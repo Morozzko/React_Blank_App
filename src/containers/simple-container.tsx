@@ -12,7 +12,7 @@ type OwnPropertyType = {
 }
 
 
-function ToDoListContainer(props: OwnPropertyType) {
+function SimpleContainer(props: OwnPropertyType) {
     return (
         <SimplePageManager {...props}/>
     )
@@ -34,4 +34,4 @@ const mapDispatchToProps = (dispatch: AppDispatch) => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ToDoListContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SimpleContainer);
