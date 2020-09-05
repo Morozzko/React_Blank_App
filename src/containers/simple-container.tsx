@@ -1,37 +1,24 @@
-import React, {useEffect} from "react";
-import {connect} from "react-redux";
-import {AppDispatch, RootState} from "../store/store";
-import {actions, getData} from "../store/reducers/simple-reducer";
+import React from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {AppStateType,} from "../store/store";
 import SimplePageManager from "../components/SimplePageManager/SimplePageManager";
 
 
-type OwnPropertyType = {
-    isFetching: boolean
-    toggleIsFetching: (isFetch:boolean) => void
-    getData: (user: string) => void
-}
+export default function SimpleContainer() {
+
+    const dispatch=useDispatch()
+    const simple=useSelector<AppStateType, any>(state => state.SimpleReducer)
 
 
-function SimpleContainer(props: OwnPropertyType) {
+
     return (
-        <SimplePageManager {...props}/>
+        <SimplePageManager />
     )
 }
 
-const mapStateToProps = (state: RootState) => {
-    return {
-        SimplePage: state.SimpleReducer
 
-    }
-};
+// const callbacks {
+//         toggleIsFetching: (isFetch:boolean) => dispatch(actions.toggleIsFetching(isFetch)),
+//         getData: (user: string) => dispatch(getData(user))
+//     }
 
-const mapDispatchToProps = (dispatch: AppDispatch) => {
-    return {
-        toggleIsFetching: (isFetch:boolean) => dispatch(actions.toggleIsFetching(isFetch)),
-        getData: (user: string) => dispatch(getData(user))
-    }
-
-};
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(SimpleContainer);

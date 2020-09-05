@@ -1,17 +1,27 @@
 import React from "react";
-
-type OwnPropertyType={
-    isFetching: boolean
-    toggleIsFetching: (isFetch:boolean) => void
-    getData: (user: string) => void
-}
+import { NavLink} from "react-router-dom";
 
 
-export default function SimplePageManager(props:OwnPropertyType) {
+export default function SimplePageManager() {
 
-    return(
+
+    let arr: number[] = []
+
+    for (let i: number = 0; i < 10; i++) {
+        arr.push(i)
+    }
+
+
+    return (
         <div>
-            SimplePage
+            {arr.map(ele => {
+                return (
+                    <div>
+                        <NavLink to={`/simple/${ele}`}>{ele}</NavLink>
+                    </div>)
+
+
+            })}
         </div>
     )
 

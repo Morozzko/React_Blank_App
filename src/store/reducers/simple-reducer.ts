@@ -1,47 +1,30 @@
 import {BaseThunkType, InferActionsTypes} from '../store'
 import * as SearchApi from '../../api/simplePageApi/simplePageApi'
-
-const IS_FETCHING = "IS-FETCHING"
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 const initialState = {
     isFetching: true,
 }
 
-const SimpleReducer = (state = initialState, action: ActionsType): InitialStateType => {
-    switch (action.type) {
-        case IS_FETCHING: {
-            return {
-                ...state,
-                isFetching: action.isFetching
-            }
+const slice = createSlice({
+    name: "SimpleReducer",
+    initialState,
+    reducers: {
+        toggleIsFetching(state, action: PayloadAction<{ isFetching: boolean }>) {
+            state.isFetching = action.payload.isFetching
         }
-
-        default:
-            return state
     }
-}
+})
 
-export const actions = {
-
-    toggleIsFetching: (isFetching: boolean) => ({type: IS_FETCHING, isFetching} as const),
-}
-
-export const searchUsers = (
-    userForSearch: string,
-    currentPage: number,
-    objectPerPage: number): ThunkType => {
-
-    return async (dispatch, getState) => {
-        let data = await SearchApi.SearchPageApi.getUsers(userForSearch, currentPage, objectPerPage);
-                dispatch(actions.toggleIsFetching(false));
-    }
-}
+const SimpleReducer = slice.reducer
+const actions = slice.actions
 
 export const getData = (user: string): ThunkType => {
-
     return async (dispatch, getState) => {
         let data = await SearchApi.SearchPageApi.getReposFromUser(user)
-        dispatch(actions.toggleIsFetching(false));
+        if (data) {
+            dispatch(actions.toggleIsFetching({isFetching: false}));
+        }
     }
 }
 
