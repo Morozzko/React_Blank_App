@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, ReactElement} from "react";
 
 enum ResultCodeEnum {
     ERROR,
@@ -28,6 +28,6 @@ export type ThunkError = {
 
 export type RouterComponentType = {
     path: string
-    component: () => JSX.Element | FC
+    component: FC | JSX.Element
     exact?: boolean
 }

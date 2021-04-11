@@ -9,7 +9,7 @@ const Presentation: FC<OwnPropertyType> = (props) => {
 
     return (
         <PresentationStyle>
-
+s
         </PresentationStyle>
     )
 };

@@ -1,16 +1,21 @@
 import React, {FC} from "react";
 import {Redirect, Route, Switch} from "react-router-dom";
-import NotFound from "../../../../components/organics/404";
+import {Routes} from "./routes";
 
 
 const AppRouter: FC = () => {
 
     return (
         <Switch>
-                <Route exact path="/" render={() => <p>s</p>}/>
-                <Route exact path="/404" render={() => <NotFound/>}/>
-
-                <Redirect to="/404"/>
+            {
+                Routes.map(route => <Route
+                    key={route.path}
+                    path={route.path}
+                    exact={route.exact}
+                    render={()=>route.component}/>
+                )
+            }
+            <Redirect to="/NotFound"/>
         </Switch>
     )
 }
