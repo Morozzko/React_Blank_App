@@ -1,6 +1,6 @@
 import {RouterComponentType} from "../../types";
 import NotFound from "../../../../components/organics/404";
-import React, {FC, lazy, LazyExoticComponent, ReactNode, Suspense} from "react";
+import React, {lazy, LazyExoticComponent, Suspense} from "react";
 import Loading from "../../../../components/organics/Loading";
 import {Sample} from "../../../Sample";
 
