@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const baseURL="https://jsonplaceholder.typicode.com/";
+const baseURL=process.env.REACT_APP_BACKEND_IP;
+console.log(process.env.REACT_APP_BACKEND_IP)
 const headers = {
     Authorization: "",
 }

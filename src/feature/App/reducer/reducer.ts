@@ -1,10 +1,9 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {PermissionsType, RequestStatusType} from "../types";
 
-
-export type RequestStatusType = "idle" | "loading" | "succeeded" | "failed";
 
 const initialState = {
-    permission: "user",
+    permissions: ["viewer"] as PermissionsType[],
     jwt: "",
     status: "idle" as RequestStatusType,
     message: "",
@@ -31,7 +30,10 @@ export const slice = createSlice({
         },
         setAppErrors: (state, action: PayloadAction<Array<{ field: string, error: string }>>) => {
             state.errors = [...state.errors, ...action.payload]
-        }
+        },
+        setPermissions: (state, action: PayloadAction<PermissionsType[]>) => {
+            state.permissions = action.payload
+        },
     }
 });
 

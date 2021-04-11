@@ -1,8 +1,20 @@
-export type ResponseType<Data = {}> = {
-  body: Data;
-  messages: string[];
-  fieldsErrors: string[];
-};
+enum ResultCodeEnum {
+  ERROR,
+  SUCCESS,
+  NOT_FOUND,
+}
+
+export type ResponseType<D> = {
+  data: D
+  ResultCode: ResultCodeEnum
+  errors: Array<{
+    field: string
+    error: string
+  }>
+  message: string
+}
+export type RequestStatusType = "idle" | "loading" | "succeeded" | "failed";
+export type PermissionsType = "viewer" | "admin" | "user" ;
 
 export type FieldErrorType = { field: string; error: string };
 export type ThunkError = {

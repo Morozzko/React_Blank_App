@@ -1,5 +1,4 @@
 import React, {FC} from "react";
-import {Route} from "react-router-dom";
 import {Style} from "./style";
 
 const ThunkTemplate: FC = (props) => {

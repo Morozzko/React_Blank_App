@@ -1,7 +1,6 @@
 import {handleAsyncServerAppError, handleAsyncServerNetworkError, ThunkAPIType,} from "./error-utils";
 import {App} from "../feature/App";
-import {RequestStatusType} from "../feature/App/reducer/reducer";
-
+import {RequestStatusType} from "../feature/App/types";
 
 
 export const handleSetAppStatus = (status: RequestStatusType, thunkAPI: ThunkAPIType) => thunkAPI.dispatch(App.Actions.setAppStatus({status}));

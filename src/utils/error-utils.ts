@@ -1,7 +1,7 @@
 import {AxiosError} from "axios";
 import {Dispatch} from "redux";
-import {ResponseType} from "../api/ResponseType";
 import {App} from "../feature/App";
+import {ResponseType} from "../feature/App/types"
 
 export type ThunkAPIType = {
     dispatch: Dispatch;

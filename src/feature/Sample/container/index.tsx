@@ -1,16 +1,10 @@
-import React, {FC, useEffect} from "react";
-import ThunkTemplate from "../templates/Sample";
-import {useActions} from "../../../utils/Hooks";
-import {Sample} from "../index";
-import {GetUsersTC} from "../reducer/reducer";
+import React, {FC} from "react";
+import Presentation from "../presentation";
 
 
 const Container: FC = () => {
-    const {GetUsersTC} = useActions(Sample.Actions)
-    useEffect(()=>{
-        GetUsersTC()
-    },[])
-    return <ThunkTemplate/>;
+
+    return <Presentation/>;
 };
 
 export default Container;
