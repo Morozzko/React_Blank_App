@@ -1,5 +1,5 @@
-import {Action, combineReducers} from "redux";
-import thunkMiddleware, {ThunkAction} from "redux-thunk";
+import {combineReducers} from "redux";
+import thunkMiddleware from "redux-thunk";
 import {configureStore} from "@reduxjs/toolkit";
 import {reducersList} from "./reducers";
 

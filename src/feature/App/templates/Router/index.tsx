@@ -1,17 +1,16 @@
 import React, {FC} from "react";
-import {Route, Switch} from "react-router-dom";
-
+import {Redirect, Route, Switch} from "react-router-dom";
+import NotFound from "../../../../components/organics/404";
 
 
 const AppRouter: FC = () => {
 
     return (
         <Switch>
+                <Route exact path="/" render={() => <p>s</p>}/>
+                <Route exact path="/404" render={() => <NotFound/>}/>
 
-
-            <Route exact path="/2/" render={() => <div/>}/>
-            <Route exact path="/2/:collateralid?"
-                   render={() => <div/>}/>
+                <Redirect to="/404"/>
         </Switch>
     )
 }

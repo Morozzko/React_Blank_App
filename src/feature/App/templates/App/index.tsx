@@ -1,19 +1,13 @@
-import React, {FC, useEffect} from "react";
-import {Redirect, Route} from "react-router-dom";
+import React, {FC} from "react";
 import {Style} from "./style";
-import {useThrottle} from "../../../../hooks/useThrottle";
+import AppRouter from "../Router";
 
 
 const App: FC = (props) => {
 
-
-
     return (
         <Style>
-            <Route exact path="/" render={() => <p>s</p>}/>
-            <Route exact path="/:collateralid"
-                   render={() =><p>2</p>}/>
-                   <Redirect to="/w"/>
+            <AppRouter/>
         </Style>
     )
 }
