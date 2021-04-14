@@ -1,5 +1,4 @@
 {
-  "extends": "./alias.extend.json",
   "compilerOptions": {
     "target": "es5",
     "lib": [
