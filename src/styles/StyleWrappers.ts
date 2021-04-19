@@ -5,6 +5,9 @@ export const Row = styled.div`
   flex-direction: row;
 `;
 
+export const Flex = styled.div`
+  display: flex;
+`;
 
 export const Column = styled.div`
   display: flex;
@@ -21,5 +24,6 @@ export const Padding = styled.div`
 export const SW = {
     Padding,
     Row,
-    Column
+    Column,
+    Flex
 }

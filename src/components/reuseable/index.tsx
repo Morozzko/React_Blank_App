@@ -1,6 +1,6 @@
-import Map from "./Map/Map";
+import List from "./List/List";
 
 
 export const RE = {
-    Map
+    List
 }
