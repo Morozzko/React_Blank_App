@@ -9,7 +9,7 @@ interface IList<T> {
 }
 
 export default function List<T>(props: IList<T>) {
-    //<RE.List items={item} renderItem={(item)=><itemTemplate key/>}
+    //<RE.List items={items} renderItem={(item)=><itemTemplate key/>}
     return (
         <SW.Flex style={{flexDirection: props.direction ? props.direction : "row"}}>
             {props.items.map(props.renderItem)}
