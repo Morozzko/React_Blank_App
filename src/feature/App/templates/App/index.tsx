@@ -3,8 +3,6 @@ import {AppStyle} from "./style";
 import AppRouter from "../../../Router";
 
 
-
-
 const App: FC = (props) => {
 
     return (
