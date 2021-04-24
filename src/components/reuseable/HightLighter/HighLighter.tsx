@@ -16,7 +16,7 @@ const HighLighter: FC<OwnPropertyType> = (props) => {
         if (Array.isArray(text)) {
             let arr: any[] = []
             for (let i = 0; i < text.length; i++) {
-                const array = text[i]?.split(new RegExp(`(${reg})`, 'gi'));
+                const array = text[i]?.split(new RegExp("("+reg+")", 'gi'));
                 arr = arr.concat(JSUtils.ArrayDecomposition(array.filter(ele => !!(ele.length))))
             }
             return arr
@@ -44,7 +44,7 @@ const HighLighter: FC<OwnPropertyType> = (props) => {
                               style={
                                   Array.isArray(props.highlight)
                                   &&
-                                  props.highlight.find(ele => part.toLowerCase() == ele.toLowerCase()) ?
+                                  props.highlight.find(ele => part.toLowerCase().match(ele.toLowerCase()) ) ?
                                       {
                                           color: props.color ? props.color : "red",
                                           backgroundColor: props.backgroundColor && props.backgroundColor
@@ -63,7 +63,7 @@ const HighLighter: FC<OwnPropertyType> = (props) => {
                 {parts.map((part, i) => {
                     return (
                         <span key={i}
-                              style={part.toLowerCase() === props.highlight.toString().toLowerCase() ? {color: "red"} : {}}>
+                              style={part.toLowerCase().match(props.highlight.toString().toLowerCase()) ? {color: "red"} : {}}>
                             {part}
                         </span>
                     )
