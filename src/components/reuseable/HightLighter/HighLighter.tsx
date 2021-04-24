@@ -5,8 +5,11 @@ import React, {FC} from "react";
 type OwnPropertyType = {
     text: string
     highlight: string[] | string
+    errorRegEx?: string
     color?: string
     backgroundColor?: string
+    errorColor?: string
+    errorBackgroundColor?: string
 }
 
 const HighLighter: FC<OwnPropertyType> = (props) => {
@@ -16,7 +19,7 @@ const HighLighter: FC<OwnPropertyType> = (props) => {
         if (Array.isArray(text)) {
             let arr: any[] = []
             for (let i = 0; i < text.length; i++) {
-                const array = text[i]?.split(new RegExp("("+reg+")", 'gi'));
+                const array = text[i]?.split(new RegExp("(" + reg + ")", 'gi'));
                 arr = arr.concat(JSUtils.ArrayDecomposition(array.filter(ele => !!(ele.length))))
             }
             return arr
@@ -44,9 +47,18 @@ const HighLighter: FC<OwnPropertyType> = (props) => {
                               style={
                                   Array.isArray(props.highlight)
                                   &&
-                                  props.highlight.find(ele => part.toLowerCase().match(ele.toLowerCase()) ) ?
+                                  props.highlight.find(ele => part.toLowerCase().match(ele.toLowerCase())) ?
                                       {
-                                          color: props.color ? props.color : "red",
+                                          color:
+                                              part.match(new RegExp("(" + props.errorRegEx + ")", 'gi'))
+                                                  ?
+                                                  props.errorColor ?  props.errorColor:"blue"
+                                                  :
+                                                    props.color
+                                                        ?
+                                                        props.color
+                                                        :
+                                                        "red",
                                           backgroundColor: props.backgroundColor && props.backgroundColor
                                       } : {}}>
                             {part}
