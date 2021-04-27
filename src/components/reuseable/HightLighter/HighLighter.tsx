@@ -28,8 +28,6 @@ const HighLighter: FC<OwnPropertyType> = (props) => {
             const array = text?.split(new RegExp(`(${reg})`, 'gi'));
             return array.filter(ele => !!(ele.length))
         }
-
-
     }
 
 
