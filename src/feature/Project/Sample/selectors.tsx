@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import {AppStateType} from "../../store/store";
+import {AppStateType} from "../../../store/store";
 
 
 const SelectUsers = (state:AppStateType) => state.App.jwt

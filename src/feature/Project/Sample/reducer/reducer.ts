@@ -1,7 +1,8 @@
 import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {ThunkError} from "../../App/types";
-import {ThunkCreator} from "../../../utils/redux-utils";
+import {ThunkError} from "../../../Core/App/types";
+import {ThunkCreator} from "../../../../utils/redux-utils";
 import {UniversalApi} from "../Api";
+
 
 export type usersArrtayType = {
     userId: number

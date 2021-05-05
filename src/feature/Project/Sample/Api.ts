@@ -1,4 +1,4 @@
-import {instance} from "../../api/Api";
+import {instance} from "../../../api/Api";
 import {usersArrtayType} from "./reducer/reducer";
 
 

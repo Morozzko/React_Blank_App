@@ -1,4 +1,5 @@
-import {FC, ReactElement} from "react";
+import {FC} from "react";
+import {ErrorType} from "../Condition/types";
 
 enum ResultCodeEnum {
     ERROR,
@@ -9,10 +10,7 @@ enum ResultCodeEnum {
 export type ResponseType<D> = {
     data: D
     ResultCode: ResultCodeEnum
-    errors: Array<{
-        field: string
-        error: string
-    }>
+    errors: Array<ErrorType>
     message: string
 }
 

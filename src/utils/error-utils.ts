@@ -1,7 +1,7 @@
 import {AxiosError} from "axios";
 import {Dispatch} from "redux";
-import {App} from "../feature/App";
-import {ResponseType} from "../feature/App/types"
+import {ResponseType} from "../feature/Core/App/types"
+import {Condition} from "../feature/Core/Condition";
 
 export type ThunkAPIType = {
     dispatch: Dispatch;
@@ -12,15 +12,15 @@ export type ThunkAPIType = {
 export const handleAsyncServerAppError = <D>(data: ResponseType<D>, thunkAPI: ThunkAPIType, showError = true) => {
     if (showError) {
         thunkAPI.dispatch(
-            App.Actions.setAppMessage({
-                error: data.message ? data.message : "Some error occurred",
+            Condition.Actions.setAppMessage({
+                message: data.message ? data.message : "Some error occurred",
             })
         );
         thunkAPI.dispatch(
-            App.Actions.setAppErrors(data.errors)
+            Condition.Actions.addAppErrors({error:data.errors})
         );
     }
-    thunkAPI.dispatch(App.Actions.setAppStatus({status: "failed"}));
+    thunkAPI.dispatch(Condition.Actions.setAppStatus({status: "failed"}));
 
     return thunkAPI.rejectWithValue({
         errors: data.message,
@@ -31,10 +31,10 @@ export const handleAsyncServerAppError = <D>(data: ResponseType<D>, thunkAPI: Th
 export const handleAsyncServerNetworkError = (error: AxiosError, thunkAPI: ThunkAPIType, showError = true) => {
     if (showError) {
         thunkAPI.dispatch(
-            App.Actions.setAppMessage({error: error.message})
+            Condition.Actions.setAppMessage({message: error.message})
         );
     }
-    thunkAPI.dispatch(App.Actions.setAppStatus({status: "failed"}));
+    thunkAPI.dispatch(Condition.Actions.setAppStatus({status: "failed"}));
 
     return thunkAPI.rejectWithValue({
         errors: [error.message],
