@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("https://fonts.googleapis.com/css?family=Roboto");
+}
+
 *,
 *::before,
 *::after {
@@ -5,6 +10,7 @@
 }
 
 body,
+a,
 h1,
 h2,
 h3,
@@ -21,8 +27,9 @@ dd {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    font-family:'Inter', sans-serif;
-  list-style: none;
+    font-family: 'Roboto', serif;
+    font-weight: normal;
+    list-style: none;
 }
 
 
