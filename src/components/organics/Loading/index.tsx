@@ -1,12 +1,8 @@
-import React from "react";
-import {StyleLoading} from "./style";
+import React from 'react';
+import { StyleLoading } from './style';
 
 const Loading = () => {
-    return (
-        <StyleLoading>
-          Loading…
-        </StyleLoading>
-    )
-}
+  return <StyleLoading>Loading…</StyleLoading>;
+};
 
 export default Loading;

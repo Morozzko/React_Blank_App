@@ -1,12 +1,8 @@
-import React, {FC} from "react";
-import {Style} from "./style";
+import React, { FC } from 'react';
+import { Style } from './style';
 
-const ThunkTemplate: FC = (props) => {
-    return (
-        <Style>
-        asd
-        </Style>
-    )
-}
+const ThunkTemplate: FC = props => {
+  return <Style>asd</Style>;
+};
 
 export default ThunkTemplate;

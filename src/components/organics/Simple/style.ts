@@ -1,7 +1,3 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-
-export const SelectedInfoStyle = styled.div`
-  
-`;
-
+export const SelectedInfoStyle = styled.div``;

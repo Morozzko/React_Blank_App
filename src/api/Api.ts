@@ -1,16 +1,16 @@
-import axios from "axios";
+import axios from 'axios';
 
-const baseURL=process.env.REACT_APP_BACKEND_IP;
+const baseURL = process.env.REACT_APP_BACKEND_IP;
 
 const headers = {
-    Authorization: "",
-}
+  Authorization: '',
+};
 
 if (localStorage.token) {
-    headers.Authorization = `Bearer ${localStorage.token}`
+  headers.Authorization = `Bearer ${localStorage.token}`;
 }
 
 export const instance = axios.create({
-    baseURL,
-    headers
+  baseURL,
+  headers,
 });

@@ -1,7 +1,7 @@
-import {ArrayDecomposition} from "./ArrayDecomposition/ArrayDecomposition";
+import { ArrayDecomposition } from './ArrayDecomposition/ArrayDecomposition';
 
 const JSUtils = {
-    ArrayDecomposition
-}
+  ArrayDecomposition,
+};
 
-export default JSUtils
+export default JSUtils;

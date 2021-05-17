@@ -1,15 +1,14 @@
-import {asyncActions, slice} from "./reducer/reducer";
-import Container from "./container";
-
+import { asyncActions, slice } from './reducer/reducer';
+import Container from './container';
 
 const Actions = {
-    ...slice.actions,
-    ...asyncActions
+  ...slice.actions,
+  ...asyncActions,
 };
-const Reducer = slice.reducer
+const Reducer = slice.reducer;
 
-export const Condition={
-    Actions,
-    Container,
-    Reducer
-}
+export const Condition = {
+  Actions,
+  Container,
+  Reducer,
+};

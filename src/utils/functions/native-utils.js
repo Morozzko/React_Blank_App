@@ -1,10 +1,8 @@
 export function merge() {
-  let dst = {}
-    , src
-    , p
-    , args = [].splice.call(arguments, 0)
-  ;
-
+  let dst = {},
+    src,
+    p,
+    args = [].splice.call(arguments, 0);
   while (args.length > 0) {
     src = args.splice(0, 1)[0];
     if (toString.call(src) === '[object Object]') {

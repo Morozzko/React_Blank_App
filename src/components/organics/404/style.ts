@@ -1,7 +1,3 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-
-export const Style404 = styled.div`
-  
-`;
-
+export const Style404 = styled.div``;

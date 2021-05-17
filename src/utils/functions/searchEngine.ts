@@ -1,141 +1,135 @@
-import {merge} from "./native-utils";
+import { merge } from './native-utils';
 
 export function getValue(obj: object | [], path: string, map?: boolean, sort?: any) {
-  const arrayRegex = /(\[(\d?)*])/i
+  const arrayRegex = /(\[(\d?)*])/i;
 
-  const pathArray = path.split(".")
-  let objectStructure = sort ? filterData(obj, sort) : obj
+  const pathArray = path.split('.');
+  let objectStructure = sort ? filterData(obj, sort) : obj;
 
   if (objectStructure) {
     try {
       for (let i = 0; i < pathArray.length; i++) {
         if (Array.isArray(objectStructure)) {
-          objectStructure = getArrayValues(objectStructure, pathArray[i])
+          objectStructure = getArrayValues(objectStructure, pathArray[i]);
         } else {
-          objectStructure = getDescriptorValue(objectStructure, pathArray[i])
+          objectStructure = getDescriptorValue(objectStructure, pathArray[i]);
         }
       }
     } catch (e) {
-      return "Ошибка в генерируемом пути"
+      return 'Ошибка в генерируемом пути';
     }
-  } else return "Нет значения"
+  } else return 'Нет значения';
 
-//@ts-ignore
+  //@ts-ignore
   function filterData(array, rule: any) {
-//@ts-ignore
+    //@ts-ignore
     function sortDESC(a, b) {
-      return getValue(b, rule.path) - getValue(a, rule.path)
+      return getValue(b, rule.path) - getValue(a, rule.path);
     }
-//@ts-ignore
+    //@ts-ignore
 
     function sortASC(a, b) {
-      return getValue(a, rule.path) - getValue(b, rule.path)
+      return getValue(a, rule.path) - getValue(b, rule.path);
     }
 
-    if (rule.action === "=") {
+    if (rule.action === '=') {
       //@ts-ignore
 
-      return array.filter(ele => getValue(ele, rule.path) == rule.value)
-    } else if (rule.action === "!") {
-//@ts-ignore
+      return array.filter(ele => getValue(ele, rule.path) == rule.value);
+    } else if (rule.action === '!') {
+      //@ts-ignore
 
-      return array.filter(ele => getValue(ele, rule.path) != rule.value)
-    } else if (rule.action === ">") {
-//@ts-ignore
+      return array.filter(ele => getValue(ele, rule.path) != rule.value);
+    } else if (rule.action === '>') {
+      //@ts-ignore
 
-      return array.filter(ele => getValue(ele, rule.path) > rule.value)
-    } else if (rule.action === "<") {
-//@ts-ignore
+      return array.filter(ele => getValue(ele, rule.path) > rule.value);
+    } else if (rule.action === '<') {
+      //@ts-ignore
 
-      return array.filter(ele => getValue(ele, rule.path) < rule.value)
-    } else if (rule.action.toUpperCase() === "HIGHEST") {
-      return array.sort(sortDESC)[0]
-    } else if (rule.action.toUpperCase() === "LOWEST") {
-      return array.sort(sortASC)[0]
+      return array.filter(ele => getValue(ele, rule.path) < rule.value);
+    } else if (rule.action.toUpperCase() === 'HIGHEST') {
+      return array.sort(sortDESC)[0];
+    } else if (rule.action.toUpperCase() === 'LOWEST') {
+      return array.sort(sortASC)[0];
     } else {
-      return array
+      return array;
     }
   }
-//@ts-ignore
+  //@ts-ignore
 
   function getDescriptorValue(obj, path) {
     if (obj === null) {
-      return null
+      return null;
     }
     if (path.match(arrayRegex)) {
-      const index = path.match(arrayRegex)[0].slice(1, -1)
+      const index = path.match(arrayRegex)[0].slice(1, -1);
 
       if (index.length) {
         try {
-//@ts-ignore
+          //@ts-ignore
 
-          return Object.getOwnPropertyDescriptor(obj, path.split("[")[0]).value[index]
-
+          return Object.getOwnPropertyDescriptor(obj, path.split('[')[0]).value[index];
         } catch (e) {
-          return null
+          return null;
         }
-
       } else {
         try {
-//@ts-ignore
+          //@ts-ignore
 
-          return Object.getOwnPropertyDescriptor(obj, path.split("[")[0]).value
+          return Object.getOwnPropertyDescriptor(obj, path.split('[')[0]).value;
         } catch (e) {
-          return null
+          return null;
         }
       }
-
-
     } else {
-//@ts-ignore
+      //@ts-ignore
 
-      return Object.getOwnPropertyDescriptor(obj, path).value
+      return Object.getOwnPropertyDescriptor(obj, path).value;
     }
   }
-//@ts-ignore
+  //@ts-ignore
 
   function getArrayValues(array, path) {
-    return array.length ?
-        //@ts-ignore
+    return array.length
+      ? //@ts-ignore
 
-      array.map(ele => Array.isArray(ele) ? getArrayValues(ele, path) : getDescriptorValue(ele, path))
-      : null
-
+        array.map(ele => (Array.isArray(ele) ? getArrayValues(ele, path) : getDescriptorValue(ele, path)))
+      : null;
   }
-//@ts-ignore
+  //@ts-ignore
 
   function ArrayCheck(obj) {
-    let data
+    let data;
 
     if (Array.isArray(obj)) {
-      let cleaner = obj.filter(ele => ele != null)
-      data = cleaner.join()
-
+      let cleaner = obj.filter(ele => ele != null);
+      data = cleaner.join();
     } else {
-      data = obj
+      data = obj;
     }
     if (data === null) {
-      return ""
+      return '';
     }
-    if (typeof data === "object") {
-      return "Ошибка в генерируемом пути"
+    if (typeof data === 'object') {
+      return 'Ошибка в генерируемом пути';
     }
     // if (data.match("object Object")) {
     //     return "Ошибка в генерируемом пути"
     // }
 
-    return data
+    return data;
   }
 
   if (map) {
-    return objectStructure
+    return objectStructure;
   }
 
-  return ArrayCheck(objectStructure)
+  return ArrayCheck(objectStructure);
 }
 
 export function createObject(path: string, value: string) {
-  const pathArray = path.split('.')
+  const pathArray = path.split('.');
 
   if (pathArray.length > 1) {
     const obj = {};
@@ -145,10 +139,10 @@ export function createObject(path: string, value: string) {
         currentPath[pathArray[i]] = value;
       } else {
         if (currentPath === null) {
-//@ts-ignore
+          //@ts-ignore
 
           obj[pathArray[i]] = {};
-//@ts-ignore
+          //@ts-ignore
 
           currentPath = obj[pathArray[i]];
         } else {
@@ -159,16 +153,11 @@ export function createObject(path: string, value: string) {
     }
     return obj;
   } else {
-    return {[path]: value}
+    return { [path]: value };
   }
 }
 
-export function universalObjectDestructuring(params:
-                                               {
-                                                 path: string,
-                                                 value: string,
-                                                 mainObject: object
-                                               }) {
-  const secondObject = createObject(params.path, params.value)
-  return merge(params.mainObject, secondObject)
+export function universalObjectDestructuring(params: { path: string; value: string; mainObject: object }) {
+  const secondObject = createObject(params.path, params.value);
+  return merge(params.mainObject, secondObject);
 }

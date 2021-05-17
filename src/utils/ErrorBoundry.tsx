@@ -1,31 +1,27 @@
-import React, {Component, ErrorInfo} from "react";
+import React, { Component, ErrorInfo } from 'react';
 
-interface IProps {
-
-}
+interface IProps {}
 interface IState {
-    hasError:boolean
+  hasError: boolean;
 }
 
-export class ErrorBoundary extends Component<IProps,IState> {
-    constructor(props:IProps) {
-        super(props);
-        this.state = { hasError: false };
+export class ErrorBoundary extends Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong.</h1>;
     }
 
-    static getDerivedStateFromError(error:Error) {
-        return { hasError: true };
-    }
-
-    componentDidCatch(error:Error, errorInfo:ErrorInfo) {
-
-    }
-
-    render() {
-        if (this.state.hasError) {
-            return <h1>Something went wrong.</h1>;
-        }
-
-        return this.props.children;
-    }
+    return this.props.children;
+  }
 }

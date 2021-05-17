@@ -1,17 +1,10 @@
-import React, {FC} from "react";
-import {PresentationStyle} from "./style";
+import React, { FC } from 'react';
+import { PresentationStyle } from './style';
 
-type OwnPropertyType={
+type OwnPropertyType = {};
 
-}
-
-const Presentation: FC<OwnPropertyType> = (props) => {
-
-    return (
-        <PresentationStyle>
-s
-        </PresentationStyle>
-    )
+const Presentation: FC<OwnPropertyType> = props => {
+  return <PresentationStyle>s</PresentationStyle>;
 };
 
 export default Presentation;

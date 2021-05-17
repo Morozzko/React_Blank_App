@@ -1,10 +1,8 @@
-import React, {FC} from "react";
-import Presentation from "../presentation";
-
+import React, { FC } from 'react';
+import Presentation from '../presentation';
 
 const Container: FC = () => {
-
-    return <Presentation/>;
+  return <Presentation />;
 };
 
 export default Container;
