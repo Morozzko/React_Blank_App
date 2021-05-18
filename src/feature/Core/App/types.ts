@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ErrorType } from '../Condition/types';
+import { NotificationType } from '../Condition/types';
 
 enum ResultCodeEnum {
   ERROR,
@@ -10,7 +10,7 @@ enum ResultCodeEnum {
 export type ResponseType<D> = {
   data: D;
   ResultCode: ResultCodeEnum;
-  errors: Array<ErrorType>;
+
   message: string;
 };
 

@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { ErrorStyle } from './style';
-import { ErrorType } from '../../types';
+import { NotificationType } from '../../types';
 
-const Error: FC<ErrorType> = props => {
+const Error: FC<NotificationType> = props => {
   return <ErrorStyle>asd</ErrorStyle>;
 };
 
