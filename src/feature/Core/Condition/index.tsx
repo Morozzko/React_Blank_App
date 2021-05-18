@@ -1,4 +1,4 @@
-import {asyncActions, slice} from './reducer/reducer';
+import { asyncActions, slice } from './reducer/reducer';
 import Container from './container';
 
 const Actions = {

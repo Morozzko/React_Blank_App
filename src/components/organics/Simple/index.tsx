@@ -1,15 +1,10 @@
-import React, {FC} from 'react';
-import {SimpleStyle} from "./style";
+import React, { FC } from 'react';
+import { SimpleStyle } from './style';
 
-type OwnPropertyType = {}
-
+type OwnPropertyType = {};
 
 const Simple: FC<OwnPropertyType> = () => {
-    return (
-        <SimpleStyle>
-
-        </SimpleStyle>
-    );
+  return <SimpleStyle></SimpleStyle>;
 };
 
 export default Simple;

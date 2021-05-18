@@ -1,3 +1,1 @@
-export const Page = {
-
-}
+export const Page = {};
