@@ -1,1 +1,6 @@
-export const Page = {};
+import TodoPage from "./Todo";
+
+export const Page = {
+
+    TodoPage
+};

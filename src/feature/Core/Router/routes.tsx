@@ -2,7 +2,8 @@ import { RouterComponentType } from '../App/types';
 import NotFound from '../../../components/organics/404';
 import React, { lazy, LazyExoticComponent, Suspense } from 'react';
 import Loading from '../../../components/organics/Loading';
-import { Sample } from '../../Project/Sample';
+import { Sample } from '../../Project/_Sample';
+import { Page } from '../../../pages';
 
 const OtherComponent = lazy(() => import('../../../components/organics/404'));
 
@@ -14,14 +15,14 @@ const withSuspense = (Component: LazyExoticComponent<() => JSX.Element>) => (
 
 export const Routes: RouterComponentType[] = [
   {
-    path: '/2',
+    path: '/',
     exact: true,
     component: withSuspense(OtherComponent),
   },
   {
     path: '/3',
     exact: true,
-    component: <Sample.Container />,
+    component: <Page.TodoPage/>,
   },
   {
     path: '/',
