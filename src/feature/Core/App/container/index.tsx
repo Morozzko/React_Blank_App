@@ -1,20 +1,16 @@
-import React, { FC } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { SnackbarProvider } from 'notistack';
-import { Provider } from 'react-redux';
-import store from '../../../../store/store';
+import React, {FC} from 'react';
+import {BrowserRouter} from 'react-router-dom';
 import App from '../templates/App';
+import Providers from "../../Providers";
 
 const Container: FC = props => {
-  return (
-    <BrowserRouter>
-      <Provider store={store}>
-        <SnackbarProvider>
-          <App {...props} />
-        </SnackbarProvider>
-      </Provider>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Providers>
+                <App {...props} />
+            </Providers>
+        </BrowserRouter>
+    );
 };
 
 export default Container;
