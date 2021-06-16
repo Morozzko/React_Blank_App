@@ -2,8 +2,8 @@ import { RouterComponentType } from '../App/types';
 import NotFound from '../../../components/organics/404';
 import React, { lazy, LazyExoticComponent, Suspense } from 'react';
 import Loading from '../../../components/organics/Loading';
-import { Sample } from '../../Project/_Sample';
 import { Page } from '../../../pages';
+import { App } from '../App';
 
 const OtherComponent = lazy(() => import('../../../components/organics/404'));
 
@@ -17,7 +17,7 @@ export const Routes: RouterComponentType[] = [
   {
     path: '/',
     exact: true,
-    component: withSuspense(OtherComponent),
+    component: <App.Container/>,
   },
   {
     path: '/3',
