@@ -7,7 +7,8 @@ const rootReducer = combineReducers(reducersList);
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware: any) => getDefaultMiddleware().prepend(thunkMiddleware),
+  middleware: getDefaultMiddleware => getDefaultMiddleware()
+      .prepend(thunkMiddleware),
 });
 
 declare global {
