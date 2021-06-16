@@ -32,16 +32,17 @@ const Container = () => {
       enqueueSnackbar(message, {
         key,
         ...options,
-        onClose: (event, reason, myKey) => {
-          if (options.onClose) {
-            // @ts-ignore
-            options.onClose(event, reason, myKey);
-          }
-        },
-        onExited: (event, myKey) => {
-          removeNotification({ notificationId: myKey });
-          removeDisplayed(myKey);
-        },
+        // onClose: (event, reason, myKey) => {
+        //     if (options.onClose) {
+        //
+        //         // @ts-ignore
+        //         options.onClose(event, reason, myKey);
+        //     }
+        // },
+        // onExited: (event, myKey) => {
+        //     removeNotification({notificationId: myKey});
+        //     removeDisplayed(myKey);
+        // },
       });
 
       // keep track of snackbars that we've displayed
@@ -51,7 +52,5 @@ const Container = () => {
 
   return null;
 };
-
-
 
 export default Container;

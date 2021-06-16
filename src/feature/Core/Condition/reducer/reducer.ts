@@ -16,7 +16,7 @@ export const slice = createSlice({
       state.status = action.payload.status;
     },
     enqueueNotification(state, action: PayloadAction<NotificationPayloadType>) {
-      const date = new Date();
+      const date = new Date().toString();
       const key = v1();
       const notification: NotificationType = {
         message: action.payload.message,
@@ -29,7 +29,7 @@ export const slice = createSlice({
       state.notifications = [...state.notifications, notification];
     },
     enqueueSuccessNotification(state, action: PayloadAction<string>) {
-      const date = new Date();
+      const date = new Date().toString();
       const key = v1();
       const notification: NotificationType = {
         message: action.payload,
@@ -37,6 +37,34 @@ export const slice = createSlice({
         key,
         options: {
           variant: 'success',
+        },
+      };
+
+      state.notifications = [...state.notifications, notification];
+    },
+    enqueueWarningNotification(state, action: PayloadAction<string>) {
+      const date = new Date().toString();
+      const key = v1();
+      const notification: NotificationType = {
+        message: action.payload,
+        date,
+        key,
+        options: {
+          variant: 'warning',
+        },
+      };
+
+      state.notifications = [...state.notifications, notification];
+    },
+    enqueueErrorNotification(state, action: PayloadAction<string>) {
+      const date = new Date().toString();
+      const key = v1();
+      const notification: NotificationType = {
+        message: action.payload,
+        date,
+        key,
+        options: {
+          variant: 'error',
         },
       };
 

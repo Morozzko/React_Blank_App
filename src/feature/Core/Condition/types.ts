@@ -1,7 +1,7 @@
 export type RequestStatusType = 'idle' | 'loading' | 'succeeded' | 'failed';
 export type NotificationType = {
   key: string;
-  date: Date;
+  date: Date | string;
   message: string;
   options: {
     onClose?: any;
