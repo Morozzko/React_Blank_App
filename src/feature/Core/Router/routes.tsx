@@ -22,7 +22,7 @@ export const Routes: RouterComponentType[] = [
   {
     path: '/3',
     exact: true,
-    component: <Page.TodoPage/>,
+    component: <Page.TodoPage />,
   },
   {
     path: '/',
