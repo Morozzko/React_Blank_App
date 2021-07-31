@@ -3,7 +3,6 @@ import NotFound from '../../../components/organics/404';
 import React, { lazy, LazyExoticComponent, Suspense } from 'react';
 import Loading from '../../../components/organics/Loading';
 import { Page } from '../../../pages';
-import { App } from '../App';
 
 const OtherComponent = lazy(() => import('../../../components/organics/404'));
 
@@ -17,21 +16,21 @@ export const Routes: RouterComponentType[] = [
   {
     path: '/',
     exact: true,
-    component: <p>sd</p>,
+    component: <p>sd</p>
   },
   {
     path: '/3',
     exact: true,
-    component: <Page.TodoPage />,
+    component: <Page.TodoPage />
   },
   {
     path: '/',
     exact: true,
-    component: <p>ssss</p>,
+    component: <p>ssss</p>
   },
   {
     path: '/NotFound',
     exact: true,
-    component: <NotFound />,
-  },
+    component: <NotFound />
+  }
 ];
