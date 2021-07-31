@@ -17,7 +17,7 @@ export const Routes: RouterComponentType[] = [
   {
     path: '/',
     exact: true,
-    component: <App.Container/>,
+    component: <p>sd</p>,
   },
   {
     path: '/3',
