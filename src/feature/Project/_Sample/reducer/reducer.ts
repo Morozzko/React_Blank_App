@@ -21,9 +21,14 @@ export const slice = createSlice({
     builder.addCase(GetUsersTC.fulfilled, (state, action) => {
       // state.users = action.payload;
     });
-  },
+  }
 });
 
 export const asyncActions = {
-  GetUsersTC,
+  GetUsersTC
+};
+
+export const localActions = {
+  ...slice.actions,
+  ...asyncActions
 };
