@@ -5,7 +5,7 @@ import { reducersList } from './reducers';
 
 const rootReducer = combineReducers(reducersList);
 
-export const store = configureStore({
+const store = configureStore({
   reducer: rootReducer,
   middleware: getDefaultMiddleware => getDefaultMiddleware().prepend(thunkMiddleware),
 });

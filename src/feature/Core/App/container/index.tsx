@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import App from '../templates/App';
+import App from '../ui';
 import Providers from '../../Providers';
 
 const Container: FC = props => {

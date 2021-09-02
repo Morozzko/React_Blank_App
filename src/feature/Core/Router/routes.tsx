@@ -1,10 +1,10 @@
 import { RouterComponentType } from '../App/types';
-import NotFound from '../../../components/organics/404';
+import NotFound from '../../../components/shared/404';
 import React, { lazy, LazyExoticComponent, Suspense } from 'react';
-import Loading from '../../../components/organics/Loading';
+import Loading from '../../../components/shared/Loading';
 import { Page } from '../../../pages';
 
-const OtherComponent = lazy(() => import('../../../components/organics/404'));
+const OtherComponent = lazy(() => import('../../../components/shared/404'));
 
 const withSuspense = (Component: LazyExoticComponent<() => JSX.Element>) => (
   <Suspense fallback={Loading}>
