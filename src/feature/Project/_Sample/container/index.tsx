@@ -5,8 +5,7 @@ import { useAppSelector } from '../../../../utils/hooks/useAppSelector';
 import { localActions } from '../model';
 
 const Container: FC = () => {
-
-  const {}=useActions(localActions)
+  const {} = useActions(localActions);
   // const a=useAppSelector(state => state.)
 
   return <UI />;

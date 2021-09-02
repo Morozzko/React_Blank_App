@@ -16,21 +16,21 @@ export const Routes: RouterComponentType[] = [
   {
     path: '/',
     exact: true,
-    component: <p>sd</p>
+    component: <p>sd</p>,
   },
   {
     path: '/3',
     exact: true,
-    component: <Page.TodoPage />
+    component: <Page.TodoPage />,
   },
   {
     path: '/',
     exact: true,
-    component: <p>ssss</p>
+    component: <p>ssss</p>,
   },
   {
     path: '/NotFound',
     exact: true,
-    component: <NotFound />
-  }
+    component: <NotFound />,
+  },
 ];
