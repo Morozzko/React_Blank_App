@@ -1,4 +1,4 @@
-import { asyncActions, slice } from './reducer/reducer';
+import { asyncActions, slice } from './model';
 import * as Selectors from './selectors';
 import Container from './container';
 

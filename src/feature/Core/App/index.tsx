@@ -1,4 +1,4 @@
-import { slice } from './reducer/reducer';
+import { slice } from './model';
 import * as Selectors from './selectors';
 import Container from './container';
 

@@ -1,4 +1,4 @@
-import { slice } from '../feature/Core/App/reducer/reducer';
+import { slice } from '../feature/Core/App/model';
 import { Sample } from '../feature/Project/_Sample';
 import { Condition } from '../feature/Core/Condition';
 

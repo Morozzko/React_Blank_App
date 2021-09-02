@@ -4,8 +4,8 @@ import StyleContainer from '../../../../styles/StyleContainer';
 
 type OwnPropertyType = {};
 
-const Presentation: FC<OwnPropertyType> = props => {
+const UI: FC<OwnPropertyType> = props => {
   return <StyleContainer>s</StyleContainer>;
 };
 
-export default Presentation;
+export default UI;
