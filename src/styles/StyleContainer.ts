@@ -12,6 +12,8 @@ interface IStyleContainer {
   height?: string;
   'max-height'?: string;
   'max-width'?: string;
+  'min-height'?: string;
+  'min-width'?: string;
   'font-weight'?: number;
   'circle-top'?: boolean;
   'box-shadow'?: string;
@@ -38,6 +40,8 @@ const StyleContainer = styled.div<IStyleContainer>`
   height: ${props => (props.height ? props.height : props.vh ? `${props.vh}vh` : '')};
   max-height: ${props => props['max-height'] && props['max-height']};
   max-width: ${props => props['max-width'] && props['max-width']};
+  min-height: ${props => props['min-height'] && props['min-height']};
+  min-width: ${props => props['min-width'] && props['min-width']};
   font-weight: ${props => props['font-weight'] && props['font-weight']};
   border-top-left-radius: ${props => props['circle-top'] && '5%'};
   border-top-right-radius: ${props => props['circle-top'] && '5%'};
