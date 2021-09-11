@@ -1,14 +1,11 @@
-import React, { FC } from 'react';
-import UI from '../ui';
-import { useActions } from '../../../../utils/hooks/useActions';
-import { useAppSelector } from '../../../../utils/hooks/useAppSelector';
-import { localActions } from '../model';
+import React, { FC } from 'react'
+import UI from '../ui'
+import { useContainer } from './useContainer'
 
 const Container: FC = () => {
-  const {} = useActions(localActions);
-  // const a=useAppSelector(state => state.)
+  const {} = useContainer()
 
-  return <UI />;
-};
+  return <UI />
+}
 
-export default Container;
+export default Container

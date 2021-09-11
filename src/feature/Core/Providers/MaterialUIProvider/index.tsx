@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import React, { FC } from 'react'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core'
 
 const MaterialUIProvider: FC = props => {
   const theme = createMuiTheme({
@@ -11,8 +11,8 @@ const MaterialUIProvider: FC = props => {
         main: '#2f2f2f',
       },
     },
-  });
-  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
-};
+  })
+  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+}
 
-export default MaterialUIProvider;
+export default MaterialUIProvider

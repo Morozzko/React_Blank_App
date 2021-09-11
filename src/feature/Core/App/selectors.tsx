@@ -1,1 +1,1 @@
-import { AppStateType } from '../../../store/store';
+import { AppStateType } from '../../../store/store'

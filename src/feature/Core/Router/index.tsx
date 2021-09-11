@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
-import { Routes } from './routes';
+import React, { FC } from 'react'
+import { Redirect, Route, Switch } from 'react-router-dom'
+import { Routes } from './routes'
 
 const AppRouter: FC = () => {
   return (
@@ -10,7 +10,7 @@ const AppRouter: FC = () => {
       ))}
       <Redirect to="/NotFound" />
     </Switch>
-  );
-};
+  )
+}
 
-export default AppRouter;
+export default AppRouter

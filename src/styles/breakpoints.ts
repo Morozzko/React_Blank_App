@@ -6,7 +6,7 @@ const size = {
   laptop: '1024px',
   laptopL: '1440px',
   desktop: '2560px',
-};
+}
 
 export const device = {
   mobileS: `(min-width: ${size.mobileS})`,
@@ -17,4 +17,4 @@ export const device = {
   laptopL: `(min-width: ${size.laptopL})`,
   desktop: `(min-width: ${size.desktop})`,
   desktopL: `(min-width: ${size.desktop})`,
-};
+}

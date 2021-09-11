@@ -1,5 +1,5 @@
-import TodoPage from './Todo';
+import TodoPage from './Todo'
 
 export const Page = {
   TodoPage,
-};
+}

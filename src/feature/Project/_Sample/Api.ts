@@ -1,7 +1,7 @@
-import { instance } from '../../../api/Api';
+import { instance } from '../../../api/Api'
 
 export const UniversalApi = {
   async get() {
-    return await instance.get<{}>('todos/');
+    return await instance.get<{}>('todos/')
   },
-};
+}

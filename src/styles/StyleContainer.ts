@@ -1,32 +1,32 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 interface IStyleContainer {
-  column?: boolean;
-  absolute?: boolean;
-  'position-relative'?: boolean;
-  'font-size'?: string;
-  padding?: string;
-  margin?: string;
-  'default-margin'?: boolean;
-  width?: string;
-  height?: string;
-  'max-height'?: string;
-  'max-width'?: string;
-  'min-height'?: string;
-  'min-width'?: string;
-  'font-weight'?: number;
-  'circle-top'?: boolean;
-  'box-shadow'?: string;
-  'circle-bottom'?: boolean;
-  'background-color'?: string;
-  pointer?: boolean;
-  'no-padding'?: boolean;
-  vh?: number;
-  vw?: number;
-  middle?: boolean;
-  color?: string;
-  'justify-content'?: 'center' | 'flex-start' | 'stretch' | 'flex-end' | 'space-between';
-  'align-items'?: 'center' | 'flex-start' | 'stretch' | 'flex-end';
+  column?: boolean
+  absolute?: boolean
+  'position-relative'?: boolean
+  'font-size'?: string
+  padding?: string
+  margin?: string
+  'default-margin'?: boolean
+  width?: string
+  height?: string
+  'max-height'?: string
+  'max-width'?: string
+  'min-height'?: string
+  'min-width'?: string
+  'font-weight'?: number
+  'circle-top'?: boolean
+  'box-shadow'?: string
+  'circle-bottom'?: boolean
+  'background-color'?: string
+  pointer?: boolean
+  'no-padding'?: boolean
+  vh?: number
+  vw?: number
+  middle?: boolean
+  color?: string
+  'justify-content'?: 'center' | 'flex-start' | 'stretch' | 'flex-end' | 'space-between'
+  'align-items'?: 'center' | 'flex-start' | 'stretch' | 'flex-end'
 }
 
 const StyleContainer = styled.div<IStyleContainer>`
@@ -54,6 +54,6 @@ const StyleContainer = styled.div<IStyleContainer>`
   box-sizing: border-box;
   color: ${props => props.color && props.color};
   background-color: ${props => props['background-color'] && props['background-color']};
-`;
+`
 
-export default StyleContainer;
+export default StyleContainer

@@ -14,4 +14,4 @@ export const ColorTheme = {
 
   paddingFirst: '8px',
   paddingSecond: '16px',
-};
+}

@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
-import { PresentationStyle } from './style';
-import StyleContainer from '../../../../styles/StyleContainer';
+import React, { FC } from 'react'
+import { PresentationStyle } from './style'
+import StyleContainer from '../../../../styles/StyleContainer'
 
-type OwnPropertyType = {};
+type OwnPropertyType = {}
 
 const UI: FC<OwnPropertyType> = props => {
-  return <StyleContainer>s</StyleContainer>;
-};
+  return <StyleContainer>s</StyleContainer>
+}
 
-export default UI;
+export default UI

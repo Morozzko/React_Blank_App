@@ -1,13 +1,13 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ThunkError } from '../../../Core/App/types';
-import { ThunkCreator } from '../../../../utils/redux-utils';
-import { UniversalApi } from '../Api';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { ThunkError } from '../../../Core/App/types'
+import { ThunkCreator } from '../../../../utils/lib/ThunkCreator'
+import { UniversalApi } from '../Api'
 
-const initialState = {};
+const initialState = {}
 
 export const GetUsersTC = createAsyncThunk<any, void, ThunkError>('Entity/Get', async (param, thunkAPI) => {
-  return await ThunkCreator({ apiMethod: UniversalApi.get, param }, thunkAPI);
-});
+  return await ThunkCreator({ apiMethod: UniversalApi.get, param }, thunkAPI)
+})
 
 export const slice = createSlice({
   name: `TApp`,
@@ -20,15 +20,15 @@ export const slice = createSlice({
   extraReducers: builder => {
     builder.addCase(GetUsersTC.fulfilled, (state, action) => {
       // state.users = action.payload;
-    });
+    })
   },
-});
+})
 
 export const asyncActions = {
   GetUsersTC,
-};
+}
 
 export const localActions = {
   ...slice.actions,
   ...asyncActions,
-};
+}

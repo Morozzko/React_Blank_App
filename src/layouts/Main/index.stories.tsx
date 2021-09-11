@@ -1,7 +1,7 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import Component from './index';
+import Component from './index'
 
 export default {
   title: 'Main Page',
@@ -9,8 +9,8 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof Component>;
+} as ComponentMeta<typeof Component>
 
-const Template: ComponentStory<typeof Component> = args => <Component {...args} />;
+const Template: ComponentStory<typeof Component> = args => <Component {...args} />
 
-export const MainPage = Template.bind({});
+export const MainPage = Template.bind({})

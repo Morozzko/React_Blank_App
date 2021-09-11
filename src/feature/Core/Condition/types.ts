@@ -1,14 +1,14 @@
-export type RequestStatusType = 'idle' | 'loading' | 'succeeded' | 'failed';
+export type RequestStatusType = 'idle' | 'loading' | 'succeeded' | 'failed'
 export type NotificationType = {
-  key: string;
-  date: Date | string;
-  message: string;
+  key: string
+  date: Date | string
+  message: string
   options: {
-    onClose?: any;
-    variant: 'warning' | 'success' | 'error' | 'info';
-  };
-};
+    onClose?: any
+    variant: 'warning' | 'success' | 'error' | 'info'
+  }
+}
 export type NotificationPayloadType = {
-  message: string;
-  variant: 'warning' | 'success' | 'error' | 'info';
-};
+  message: string
+  variant: 'warning' | 'success' | 'error' | 'info'
+}

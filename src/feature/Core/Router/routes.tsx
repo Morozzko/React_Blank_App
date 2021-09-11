@@ -1,16 +1,16 @@
-import { RouterComponentType } from '../App/types';
-import NotFound from '../../../components/shared/404';
-import React, { lazy, LazyExoticComponent, Suspense } from 'react';
-import Loading from '../../../components/shared/Loading';
-import { Page } from '../../../pages';
+import { RouterComponentType } from '../App/types'
+import NotFound from '../../../components/ui/404'
+import React, { lazy, LazyExoticComponent, Suspense } from 'react'
+import Loading from '../../../components/ui/Loading'
+import { Page } from '../../../pages'
 
-const OtherComponent = lazy(() => import('../../../components/shared/404'));
+const OtherComponent = lazy(() => import('../../../components/ui/404'))
 
 const withSuspense = (Component: LazyExoticComponent<() => JSX.Element>) => (
   <Suspense fallback={Loading}>
     <Component />
   </Suspense>
-);
+)
 
 export const Routes: RouterComponentType[] = [
   {
@@ -33,4 +33,4 @@ export const Routes: RouterComponentType[] = [
     exact: true,
     component: <NotFound />,
   },
-];
+]

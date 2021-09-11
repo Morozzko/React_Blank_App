@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { NotificationType } from '../Condition/types';
+import { FC } from 'react'
+import { NotificationType } from '../Condition/types'
 
 enum ResultCodeEnum {
   ERROR,
@@ -8,24 +8,24 @@ enum ResultCodeEnum {
 }
 
 export type ResponseType<D> = {
-  data: D;
-  ResultCode: ResultCodeEnum;
+  data: D
+  ResultCode: ResultCodeEnum
 
-  message: string;
-};
+  message: string
+}
 
-export type RequestStatusType = 'idle' | 'loading' | 'succeeded' | 'failed';
+export type RequestStatusType = 'idle' | 'loading' | 'succeeded' | 'failed'
 
-export type PermissionsType = 'viewer' | 'admin' | 'user';
+export type PermissionsType = 'viewer' | 'admin' | 'user'
 
-export type FieldErrorType = { field: string; error: string };
+export type FieldErrorType = { field: string; error: string }
 
 export type ThunkError = {
-  rejectValue: { errors: Array<string>; fieldsErrors?: Array<FieldErrorType> };
-};
+  rejectValue: { errors: Array<string>; fieldsErrors?: Array<FieldErrorType> }
+}
 
 export type RouterComponentType = {
-  path: string;
-  component: FC | JSX.Element;
-  exact?: boolean;
-};
+  path: string
+  component: FC | JSX.Element
+  exact?: boolean
+}

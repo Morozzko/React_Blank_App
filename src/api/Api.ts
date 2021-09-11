@@ -1,17 +1,17 @@
-import axios from 'axios';
+import axios from 'axios'
 
-const baseURL = process.env.REACT_APP_BACKEND_IP;
+const baseURL = process.env.REACT_APP_BACKEND_IP
 
 const headers = {
   Authorization: '',
-};
+}
 
 export const instance = axios.create({
   baseURL,
   headers,
-});
+})
 
 instance.interceptors.request.use(config => {
-  config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
-  return config;
-});
+  config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`
+  return config
+})
