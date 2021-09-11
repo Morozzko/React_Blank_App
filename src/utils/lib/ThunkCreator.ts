@@ -1,22 +1,33 @@
-import { handleAsyncServerAppError, handleAsyncServerNetworkError, handleSetAppStatus, ThunkAPIType } from './AppStatusHandlers'
+import {
+  handleAsyncServerAppError,
+  handleAsyncServerNetworkError,
+  handleSetAppStatus,
+  ThunkAPIType
+} from './AppStatusHandlers';
+import { Action, AnyAction } from 'redux';
 
-export const ThunkCreator = async (
-  creator: { param?: any; apiMethod: (param: any) => any; status?: number; errorCallback?: () => void },
-  thunkAPI: ThunkAPIType
-) => {
-  creator.status = creator.status ? creator.status : 200
-  handleSetAppStatus('loading', thunkAPI)
+type ThunkCreatorType = {
+  param?: any
+  apiMethod: (param: any) => any
+  status?: number
+  errorCallback?: () => void
+  customLoadingAction?: Function
+}
+
+export const ThunkCreator = async (creator: ThunkCreatorType, thunkAPI: ThunkAPIType) => {
+  creator.status = creator.status ? creator.status : 200;
+  creator.customLoadingAction ? thunkAPI.dispatch(creator.customLoadingAction({ status: 'loading' })) : handleSetAppStatus('loading', thunkAPI);
   try {
-    const res = await creator.apiMethod(creator.param)
+    const res = await creator.apiMethod(creator.param);
     if (res.status === creator.status) {
-      handleSetAppStatus('succeeded', thunkAPI)
-      return res.data
+      creator.customLoadingAction ? thunkAPI.dispatch(creator.customLoadingAction({ status: 'succeeded' })) : handleSetAppStatus('succeeded', thunkAPI);
+      return res.data;
     } else {
-      creator.errorCallback && creator.errorCallback()
-      return handleAsyncServerAppError(res.data, thunkAPI)
+      creator.errorCallback && creator.errorCallback();
+      return handleAsyncServerAppError(res.data, thunkAPI);
     }
   } catch (error) {
-    creator.errorCallback && creator.errorCallback()
-    return handleAsyncServerNetworkError(error, thunkAPI)
+    creator.errorCallback && creator.errorCallback();
+    return handleAsyncServerNetworkError(error, thunkAPI);
   }
-}
+};

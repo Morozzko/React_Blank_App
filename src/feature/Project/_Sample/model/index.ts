@@ -4,7 +4,7 @@ import { ThunkCreator } from '../../../../utils/lib/ThunkCreator'
 import { UniversalApi } from '../Api'
 
 const initialState = {
-  sample:""
+  sample: '',
 }
 
 export const GetUsersTC = createAsyncThunk<any, void, ThunkError>('Entity/Get', async (param, thunkAPI) => {
