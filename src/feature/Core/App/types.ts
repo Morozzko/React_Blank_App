@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { NotificationType } from '../Condition/types'
 
 enum ResultCodeEnum {
   ERROR,
