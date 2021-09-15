@@ -7,7 +7,7 @@ export const useContainer = () => {
   useEffect(() => {}, [])
 
   const {} = useActions(localActions)
-  const a = useAppSelector(state => state._Sample.sample)
+  const {} = useAppSelector(state => state._Sample)
 
   return {}
 }

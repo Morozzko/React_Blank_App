@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
-import UI from '../ui'
-import { useContainer } from './useContainer'
+import React, { FC } from 'react';
+import UI from '../ui';
+import { useContainer } from './useContainer';
 
 const Container: FC = () => {
-  const {} = useContainer()
+  const {} = useContainer();
 
-  return <UI />
-}
+  return <UI />;
+};
 
-export default Container
+export default React.memo(Container);
