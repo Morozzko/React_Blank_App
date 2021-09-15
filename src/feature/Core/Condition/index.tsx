@@ -1,5 +1,5 @@
 import { asyncActions, slice } from './model'
-import Container from './container'
+import useContainer from './container/useContainer'
 
 const Actions = {
   ...slice.actions,
@@ -10,6 +10,6 @@ const Reducer = slice.reducer
 
 export const Condition = {
   Actions,
-  Container,
+  useContainer,
   Reducer,
 }

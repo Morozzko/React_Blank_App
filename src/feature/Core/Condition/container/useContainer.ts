@@ -6,7 +6,7 @@ import { Condition } from '../index'
 
 let displayed: SnackbarKey[] = []
 
-const Container = () => {
+const useContainer = () => {
   const { removeNotification } = useActions(Condition.Actions)
   const notifications = useAppSelector(state => state.Condition.notifications || [])
   const { enqueueSnackbar, closeSnackbar } = useSnackbar()
@@ -38,7 +38,6 @@ const Container = () => {
     })
   }, [notifications, closeSnackbar, enqueueSnackbar, removeNotification])
 
-  return null
 }
 
-export default Container
+export default useContainer
