@@ -1,6 +1,6 @@
 import { instance } from '../../../api/Api'
 
-export const UniversalApi = {
+export const RestAPI = {
   async get() {
     return await instance.get<{}>('todos/')
   },

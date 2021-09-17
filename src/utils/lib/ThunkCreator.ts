@@ -7,7 +7,7 @@ import {
 import { Action, AnyAction } from 'redux';
 
 type ThunkCreatorType = {
-  param?: any
+  payload?: any
   apiMethod: (param: any) => any
   status?: number
   errorCallback?: () => void
@@ -18,7 +18,7 @@ export const ThunkCreator = async (creator: ThunkCreatorType, thunkAPI: ThunkAPI
   creator.status = creator.status ? creator.status : 200;
   creator.customLoadingAction ? thunkAPI.dispatch(creator.customLoadingAction({ status: 'loading' })) : handleSetAppStatus('loading', thunkAPI);
   try {
-    const res = await creator.apiMethod(creator.param);
+    const res = await creator.apiMethod(creator.payload);
     if (res.status === creator.status) {
       creator.customLoadingAction ? thunkAPI.dispatch(creator.customLoadingAction({ status: 'succeeded' })) : handleSetAppStatus('succeeded', thunkAPI);
       return res.data;

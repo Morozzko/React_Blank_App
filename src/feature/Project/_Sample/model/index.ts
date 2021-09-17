@@ -1,14 +1,14 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { ThunkError } from '../../../Core/App/types'
 import { ThunkCreator } from '../../../../utils/lib/ThunkCreator'
-import { UniversalApi } from '../Api'
+import { RestAPI } from '../Api'
 
 const initialState = {
   sample: '',
 }
 
-export const GetUsersTC = createAsyncThunk<any, void, ThunkError>('Entity/Get', async (param, thunkAPI) => {
-  return await ThunkCreator({ apiMethod: UniversalApi.get, param }, thunkAPI)
+export const GetUsersTC = createAsyncThunk<any, void, ThunkError>('Entity/Get', async (payload, thunkAPI) => {
+  return await ThunkCreator({ apiMethod: RestAPI.get, payload }, thunkAPI)
 })
 
 export const slice = createSlice({
