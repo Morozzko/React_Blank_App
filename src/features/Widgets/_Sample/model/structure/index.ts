@@ -1,5 +1,7 @@
 const initialState = {
-  sample: '',
-}
+  loading: false,
+  sample: ''
 
-export default initialState
+};
+
+export default initialState;
