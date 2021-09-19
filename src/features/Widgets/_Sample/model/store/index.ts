@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import initialState from '../structure';
-import GetUsersTC from '../thunks/sample';
 import asyncActions from '../thunks/io';
 
 
@@ -13,7 +12,7 @@ export const slice = createSlice({
     }
   },
   extraReducers: builder => {
-    builder.addCase(GetUsersTC.fulfilled, (state, action) => {
+    builder.addCase(asyncActions.GetUsersTC.fulfilled, (state, action) => {
       // state.users = action.payload;
     });
   }
