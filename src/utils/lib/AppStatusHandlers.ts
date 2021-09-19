@@ -1,7 +1,7 @@
 import { AxiosError } from 'axios'
 import { Dispatch } from 'redux'
-import { RequestStatusType, ResponseType } from '../../feature/Core/App/types'
-import { Condition } from '../../feature/Core/Condition'
+import { RequestStatusType, ResponseType } from '../../app/entry/lib/types'
+import { Condition } from '../../features/Services/Condition'
 
 export type ThunkAPIType = {
   dispatch: Dispatch

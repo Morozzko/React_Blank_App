@@ -1,4 +1,4 @@
-import TodoPage from './Todo'
+import TodoPage from './Simple'
 
 export const Page = {
   TodoPage,
