@@ -9,9 +9,6 @@ export const slice = createSlice({
       state.sample = action.payload.sample
     },
   },
-  extraReducers: builder => {
-    builder
-  },
 })
 
 export const Actions = {

@@ -1,13 +1,14 @@
-import { useEffect } from 'react'
-import { useAppSelector } from '../../../../utils/hooks/useAppSelector/useAppSelector'
-import { useActions } from '../../../../utils/hooks/useActions/useActions'
-import { Actions } from '../store'
+import { useEffect } from 'react';
+
+import { Actions } from '../store';
+import { useActions } from '../../../../utils/hooks/useActions';
+import { useAppSelector } from '../../../../utils/hooks/useAppSelector';
 
 export const useContainer = () => {
   useEffect(() => {}, [])
 
   const {} = useActions(Actions)
-  const {} = useAppSelector(state => state.Sample)
+  const {} = useAppSelector(state => state._Sample)
 
   return null
 }
