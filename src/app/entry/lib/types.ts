@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC } from 'react'
 
 enum ResultCodeEnum {
   ERROR,
@@ -15,15 +15,14 @@ export type ResponseType<D> = {
 
 export type RequestStatusType = 'idle' | 'loading' | 'succeeded' | 'failed'
 
-
 export type FieldErrorType = {
-  field: string,
+  field: string
   error: string
 }
 
 export type ThunkError = {
   rejectValue: {
-    errors: string[],
+    errors: string[]
     fieldsErrors?: FieldErrorType[]
   }
 }

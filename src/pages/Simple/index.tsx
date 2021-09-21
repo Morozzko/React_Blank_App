@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Sample } from '../../features/Widgets/_Sample'
+import { Sample } from '../../features/widgets/_Sample'
 import { Layout } from '../../layouts'
 import StyleContainer from '../../styles/StyleContainer'
 

@@ -1,14 +1,13 @@
-import React from 'react';
+import React from 'react'
 
 type OwnPropertyType = {
   containers: Array<() => void>
 }
 
 const CRI = ({ containers }: OwnPropertyType) => {
+  containers.forEach(container => container())
 
-  containers.forEach(container => container());
+  return null
+}
 
-  return null;
-};
-
-export default React.memo(CRI);
+export default React.memo(CRI)
