@@ -1,0 +1,94 @@
+{
+  "notifer": {
+    "wait": "Подпись сформирована, начинается подпись документов"
+  },
+  "modal": {
+    "titles": {
+      "singleSign": "Document for signature",
+      "multipleSign": "Documents for signature",
+      "sign": "Signing documents",
+      "generalInfo": "General information",
+      "chooseSiganture": "Choose a signature method",
+      "signingError": "Signing error",
+      "unavailableService": "Service is not available",
+      "result": "Sign result",
+      "moreErrors": "Signing errors"
+    },
+    "generalInfo": {
+      "emptyState": "There is no any document for signing"
+    },
+    "footer": {
+      "buttons": {
+        "sign": "Sign",
+        "signAndSend": "Sign and send",
+        "close": "Close",
+        "cancel": "Cancel",
+        "downloadInstuction": "Download instruction"
+      },
+      "signInProgress": "Signing in progress. Please, don't close the page"
+    },
+    "statuses": {
+      "accepted": "The document was signed and sent to the bank",
+      "rejected": "Something went wrong. Please, try again later",
+      "waiting": "Signing in progress. Check the document status later",
+      "deleted": "deleted",
+      "errorTitle": "Failed to sign"
+    }
+  },
+  "entity": {
+    "type": "Type",
+    "docNumber": "Document number",
+    "date": "Document date",
+    "payerAccount": "Payer account",
+    "receiverAccount": "Receiver account",
+    "sum": "Sum"
+  },
+  "signature": {
+    "validUntil": "Valid until: {{date}}",
+    "types": {
+      "first": "First signature",
+      "second": "Second signature",
+      "single": "Single signature",
+      "visa": "Visa signature",
+      "controller": "Controller signature",
+      "bank": "Technical signature",
+      "currencyControl": "Currency controll signature"
+    }
+  },
+  "fromDate": "from {{date}}",
+  "docNumber": "#{{docNumber}}",
+  "unavailable": {
+    "signElectronicKey": "To sign with an electronic key,",
+    "installCryptoPlugin": "install crypto plugin",
+    "andRestartBrowser": "and restart the browser",
+    "downloadInstruction": "Download instruction"
+  },
+  "errors": {
+    "insufficientAuthority": "There are no signature tools to sign this document",
+    "insufficientAuthority__plural": "There are no signature tools to sign these documents",
+    "cryptoProAbsence": "To sign with an electronic key, <0>install crypto plugin</0> and restart the browser",
+    "unavailableService": "Try again later or contact technical support",
+    "cryptoPro": {
+      "sign.private_key_not_found": "Signature error. Private key not found. The signature was not generated.\n{{code}}",
+      "window.cadesplugin": "CryptoPro plugin is unavailable"
+    }
+  },
+  "signature_type": {
+    "GUARANTEE": "Application for issuing a bank guarantee",
+    "R_PAYMENT": "Ruble payment"
+  },
+  "result": {
+    "success": "Signed and sent",
+    "failure": "Not signed"
+  },
+  "count": "Count",
+  "sum": "Total",
+  "currency": "Currency",
+  "docType": "Document type",
+  "number": "Number",
+  "date": "Date",
+  "lookingForMoreError": "View errors",
+  "back": "Back",
+  "exportXLS": "export to Excel"
+
+}

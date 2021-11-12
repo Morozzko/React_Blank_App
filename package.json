@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "dot-prop": "^6.0.1",
+    "i18next": "^21.4.2",
     "lodash": "^4.17.21",
     "notistack": "^1.0.8",
     "react": "^17.0.2",
