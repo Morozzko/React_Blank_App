@@ -1,14 +1,14 @@
-import { useEffect } from 'react';
-import { SnackbarKey, useSnackbar } from 'notistack';
-import { useAppSelector } from '../../../../utils/hooks/useAppSelector';
-import { useActions } from '../../../../utils/hooks/useActions';
-import { Actions } from '../store';
+import { useEffect } from 'react'
+import { SnackbarKey, useSnackbar } from 'notistack'
+import { useAppSelector } from '../../../../utils/hooks/useAppSelector'
+import { useActions } from '../../../../utils/hooks/useActions'
+import { Actions } from '../store'
 
 let displayed: SnackbarKey[] = []
 
 const useContainer = () => {
   const { removeNotification } = useActions(Actions)
-  const {notifications} = useAppSelector(state => state.condition)
+  const { notifications } = useAppSelector(state => state.condition)
   const { enqueueSnackbar, closeSnackbar } = useSnackbar()
 
   const storeDisplayed = (id: SnackbarKey) => {
