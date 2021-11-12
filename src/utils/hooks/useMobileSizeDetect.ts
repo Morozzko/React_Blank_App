@@ -1,29 +1,31 @@
-import { useEffect, useState } from 'react'
-import { useDebounce } from './useDebounce'
+import { useEffect, useState } from 'react';
+import { useDebounce } from './useDebounce';
+import { MobileSizeTable } from '../../styles/breakpoints';
 
-export const useMobileSizeDetect = (pixel: number = 740) => {
-  const isClient = typeof window !== 'undefined'
+
+export const useMobileSizeDetect = (pixel: MobileSizeTable = MobileSizeTable.tablet) => {
+  const isClient = typeof window !== 'undefined';
 
   if (!isClient) {
-    return
+    return;
   }
 
-  const getSize = () => isClient && window.innerWidth
+  const getSize = () => isClient && window.innerWidth;
 
   const widthResize = useDebounce((px: number) => {
-    setWindowSize(px)
-  }, 100)
+    setWindowSize(px);
+  }, 100);
 
-  const [windowSize, setWindowSize] = useState<number>(getSize)
+  const [windowSize, setWindowSize] = useState<number>(getSize);
 
   useEffect(() => {
     const handleResize = () => {
-      widthResize(getSize())
-    }
+      widthResize(getSize());
+    };
 
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-  return windowSize < pixel + 1
-}
+  return windowSize < pixel + 1;
+};
