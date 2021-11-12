@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/react-i18next": "^8.1.0",
     "axios": "^0.21.1",
     "dot-prop": "^6.0.1",
     "i18next": "^21.4.2",

@@ -7,16 +7,16 @@ export const useMobileSizeDetect = (pixel: MobileSizeTable = MobileSizeTable.tab
   const isClient = typeof window !== 'undefined';
 
   if (!isClient) {
-    return;
+    return false;
   }
 
   const getSize = () => isClient && window.innerWidth;
+  const [windowSize, setWindowSize] = useState<number>(getSize);
 
   const widthResize = useDebounce((px: number) => {
     setWindowSize(px);
   }, 100);
 
-  const [windowSize, setWindowSize] = useState<number>(getSize);
 
   useEffect(() => {
     const handleResize = () => {

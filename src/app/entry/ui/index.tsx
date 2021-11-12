@@ -3,6 +3,8 @@ import AppStyle from './style'
 import AppRouter from '../../router'
 import { condition } from '../../../features/services/condition'
 import CRI from '../../../components/shared/lib/ContainerReconciliationIsolator'
+import "../../../styles/unselectable.css"
+import "../../../features/services/localization"
 
 const App: FC = props => {
   return (
