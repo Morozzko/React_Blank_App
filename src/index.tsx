@@ -2,4 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { App } from './app/entry'
 
-ReactDOM.render(<App.Container />, document.getElementById('root'))
+const container = document.getElementById('root');
+
+
+ReactDOM.render(<App.Container />, container)
