@@ -1,5 +1,5 @@
-type AlfaOpacityType = 120 | 100 | 90 | 80 | 70 | 60 | 50 | 40 | 30 | 20 | 10 | 0
-const AlfaOpacityArray = [120 | 100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 0];
+type AlfaOpacityType =  100 | 90 | 80 | 70 | 60 | 50 | 40 | 30 | 20 | 10
+const AlfaOpacityArray = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10];
 
 const colorPicker = (payload: {
   opacity: AlfaOpacityType
@@ -67,36 +67,58 @@ class ColorsScheme {
   }
   // Желтый
 
-  // Желтый
+  // Красный
   RaiffeisenRed(opacity: AlfaOpacityType = 100) {
     const preview = '#EE505A';
     return ColorConstructor(238, 80, 90, opacity);
   }
-  // Желтый
+  // Красный
 
-  // Желтый
+  // Синий
   RaiffeisenBlue(opacity: AlfaOpacityType = 100) {
     const preview = '#00A5BC';
     return ColorConstructor(0, 165, 188, opacity);
   }
-  // Желтый
+  // Синий
 
-  // Желтый
+  // Бирюзовый
   RaiffeisenTurquoise(opacity: AlfaOpacityType = 100) {
     const preview = '#19B28D';
     return ColorConstructor(25, 178, 141, opacity);
   }
-  // Желтый
+  // Бирюзовый
 
-  // Желтый
+  // Оранжевый
   RaiffeisenOrange(opacity: AlfaOpacityType = 100) {
     const preview = '#F88545';
     return ColorConstructor(248, 133, 69, opacity);
   }
-  // Желтый
+  // Оранжевый
 
+  // Белый
+  RaiffeisenWhite(opacity: AlfaOpacityType = 100) {
+    const preview = '#F4F4F4';
+    return ColorConstructor(244, 244, 244, opacity);
+  }
+  // Белый
 
+  // Черный
+  RaiffeisenBlack(opacity: AlfaOpacityType = 100) {
+    const preview = '#2B2D33';
+    return ColorConstructor(43, 45, 51, opacity);
+  }
+  // Черный
   //// Raiffeisen Colors
+
+  //// AlfaBank Colors
+  // Черный
+  AlfaBankBlack(opacity: AlfaOpacityType = 100) {
+    const preview = '#2f2f2f';
+    return ColorConstructor(47, 47, 47, opacity);
+  }
+  // Черный
+  //// AlfaBank Colors
+
 
 }
 

@@ -15,5 +15,4 @@ export const useContainer = () => {
     }
   }, [isMobileWidth])
 
-  return null
 }

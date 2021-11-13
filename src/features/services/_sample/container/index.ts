@@ -9,5 +9,4 @@ export const useContainer = () => {
   const {} = useActions(Actions)
   const {} = useAppSelector(state => state._Sample)
 
-  return null
 }
