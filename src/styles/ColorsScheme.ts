@@ -30,7 +30,6 @@ class ColorsScheme {
     const preview = '#0070b9';
     return ColorConstructor(0, 112, 185, opacity);
   }
-
   // Синий
 
   // Голубой
@@ -38,7 +37,6 @@ class ColorsScheme {
     const preview = '#009afe';
     return ColorConstructor(0, 154, 254, opacity);
   }
-
   // Голубой
 
   // Оранжевый
@@ -46,15 +44,13 @@ class ColorsScheme {
     const preview = '#e65706';
     return ColorConstructor(230, 87, 6, opacity);
   }
-
   // Оранжевый
 
   // Бирюзовый
   GoogleTurquoise(opacity: AlfaOpacityType = 100) {
     const preview = '#4dd6ca';
-    return ColorConstructor(230, 87, 6, opacity);
+    return ColorConstructor(77, 214, 202, opacity);
   }
-
   // Бирюзовый
   //// Google Colors
 
