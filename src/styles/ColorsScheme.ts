@@ -8,7 +8,7 @@ const colorPicker = (payload: {
   blue: number
 }) => `rgba(${payload.red},${payload.green},${payload.blue},${payload.opacity / 100})`;
 
-function ColorConstructor(red: number, green: number, blue: number, opacity: AlfaOpacityType = 100) {
+function ColorConstructor(red: number, green: number, blue: number, opacity: AlfaOpacityType = 100):string {
   let color;
   AlfaOpacityArray.forEach(ele => {
     if (opacity === ele) {
@@ -20,6 +20,7 @@ function ColorConstructor(red: number, green: number, blue: number, opacity: Alf
       });
     }
   });
+  // @ts-ignore
   return color;
 }
 

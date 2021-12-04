@@ -1,14 +1,16 @@
 import React, { FC } from 'react'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core'
+import { ThemeProvider } from '@mui/material'
+import ColorsScheme from '../../../styles/ColorsScheme'
+import { createTheme } from '@mui/material/styles'
 
 const MaterialUIProvider: FC = props => {
-  const theme = createMuiTheme({
+  const theme = createTheme({
     palette: {
       primary: {
-        main: '#ff0000',
+        main: ColorsScheme.RaiffeisenWhite(),
       },
       secondary: {
-        main: '#2f2f2f',
+        main: ColorsScheme.RaiffeisenBlack(),
       },
     },
   })
