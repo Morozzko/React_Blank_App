@@ -15,22 +15,14 @@ const withSuspense = (Component: LazyExoticComponent<() => JSX.Element>) => (
 export const Routes: RouterComponentType[] = [
   {
     path: '/',
-    exact: true,
     component: <p>sd</p>,
   },
   {
     path: '/3',
-    exact: true,
     component: <Page.TodoPage />,
   },
   {
-    path: '/',
-    exact: true,
-    component: <p>ssss</p>,
-  },
-  {
     path: '/NotFound',
-    exact: true,
     component: <NotFound />,
   },
 ]

@@ -30,5 +30,4 @@ export type ThunkError = {
 export type RouterComponentType = {
   path: string
   component: FC | JSX.Element
-  exact?: boolean
 }
