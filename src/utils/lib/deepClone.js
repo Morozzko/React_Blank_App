@@ -1,11 +1,11 @@
 export function deepClone(obj) {
-  const clObj = {};
-  for(const i in obj) {
+  const clObj = {}
+  for (const i in obj) {
     if (obj[i] instanceof Object) {
-      clObj[i] = deepClone(obj[i]);
-      continue;
+      clObj[i] = deepClone(obj[i])
+      continue
     }
-    clObj[i] = obj[i];
+    clObj[i] = obj[i]
   }
-  return clObj;
+  return clObj
 }

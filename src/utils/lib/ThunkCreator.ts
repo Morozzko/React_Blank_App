@@ -1,5 +1,4 @@
 import { handleAsyncServerAppError, handleAsyncServerNetworkError, handleSetAppStatus, ThunkAPIType } from './AppStatusHandlers'
-import { Action, AnyAction } from 'redux'
 
 type ThunkCreatorType = {
   payload?: any

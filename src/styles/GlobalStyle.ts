@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import { Theme } from './Theme';
+import { createGlobalStyle } from 'styled-components'
+import { Theme } from './Theme'
 
 export default createGlobalStyle`
   @font-face {
@@ -139,4 +139,4 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
-`;
+`

@@ -1,4 +1,4 @@
-import { merge } from './MergeObjects'
+import { mergeObjects as merge } from './mergeObjects'
 
 export function getValue(obj: object | [], path: string, map?: boolean, sort?: any) {
   const arrayRegex = /(\[(\d?)*])/i

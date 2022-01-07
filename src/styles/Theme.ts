@@ -1,7 +1,5 @@
-import { px2vw } from './mixins';
-import  ColorsScheme  from './ColorsScheme';
-
-
+import { px2vw } from './mixins'
+import ColorsScheme from './ColorsScheme'
 
 export const Theme = {
   // Initialization
@@ -25,9 +23,8 @@ export const Theme = {
   // H3
 
   // Link color
-  LinkColor: ColorsScheme.GoogleOrange()
+  LinkColor: ColorsScheme.GoogleOrange(),
   // Link color
 
   // Initialization
-
-};
+}
