@@ -20,7 +20,7 @@ export const ThunkCreator = async (creator: ThunkCreatorType, thunkAPI: ThunkAPI
       creator.errorCallback && creator.errorCallback()
       return handleAsyncServerAppError(res.data, thunkAPI)
     }
-  } catch (error) {
+  } catch (error:any) {
     creator.errorCallback && creator.errorCallback()
     return handleAsyncServerNetworkError(error, thunkAPI)
   }
