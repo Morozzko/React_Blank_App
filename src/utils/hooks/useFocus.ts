@@ -1,9 +1,6 @@
 import { MutableRefObject, useRef } from 'react'
 
-type useFocusType = [
-  htmlElRef: MutableRefObject<any>,
-  setFocus: () => void
-]
+type useFocusType = [htmlElRef: MutableRefObject<any>, setFocus: () => void]
 
 export const useFocus = (): useFocusType => {
   const htmlElRef = useRef<any>(null)
