@@ -30,21 +30,21 @@ class ColorsScheme {
   // Синий
 
   // Голубой
-  GoogleCyan(opacity: AlfaOpacityType = 100) {
+  public GoogleCyan(opacity: AlfaOpacityType = 100) {
     const preview = '#009afe'
     return ColorConstructor(0, 154, 254, opacity)
   }
   // Голубой
 
   // Оранжевый
-  GoogleOrange(opacity: AlfaOpacityType = 100) {
+  public GoogleOrange(opacity: AlfaOpacityType = 100) {
     const preview = '#e65706'
     return ColorConstructor(230, 87, 6, opacity)
   }
   // Оранжевый
 
   // Бирюзовый
-  GoogleTurquoise(opacity: AlfaOpacityType = 100) {
+  public GoogleTurquoise(opacity: AlfaOpacityType = 100) {
     const preview = '#4dd6ca'
     return ColorConstructor(77, 214, 202, opacity)
   }
@@ -53,49 +53,49 @@ class ColorsScheme {
 
   //// Raiffeisen Colors
   // Желтый
-  RaiffeisenYellow(opacity: AlfaOpacityType = 100) {
+  public RaiffeisenYellow(opacity: AlfaOpacityType = 100) {
     const preview = '#FEE600'
     return ColorConstructor(254, 230, 0, opacity)
   }
   // Желтый
 
   // Красный
-  RaiffeisenRed(opacity: AlfaOpacityType = 100) {
+  public RaiffeisenRed(opacity: AlfaOpacityType = 100) {
     const preview = '#EE505A'
     return ColorConstructor(238, 80, 90, opacity)
   }
   // Красный
 
   // Синий
-  RaiffeisenBlue(opacity: AlfaOpacityType = 100) {
+  public RaiffeisenBlue(opacity: AlfaOpacityType = 100) {
     const preview = '#00A5BC'
     return ColorConstructor(0, 165, 188, opacity)
   }
   // Синий
 
   // Бирюзовый
-  RaiffeisenTurquoise(opacity: AlfaOpacityType = 100) {
+  public RaiffeisenTurquoise(opacity: AlfaOpacityType = 100) {
     const preview = '#19B28D'
     return ColorConstructor(25, 178, 141, opacity)
   }
   // Бирюзовый
 
   // Оранжевый
-  RaiffeisenOrange(opacity: AlfaOpacityType = 100) {
+  public RaiffeisenOrange(opacity: AlfaOpacityType = 100) {
     const preview = '#F88545'
     return ColorConstructor(248, 133, 69, opacity)
   }
   // Оранжевый
 
   // Белый
-  RaiffeisenWhite(opacity: AlfaOpacityType = 100) {
+  public RaiffeisenWhite(opacity: AlfaOpacityType = 100) {
     const preview = '#F4F4F4'
     return ColorConstructor(244, 244, 244, opacity)
   }
   // Белый
 
   // Черный
-  RaiffeisenBlack(opacity: AlfaOpacityType = 100) {
+  public RaiffeisenBlack(opacity: AlfaOpacityType = 100) {
     const preview = '#2B2D33'
     return ColorConstructor(43, 45, 51, opacity)
   }
@@ -104,7 +104,7 @@ class ColorsScheme {
 
   //// AlfaBank Colors
   // Черный
-  AlfaBankBlack(opacity: AlfaOpacityType = 100) {
+  public AlfaBankBlack(opacity: AlfaOpacityType = 100) {
     const preview = '#2f2f2f'
     return ColorConstructor(47, 47, 47, opacity)
   }

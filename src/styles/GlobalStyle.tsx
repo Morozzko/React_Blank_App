@@ -1,7 +1,9 @@
-import { createGlobalStyle } from 'styled-components'
+import { css, Global } from '@emotion/react'
 import { Theme } from './Theme'
 
-export default createGlobalStyle`
+export const GlobalStyle = () => <Global styles={style} />
+
+const style = css`
   @font-face {
     font-family: 'Roboto Condensed';
     font-style: normal;

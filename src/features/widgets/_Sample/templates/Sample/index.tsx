@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
-import { Style } from './style'
+import StyleContainer from '../../../../../styles/StyleContainer'
 
 const Sample: FC = props => {
-  return <Style>asd</Style>
+  return <StyleContainer>asd</StyleContainer>
 }
 
-export default Sample
+export default React.memo(Sample)
