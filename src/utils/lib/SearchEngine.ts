@@ -1,6 +1,6 @@
-import { mergeObjects as merge } from './mergeObjects'
+import { MergeObjects as merge } from './MergeObjects'
 
-export function getValue(obj: object | [], path: string, map?: boolean, sort?: any) {
+export function GetValue(obj: object | [], path: string, map?: boolean, sort?: any) {
   const arrayRegex = /(\[(\d?)*])/i
 
   const pathArray = path.split('.')
@@ -24,30 +24,30 @@ export function getValue(obj: object | [], path: string, map?: boolean, sort?: a
   function filterData(array, rule: any) {
     //@ts-ignore
     function sortDESC(a, b) {
-      return getValue(b, rule.path) - getValue(a, rule.path)
+      return GetValue(b, rule.path) - GetValue(a, rule.path)
     }
     //@ts-ignore
 
     function sortASC(a, b) {
-      return getValue(a, rule.path) - getValue(b, rule.path)
+      return GetValue(a, rule.path) - GetValue(b, rule.path)
     }
 
     if (rule.action === '=') {
       //@ts-ignore
 
-      return array.filter(ele => getValue(ele, rule.path) == rule.value)
+      return array.filter(ele => GetValue(ele, rule.path) == rule.value)
     } else if (rule.action === '!') {
       //@ts-ignore
 
-      return array.filter(ele => getValue(ele, rule.path) != rule.value)
+      return array.filter(ele => GetValue(ele, rule.path) != rule.value)
     } else if (rule.action === '>') {
       //@ts-ignore
 
-      return array.filter(ele => getValue(ele, rule.path) > rule.value)
+      return array.filter(ele => GetValue(ele, rule.path) > rule.value)
     } else if (rule.action === '<') {
       //@ts-ignore
 
-      return array.filter(ele => getValue(ele, rule.path) < rule.value)
+      return array.filter(ele => GetValue(ele, rule.path) < rule.value)
     } else if (rule.action.toUpperCase() === 'HIGHEST') {
       return array.sort(sortDESC)[0]
     } else if (rule.action.toUpperCase() === 'LOWEST') {

@@ -16,3 +16,10 @@ const Container: FC = props => {
 }
 
 export default Container
+
+export const ImportedContainer: FC = props => (
+  <Providers>
+    <App {...props} />
+    <GlobalStyle />
+  </Providers>
+)

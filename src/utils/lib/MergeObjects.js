@@ -1,4 +1,4 @@
-export function mergeObjects() {
+export function MergeObjects() {
   let dst = {},
     src,
     p,
