@@ -1,8 +1,7 @@
 import { handleAsyncServerAppError, handleAsyncServerNetworkError, handleSetAppStatus, ThunkAPIType } from './AppStatusHandlers'
 
 type ThunkCreatorType = {
-  payload?: any
-  apiMethod: (param: any) => any
+  apiMethod: () => any
   status?: number
   errorCallback?: () => void
   customLoadingAction?: Function
@@ -12,7 +11,7 @@ export const ThunkCreator = async (creator: ThunkCreatorType, thunkAPI: ThunkAPI
   creator.status = creator.status ? creator.status : 200
   creator.customLoadingAction ? thunkAPI.dispatch(creator.customLoadingAction({ status: 'loading' })) : handleSetAppStatus('loading', thunkAPI)
   try {
-    const res = await creator.apiMethod(creator.payload)
+    const res = await creator.apiMethod()
     if (res.status === creator.status) {
       creator.customLoadingAction ? thunkAPI.dispatch(creator.customLoadingAction({ status: 'succeeded' })) : handleSetAppStatus('succeeded', thunkAPI)
       return res.data

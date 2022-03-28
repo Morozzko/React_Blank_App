@@ -1,7 +1,7 @@
 import instance from '../../../../app/api'
 
 const RestAPI = {
-  async get() {
+  async get(payload: any) {
     return await instance.get<{}>('todos/')
   },
 }
