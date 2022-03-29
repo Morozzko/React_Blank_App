@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   imported: {
-    RenameImportedModuleHere: 'red@http://localhost:3002/remoteEntry.js',
+    RenameImportedModuleHere: `red@${process.env.REACT_APP_IP_MF}`,
   },
   exported: {
     './RenameExportedModuleHere': path.resolve(__dirname, 'src/modules/export/Exported'),
