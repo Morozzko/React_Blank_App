@@ -18,6 +18,7 @@ interface IStyleContainer {
   'no-padding'?: boolean
   'position-relative'?: boolean
   absolute?: boolean
+  border?: string
   color?: string
   column?: boolean
   height?: string
@@ -31,7 +32,6 @@ interface IStyleContainer {
 }
 
 const StyleContainer = styled.div<IStyleContainer>`
-  display: flex;
   align-items: ${props => (props['align-items'] ? props['align-items'] : props.middle ? 'center' : '')};
   background-color: ${props => props['background-color'] && props['background-color']};
   border-bottom-left-radius: ${props => props['circle-bottom'] && '5%'};
@@ -39,10 +39,12 @@ const StyleContainer = styled.div<IStyleContainer>`
   border-radius: ${props => props['border-radius'] && props['border-radius']};
   border-top-left-radius: ${props => props['circle-top'] && '5%'};
   border-top-right-radius: ${props => props['circle-top'] && '5%'};
+  border: ${props => props.border && props.border};
   box-shadow: ${props => props['box-shadow'] && props['box-shadow']};
   box-sizing: border-box;
   color: ${props => props.color && props.color};
   cursor: ${props => props.pointer && 'pointer'};
+  display: flex;
   flex-direction: ${props => (props.column ? 'column' : 'row')};
   font-size: ${props => props['font-size'] && props['font-size']};
   font-weight: ${props => props['font-weight'] && props['font-weight']};
