@@ -8,7 +8,8 @@ interface IList<T> {
 /**
  *
  *  <ArrayRender items={items} renderItem={(item)=><itemTemplate key/>}/>
- */
+ *
+ **/
 export default function ArrayRender<T>(props: IList<T>) {
   return <>{props.items.map(props.renderItem)}</>
 }

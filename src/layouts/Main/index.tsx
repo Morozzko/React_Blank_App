@@ -1,8 +1,7 @@
-import React, { FC } from 'react'
-import StyleContainer from '../../styles/StyleContainer'
+import { Styled } from "../../styles/DynamicStyledComponent"
 
-const Main: FC = props => {
-  return <StyleContainer>{props.children}</StyleContainer>
+const Main: FC = ({ children }) => {
+  return <Styled.Box>{children}</Styled.Box>
 }
 
 export default Main

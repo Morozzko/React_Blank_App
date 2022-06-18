@@ -1,10 +1,9 @@
-import React, { FC } from 'react'
 import { SimpleStyle } from './style'
 
 type OwnPropertyType = {}
 
 const Simple: FC<OwnPropertyType> = () => {
-  return <SimpleStyle></SimpleStyle>
+  return <SimpleStyle>simple</SimpleStyle>
 }
 
 export default Simple

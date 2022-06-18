@@ -1,13 +1,12 @@
-import React, { FC } from 'react'
-import MaterialUIProvider from './MaterialUIProvider'
-import ReduxStoreProvider from './ReduxStoreProvider'
-import SnackBarProvider from './SnackBarProvider'
+import { ReduxStoreProvider } from './ReduxStoreProvider'
+import { SnackBarProvider } from './SnackBarProvider'
+import { MaterialUIProvider } from './MaterialUIProvider'
 
-const Providers: FC = props => {
+const Providers: FC = ({children}) => {
   return (
     <ReduxStoreProvider>
       <SnackBarProvider>
-        <MaterialUIProvider>{props.children}</MaterialUIProvider>
+        <MaterialUIProvider>{children}</MaterialUIProvider>
       </SnackBarProvider>
     </ReduxStoreProvider>
   )

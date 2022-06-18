@@ -6,7 +6,7 @@ const headers = {
   Authorization: '',
 }
 
-const instance = axios.create({
+export const instance = axios.create({
   baseURL,
   headers,
 })
@@ -16,5 +16,3 @@ instance.interceptors.request.use(config => {
   config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`
   return config
 })
-
-export default instance

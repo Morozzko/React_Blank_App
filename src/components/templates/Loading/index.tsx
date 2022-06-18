@@ -1,7 +1,6 @@
-import React from 'react'
 import { StyleLoading } from './style'
 
-const Loading = () => {
+const Loading:FC = () => {
   return <StyleLoading>Loading…</StyleLoading>
 }
 

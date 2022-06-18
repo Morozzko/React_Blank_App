@@ -7,7 +7,7 @@ import { Page } from '../../pages'
 const OtherComponent = lazy(() => import('../../components/templates/404'))
 
 const withSuspense = (Component: LazyExoticComponent<() => JSX.Element>) => (
-  <Suspense fallback={Loading}>
+  <Suspense fallback={"Loading"}>
     <Component />
   </Suspense>
 )

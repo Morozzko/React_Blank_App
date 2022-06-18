@@ -1,9 +1,8 @@
-import React, { FC } from 'react'
 import { ThemeProvider } from '@mui/material'
 import ColorsScheme from '../../../styles/ColorsScheme'
 import { createTheme } from '@mui/material/styles'
 
-const MaterialUIProvider: FC = props => {
+export const MaterialUIProvider: FC = ({children}) => {
   const theme = createTheme({
     palette: {
       primary: {
@@ -14,7 +13,5 @@ const MaterialUIProvider: FC = props => {
       },
     },
   })
-  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
-
-export default MaterialUIProvider

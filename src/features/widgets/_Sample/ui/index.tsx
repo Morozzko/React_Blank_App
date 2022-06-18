@@ -1,14 +1,13 @@
-import React, { FC } from 'react'
-import StyleContainer from '../../../../styles/StyleContainer'
-import { RedModule } from '../../../../modules/import'
+import React from 'react'
+import { Styled } from '../../../../styles/DynamicStyledComponent'
 
 export type UIPropertyType = {}
 
 const UI: FC<UIPropertyType> = props => {
   return (
-    <StyleContainer>
-      <RedModule />
-    </StyleContainer>
+    <Styled.Box>
+
+    </Styled.Box>
   )
 }
 

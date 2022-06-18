@@ -1,4 +1,6 @@
-import instance from '../../../../app/api'
+// import { instance } from '@axios'
+
+import { instance } from '../../../../app/api/axios'
 
 const RestAPI = {
   async get(payload: any) {

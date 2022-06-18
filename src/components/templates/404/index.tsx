@@ -1,4 +1,3 @@
-import React from 'react'
 import { Style404 } from './style'
 
 const NotFound = () => {

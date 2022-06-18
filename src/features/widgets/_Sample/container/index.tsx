@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { useContainer } from './useContainer'
 import UI from '../ui'
 

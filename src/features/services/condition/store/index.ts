@@ -3,9 +3,10 @@ import { NotificationPayloadType, NotificationType, RequestStatusType } from '..
 import { v1 } from 'uuid'
 import { SnackbarKey } from 'notistack'
 import initialState from '../structure'
+import { Constants } from '../../../../constants'
 
 export const slice = createSlice({
-  name: `Condition`,
+  name: `[@${Constants.app.name} - Condition - Service]`,
   initialState,
   reducers: {
     setAppStatus(state, action: PayloadAction<{ status: RequestStatusType }>) {
@@ -67,7 +68,7 @@ export const slice = createSlice({
       state.notifications = [...state.notifications, notification]
     },
     removeNotification(state, action: PayloadAction<{ notificationId: SnackbarKey }>) {
-      state.notifications = state.notifications.filter(notification => notification.key != action.payload.notificationId)
+      state.notifications = state.notifications.filter(notification => notification.key !== action.payload.notificationId)
     },
   },
 })
