@@ -5,7 +5,7 @@ type ThunkCreatorType = {
   status?: number
   errorCallback?: () => void
   notification?: {
-    hide: boolean
+    hide?: boolean
     notifySuccess?: string
     notifyError?: string
   }
