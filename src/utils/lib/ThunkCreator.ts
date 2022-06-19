@@ -1,4 +1,4 @@
-import { handleAsyncServerAppError, handleAsyncServerNetworkError, handleSetAppStatus, ThunkAPIType } from './AppStatusHandlers'
+import { ThunkAPIType, handleAsyncServerAppError, handleAsyncServerNetworkError, handleSetAppStatus } from './AppStatusHandlers'
 
 type ThunkCreatorType = {
   apiMethod: () => any

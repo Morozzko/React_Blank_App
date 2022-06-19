@@ -20,6 +20,7 @@ const useContainer = () => {
   // }
 
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
     notifications.forEach(({ key, message, options = {}, dismissed = false }) => {
       if (dismissed) {

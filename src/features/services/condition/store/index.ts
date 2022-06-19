@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { NotificationPayloadType, NotificationType, RequestStatusType } from '../lib/types'
 import { v1 } from 'uuid'
 import { SnackbarKey } from 'notistack'

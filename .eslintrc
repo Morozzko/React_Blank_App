@@ -25,12 +25,19 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "rules": {
-    "@typescript-eslint/no-empty-function": "warn",
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
+    "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/ban-types": "off",
-    "@typescript-eslint/ban-ts-comment": "warn"
+    "@typescript-eslint/no-empty-function": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "sort-imports": ["error", {
+      "ignoreCase": false,
+      "ignoreDeclarationSort": true,
+      "ignoreMemberSort": false,
+      "memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
+    }]
   },
+
   "overrides": [
     {
       "files": [

@@ -1,9 +1,11 @@
-/src/utils/hooks/
+/src/app/api/axios.ts
 /src/components/shared/atoms/_Simple
 /src/components/shared/moleculas/_Simple
 /src/components/templates/_Simple
 /src/features/services/_sample
+/src/features/services/condition
 /src/features/widgets/_Sample
-/src/styles/ColorsScheme.ts
 /src/index.ts
-/src/app/api/axios.ts
+/src/styles/ColorsScheme.ts
+/src/utils/hooks/
+/src/utils/lib/

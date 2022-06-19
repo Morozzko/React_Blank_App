@@ -32,6 +32,7 @@
     "build": "rescripts build",
     "test": "react-scripts test",
     "prettier": "prettier --write \"{,src/**/}*.{js,jsx,ts,tsx}\"",
+    "eslint": "eslint --fix --ext .js,.jsx,.tsx,ts .",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
