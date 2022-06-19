@@ -68,7 +68,6 @@ const LI = styled.li<IStyleContainer>`
   ${style};
 `
 
-
 export const Styled = {
   A,
   Button,
@@ -86,5 +85,5 @@ export const Styled = {
   TD,
   TH,
   TR,
-  UL
+  UL,
 }

@@ -53,5 +53,3 @@ export const style = (props: IStyleContainer) =>
     position: ${props.absolute ? 'absolute' : props['position-relative'] ? 'relative' : ''};
     width: ${props.width ? props.width : props.vw ? `${props.vw}vw` : ''};
   `
-
-

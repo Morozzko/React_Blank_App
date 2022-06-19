@@ -1,7 +1,5 @@
-import GetUsersTC from '../sample'
+import { GetUsersTC } from '../sample'
 
-const asyncActions = {
+export const asyncActions = {
   GetUsersTC,
 }
-
-export default asyncActions

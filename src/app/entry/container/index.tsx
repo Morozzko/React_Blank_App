@@ -15,7 +15,6 @@ export const Container: FC = props => {
   )
 }
 
-
 export const ImportedContainer: FC = props => {
   return (
     <Providers>
@@ -24,5 +23,3 @@ export const ImportedContainer: FC = props => {
     </Providers>
   )
 }
-
-

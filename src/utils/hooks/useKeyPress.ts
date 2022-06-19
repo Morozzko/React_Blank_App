@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 type EventArgument = {
   key: string
-};
+}
 
 export default function useKeyPressed(targetKey: string): boolean {
   const [keyPressed, setKeyPressed] = useState(false)

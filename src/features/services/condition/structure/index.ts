@@ -1,8 +1,6 @@
 import { NotificationType, RequestStatusType } from '../lib/types'
 
-const initialState = {
+export const initialState = {
   status: 'idle' as RequestStatusType,
   notifications: [] as NotificationType[],
 }
-
-export default initialState

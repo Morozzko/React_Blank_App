@@ -1,6 +1,4 @@
-const initialState = {
+export const initialState = {
   loading: false,
   sample: '',
 }
-
-export default initialState

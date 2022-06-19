@@ -7,7 +7,7 @@ import { Page } from '../../pages'
 const OtherComponent = lazy(() => import('../../components/templates/404'))
 
 const withSuspense = (Component: LazyExoticComponent<() => JSX.Element>) => (
-  <Suspense fallback={"Loading"}>
+  <Suspense fallback={'Loading'}>
     <Component />
   </Suspense>
 )
@@ -18,8 +18,8 @@ export const Routes: RouterComponentType[] = [
     component: <p>sd</p>,
   },
   {
-    path: '/3',
-    component: <Page.TodoPage />,
+    path: '/auth',
+    component: <Page.AuthPage />,
   },
   {
     path: '/NotFound',

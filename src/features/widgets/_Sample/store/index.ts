@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import initialState from '../structure'
+import { initialState } from '../structure'
 import { Constants } from '../../../../constants'
 
 export const slice = createSlice({

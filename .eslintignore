@@ -1,1 +1,8 @@
 /src/utils/hooks/
+/src/components/shared/atoms/_Simple
+/src/components/shared/moleculas/_Simple
+/src/components/templates/_Simple
+/src/features/services/_sample
+/src/features/widgets/_Sample
+/src/styles/ColorsScheme.ts
+/src/index.ts

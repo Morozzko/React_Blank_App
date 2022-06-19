@@ -2,7 +2,7 @@ const {
   container: { ModuleFederationPlugin },
 } = require('webpack')
 const { imported, exported } = require('./.MF.module.js')
-const { name,dependencies } = require('./package.json')
+const { name, dependencies } = require('./package.json')
 
 const addPlugins = config => {
   config.plugins.unshift(
@@ -15,20 +15,20 @@ const addPlugins = config => {
         ...dependencies,
         react: {
           singleton: true,
-          version: dependencies['react']
+          version: dependencies['react'],
         },
         'react-dom': {
           singleton: true,
-          version: dependencies['react-dom']
+          version: dependencies['react-dom'],
         },
         'react-router-dom': {
           singleton: true,
-          version: dependencies['react-router-dom']
+          version: dependencies['react-router-dom'],
         },
         'react-redux': {
           singleton: true,
-          version: dependencies['react-router-dom']
-        }
+          version: dependencies['react-router-dom'],
+        },
       },
     })
   )

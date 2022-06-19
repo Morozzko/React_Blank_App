@@ -9,7 +9,6 @@ enum ResultCodeEnum {
 export type ResponseType<D> = {
   data: D
   ResultCode: ResultCodeEnum
-
   message: string
 }
 

@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { NotificationPayloadType, NotificationType, RequestStatusType } from '../lib/types'
 import { v1 } from 'uuid'
 import { SnackbarKey } from 'notistack'
-import initialState from '../structure'
+import { initialState } from '../structure'
 import { Constants } from '../../../../constants'
 
 export const slice = createSlice({
