@@ -32,6 +32,7 @@
     "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/no-empty-function": "warn",
+    "no-empty-pattern": "warn",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "import/order": [
