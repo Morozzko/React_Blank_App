@@ -68,10 +68,10 @@ module.exports = [
   config => {
     console.log(process.env.NODE_ENV)
     const mode = process.env.NODE_ENV || 'development'
-    const publicPath = `//${process.env.HOST}:${process.env.PORT}/`
+    // const publicPath = `//${process.env.HOST}:${process.env.PORT}/`
 
     config.mode = mode
-    config.output.publicPath = publicPath
+    // config.output.publicPath = publicPath
     return overrideConfig(config)
   },
 ]
