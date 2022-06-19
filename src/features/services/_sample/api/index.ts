@@ -1,5 +1,3 @@
-// import { instance } from '@axios'
-
 import { instance } from '../../../../app/api/axios'
 
 export const RestAPI = {
