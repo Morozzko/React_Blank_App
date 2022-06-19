@@ -13,5 +13,5 @@ export const useContainer = () => {
     if (isMobileWidth !== isMobile) {
       setIsMobile(isMobileWidth)
     }
-  }, [isMobileWidth])
+  }, [isMobile])
 }
