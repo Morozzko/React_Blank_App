@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    //    "baseUrl": "./src",
+    //    "paths": {
+    //      "@hooks/*": ["utils/hooks/*"]
+    //    },
+    //    "typeRoots": ["node_modules/@types"],
     "target": "es5",
     "lib": [
       "dom",
