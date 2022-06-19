@@ -13,6 +13,7 @@ export interface IStyleContainer {
   'min-height'?: string
   'min-width'?: string
   'position-relative'?: boolean
+  'z-index'?: number
   absolute?: boolean
   border?: string
   color?: string
@@ -29,7 +30,6 @@ export interface IStyleContainer {
 
 export const style = (props: IStyleContainer) =>
   css`
-    color: ${props.color};
     align-items: ${props['align-items'] ? props['align-items'] : props.middle ? 'center' : ''};
     background-color: ${props['background-color'] && props['background-color']};
     border-radius: ${props['border-radius'] && props['border-radius']};
@@ -37,6 +37,7 @@ export const style = (props: IStyleContainer) =>
     box-shadow: ${props['box-shadow'] && props['box-shadow']};
     box-sizing: border-box;
     color: ${props.color && props.color};
+    color: ${props.color};
     cursor: ${props.pointer && 'pointer'};
     display: flex;
     flex-direction: ${props.column ? 'column' : 'row'};
@@ -52,4 +53,5 @@ export const style = (props: IStyleContainer) =>
     padding: ${props.padding ? props.padding : '0'};
     position: ${props.absolute ? 'absolute' : props['position-relative'] ? 'relative' : ''};
     width: ${props.width ? props.width : props.vw ? `${props.vw}vw` : ''};
+    z-index: ${props['z-index'] && props['z-index']};
   `
