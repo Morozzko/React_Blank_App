@@ -13,22 +13,22 @@ const addPlugins = config => {
       remotes: imported,
       shared: {
         ...dependencies,
-        react: {
-          singleton: true,
-          version: dependencies['react'],
-        },
-        'react-dom': {
-          singleton: true,
-          version: dependencies['react-dom'],
-        },
-        'react-router-dom': {
-          singleton: true,
-          version: dependencies['react-router-dom'],
-        },
-        'react-redux': {
-          singleton: true,
-          version: dependencies['react-router-dom'],
-        },
+        // react: {
+        //   singleton: true,
+        //   version: dependencies['react'],
+        // },
+        // 'react-dom': {
+        //   singleton: true,
+        //   version: dependencies['react-dom'],
+        // },
+        // 'react-router-dom': {
+        //   singleton: true,
+        //   version: dependencies['react-router-dom'],
+        // },
+        // 'react-redux': {
+        //   singleton: true,
+        //   version: dependencies['react-router-dom'],
+        // },
       },
     })
   )

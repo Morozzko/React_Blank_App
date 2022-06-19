@@ -6,3 +6,4 @@
 /src/features/widgets/_Sample
 /src/styles/ColorsScheme.ts
 /src/index.ts
+/src/app/api/axios.ts
