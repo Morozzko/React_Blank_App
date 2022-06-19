@@ -1,8 +1,8 @@
 import AppStyle from './style'
-import AppRouter from '../../router'
-import { condition } from '../../../features/services/condition'
 import CRI from '../../../components/shared/lib/ContainerReconciliationIsolator'
+import { condition } from '../../../features/services/condition'
 import { mobile } from '../../../features/services/mobile'
+import AppRouter from '../../router'
 import '../../../styles/unselectable.css'
 import '../../../features/services/localization'
 

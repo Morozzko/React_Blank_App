@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
 import { SnackbarKey, useSnackbar } from 'notistack'
-import { useAppSelector } from '../../../../utils/hooks/useAppSelector'
+import { useEffect } from 'react'
 import { useActions } from '../../../../utils/hooks/useActions'
+import { useAppSelector } from '../../../../utils/hooks/useAppSelector'
 import { Actions } from '../store'
 
 let displayed: SnackbarKey[] = []

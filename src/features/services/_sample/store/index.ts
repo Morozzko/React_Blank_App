@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
+import { Constants } from '../../../../constants'
 import { initialState } from '../structure'
 import { asyncActions } from '../thunks/io'
-import { Constants } from '../../../../constants'
 
 export const slice = createSlice({
   name: `[@${Constants.app.name} - Sample - Service]`,

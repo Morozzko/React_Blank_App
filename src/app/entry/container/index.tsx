@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import App from '../ui'
-import Providers from '../../providers'
 import { GlobalStyle } from '../../../styles/GlobalStyle'
+import Providers from '../../providers'
+import App from '../ui'
 
 export const Container: FC = props => {
   return (

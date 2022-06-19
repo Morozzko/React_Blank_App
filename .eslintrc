@@ -4,12 +4,14 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:import/warnings"
   ],
   "plugins": [
     "react",
     "@typescript-eslint",
-    "prettier"
+    "prettier",
+    "import"
   ],
   "env": {
     "browser": true,
@@ -30,14 +32,45 @@
     "@typescript-eslint/no-empty-function": "warn",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "sort-imports": ["error", {
-      "ignoreCase": false,
-      "ignoreDeclarationSort": true,
-      "ignoreMemberSort": false,
-      "memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
-    }]
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "sibling",
+          "parent",
+          "index"
+        ],
+        "newlines-between": "never",
+        "pathGroupsExcludedImportTypes": ["react"],
+        "pathGroups": [
+          {
+            "pattern": "components",
+            "group": "internal"
+          },
+          {
+            "pattern": "common",
+            "group": "internal"
+          },
+          {
+            "pattern": "routes/ **",
+            "group": "internal"
+          },
+          {
+            "pattern": "assets/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
   },
-
   "overrides": [
     {
       "files": [

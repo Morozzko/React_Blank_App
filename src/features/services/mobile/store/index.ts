@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-import { initialState } from '../structure'
 import { Constants } from '../../../../constants'
+import { initialState } from '../structure'
 
 export const slice = createSlice({
   name: `[@${Constants.app.name} - Mobile - Service]`,
