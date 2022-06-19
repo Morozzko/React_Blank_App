@@ -1,4 +1,4 @@
-import { handleSetAppStatus, handleThunkSuccess, ThunkAPIType } from './AppStatusHandlers'
+import { handleSetAppStatus, handleThunkError, handleThunkSuccess, ThunkAPIType } from './AppStatusHandlers'
 
 type ThunkCreatorType = {
   apiMethod: () => any
@@ -23,6 +23,6 @@ export const ThunkCreator = async (creator: ThunkCreatorType, thunkAPI: ThunkAPI
     }
   } catch (error: any) {
     creator.errorCallback && creator.errorCallback()
-    return handleThunkSuccess({ showNotify: !creator.notification?.hide, message: creator.notification?.notifyError || error }, thunkAPI)
+    return handleThunkError({ showNotify: !creator.notification?.hide, message: creator.notification?.notifyError || error }, thunkAPI)
   }
 }
