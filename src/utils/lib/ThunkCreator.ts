@@ -5,7 +5,7 @@ type ThunkCreatorType = {
   status?: number
   errorCallback?: () => void
   notification?: {
-    show: boolean
+    hide: boolean
     notifySuccess?: string
     notifyError?: string
   }
@@ -18,11 +18,11 @@ export const ThunkCreator = async (creator: ThunkCreatorType, thunkAPI: ThunkAPI
     const res = await creator.apiMethod()
 
     if (res.status === creator.status) {
-      handleThunkSuccess({ showNotify: creator.notification?.show, message: creator.notification?.notifySuccess }, thunkAPI)
+      handleThunkSuccess({ showNotify: !creator.notification?.hide, message: creator.notification?.notifySuccess }, thunkAPI)
       return res.data
     }
   } catch (error: any) {
     creator.errorCallback && creator.errorCallback()
-    return handleThunkSuccess({ showNotify: creator.notification?.show, message: creator.notification?.notifyError || error }, thunkAPI)
+    return handleThunkSuccess({ showNotify: !creator.notification?.hide, message: creator.notification?.notifyError || error }, thunkAPI)
   }
 }
