@@ -68,22 +68,37 @@ const LI = styled.li<IStyleContainer>`
   ${style};
 `
 
+const Nav = styled.nav<IStyleContainer>`
+  ${style};
+`
+
+const Header = styled.header<IStyleContainer>`
+  ${style};
+`
+
+const Footer = styled.footer<IStyleContainer>`
+  ${style};
+`
+
 export const Styled = {
   A,
-  Button,
   Box,
+  Button,
+  Footer,
   H1,
   H2,
   H3,
   H4,
   H5,
+  Header,
   Input,
   LI,
+  Nav,
   P,
   SPAN,
-  Table,
   TD,
   TH,
   TR,
+  Table,
   UL,
 }
