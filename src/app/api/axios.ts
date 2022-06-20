@@ -15,3 +15,20 @@ instance.interceptors.request.use(config => {
   config.headers!.Authorization = `Bearer ${localStorage.getItem('token')}`
   return config
 })
+
+// instance.interceptors.response.use(
+//   config => config,
+//   async error => {
+//     const request = error.config
+//     if (error.response.status === 401 && error.config && !error.config.isRetry) {
+//       request.isRetry = true
+//       await keycloak.updateToken(30).then(() => {
+//         if (keycloak.idToken) {
+//           localStorage.setItem('token', keycloak.idToken)
+//         }
+//       })
+//       return instance.request(request)
+//     }
+//     throw error
+//   }
+// )
