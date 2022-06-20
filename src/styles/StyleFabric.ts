@@ -5,6 +5,7 @@ export interface IStyleContainer {
   'background-color'?: string
   'border-radius'?: string
   'box-shadow'?: string
+  'box-sizing'?: 'border-box' | 'content-box' | 'padding-box' | 'inherit'
   'font-size'?: string
   'font-weight'?: number
   'justify-content'?: 'center' | 'flex-start' | 'stretch' | 'flex-end' | 'space-between'
@@ -12,6 +13,7 @@ export interface IStyleContainer {
   'max-width'?: string
   'min-height'?: string
   'min-width'?: string
+  'no-border-box'?: boolean
   'position-relative'?: boolean
   'z-index'?: number
   absolute?: boolean
@@ -23,6 +25,7 @@ export interface IStyleContainer {
   middle?: boolean
   padding?: string
   pointer?: boolean
+  position?: 'fixed' | 'sticky' | 'relative' | 'inherit' | 'static'
   vh?: number
   vw?: number
   width?: string
@@ -35,7 +38,7 @@ export const style = (props: IStyleContainer) =>
     border-radius: ${props['border-radius'] && props['border-radius']};
     border: ${props.border && props.border};
     box-shadow: ${props['box-shadow'] && props['box-shadow']};
-    box-sizing: border-box;
+    box-sizing: ${props['box-sizing'] ? props['box-sizing'] : props['no-border-box'] ? '' : 'border-box'};
     color: ${props.color && props.color};
     color: ${props.color};
     cursor: ${props.pointer && 'pointer'};
@@ -51,7 +54,7 @@ export const style = (props: IStyleContainer) =>
     min-height: ${props['min-height'] && props['min-height']};
     min-width: ${props['min-width'] && props['min-width']};
     padding: ${props.padding ? props.padding : '0'};
-    position: ${props.absolute ? 'absolute' : props['position-relative'] ? 'relative' : ''};
+    position: ${props.absolute ? 'absolute' : props['position-relative'] ? 'relative' : props.position ? props.position : ''};
     width: ${props.width ? props.width : props.vw ? `${props.vw}vw` : ''};
     z-index: ${props['z-index'] && props['z-index']};
   `
