@@ -26,7 +26,12 @@ export type ThunkError = {
   }
 }
 
+export type RouterType = Partial<RouterComponentType>
+
 export type RouterComponentType = {
+  id: string
   path: string
-  component: ReactNode
+  element: ReactNode
+  index: boolean
+  child: RouterType[]
 }
