@@ -4,10 +4,10 @@ import { mobile } from '../../features/services/mobile'
 import { Sample } from '../../features/widgets/_Sample'
 
 export const reducersList = {
-  // Buttons
+  // Sample
   _sample: sample.Reducer,
   _Sample: Sample.Reducer,
-  // Buttons
+  // Sample
 
   // Services
   condition: condition.Reducer,
