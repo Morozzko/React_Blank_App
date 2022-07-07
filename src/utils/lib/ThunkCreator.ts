@@ -3,6 +3,7 @@ import { handleSetAppStatus, handleThunkError, handleThunkSuccess, ThunkAPIType 
 type ThunkCreatorType = {
   apiMethod: () => any
   status?: number
+  successCallback?: () => void
   errorCallback?: () => void
   notification?: {
     hideSuccess?: boolean
@@ -20,6 +21,7 @@ export const ThunkCreator = async (creator: ThunkCreatorType, thunkAPI: ThunkAPI
 
     if (res.status === creator.status) {
       handleThunkSuccess({ showNotify: !creator.notification?.hideSuccess, message: creator.notification?.notifySuccess }, thunkAPI)
+      creator.successCallback && creator.successCallback()
       return res.data
     }
   } catch (error: any) {
