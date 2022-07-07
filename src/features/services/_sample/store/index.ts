@@ -3,8 +3,10 @@ import { Constants } from '../../../../constants'
 import { initialState } from '../structure'
 import { asyncActions } from '../thunks/io'
 
+export const name = `[@${Constants.app.name} - Sample - Service]`
+
 export const slice = createSlice({
-  name: `[@${Constants.app.name} - Sample - Service]`,
+  name,
   initialState,
   reducers: {
     setJWT(state, action: PayloadAction<{ sample: string }>) {

@@ -5,8 +5,10 @@ import { Constants } from '../../../../constants'
 import { NotificationPayloadType, NotificationType, RequestStatusType } from '../lib/types'
 import { initialState } from '../structure'
 
+export const name = `[@${Constants.app.name} - Condition - Service]`
+
 export const slice = createSlice({
-  name: `[@${Constants.app.name} - Condition - Service]`,
+  name,
   initialState,
   reducers: {
     setAppStatus(state, action: PayloadAction<{ status: RequestStatusType }>) {
