@@ -2,9 +2,11 @@ import { Global, css } from '@emotion/react'
 
 export const GlobalStyle = () => <Global styles={style} />
 
+const fontFamily = 'Roboto Condensed'
+
 const style = css`
   @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: ${fontFamily};
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -13,7 +15,7 @@ const style = css`
   }
   /* cyrillic */
   @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: ${fontFamily};
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -22,7 +24,7 @@ const style = css`
   }
   /* greek-ext */
   @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: ${fontFamily};
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -31,7 +33,7 @@ const style = css`
   }
   /* greek */
   @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: ${fontFamily};
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -40,7 +42,7 @@ const style = css`
   }
   /* vietnamese */
   @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: ${fontFamily};
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -49,7 +51,7 @@ const style = css`
   }
   /* latin-ext */
   @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: ${fontFamily};
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -58,7 +60,7 @@ const style = css`
   }
   /* latin */
   @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: ${fontFamily};
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -69,7 +71,7 @@ const style = css`
 
   * {
     text-decoration: none;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: ${fontFamily}, sans-serif;
   }
 
   body,
@@ -90,7 +92,7 @@ const style = css`
   dd {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: ${fontFamily}, sans-serif;
     list-style: none;
     text-decoration: none;
   }
@@ -110,7 +112,7 @@ const style = css`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: ${fontFamily}, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
