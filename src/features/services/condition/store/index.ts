@@ -1,11 +1,9 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { SnackbarKey } from 'notistack'
 import { v1 } from 'uuid'
-import { Constants } from '../../../../constants'
 import { NotificationPayloadType, NotificationType, RequestStatusType } from '../lib/types'
 import { initialState } from '../structure'
-
-export const name = `[@${Constants.app.name} - Condition - Service]`
+import { name } from '../constants/name'
 
 export const slice = createSlice({
   name,

@@ -1,8 +1,6 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-import { Constants } from '../../../../constants'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { initialState } from '../structure'
-
-export const name = `[@${Constants.app.name} - Sample - Widget]`
+import { name } from '../constants/name'
 
 export const slice = createSlice({
   name,
