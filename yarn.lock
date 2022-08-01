@@ -1710,10 +1710,10 @@
     ramda "^0.28.0"
     react-dev-utils "^12.0.1"
 
-"@npm.piece/eslint-config-npmpiece@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@npm.piece/eslint-config-npmpiece/-/eslint-config-npmpiece-1.0.4.tgz#508aafbb392cb208592d5cbacd677e478814f121"
-  integrity sha512-alqP9640dZN3LIvlA/4HWbEHF6K0zKnuo6cp46K4dv1gmiEiJaJMccBTUef6riVRUtJRX/RW38tx1IeumYMt0Q==
+"@npm.piece/eslint-config-npmpiece@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@npm.piece/eslint-config-npmpiece/-/eslint-config-npmpiece-1.0.7.tgz#b80c931b8be9f7d7beba536615944f85af3fd031"
+  integrity sha512-4SiJE7CBJkOGrnEp6BhYm3+RamY2E75ibCsKwqqoWPxk5HH2kgXy/M4pA3Zc3qnsURtxdUdLx65sPViYW9mjtw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.28.0"
     "@typescript-eslint/parser" "^5.28.0"

@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@npm.piece/cra-update": "^1.0.2",
-    "@npm.piece/eslint-config-npmpiece": "^1.0.4",
+    "@npm.piece/eslint-config-npmpiece": "^1.0.7",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.1",
