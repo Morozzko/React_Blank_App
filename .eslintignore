@@ -1,6 +1,6 @@
 /src/app/api/axios.ts
 /src/components/shared/atoms/_Simple
-/src/components/shared/moleculas/_Simple
+/src/components/shared/molecules/_Simple
 /src/components/templates/_Simple
 /src/features/services/_sample
 /src/features/services/condition
