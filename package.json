@@ -49,12 +49,7 @@
   },
   "devDependencies": {
     "@npm.piece/cra-update": "^1.0.2",
-    "@storybook/addon-actions": "^6.5.9",
-    "@storybook/addon-essentials": "^6.5.9",
-    "@storybook/addon-links": "^6.5.9",
-    "@storybook/node-logger": "^6.5.9",
-    "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.5.9",
+    "@npm.piece/eslint-config-npmpiece": "^1.0.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.1",
@@ -66,12 +61,6 @@
     "@types/react-i18next": "^8.1.0",
     "@types/react-router-dom": "^5.3.3",
     "@types/uuid": "^8.3.0",
-    "@typescript-eslint/eslint-plugin": "^5.28.0",
-    "@typescript-eslint/parser": "^5.28.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-react": "^1.1.7",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.7.1"
   }
 }
