@@ -1,4 +1,4 @@
-import { throttle } from 'lodash'
+import throttle from 'lodash/throttle'
 import { useCallback } from 'react'
 
 //const log = useThrottle((params) => console.log(params), 1000);

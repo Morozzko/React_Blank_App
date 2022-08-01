@@ -20,12 +20,24 @@ export const ThunkCreator = async (creator: ThunkCreatorType, thunkAPI: ThunkAPI
     const res = await creator.apiMethod()
 
     if (res.status === creator.status) {
-      handleThunkSuccess({ showNotify: !creator.notification?.hideSuccess, message: creator.notification?.notifySuccess }, thunkAPI)
+      handleThunkSuccess(
+        {
+          showNotify: !creator.notification?.hideSuccess,
+          message: creator.notification?.notifySuccess,
+        },
+        thunkAPI
+      )
       creator.successCallback && creator.successCallback()
       return res.data
     }
   } catch (error: any) {
     creator.errorCallback && creator.errorCallback()
-    return handleThunkError({ showNotify: !creator.notification?.notifyError, message: creator.notification?.notifyError || error }, thunkAPI)
+    return handleThunkError(
+      {
+        showNotify: !creator.notification?.notifyError,
+        message: creator.notification?.notifyError || error,
+      },
+      thunkAPI
+    )
   }
 }
