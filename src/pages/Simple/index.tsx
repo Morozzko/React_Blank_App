@@ -5,9 +5,9 @@ import { Styled } from '../../styles/DynamicStyledComponent'
 export const TodoPage = () => {
   return (
     <Layout.Main>
-      <Styled.Box column>
+      <Styled.div column>
         <Sample.Container />
-      </Styled.Box>
+      </Styled.div>
     </Layout.Main>
   )
 }

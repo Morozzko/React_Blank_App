@@ -4,7 +4,7 @@ import { Styled } from '../../../../../styles/DynamicStyledComponent'
 type OwnPropertyType = {}
 
 const Sample: FC<OwnPropertyType> = ({ children }) => {
-  return <Styled.Box>asd</Styled.Box>
+  return <Styled.div>asd</Styled.div>
 }
 
 export default React.memo(Sample)
