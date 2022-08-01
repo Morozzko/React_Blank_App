@@ -3,6 +3,9 @@ const {
 } = require('webpack')
 const { imported, exported } = require('./.MF.module.js')
 const { name, dependencies } = require('./package.json')
+const {
+  v5: { overrideConfig },
+} = require('@npm.piece/cra-update')
 
 const addPlugins = config => {
   config.plugins.unshift(
@@ -46,24 +49,6 @@ const overrideSplitChunksName = config => ({
   },
 })
 
-function compose(...functions) {
-  if (functions.length === 0) {
-    return arg => arg
-  }
-
-  if (functions.length === 1) {
-    return functions[0]
-  }
-
-  return functions.reduce(
-    (a, b) =>
-      (...args) =>
-        a(b(...args))
-  )
-}
-
-const overrideConfig = config => compose(addPlugins, overrideSplitChunksName)(config)
-
 module.exports = [
   config => {
     console.log(process.env.NODE_ENV)
@@ -72,6 +57,6 @@ module.exports = [
 
     config.mode = mode
     // config.output.publicPath = publicPath
-    return overrideConfig(config)
+    return overrideConfig(config, addPlugins)
   },
 ]

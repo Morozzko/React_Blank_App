@@ -9,7 +9,6 @@
     "@mui/material": "^5.5.2",
     "@mui/styled-engine-sc": "^5.5.2",
     "@reduxjs/toolkit": "^1.8.0",
-    "add": "^2.0.6",
     "axios": "^0.27.2",
     "dot-prop": "^7.2.0",
     "i18next": "^21.6.14",
@@ -28,8 +27,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "rescripts start",
-    "build": "rescripts build",
+    "start": "updated-cra start",
+    "build": "updated-cra build",
     "test": "react-scripts test",
     "prettier": "prettier --write \"{,src/**/}*.{js,jsx,ts,tsx}\"",
     "eslint": "eslint --fix --ext .js,.jsx,.tsx,ts .",
@@ -49,7 +48,7 @@
     ]
   },
   "devDependencies": {
-    "@rescripts/cli": "^0.0.16",
+    "@npm.piece/cra-update": "^1.0.2",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
