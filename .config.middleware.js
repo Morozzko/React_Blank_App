@@ -38,25 +38,11 @@ const addPlugins = config => {
   return config
 }
 
-const overrideSplitChunksName = config => ({
-  ...config,
-  optimization: {
-    ...config.optimization,
-    splitChunks: {
-      ...config.optimization.splitChunks,
-      name: false,
-    },
-  },
-})
-
 module.exports = [
   config => {
     console.log(process.env.NODE_ENV)
-    const mode = process.env.NODE_ENV || 'development'
-    // const publicPath = `//${process.env.HOST}:${process.env.PORT}/`
+    config.mode = process.env.NODE_ENV || 'development'
 
-    config.mode = mode
-    // config.output.publicPath = publicPath
     return overrideConfig(config, addPlugins)
   },
 ]
