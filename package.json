@@ -8,6 +8,7 @@
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.2",
     "@mui/styled-engine-sc": "^5.5.2",
+    "@npm.piece/mf-utils": "^1.0.6",
     "@reduxjs/toolkit": "^1.8.0",
     "axios": "^0.27.2",
     "dot-prop": "^7.2.0",
@@ -19,7 +20,6 @@
     "react-hook-form": "^7.28.1",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
     "typescript": "^4.7.4",
@@ -30,7 +30,7 @@
     "start": "updated-cra start",
     "build": "updated-cra build",
     "test": "react-scripts test",
-    "eslint": "eslint --fix --ext .js,.jsx,.tsx,ts .",
+    "eslint": "eslint --fix --ext .js,.jsx,.tsx,ts ."
   },
   "browserslist": {
     "production": [
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@npm.piece/cra-update": "^1.0.2",
-    "@npm.piece/eslint-config-npmpiece": "^1.0.7",
+    "@npm.piece/eslint-config-npmpiece": "^1.0.8",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.1",
@@ -57,6 +57,7 @@
     "@types/react-dom": "^18.0.5",
     "@types/react-i18next": "^8.1.0",
     "@types/react-router-dom": "^5.3.3",
-    "@types/uuid": "^8.3.0"
+    "@types/uuid": "^8.3.0",
+    "react-scripts": "^5.0.1"
   }
 }
