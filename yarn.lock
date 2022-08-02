@@ -1725,10 +1725,10 @@
     eslint-plugin-prettier "^4.0.0"
     prettier "^2.7.1"
 
-"@npm.piece/mf-utils@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@npm.piece/mf-utils/-/mf-utils-1.0.6.tgz#a65b98f590176268fc315840f6f0b282cde8533b"
-  integrity sha512-aGFEtBkOtJ53wDJoV9APCCdVszwDiCh2alEZidDlVPcKpjQYu0/5vjuF0ZvtcbbZXzkc5L+sLwhXD+pKqvX2JQ==
+"@npm.piece/mf-utils@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@npm.piece/mf-utils/-/mf-utils-1.0.7.tgz#ca9cfd5afec4f560562c029971cccfcb0f16d37f"
+  integrity sha512-2fGz5S8OWxupeT9aK8GbhEq4bGOS2EM6Xgq+tc7PR1qy5hCTgn66awiRJj+DSzGUFeS5Uno1QE6+ZlArf6a3PQ==
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
   version "0.5.7"
