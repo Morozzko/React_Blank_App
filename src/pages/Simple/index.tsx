@@ -5,7 +5,7 @@ import { Styled } from '../../styles/DynamicStyledComponent'
 export const TodoPage = () => {
   return (
     <Layout.Main>
-      <Styled.div column>
+      <Styled.div column middle>
         <Sample.Container />
       </Styled.div>
     </Layout.Main>

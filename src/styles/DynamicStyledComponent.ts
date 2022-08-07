@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import { IStyleContainer, style } from './StyleFabric'
+import styled from '@emotion/styled/macro'
+import { IStyleContainer, style } from '@npm.piece/dynamic-styles'
 
 const Box = styled.div<IStyleContainer>`
   ${style};

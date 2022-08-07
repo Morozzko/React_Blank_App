@@ -3,16 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.8.2",
-    "@emotion/styled": "^11.8.1",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.2",
     "@mui/styled-engine-sc": "^5.5.2",
+    "@npm.piece/dynamic-styles": "^1.0.2",
     "@npm.piece/mf-utils": "^1.0.7",
     "@reduxjs/toolkit": "^1.8.0",
     "axios": "^0.27.2",
     "dot-prop": "^7.2.0",
-    "i18next": "^21.6.14",
+    "i18next": "^21.8.16",
     "lodash": "^4.17.21",
     "notistack": "^2.0.3",
     "react": "^18.2.0",
@@ -46,7 +47,7 @@
   },
   "devDependencies": {
     "@npm.piece/cra-update": "^1.0.2",
-    "@npm.piece/eslint-config-npmpiece": "^1.0.8",
+    "@npm.piece/eslint-config-npmpiece": "^1.0.9",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.1",
@@ -58,6 +59,7 @@
     "@types/react-i18next": "^8.1.0",
     "@types/react-router-dom": "^5.3.3",
     "@types/uuid": "^8.3.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "webpack-bundle-analyzer": "^4.5.0"
   }
 }
