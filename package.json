@@ -9,7 +9,7 @@
     "@mui/material": "^5.5.2",
     "@mui/styled-engine-sc": "^5.5.2",
     "@npm.piece/dynamic-styles": "^1.0.2",
-    "@npm.piece/hooks": "^1.0.1",
+    "@npm.piece/hooks": "^1.0.3",
     "@npm.piece/mf-utils": "^1.0.7",
     "@reduxjs/toolkit": "^1.8.0",
     "axios": "^0.27.2",

@@ -37,6 +37,7 @@ const rewriteBabel = config => {
 
 const addPlugins = config => {
   config.plugins.unshift(
+    // new BundleAnalyzerPlugin(),
     new ModuleFederationPlugin({
       name,
       filename: 'remoteEntry.js',

@@ -1730,10 +1730,10 @@
     eslint-plugin-prettier "^4.0.0"
     prettier "^2.7.1"
 
-"@npm.piece/hooks@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@npm.piece/hooks/-/hooks-1.0.1.tgz#9605e15460d974f42462023ff2a7d66469e1ebdd"
-  integrity sha512-h6ONlI0UQoJ44+HmhvDwhnyMSj5uTrRg8fKzEFQ/ycbu2vIaQ+SBbldLH1YwRXb70xwE3rVKdUxt1qn450rKBg==
+"@npm.piece/hooks@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@npm.piece/hooks/-/hooks-1.0.3.tgz#9b8a2578d4438dbc29789e89075f60df79fbf0b8"
+  integrity sha512-jqUYR18zjHlpPsyjP46NPdGHsvqtE+O4/BTvwyI+hyshl8q6tl7shZle/eiOWePRIs1jBCStknwQQoDh8naSlQ==
   dependencies:
     lodash "^4.17.21"
 
