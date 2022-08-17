@@ -1730,6 +1730,13 @@
     eslint-plugin-prettier "^4.0.0"
     prettier "^2.7.1"
 
+"@npm.piece/hooks@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@npm.piece/hooks/-/hooks-1.0.1.tgz#9605e15460d974f42462023ff2a7d66469e1ebdd"
+  integrity sha512-h6ONlI0UQoJ44+HmhvDwhnyMSj5uTrRg8fKzEFQ/ycbu2vIaQ+SBbldLH1YwRXb70xwE3rVKdUxt1qn450rKBg==
+  dependencies:
+    lodash "^4.17.21"
+
 "@npm.piece/mf-utils@^1.0.7":
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@npm.piece/mf-utils/-/mf-utils-1.0.7.tgz#ca9cfd5afec4f560562c029971cccfcb0f16d37f"
