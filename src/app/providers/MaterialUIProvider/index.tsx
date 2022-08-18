@@ -1,5 +1,4 @@
-import { ThemeProvider } from '@mui/material'
-import { createTheme } from '@mui/material/styles'
+import { ThemeProvider, createTheme } from '@mui/material/'
 
 export const MaterialUIProvider: FC = ({ children }) => {
   const theme = createTheme({

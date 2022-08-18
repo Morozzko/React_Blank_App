@@ -23,6 +23,7 @@ const rewriteBabel = config => {
     throw new Error()
   }
 
+  //Overwrite presets & plugins here
   const presets = [...babelConfig.options.presets]
   const plugins = [...babelConfig.options.plugins]
 
@@ -37,7 +38,6 @@ const rewriteBabel = config => {
 
 const addPlugins = config => {
   config.plugins.unshift(
-    // new BundleAnalyzerPlugin(),
     new ModuleFederationPlugin({
       name,
       filename: 'remoteEntry.js',
@@ -62,7 +62,7 @@ const addPlugins = config => {
         //   version: dependencies['react-router-dom'],
         // },
       }
-    }),
+    })
     // new BundleAnalyzerPlugin()
   )
   return config
@@ -72,7 +72,6 @@ module.exports = [
   config => {
     console.log(process.env.NODE_ENV)
     config.mode = process.env.NODE_ENV || 'development'
-
     return overrideConfig(config, addPlugins)
   }
 ]
