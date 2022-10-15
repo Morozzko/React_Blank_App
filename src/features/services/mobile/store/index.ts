@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { name } from '../constants/name'
 import { initialState } from '../structure'
 
-export const slice = createSlice({
+const slice = createSlice({
   name,
   initialState,
   reducers: {

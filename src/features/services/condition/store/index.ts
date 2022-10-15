@@ -5,7 +5,7 @@ import { NotificationPayloadType, NotificationType, RequestStatusType } from '..
 import { initialState } from '../structure'
 import { name } from '../constants/name'
 
-export const slice = createSlice({
+const slice = createSlice({
   name,
   initialState,
   reducers: {

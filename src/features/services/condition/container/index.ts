@@ -6,7 +6,7 @@ import { Actions } from '../store'
 
 let displayed: SnackbarKey[] = []
 
-const useContainer = () => {
+export const useContainer = () => {
   const { removeNotification } = useActions(Actions)
   const { notifications } = useAppSelector(state => state.condition)
   const { enqueueSnackbar, closeSnackbar } = useSnackbar()
@@ -40,4 +40,3 @@ const useContainer = () => {
   }, [notifications, closeSnackbar, enqueueSnackbar, removeNotification])
 }
 
-export default useContainer

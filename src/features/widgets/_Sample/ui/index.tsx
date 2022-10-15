@@ -3,8 +3,8 @@ import { Styled } from '../../../../styles/DynamicStyledComponent'
 
 export type UIPropertyType = {}
 
-const UI: FC<UIPropertyType> = props => {
-  return <Styled.div>123</Styled.div>
-}
+export const UI: FC<UIPropertyType> =  React.memo((props) => {
 
-export default React.memo(UI)
+  return <Styled.div>123</Styled.div>
+})
+

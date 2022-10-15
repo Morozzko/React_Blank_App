@@ -1,3 +1,5 @@
+/build
+/node_modules
 /src/app/api/axios.ts
 /src/components/shared/atoms/_Simple
 /src/components/shared/molecules/_Simple
@@ -9,3 +11,4 @@
 /src/styles/ColorsScheme.ts
 /src/utils/hooks/
 /src/utils/functions/
+/src/modules

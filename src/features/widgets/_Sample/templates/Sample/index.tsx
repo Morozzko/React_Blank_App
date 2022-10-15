@@ -3,8 +3,7 @@ import { Styled } from '../../../../../styles/DynamicStyledComponent'
 
 type OwnPropertyType = {}
 
-const Sample: FC<OwnPropertyType> = ({ children }) => {
+export const Sample: FC<OwnPropertyType> = React.memo(({ children }) => {
   return <Styled.div>asd</Styled.div>
-}
+})
 
-export default React.memo(Sample)

@@ -5,7 +5,7 @@ import { reducersList } from './reducers'
 
 const rootReducer = combineReducers(reducersList)
 
-const store = configureStore({
+export const store = configureStore({
   reducer: rootReducer,
   middleware: getDefaultMiddleware => getDefaultMiddleware().prepend(thunkMiddleware),
 })
@@ -19,8 +19,3 @@ window.store = store
 
 export type AppStateType = ReturnType<typeof rootReducer>
 export type AppDispatchType = typeof store.dispatch
-
-// export type InferActionsTypes<T> = T extends { [keys: string]: (...args: any[]) => infer U } ? U : never;
-// export type BaseThunkType<A extends Action = Action, R = Promise<void>> = ThunkAction<R, AppStateType, unknown, A>;
-
-export default store

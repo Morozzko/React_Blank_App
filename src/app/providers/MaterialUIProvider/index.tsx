@@ -11,5 +11,6 @@ export const MaterialUIProvider: FC = ({ children }) => {
       // },
     },
   })
+
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
