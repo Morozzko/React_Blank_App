@@ -30,6 +30,7 @@
 > hook для выполнения dispatch
 > 
 > const {} = useActions(sample.Actions)
+> забирать нужно const {} = useAppActions()
 > 
 > где action импортируются через чей-то index.tsx
 
