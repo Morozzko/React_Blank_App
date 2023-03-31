@@ -1,73 +1,43 @@
-# Turborepo starter
+# Архитектура
 
-This is an official Yarn v1 starter turborepo.
+>Слой app: инициализация приложения.
 
-## What's inside?
+>Слой service: отдельные логические реализации.
+>+ Все сервисы должны наименоваться с маленькой буквы в файле index.tsx
+>+ structure: изначальное состояние slice
+>+ store: настройка slice и actions
+>+ thunks: для каждой thunk свой файл, закидываются в io, а далее сами подцепляются
+>+ api: (Data Access Layer)
+>+ container: реализация логики
+>+ lib: utility функции, типизация
+>+ selectors (Реселекты для мемоизации бизнес логики)
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. It includes the following packages/apps:
+>Слой widget отдельные куски приложения:
+>+ Все виджеты должны именоваться с большой буквы в файле index.tsx
+>+ container/useContainer.ts (все side effects для ui, мемоизация логики)
+>+ ui (чистая компонента, отвечающая только за отрисовку)
+>+ templates (декомпозиция UI для более простого масштабирования приложения в будущем)
+>+ lib: utility функции
+>+ store: (необязательно) обычно используется для локального состояния загрузки или других процессов, которые зависят от других thunks
+>+ structure: (необязательно) изначальное состояние slice
+>
 
-### Apps and Packages
+>Слой layouts: верстка каркасов приложения
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+>Слой pages: верстка страницы, объединяющая отдельные логические реализации
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+> #useActions
+> hook для выполнения dispatch
+>
+> const {} = useActions(sample.Actions)
+> забирать нужно const {} = useAppActions()
+>
+> где action импортируются через чей-то index.tsx
 
-### Utilities
+> #useAppSelector
+> вместо useSelector используется типизированный useAppSelector
 
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+> Для создания новых сущностей просто копируйте папку _sample/_Sample
+>
+>+ не забывайте импортировать slice в store index/store/reducers
+>+ каждый slice и thunk должны иметь уникальный: name (slice), typePrefix (thunk)
