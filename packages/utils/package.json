@@ -31,13 +31,12 @@
   "license": "ISC",
   "scripts": {
     "bump": "npm version patch",
-    "rollup": "rm -rf ./dist && rollup -c",
+    "rollup": "rm -rf ./dist && node_modules/.bin/rollup -c",
     "build": "npm run rollup",
-    "eslint": "eslint --fix --ext .js,.jsx,.tsx,ts ."
+    "eslint": "eslint --fix --ext .js,.jsx,.tsx,ts ../hooks"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
-    "@npm.piece/eslint-config-npmpiece": "*",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-node-resolve": "^13.3.0",

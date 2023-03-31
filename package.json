@@ -13,7 +13,7 @@
     "format": "prettier --write \\\"**/*.{ts,tsx,md}\\\""
   },
   "devDependencies": {
-    "@npm.piece/eslint-config-npmpiece": "^1.0.11",
+    "@npm.piece/eslint-config-npmpiece": "*",
     "turbo": "latest"
   },
   "engines": {
