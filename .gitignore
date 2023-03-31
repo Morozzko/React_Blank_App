@@ -33,3 +33,4 @@ yarn-error.log*
 .turbo
 /node_modules/
 .idea
+/packages/eslint-config-npmpiece/node_modules/
