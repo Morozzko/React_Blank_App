@@ -10,7 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \\\"**/*.{ts,tsx,md}\\\""
+    "format": "eslint --fix --ext .js,.jsx,.tsx,ts ."
   },
   "devDependencies": {
     "@npm.piece/eslint-config-npmpiece": "*",

@@ -1,5 +1,5 @@
 export const MergeObjects = (...objects: object[]) => {
-  let result: Record<string, unknown> = {}
+  const result: Record<string, unknown> = {}
 
   objects.forEach(obj => {
     if (typeof obj === 'object' && obj !== null) {
@@ -18,7 +18,6 @@ export const MergeObjects = (...objects: object[]) => {
 
   return result
 }
-
 
 // export function MergeObjects() {
 //   let dst = {},

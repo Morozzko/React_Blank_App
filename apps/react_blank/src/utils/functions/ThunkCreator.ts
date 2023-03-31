@@ -28,10 +28,12 @@ export const ThunkCreator = async (creator: ThunkCreatorType, thunkAPI: ThunkAPI
         thunkAPI
       )
       creator.successCallback && creator.successCallback()
+
       return res.data
     }
   } catch (error: any) {
     creator.errorCallback && creator.errorCallback()
+
     return handleThunkError(
       {
         showNotify: !creator.notification?.notifyError,

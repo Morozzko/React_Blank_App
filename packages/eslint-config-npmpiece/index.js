@@ -22,12 +22,12 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   rules: {
-    "@typescript-eslint/no-var-requires":"warn",
-    "arrow-body-style": ["error", "as-needed"],
-    "newline-before-return": "error",
-    "prefer-template": "error",
-    "react/jsx-curly-brace-presence": ['error', { "props": "never", "children": "ignore" }],
-    "react/self-closing-comp": "error",
+    '@typescript-eslint/no-var-requires': 'warn',
+    'arrow-body-style': ['error', 'as-needed'],
+    'newline-before-return': 'error',
+    'prefer-template': 'error',
+    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'ignore' }],
+    'react/self-closing-comp': 'error',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-empty-function': 'warn',
@@ -50,7 +50,7 @@ module.exports = {
         bracketSameLine: false,
       },
     ],
-    "import/no-default-export": "error",
+    'import/no-default-export': 'error',
     'import/order': [
       'warn',
       {
@@ -82,5 +82,5 @@ module.exports = {
         },
       },
     ],
-  }
+  },
 }

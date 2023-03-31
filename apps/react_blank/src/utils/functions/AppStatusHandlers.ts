@@ -21,6 +21,7 @@ export const handleThunkError = ({ showNotify = true, message = 'Error' }, thunk
     )
   }
   handleSetAppStatus('failed', thunkAPI)
+
   return thunkAPI.rejectWithValue({})
 }
 

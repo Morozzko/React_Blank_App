@@ -1,14 +1,15 @@
 import { SnackbarKey, useSnackbar } from 'notistack'
 import { useEffect } from 'react'
-import { useAppSelector } from '../../../../utils/hooks/useAppSelector'
 import { useAppActions } from '../../../../utils/hooks/useAppActions'
+import { useAppSelector } from '../../../../utils/hooks/useAppSelector'
 
 let displayed: SnackbarKey[] = []
 
 export const useContainer = () => {
-  const { conditionActions: { removeNotification } } = useAppActions()
+  const {
+    conditionActions: { removeNotification },
+  } = useAppActions()
   const { notifications } = useAppSelector(state => state.condition)
-
 
   const { enqueueSnackbar, closeSnackbar } = useSnackbar()
 
@@ -26,6 +27,7 @@ export const useContainer = () => {
     notifications.forEach(({ key, message, options = {}, dismissed = false }) => {
       if (dismissed) {
         closeSnackbar(key)
+
         return
       }
 
@@ -33,11 +35,10 @@ export const useContainer = () => {
 
       enqueueSnackbar(message, {
         key,
-        ...options
+        ...options,
       })
 
       storeDisplayed(key)
     })
   }, [notifications, closeSnackbar, enqueueSnackbar, removeNotification])
 }
-

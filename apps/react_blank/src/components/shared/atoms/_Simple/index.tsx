@@ -3,8 +3,4 @@ import { SimpleStyle } from './style'
 
 type OwnPropertyType = {}
 
-const Simple: FC<OwnPropertyType> = () => {
-  return <SimpleStyle>simple</SimpleStyle>
-}
-
-export default React.memo(Simple)
+export const Simple: FC<OwnPropertyType> = React.memo(() => <SimpleStyle>simple</SimpleStyle>)

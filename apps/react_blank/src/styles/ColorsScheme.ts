@@ -25,6 +25,7 @@ class ColorsScheme {
   // Синий
   public GoogleBlue(opacity: AlfaOpacityType = 100) {
     const preview = '#0070b9'
+
     return ColorConstructor(0, 112, 185, opacity)
   }
   // Синий
@@ -32,6 +33,7 @@ class ColorsScheme {
   // Голубой
   public GoogleCyan(opacity: AlfaOpacityType = 100) {
     const preview = '#009afe'
+
     return ColorConstructor(0, 154, 254, opacity)
   }
   // Голубой
@@ -39,6 +41,7 @@ class ColorsScheme {
   // Оранжевый
   public GoogleOrange(opacity: AlfaOpacityType = 100) {
     const preview = '#e65706'
+
     return ColorConstructor(230, 87, 6, opacity)
   }
   // Оранжевый
@@ -46,6 +49,7 @@ class ColorsScheme {
   // Бирюзовый
   public GoogleTurquoise(opacity: AlfaOpacityType = 100) {
     const preview = '#4dd6ca'
+
     return ColorConstructor(77, 214, 202, opacity)
   }
   // Бирюзовый
@@ -55,6 +59,7 @@ class ColorsScheme {
   // Желтый
   public RaiffeisenYellow(opacity: AlfaOpacityType = 100) {
     const preview = '#FEE600'
+
     return ColorConstructor(254, 230, 0, opacity)
   }
   // Желтый
@@ -62,6 +67,7 @@ class ColorsScheme {
   // Красный
   public RaiffeisenRed(opacity: AlfaOpacityType = 100) {
     const preview = '#EE505A'
+
     return ColorConstructor(238, 80, 90, opacity)
   }
   // Красный
@@ -69,6 +75,7 @@ class ColorsScheme {
   // Синий
   public RaiffeisenBlue(opacity: AlfaOpacityType = 100) {
     const preview = '#00A5BC'
+
     return ColorConstructor(0, 165, 188, opacity)
   }
   // Синий
@@ -76,6 +83,7 @@ class ColorsScheme {
   // Бирюзовый
   public RaiffeisenTurquoise(opacity: AlfaOpacityType = 100) {
     const preview = '#19B28D'
+
     return ColorConstructor(25, 178, 141, opacity)
   }
   // Бирюзовый
@@ -83,6 +91,7 @@ class ColorsScheme {
   // Оранжевый
   public RaiffeisenOrange(opacity: AlfaOpacityType = 100) {
     const preview = '#F88545'
+
     return ColorConstructor(248, 133, 69, opacity)
   }
   // Оранжевый
@@ -90,6 +99,7 @@ class ColorsScheme {
   // Белый
   public RaiffeisenWhite(opacity: AlfaOpacityType = 100) {
     const preview = '#F4F4F4'
+
     return ColorConstructor(244, 244, 244, opacity)
   }
   // Белый
@@ -97,6 +107,7 @@ class ColorsScheme {
   // Черный
   public RaiffeisenBlack(opacity: AlfaOpacityType = 100) {
     const preview = '#2B2D33'
+
     return ColorConstructor(43, 45, 51, opacity)
   }
   // Черный
@@ -106,6 +117,7 @@ class ColorsScheme {
   // Черный
   public AlfaBankBlack(opacity: AlfaOpacityType = 100) {
     const preview = '#2f2f2f'
+
     return ColorConstructor(47, 47, 47, opacity)
   }
   // Черный

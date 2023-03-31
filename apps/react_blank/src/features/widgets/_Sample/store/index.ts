@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { initialState } from '../structure'
 import { name } from '../constants/name'
+import { initialState } from '../structure'
 
 const slice = createSlice({
   name,

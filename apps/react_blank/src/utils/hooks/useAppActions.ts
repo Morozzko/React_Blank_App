@@ -16,7 +16,7 @@ export const useAppActions = () => {
   return useMemo(
     () => ({
       conditionActions,
-      mobileActions
+      mobileActions,
     }),
     []
   )

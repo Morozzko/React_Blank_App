@@ -5,7 +5,7 @@ const RedModuleLazy = lazy(async () => await import('RenameImportedModuleHere/An
 
 const RemoteFactory = JSX => (
   <ErrorBoundary>
-    <Suspense fallback={'Load'}>{JSX}</Suspense>
+    <Suspense fallback="Load">{JSX}</Suspense>
   </ErrorBoundary>
 )
 

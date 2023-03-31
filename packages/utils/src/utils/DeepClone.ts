@@ -1,5 +1,6 @@
-export function DeepClone(obj) {
-  const clObj = {}
+export const DeepClone = <T>(obj: T): T => {
+  const clObj: any = {}
+
   for (const i in obj) {
     if (obj[i] instanceof Object) {
       clObj[i] = DeepClone(obj[i])
@@ -7,5 +8,6 @@ export function DeepClone(obj) {
     }
     clObj[i] = obj[i]
   }
-  return clObj
+
+  return clObj as T
 }
