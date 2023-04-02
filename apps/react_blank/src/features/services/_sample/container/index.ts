@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { useAppActions } from '../../../../utils/hooks/useAppActions'
-import { useAppSelector } from '../../../../utils/hooks/useAppSelector'
+import { useAppActions } from '@hooks/useAppActions'
+import { useAppSelector } from '@hooks/useAppSelector'
 
 export const useContainer = () => {
   useEffect(() => {}, [])

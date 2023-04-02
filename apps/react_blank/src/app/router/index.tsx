@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
+import { Page } from '@pages/index'
 import { NotFound } from '../../components/templates/404'
-import { Page } from '../../pages'
 
 export const AppRouter: FC = () => (
   <Routes>

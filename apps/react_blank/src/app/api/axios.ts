@@ -28,8 +28,10 @@ instance.interceptors.response.use(
       //     localStorage.setItem('token', keycloak.idToken)
       //   }
       // })
+
       return instance.request(request)
     }
+
     throw error
   }
 )

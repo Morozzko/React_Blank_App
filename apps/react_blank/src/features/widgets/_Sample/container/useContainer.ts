@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { useAppActions } from '../../../../utils/hooks/useAppActions'
-import { useAppSelector } from '../../../../utils/hooks/useAppSelector'
+import { useAppActions } from '@hooks/useAppActions'
+import { useAppSelector } from '@hooks/useAppSelector'
 import { UIPropertyType } from '../ui'
 
 export const useContainer = (): UIPropertyType => {

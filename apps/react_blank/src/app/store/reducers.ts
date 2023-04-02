@@ -1,7 +1,7 @@
-import { sample } from '../../features/services/_sample'
-import { condition } from '../../features/services/condition'
-import { mobile } from '../../features/services/mobile'
-import { Sample } from '../../features/widgets/_Sample'
+import { sample } from '@services/_sample'
+import { condition } from '@services/condition'
+import { mobile } from '@services/mobile'
+import { Sample } from '@widgets/_Sample'
 
 export const reducersList = {
   // Sample

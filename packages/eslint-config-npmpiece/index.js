@@ -12,6 +12,7 @@ module.exports = {
     browser: true,
     jasmine: true,
     jest: true,
+    node: true,
   },
   settings: {
     react: {

@@ -1,5 +1,20 @@
 {
   "extends": [
     "@npm.piece/eslint-config-npmpiece"
-  ]
+  ],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@widgets", "./src/features/widgets"],
+          ["@services", "./src/features/services"],
+          ["@hooks", "./src/utils/hooks"],
+          ["@pages", "./src/pages"],
+          ["@constants", "./src/constants"]
+
+        ],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
 }

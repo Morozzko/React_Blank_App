@@ -2,7 +2,7 @@ const {
   container: { ModuleFederationPlugin }
 } = require('webpack')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-
+const path = require('path')
 const { imported, exported } = require('./.MF.module.js')
 const { name, dependencies } = require('./package.json')
 const {
@@ -72,6 +72,14 @@ module.exports = [
   config => {
     console.log(process.env.NODE_ENV)
     config.mode = process.env.NODE_ENV || 'development'
+    config.resolve.alias={
+      '@widgets': path.resolve(__dirname, 'src/features/widgets/'),
+      '@services': path.resolve(__dirname, 'src/features/services/'),
+      '@hooks': path.resolve(__dirname, 'src/utils/hooks/'),
+      '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@constants': path.resolve(__dirname, 'src/constants/'),
+    }
+
     return overrideConfig(config, addPlugins)
   }
 ]

@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
-    //    "baseUrl": "./src",
-    //    "paths": {
-    //      "@hooks/*": ["utils/hooks/*"]
-    //    },
+        "baseUrl": "./src",
+        "paths": {
+          "@widgets/*": ["features/widgets/*"],
+          "@services/*": ["features/services/*"],
+          "@hooks/*": ["utils/hooks/*"],
+          "@pages/*": ["pages/*"],
+          "@constants/*": ["constants/*"]
+        },
     //    "typeRoots": ["node_modules/@types"],
     "target": "es5",
     "lib": [
