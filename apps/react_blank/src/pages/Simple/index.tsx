@@ -1,6 +1,6 @@
-import { Sample } from '../../features/widgets/_Sample'
-import { Layout } from '../../layouts'
-import { Styled } from '../../styles/DynamicStyledComponent'
+import { Layout } from '@layouts/index'
+import { Styled } from '@styles/DynamicStyledComponent'
+import { Sample } from '@widgets/_Sample'
 
 export const TodoPage = () => (
   <Layout.Main>

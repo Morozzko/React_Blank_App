@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface IList<T> {
+type IList<T> = {
   items: T[]
   renderItem: (item: T, index?: number) => React.ReactNode
 }
@@ -10,6 +10,6 @@ interface IList<T> {
  *  <ArrayRender items={items} renderItem={(item)=><itemTemplate key/>}/>
  *
  **/
-export function ArrayRender<T>(props: IList<T>) {
-  return <>{props.items.map(props.renderItem)}</>
-}
+export const ArrayRender = <T extends unknown>({ items, renderItem }: IList<T>): JSX.Element => (
+  <>{items.map((item, index) => renderItem(item, index))}</>
+)

@@ -6,15 +6,21 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["@widgets", "./src/features/widgets"],
-          ["@services", "./src/features/services"],
+          ["@app", "./src/app"],
+          ["@components", "./src/components"],
+          ["@constants", "./src/constants"],
+          ["@functions", "./src/utils/functions"],
+          ["@helpers", "./src/utils/helpers"],
           ["@hooks", "./src/utils/hooks"],
+          ["@layouts", "./src/layouts"],
           ["@pages", "./src/pages"],
-          ["@constants", "./src/constants"]
-
+          ["@services", "./src/features/services"],
+          ["@styles", "./src/styles"],
+          ["@widgets", "./src/features/widgets"]
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   }
 }
+

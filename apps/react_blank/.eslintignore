@@ -1,14 +1,9 @@
 /build
 /node_modules
 /src/app/api/axios.ts
-/src/components/shared/atoms/_Simple
-/src/components/shared/molecules/_Simple
-/src/components/templates/_Simple
 /src/features/services/_sample
 /src/features/services/condition
 /src/features/widgets/_Sample
 /src/index.ts
 /src/styles/ColorsScheme.ts
-/src/utils/hooks/
-/src/utils/functions/
 /src/modules

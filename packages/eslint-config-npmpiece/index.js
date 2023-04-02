@@ -24,6 +24,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   rules: {
     '@typescript-eslint/no-var-requires': 'warn',
+    '@typescript-eslint/no-unnecessary-type-constraint': 'off',
     'arrow-body-style': ['error', 'as-needed'],
     'newline-before-return': 'error',
     'prefer-template': 'error',
@@ -53,34 +54,56 @@ module.exports = {
     ],
     'import/no-default-export': 'error',
     'import/order': [
-      'warn',
+      'error',
       {
-        groups: ['external', 'builtin', 'internal', 'sibling', 'parent', 'index'],
-        'newlines-between': 'never',
-        pathGroupsExcludedImportTypes: ['react'],
-        pathGroups: [
-          {
-            pattern: 'components',
-            group: 'internal',
-          },
-          {
-            pattern: 'common',
-            group: 'internal',
-          },
-          {
-            pattern: 'routes/ **',
-            group: 'internal',
-          },
-          {
-            pattern: 'assets/**',
-            group: 'internal',
-            position: 'after',
-          },
-        ],
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
         alphabetize: {
           order: 'asc',
           caseInsensitive: true,
         },
+        pathGroups: [
+          {
+            pattern: '@app/**',
+            group: 'internal',
+          },
+          {
+            pattern: '@components/**',
+            group: 'internal',
+          },
+          {
+            pattern: '@constants/**',
+            group: 'internal',
+          },
+          {
+            pattern: '@functions/**',
+            group: 'internal',
+          },
+          {
+            pattern: '@hooks/**',
+            group: 'internal',
+          },
+          {
+            pattern: '@layouts/**',
+            group: 'internal',
+          },
+          {
+            pattern: '@pages/**',
+            group: 'internal',
+          },
+          {
+            pattern: '@services/**',
+            group: 'internal',
+          },
+          {
+            pattern: '@styles/**',
+            group: 'internal',
+          },
+          {
+            pattern: '@widgets/**',
+            group: 'internal',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['builtin'],
       },
     ],
   },

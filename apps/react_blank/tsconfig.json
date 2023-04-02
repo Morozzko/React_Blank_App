@@ -2,11 +2,17 @@
   "compilerOptions": {
         "baseUrl": "./src",
         "paths": {
-          "@widgets/*": ["features/widgets/*"],
-          "@services/*": ["features/services/*"],
+          "@app/*": ["app/*"],
+          "@components/*": ["components/*"],
+          "@constants/*": ["constants/*"],
+          "@functions/*": ["utils/functions/*"],
+          "@helpers/*": ["utils/helpers/*"],
           "@hooks/*": ["utils/hooks/*"],
+          "@layouts/*": ["layouts/*"],
           "@pages/*": ["pages/*"],
-          "@constants/*": ["constants/*"]
+          "@services/*": ["features/services/*"],
+          "@styles/*": ["styles/*"],
+          "@widgets/*": ["features/widgets/*"],
         },
     //    "typeRoots": ["node_modules/@types"],
     "target": "es5",

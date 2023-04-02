@@ -1,14 +1,14 @@
+import { AppRouter } from '@app/router'
+import { CustomContainerInjector } from '@helpers/CustomContainerInjector'
+import { condition } from '@services/condition'
+import { mobile } from '@services/mobile'
 import { AppStyle } from './style'
-import { CRI } from '../../../components/shared/lib/ContainerReconciliationIsolator'
-import { condition } from '../../../features/services/condition'
-import { mobile } from '../../../features/services/mobile'
-import { AppRouter } from '../../router'
 import '../../../styles/unselectable.css'
-import '../../../features/services/localization'
+import '@services/localization'
 
 export const App: FC = () => (
   <AppStyle>
     <AppRouter />
-    <CRI containers={[condition.useContainer, mobile.useContainer]} />
+    <CustomContainerInjector containers={[condition.useContainer, mobile.useContainer]} />
   </AppStyle>
 )

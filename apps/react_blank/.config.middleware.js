@@ -73,11 +73,17 @@ module.exports = [
     console.log(process.env.NODE_ENV)
     config.mode = process.env.NODE_ENV || 'development'
     config.resolve.alias={
-      '@widgets': path.resolve(__dirname, 'src/features/widgets/'),
-      '@services': path.resolve(__dirname, 'src/features/services/'),
-      '@hooks': path.resolve(__dirname, 'src/utils/hooks/'),
-      '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@app': path.resolve(__dirname, 'src/app/'),
+      '@components': path.resolve(__dirname, 'src/components/'),
       '@constants': path.resolve(__dirname, 'src/constants/'),
+      '@functions': path.resolve(__dirname, 'src/utils/functions/'),
+      '@helpers': path.resolve(__dirname, 'src/utils/helpers/'),
+      '@hooks': path.resolve(__dirname, 'src/utils/hooks/'),
+      '@layouts': path.resolve(__dirname, 'src/layouts/'),
+      '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@services': path.resolve(__dirname, 'src/features/services/'),
+      '@styles': path.resolve(__dirname, 'src/styles/'),
+      '@widgets': path.resolve(__dirname, 'src/features/widgets/'),
     }
 
     return overrideConfig(config, addPlugins)
