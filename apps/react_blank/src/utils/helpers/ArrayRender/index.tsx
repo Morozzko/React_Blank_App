@@ -1,6 +1,6 @@
 import React from 'react'
 
-type IList<T> = {
+type OwnPropertyType<T> = {
   items: T[]
   renderItem: (item: T, index?: number) => React.ReactNode
 }
@@ -10,6 +10,6 @@ type IList<T> = {
  *  <ArrayRender items={items} renderItem={(item)=><itemTemplate key/>}/>
  *
  **/
-export const ArrayRender = <T extends unknown>({ items, renderItem }: IList<T>): JSX.Element => (
+export const ArrayRender = <T extends unknown>({ items, renderItem }: OwnPropertyType<T>): JSX.Element => (
   <>{items.map((item, index) => renderItem(item, index))}</>
 )
