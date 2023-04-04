@@ -28,6 +28,7 @@
     "start": "updated-cra start",
     "dev": "updated-cra start",
     "build": "updated-cra build",
+    "gen:hooks": "npx @rtk-query/codegen-openapi server/reduxRestCodegen/config/openapi-config.ts",
     "test": "react-scripts test",
     "eslint": "eslint --fix --ext .js,.jsx,.tsx,ts ."
   },
@@ -63,6 +64,7 @@
     "postcss-import": "^15.1.0",
     "react-scripts": "^5.0.1",
     "tailwindcss": "^3.3.1",
+    "ts-node": "^10.9.1",
     "webpack-bundle-analyzer": "^4.6.1"
   }
 }
