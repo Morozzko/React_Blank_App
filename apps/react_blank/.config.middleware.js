@@ -77,6 +77,7 @@ module.exports = [
       '@components': path.resolve(__dirname, 'src/components/'),
       '@constants': path.resolve(__dirname, 'src/constants/'),
       '@functions': path.resolve(__dirname, 'src/utils/functions/'),
+      '@generated': path.resolve(__dirname, 'src/features/generated/'),
       '@helpers': path.resolve(__dirname, 'src/utils/helpers/'),
       '@hooks': path.resolve(__dirname, 'src/utils/hooks/'),
       '@layouts': path.resolve(__dirname, 'src/layouts/'),

@@ -1,10 +1,11 @@
 const fs = require('fs')
 const path = require('path')
+const { removeImportsFromFile } = require('../../utils/deleteImportsFromFile')
 
 // указываем путь к папке, в которой находятся файлы
-const folderPath = '../../../src/features/generated/hooks/'
+const folderPath = path.resolve(__dirname, '../../../src/features/generated/hooks/')
 // файл куда заберутся все импорты хуков
-const importFilePath = path.join('../../../src/features/generated/index.ts')
+const importFilePath = path.resolve(__dirname, '../../../src/features/generated/index.ts')
 
 // создаем регулярное выражение, которое будет искать все хуки
 const hooksRegExp = /use(\w+)Mutation|use(\w+)Query/g
@@ -63,13 +64,10 @@ files.forEach(file => {
   }
 })
 
+// удаляем все импорты из файла
+removeImportsFromFile(importFilePath)
 // читаем содержимое файла index.ts
 const data = fs.readFileSync(importFilePath, 'utf8')
-
-// удаляем все импорты из файла
-const importsRegExp = /import\s*{\s*[a-zA-Z0-9_,\s]+}\s*from\s*'\.\/.*';?\n?/g
-const newContent = data.replace(importsRegExp, '')
-
 console.log(imports)
 // добавляем новые импорты в начало файла
 // если массив импортов не пустой, то вставляем его в начало файла
@@ -77,7 +75,7 @@ console.log(imports)
 // добавляем новые импорты в начало файла
 // если массив импортов не пустой, то вставляем его в начало файла
 if (imports.length > 0) {
-  fs.writeFileSync(importFilePath, `${imports.join('\n')}\n${newContent}`, 'utf8', err => {
+  fs.writeFileSync(importFilePath, `${imports.join('\n')}\n${data}`, 'utf8', err => {
     if (err) {
       console.error(err)
     }

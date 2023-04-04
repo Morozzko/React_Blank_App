@@ -1,3 +1,4 @@
+import { generatedReducersList } from '@app/store/generated/reducers'
 import { sample } from '@services/_sample'
 import { condition } from '@services/condition'
 import { mobile } from '@services/mobile'
@@ -16,4 +17,8 @@ export const reducersList = {
 
   // Widgets
   // Widgets
+
+  // Auto Generated Reducers
+  ...generatedReducersList,
+  // Auto Generated Reducers
 }
