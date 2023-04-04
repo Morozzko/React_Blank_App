@@ -1,4 +1,4 @@
-import { useMobileSizeDetect } from '@npm.piece/hooks'
+import { useMobileSizeDetect } from '@npm.piece/utils'
 import { useEffect } from 'react'
 import { useAppActions } from '@hooks/useAppActions'
 import { useAppSelector } from '@hooks/useAppSelector'
