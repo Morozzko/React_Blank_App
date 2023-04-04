@@ -37,7 +37,7 @@ function injectReducers(folderPath, filePath) {
   reducerStatements += '}\n'
 
   // Regex для поиска старого объекта старый объект
-  const oldReducerRegex = /export\s+const\s+generatedReducersList\s*=\s*{([\s\S]*?)}/
+  const oldReducerRegex = /const\s+generatedReducersList\s*=\s*{([\s\S]*?)}/
 
   // Составляем новое содержимое файла с добавленными импортами и существующими данными
   const newFileContent = `${importStatements}\n\n\n${reducerStatements}\n\n${fileContent.replace(oldReducerRegex, '')}`
