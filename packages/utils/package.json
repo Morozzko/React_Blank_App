@@ -1,6 +1,6 @@
 {
-  "name": "@npm.piece/hooks",
-  "version": "1.0.4",
+  "name": "@npm.piece/utils",
+  "version": "1.0.6",
   "private": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

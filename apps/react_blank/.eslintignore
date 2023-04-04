@@ -1,9 +1,5 @@
 /build
 /node_modules
 /src/app/api/axios.ts
-/src/features/services/_sample
-/src/features/services/condition
-/src/features/widgets/_Sample
 /src/index.ts
-/src/styles/ColorsScheme.ts
 /src/modules

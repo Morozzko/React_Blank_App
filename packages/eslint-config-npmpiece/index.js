@@ -40,6 +40,13 @@ module.exports = {
     'react/display-name': 'off',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-max-props-per-line': [
+      'error',
+      {
+        maximum: 1,
+        when: 'multiline',
+      },
+    ],
     'prettier/prettier': [
       'error',
       {

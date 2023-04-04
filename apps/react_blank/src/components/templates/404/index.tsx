@@ -1,3 +1,9 @@
-import { Style404 } from './style'
+import React from 'react'
 
-export const NotFound = () => <Style404>NotFound</Style404>
+type OwnPropertyType = {}
+
+export const NotFound: FC<OwnPropertyType> = React.memo(({}) => {
+  const simple = 'Not found'
+
+  return <div>{simple}</div>
+})

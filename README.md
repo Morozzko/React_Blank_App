@@ -41,3 +41,20 @@
 >
 >+ не забывайте импортировать slice в store index/store/reducers
 >+ каждый slice и thunk должны иметь уникальный: name (slice), typePrefix (thunk)
+
+
+> #Оркестровка репозиторием
+> 
+> Сборка библиотеки common
+> 
+> ```
+> yarn build --filter=@npm.piece/common
+> ```
+> 
+> Сборка проекта
+>
+> ```
+> yarn build --filter=@npm.piece/common
+>
+> yarn dev --filter=rupor-ui-kit-tailwind
+> ```

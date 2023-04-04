@@ -1,14 +1,12 @@
 import { AppRouter } from '@app/router'
-import { CustomContainerInjector } from '@helpers/CustomContainerInjector'
 import { condition } from '@services/condition'
 import { mobile } from '@services/mobile'
-import { AppStyle } from './style'
-import '../../../styles/unselectable.css'
 import '@services/localization'
+import { CustomContainerInjector } from '@npm.piece/utils/'
 
 export const App: FC = () => (
-  <AppStyle>
+  <div>
     <AppRouter />
     <CustomContainerInjector containers={[condition.useContainer, mobile.useContainer]} />
-  </AppStyle>
+  </div>
 )

@@ -1,6 +1,9 @@
 import React from 'react'
-import { Styled } from '../../../../styles/DynamicStyledComponent'
 
 export type UIPropertyType = {}
 
-export const UI: FC<UIPropertyType> = React.memo(props => <Styled.div>123</Styled.div>)
+export const UI: FC<UIPropertyType> = React.memo(({}) => {
+  const simple = 'simple'
+
+  return <div>{simple}</div>
+})

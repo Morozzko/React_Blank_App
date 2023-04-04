@@ -7,17 +7,17 @@
 ## Install
 
 ```
-npm i @npm.piece/hooks
+npm i @npm.piece/utils
 ```
 
 ```
-yarn add @npm.piece/hooks
+yarn add @npm.piece/utils
 ```
 
 ## useDebounce (with lodash)
 
 ```javascript
-import {useDebounce} from '@npm.piece/hooks'
+import {useDebounce} from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -29,7 +29,7 @@ log("123")
 ## useThrottle (with lodash)
 
 ```javascript
-import {useThrottle} from '@npm.piece/hooks'
+import {useThrottle} from '@npm.piece/utils'
 ```
 
 ```javascript

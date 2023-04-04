@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/eslint-config-npmpiece",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "custom eslint configuration",
   "main": "index.js",
   "private": false,
@@ -16,13 +16,13 @@
   "license": "ISC",
   "dependencies": {
     "eslint": "^8.21.0",
-    "@typescript-eslint/eslint-plugin": "^5.28.0",
-    "@typescript-eslint/parser": "^5.28.0",
-    "eslint-config-prettier": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-config-react": "^1.1.7",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-import-resolver-alias": "^1.1.2",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.7.1"
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7"
   }
 }

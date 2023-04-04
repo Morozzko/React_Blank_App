@@ -1,3 +1,9 @@
-import { StyleLoading } from './style'
+import React from 'react'
 
-export const Loading: FC = () => <StyleLoading>Loading…</StyleLoading>
+type OwnPropertyType = {}
+
+export const Loading: FC<OwnPropertyType> = React.memo(({}) => {
+  const simple = 'simple'
+
+  return <div>{simple}</div>
+})

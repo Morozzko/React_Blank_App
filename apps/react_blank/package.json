@@ -8,7 +8,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.9",
     "@mui/styled-engine-sc": "^5.10.6",
-    "@npm.piece/hooks": "^1.0.4",
+    "@npm.piece/utils": "*",
     "@reduxjs/toolkit": "^1.9.3",
     "axios": "^1.3.4",
     "i18next": "^22.4.14",
@@ -46,7 +46,6 @@
   "devDependencies": {
     "@npm.piece/cra-update": "^1.0.4",
     "@npm.piece/eslint-config-npmpiece": "*",
-    "@npm.piece/dynamic-styles": "^1.0.2",
     "@rtk-query/codegen-openapi": "^1.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
