@@ -1,6 +1,6 @@
 import { Dispatch } from 'redux'
-import { RequestStatusType } from '../../app/entry/lib/types'
-import { condition } from '../../features/services/condition'
+import { condition } from '@services/condition'
+import { RequestStatusType } from '../lib/types/types'
 
 export type ThunkAPIType = {
   dispatch: Dispatch

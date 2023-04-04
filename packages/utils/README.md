@@ -1,7 +1,3 @@
-<div style='display: flex;align-items: center;justify-content: center'>
-<img src='https://svgshare.com/i/jfX.svg' alt=''/>
-</div> 
-
 # Frequently used hooks for React
 
 ## Install
@@ -41,7 +37,7 @@ log("123")
 ## useEffectWithoutFirstCall
 
 ```javascript
-import {useEffectWithoutFirstCall} from '@npm.piece/hooks'
+import {useEffectWithoutFirstCall} from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -52,7 +48,7 @@ useEffectWithoutFirstCall(() => {}, []);
 ## useSessionStorage
 
 ```javascript
-import {useSessionStorage} from '@npm.piece/hooks'
+import {useSessionStorage} from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -64,7 +60,7 @@ get()
 ## useLocalStorage
 
 ```javascript
-import {useLocalStorage} from '@npm.piece/hooks'
+import {useLocalStorage} from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -76,7 +72,7 @@ get()
 ## usePortraitDetect
 
 ```javascript
-import {usePortraitDetect} from '@npm.piece/hooks'
+import {usePortraitDetect} from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -86,7 +82,7 @@ const isPortrait = usePortraitDetect()
 ## useOnlineDetect
 
 ```javascript
-import {useOnlineDetect} from '@npm.piece/hooks'
+import {useOnlineDetect} from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -96,7 +92,7 @@ const isOnline = useOnlineDetect()
 ## useMobileSizeDetect
 
 ```javascript
-import {useMobileSizeDetect} from '@npm.piece/hooks'
+import {useMobileSizeDetect} from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -106,7 +102,7 @@ const isMobileWidth = useMobileSizeDetect(768)
 ## useKeyPressDetect
 
 ```javascript
-import {useKeyPressDetect} from '@npm.piece/hooks'
+import {useKeyPressDetect} from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -116,7 +112,7 @@ const isKeyFPressed = useKeyPressDetect("f")
 ## useInterval
 
 ```javascript
-import {useInterval} from '@npm.piece/hooks'
+import {useInterval} from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -126,7 +122,7 @@ useInterval(() => {}, 1000);
 ## useFocus
 
 ```javascript
-import {useFocus} from '@npm.piece/hooks'
+import {useFocus} from '@npm.piece/utils'
 ```
 
 ```jsx
@@ -142,7 +138,7 @@ return <input ref={htmlElRef}/>
 ## useIntersection
 
 ```javascript
-import {useIntersection} from '@npm.piece/hooks'
+import {useIntersection} from '@npm.piece/utils'
 ```
 
 ```jsx
