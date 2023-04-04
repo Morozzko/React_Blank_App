@@ -34,3 +34,4 @@ yarn-error.log*
 /node_modules/
 .idea
 /packages/eslint-config-npmpiece/node_modules/
+/packages/tailwind-config/node_modules/
