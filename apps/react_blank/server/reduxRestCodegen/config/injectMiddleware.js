@@ -55,3 +55,4 @@ function injectReducers(folderPath, filePath) {
 }
 
 injectReducers(foldersPath, middlewaresFile)
+console.log('\x1b[32m', 'Инъекция Middlewares завершена', '\x1b[0m')

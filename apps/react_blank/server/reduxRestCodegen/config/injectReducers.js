@@ -52,3 +52,4 @@ function injectReducers(folderPath, filePath) {
 }
 
 injectReducers(foldersPath, reducersFile)
+console.log('\x1b[32m', 'Инъекция Reducers завершена', '\x1b[0m')

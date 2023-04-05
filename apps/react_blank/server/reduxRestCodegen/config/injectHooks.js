@@ -84,3 +84,4 @@ if (imports.length > 0) {
     }
   })
 }
+console.log('\x1b[32m', 'Инъекция Hooks завершена', '\x1b[0m')
