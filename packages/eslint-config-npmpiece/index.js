@@ -6,6 +6,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:react/recommended',
     'prettier',
+    'plugin:tailwindcss/recommended',
   ],
   plugins: ['react', '@typescript-eslint', 'prettier', 'import'],
   env: {
