@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { ThunkCreator } from '../../../../utils/functions/ThunkCreator'
+import { ThunkCreator } from '@functions/ThunkCreator'
 import { ThunkError } from '../../../../utils/lib/types/types'
 import { RestAPI } from '../api'
 import { name } from '../constants/name'

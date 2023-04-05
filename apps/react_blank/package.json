@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@npm.piece/cra-update": "^1.0.4",
-    "@npm.piece/eslint-config-npmpiece": "^1.0.12",
+    "@npm.piece/eslint-config-npmpiece": "^1.0.13",
     "@npm.piece/tailwind-config": "^1.0.0",
     "@rtk-query/codegen-openapi": "^1.0.0",
     "@testing-library/jest-dom": "^5.16.5",

@@ -3,6 +3,7 @@
 /src/app/api/axios.ts
 /src/index.ts
 /src/modules
-/src/features/widgets/_Sample
-/src/features/service/_sample
 /src/features/generated/hooks
+/src/utils/helpers/ErrorBoundary/index.tsx
+/src/utils/functions/ThunkCreator.ts
+

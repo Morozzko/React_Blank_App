@@ -28,7 +28,7 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'warn',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-unnecessary-type-constraint': 'off',
-    '@typescript-eslint/no-var-requires': 'warn',
+    '@typescript-eslint/no-var-requires': 'off',
     'arrow-body-style': ['error', 'as-needed'],
     'newline-before-return': 'error',
     'no-console': 'warn',
@@ -114,4 +114,28 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.js'],
+      rules: {
+        'no-console': 'off',
+      },
+    },
+    {
+      files: ['*.tsx'],
+      rules: {
+        'no-console': 'warn',
+      },
+    },
+    {
+      files: ['*_Sample*', '*_sample*', '**/_Sample/**/*', '**/_sample/**/*'],
+      rules: {
+        'no-empty-pattern': 'off',
+        'no-console': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+      },
+    },
+  ],
 }

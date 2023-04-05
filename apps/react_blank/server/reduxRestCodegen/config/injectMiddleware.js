@@ -49,10 +49,10 @@ function injectReducers(folderPath, filePath) {
   // Записываем новое содержимое файла
   try {
     fs.writeFileSync(filePath, newFileContent, 'utf-8')
+    console.log('\x1b[36m', 'Инъекция Middlewares завершена', '\x1b[0m')
   } catch (error) {
     console.error(`Unable to write to file ${filePath}: ${error}`)
   }
 }
 
 injectReducers(foldersPath, middlewaresFile)
-console.log('\x1b[32m', 'Инъекция Middlewares завершена', '\x1b[0m')

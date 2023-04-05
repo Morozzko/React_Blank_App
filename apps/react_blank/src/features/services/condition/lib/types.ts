@@ -4,7 +4,7 @@ export type NotificationType = {
   date: Date | string
   message: string
   options: {
-    onClose?: any
+    onClose?: never
     variant: 'warning' | 'success' | 'error' | 'info'
   }
 }
