@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Импорт tailwind */
 
+/* Зануление стилей */
 blockquote,
 body,
 span,
