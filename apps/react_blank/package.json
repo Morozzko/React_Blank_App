@@ -29,6 +29,10 @@
     "dev": "updated-cra start",
     "build": "updated-cra build",
     "gen:hooks": "npx @rtk-query/codegen-openapi server/reduxRestCodegen/config/openapi-config.ts",
+    "postgen:hooks": "yarn run inject:hooks && yarn run inject:reducers && yarn run inject:middleware && yarn run eslint",
+    "inject:hooks": "node server/reduxRestCodegen/config/injectHooks.js",
+    "inject:reducers": "node server/reduxRestCodegen/config/injectReducers.js",
+    "inject:middleware": "node server/reduxRestCodegen/config/injectMiddleware.js",
     "test": "react-scripts test",
     "eslint": "eslint --fix --ext .js,.jsx,.tsx,ts ."
   },
