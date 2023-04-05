@@ -8,8 +8,7 @@ import {
   useAddPetMutation,
   useUpdatePetMutation,
 } from './hooks/pet'
-
-// Этот реэкспорт хуков нужен, если вдруг поменяются названия файлов
+// Этот реэкспорт хуков нужен, если вдруг поменяются названия файлов при изменении контракта с backend
 export {
   useDeleteOrderMutation,
   useGetOrderByIdQuery,

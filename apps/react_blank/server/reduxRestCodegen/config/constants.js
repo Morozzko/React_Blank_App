@@ -2,7 +2,7 @@ const config = {
   // указываем путь к папке, в которой находятся файлы с хуками
   hooksFolder: '../../../src/features/generated/hooks/',
   // файл куда заберутся все импорты хуков
-  exportFile: '../../../src/features/generated/index.ts',
+  exportFile: '../../../src/features/generated/hooks.ts',
   // приписка к импорту для файла хуков
   hooksImportFileSuffix: './hooks/',
   // путь до reducers файла
