@@ -1,13 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { combineReducers } from 'redux'
 import thunkMiddleware from 'redux-thunk'
+import { generatedMiddlewaresList } from '@app/store/generated/middlewares'
 import { reducersList } from './reducers'
 
 const rootReducer = combineReducers(reducersList)
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: getDefaultMiddleware => getDefaultMiddleware().prepend(thunkMiddleware),
+  //@ts-ignore
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware()
+      .prepend(thunkMiddleware)
+      .concat(...generatedMiddlewaresList),
 })
 
 declare global {

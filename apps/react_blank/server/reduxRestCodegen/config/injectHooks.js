@@ -1,11 +1,12 @@
 const fs = require('fs')
 const path = require('path')
 const { removeImportsFromFile } = require('../../utils/deleteImportsFromFile')
+const { config } = require('../config/constants')
 
 // указываем путь к папке, в которой находятся файлы
-const folderPath = path.resolve(__dirname, '../../../src/features/generated/hooks/')
+const folderPath = path.resolve(__dirname, config.hooksFolder)
 // файл куда заберутся все импорты хуков
-const importFilePath = path.resolve(__dirname, '../../../src/features/generated/index.ts')
+const importFilePath = path.resolve(__dirname, config.exportFile)
 
 // создаем регулярное выражение, которое будет искать все хуки
 const hooksRegExp = /use(\w+)Mutation|use(\w+)Query/g
@@ -60,7 +61,9 @@ files.forEach(file => {
 
   console.log(hooks)
   if (hooks.length > 0) {
-    imports.push(`import { ${hooks.join(', ')} } from './hooks/${path.basename(filePath, '.ts')}';`)
+    imports.push(
+      `import { ${hooks.join(', ')} } from '${config.hooksImportFileSuffix}${path.basename(filePath, '.ts')}';`
+    )
   }
 })
 

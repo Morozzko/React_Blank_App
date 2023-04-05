@@ -3,10 +3,10 @@ const path = require('path')
 const { removeImportsFromFile } = require('../../utils/deleteImportsFromFile')
 const { config } = require('../config/constants')
 
-const reducersFile = path.resolve(__dirname, config.reducersImportDestination)
+const middlewaresFile = path.resolve(__dirname, '../../../src/app/store/generated/middlewares.ts')
 const foldersPath = path.resolve(__dirname, config.hooksFolder)
 
-removeImportsFromFile(reducersFile)
+removeImportsFromFile(middlewaresFile)
 
 function injectReducers(folderPath, filePath) {
   const storeRegex = /export\s*\{\s*injectedRtkApi\s*as\s*([a-zA-Z0-9_$]+)\s*\}/
@@ -17,7 +17,7 @@ function injectReducers(folderPath, filePath) {
   const fileContent = fs.readFileSync(filePath, 'utf-8')
 
   let importStatements = ''
-  let reducerStatements = `const ${config.reducersObjectName} = {\n`
+  let middlewaresStatements = `const ${config.middlewaresObjectName} = [ `
 
   for (const fileName of fileNames) {
     if (fileName.endsWith('.ts')) {
@@ -28,20 +28,23 @@ function injectReducers(folderPath, filePath) {
       if (match) {
         const storeName = match[1]
         const fileNameWithoutTS = fileName.replace('.ts', '')
-        const importStatement = `import { ${storeName} } from '${config.reducersImportFileSuffix}${fileNameWithoutTS}'\n`
-        const reducerStatement = `[${storeName}.reducerPath]: ${storeName}.reducer, \n`
+        const importStatement = `import { ${storeName} } from '${config.middlewaresImportFileSuffix}${fileNameWithoutTS}'\n`
+        const middlewaresStatement = `${storeName}.middleware,`
         importStatements += importStatement
-        reducerStatements += reducerStatement
+        middlewaresStatements += middlewaresStatement
       }
     }
   }
-  reducerStatements += '}\n'
+  middlewaresStatements += ' ]\n'
 
   // Regex для поиска старого объекта старый объект
-  const oldReducerRegex = new RegExp(`const\\s+${config.reducersObjectName}\\s*=\\s*{([\\s\\S]*?)}`)
+  const oldMiddlewaresRegex = new RegExp(`const\\s+${config.middlewaresObjectName}\\s*=\\s*\\[([\\s\\S]*?)\\]`)
 
   // Составляем новое содержимое файла с добавленными импортами и существующими данными
-  const newFileContent = `${importStatements}\n\n\n${reducerStatements}\n\n${fileContent.replace(oldReducerRegex, '')}`
+  const newFileContent = `${importStatements}\n\n\n${middlewaresStatements}\n\n${fileContent.replace(
+    oldMiddlewaresRegex,
+    ''
+  )}`
 
   // Записываем новое содержимое файла
   try {
@@ -51,4 +54,4 @@ function injectReducers(folderPath, filePath) {
   }
 }
 
-injectReducers(foldersPath, reducersFile)
+injectReducers(foldersPath, middlewaresFile)
