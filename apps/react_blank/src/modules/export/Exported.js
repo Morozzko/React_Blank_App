@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImportedContainer } from '../../app/entry/container'
+import { ImportedContainer } from '@app/entry/container'
 
 const ExportedModule = props => <ImportedContainer {...props} />
 

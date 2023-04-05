@@ -28,7 +28,7 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'warn',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-unnecessary-type-constraint': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-var-requires': 'warn',
     'arrow-body-style': ['error', 'as-needed'],
     'newline-before-return': 'error',
     'no-console': 'warn',
@@ -119,6 +119,13 @@ module.exports = {
       files: ['*.ts', '*.js'],
       rules: {
         'no-console': 'off',
+      },
+    },
+    {
+      files: ['*.js'],
+      rules: {
+        'import/no-default-export': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
       },
     },
     {
