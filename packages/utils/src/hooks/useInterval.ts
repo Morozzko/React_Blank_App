@@ -17,15 +17,11 @@ export const useInterval = <T extends (...args: any[]) => any>(callback: T, dela
       }
     }
 
-    if (delay !== null) {
+    if (delay || delay === 0) {
       id.current = setInterval(tick, delay)
 
       return () => {
-        try {
-          clearInterval(id.current)
-        } catch (e) {
-          console.error(e)
-        }
+        clearInterval(id.current)
       }
     }
   }, [delay])
