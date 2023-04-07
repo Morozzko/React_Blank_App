@@ -19,7 +19,7 @@ function printDirectoryStructure(directoryPath, indent = 0, fileDescriptor) {
     }
 
     // Создаем строку с именем файла или папки и отступом, соответствующим уровню вложенности
-    const line = `${' '.repeat(indent)}- ${file}\n`
+    const line = `${'-'.repeat(indent)}- ${file}\n`
 
     // Записываем эту строку в файл с помощью метода fs.write
     fs.write(fileDescriptor, line, err => {
@@ -39,7 +39,7 @@ function printDirectoryStructure(directoryPath, indent = 0, fileDescriptor) {
 fs.open('folderStructure.txt', 'w', (err, fileDescriptor) => {
   if (err) throw err
 
-  printDirectoryStructure('.', 0, fileDescriptor)
+  printDirectoryStructure('./apps/react_blank', 0, fileDescriptor)
 
   // Закрываем файл после записи
   fs.close(fileDescriptor, err => {

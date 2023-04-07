@@ -1,6 +1,8 @@
 const fs = require('fs')
 const path = require('path')
 
+const folderPath = './apps/react_blank/src/components'
+
 function readFilesInDirectory(directoryPath) {
   // Читаем содержимое каждого файла в директории
   fs.readdir(directoryPath, { withFileTypes: true }, (err, files) => {
@@ -10,7 +12,10 @@ function readFilesInDirectory(directoryPath) {
       const filePath = path.join(directoryPath, file.name)
 
       // Если это папка "node_modules", пропускаем ее
-      if (file.isDirectory() && file.name === 'node_modules') {
+      if (
+        file.isDirectory() &&
+        (file.name === 'node_modules' || file.name === '.idea' || file.name === 'build' || file.name === '.git')
+      ) {
         return
       }
 
@@ -22,8 +27,11 @@ function readFilesInDirectory(directoryPath) {
         fs.readFile(filePath, 'utf8', (err, data) => {
           if (err) throw err
 
-          // Выводим содержимое файла в консоль
-          console.log(`File: ${filePath}\nContent:\n${data}`)
+          // Записываем содержимое файла в файловую систему
+          const result = `File: ${filePath}\nContent:\n${data}`
+          fs.writeFile('folderData.txt', result, { flag: 'a' }, err => {
+            if (err) throw err
+          })
         })
       }
     })
@@ -31,4 +39,4 @@ function readFilesInDirectory(directoryPath) {
 }
 
 // Пример использования
-readFilesInDirectory('')
+readFilesInDirectory(folderPath)

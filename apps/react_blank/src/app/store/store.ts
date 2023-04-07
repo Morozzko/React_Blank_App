@@ -12,6 +12,7 @@ export const store = configureStore({
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware()
       .prepend(thunkMiddleware)
+      // Добавляем автоматические middleware сгенерированные библиотекой @rtk-query/codegen-openapi
       .concat(...generatedMiddlewaresList),
 })
 
@@ -20,7 +21,9 @@ declare global {
     store: typeof store
   }
 }
-window.store = store
+if (process.env.NODE_ENV === 'development') {
+  window.store = store
+}
 
 export type AppStateType = ReturnType<typeof rootReducer>
 export type AppDispatchType = typeof store.dispatch

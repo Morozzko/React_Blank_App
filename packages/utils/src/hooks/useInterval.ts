@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 
 // useInterval(() => {}, 1000);
-export const useInterval = (callback: (arg?: any) => any, delay: number) => {
-  const savedCallback = useRef<(arg?: any) => any>()
-
+export const useInterval = <T extends (...args: any[]) => any>(callback: T, delay: number) => {
+  const savedCallback = useRef<T>()
+  const id = useRef<NodeJS.Timeout>()
   // Remember the latest callback.
   useEffect(() => {
     savedCallback.current = callback
@@ -18,11 +18,11 @@ export const useInterval = (callback: (arg?: any) => any, delay: number) => {
     }
 
     if (delay !== null) {
-      const id = setInterval(tick, delay)
+      id.current = setInterval(tick, delay)
 
       return () => {
         try {
-          clearInterval(id)
+          clearInterval(id.current)
         } catch (e) {
           console.error(e)
         }

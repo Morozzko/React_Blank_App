@@ -4,6 +4,7 @@ import { Providers } from '@app/providers'
 import { App } from '../ui'
 import '../../../index.css'
 
+// Точка входа для разработки
 export const Container: FC = props => (
   <BrowserRouter>
     <Providers>
@@ -12,6 +13,7 @@ export const Container: FC = props => (
   </BrowserRouter>
 )
 
+// Импорт приложения для Плагина Module Federation
 export const ImportedContainer: FC = props => (
   <Providers>
     <App {...props} />
