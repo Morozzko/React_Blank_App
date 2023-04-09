@@ -1,16 +1,29 @@
-export type RegexpType = {
+export type UseAppActionsRegexp = {
   hooks: string
   actions: string
 }
 
-export type PathForHooksImport = {
+export type ReducersListRegexp = {
+  widget: string
+  service: string
+}
+
+export type RegexpKeysType = {
   widget: string
   service: string
 }
 
 export type ConfigType = {
-  store: string
-  useAppActions: string
-  regexp: RegexpType
-  pathForHooksImport: PathForHooksImport
+  filePath: {
+    reducersList: string
+    useAppActions: string
+  }
+  regexp: {
+    reducersList: ReducersListRegexp
+    useAppActions: UseAppActionsRegexp
+  }
+  importPath: {
+    reducersList: RegexpKeysType
+    useAppActions: RegexpKeysType
+  }
 }

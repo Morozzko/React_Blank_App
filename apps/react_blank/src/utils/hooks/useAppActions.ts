@@ -2,8 +2,8 @@ import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 import { ActionCreatorsMapObject, bindActionCreators } from 'redux'
 import { AppDispatchType } from '@app/store/store'
-import { condition } from '@services/condition'
-import { mobile } from '@services/mobile'
+import { Actions as condition } from '@services/condition/'
+import { Actions as mobile } from '@services/mobile/'
 
 // useAppDispatch - хук, который оборачивает стандартный хук useDispatch из react-redux.
 // Он предоставляет функцию dispatch с определенным типом AppDispatchType, что облегчает работу с типами TypeScript
@@ -26,8 +26,8 @@ const useActions = <T extends ActionCreatorsMapObject>(actions: T) => {
 // В данном случае зависимостей нет, поэтому объекты действий создаются только один раз при первом вызове хуков.
 export const useAppActions = () => {
   // insert hook here
-  const conditionActions = useActions(condition.Actions)
-  const mobileActions = useActions(mobile.Actions)
+  const conditionActions = useActions(condition)
+  const mobileActions = useActions(mobile)
 
   return useMemo(
     () => ({

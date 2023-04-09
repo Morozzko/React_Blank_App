@@ -11,11 +11,18 @@ const startScript = async () => {
   const args = app.getArgs()
   const config = app.getConfig()
 
+  await app.insertToReducer({
+    name: args.name,
+    pathToReducersList: config.filePath.reducersList,
+    pathForImportReducers: config.importPath.reducersList[args.type],
+    regexp: config.regexp.reducersList[args.type],
+  })
+
   await app.insertToHooks({
     name: args.name,
-    pathToHook: config.useAppActions,
-    regexp: config.regexp,
-    pathForImportHooks: config.pathForHooksImport[args.type],
+    pathToHook: config.filePath.useAppActions,
+    regexp: config.regexp.useAppActions,
+    pathForImportHooks: config.importPath.useAppActions[args.type],
   })
 }
 

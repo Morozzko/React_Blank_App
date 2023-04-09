@@ -4,9 +4,10 @@ import * as Selectors from './selectors'
 import { Actions, Reducer } from './store'
 
 export const sample = {
-  Actions,
   RestAPI,
   Selectors,
   useContainer,
   Reducer,
 }
+
+export { Actions }

@@ -4,5 +4,6 @@ import { Actions, Reducer } from './store'
 export const Sample = {
   Container,
   Reducer,
-  Actions,
 }
+
+export { Actions }

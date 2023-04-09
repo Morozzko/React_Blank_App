@@ -1,10 +1,10 @@
 import fs from 'fs/promises'
-import { RegexpType } from './lib/types'
+import { UseAppActionsRegexp } from './lib/types'
 
 type Payload = {
   pathToHook: string
   name: string
-  regexp: RegexpType
+  regexp: UseAppActionsRegexp
   pathForImportHooks: string
 }
 
@@ -15,7 +15,7 @@ export const insertToHooks = async ({ pathToHook, name, regexp, pathForImportHoo
 
     // Замена строки // insert hook here
     const hookPlaceholder = new RegExp(`${regexp.hooks}`)
-    const hookInsertion = `const ${name}Actions = useActions(${name}.Actions)`
+    const hookInsertion = `const ${name}Actions = useActions(${name})`
     const updatedDataWithHook = data.replace(hookPlaceholder, match => `${match}\n${hookInsertion}`)
 
     // Замена строки // insert actions here
@@ -28,12 +28,12 @@ export const insertToHooks = async ({ pathToHook, name, regexp, pathForImportHoo
 
     // Добавление строки import после последней строки import
     const lastImportRegex = /^import.*;?$\n(?!import)/m
-    const importInsertion = `import { ${name} } from '${pathForImportHooks}${name}'\n`
+    const importInsertion = `import { Actions as ${name} } from '${pathForImportHooks}${name}/'`
     const updatedDataWithImport = updatedDataWithActions.replace(lastImportRegex, match => `${match}${importInsertion}`)
 
     // Запись изменений обратно в файл
     await fs.writeFile(pathToHook, updatedDataWithImport, 'utf-8')
-    console.log('Файл успешно обновлен!')
+    console.log('useAppAction обновлен')
   } catch (err) {
     console.error(`Ошибка при обновлении файла: ${err}`)
   }
