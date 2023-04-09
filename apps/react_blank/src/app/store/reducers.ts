@@ -1,24 +1,17 @@
 import { generatedReducersList } from '@app/store/generated/reducers'
-import { sample } from '@services/_sample'
 import { condition } from '@services/condition'
 import { mobile } from '@services/mobile'
-import { Sample } from '@widgets/_Sample'
 
 export const reducersList = {
-  // Sample
-  _sample: sample.Reducer,
-  _Sample: Sample.Reducer,
-  // Sample
-
-  // Services
+  // Services: Начало
   condition: condition.Reducer,
   mobile: mobile.Reducer,
-  // Services
+  // Services: Конец
 
-  // Widgets
-  // Widgets
+  // Widgets: Начало
+  // Widgets: Конец
 
-  // Auto Generated Reducers
+  // Auto Generated Reducers: Начало
   ...generatedReducersList,
-  // Auto Generated Reducers
+  // Auto Generated Reducers: Конец
 }

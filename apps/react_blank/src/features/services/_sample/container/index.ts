@@ -6,5 +6,5 @@ export const useContainer = () => {
   useEffect(() => {}, [])
 
   const {} = useAppActions()
-  const {} = useAppSelector(state => state._Sample)
+  const {} = useAppSelector(state => state)
 }

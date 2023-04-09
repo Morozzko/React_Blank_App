@@ -25,16 +25,13 @@ const useActions = <T extends ActionCreatorsMapObject>(actions: T) => {
 // что гарантирует, что объекты действий будут пересозданы только при изменении зависимостей.
 // В данном случае зависимостей нет, поэтому объекты действий создаются только один раз при первом вызове хуков.
 export const useAppActions = () => {
-  // Services
+  // insert hook here
   const conditionActions = useActions(condition.Actions)
   const mobileActions = useActions(mobile.Actions)
-  // Service
-
-  // Widgets
-  // Widgets
 
   return useMemo(
     () => ({
+      // insert actions here
       conditionActions,
       mobileActions,
     }),
