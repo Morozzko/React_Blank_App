@@ -1,5 +1,4 @@
 import fs from 'fs/promises'
-import { ReducersListRegexp } from './lib/types'
 
 type Payload = {
   name: string
@@ -7,6 +6,7 @@ type Payload = {
   regexp: string
   pathForImportReducers: string
 }
+
 export const insertToReducer = async ({ name, pathToReducersList, regexp, pathForImportReducers }: Payload) => {
   try {
     // Чтение содержимого файла
@@ -14,12 +14,12 @@ export const insertToReducer = async ({ name, pathToReducersList, regexp, pathFo
 
     // Замена строки // insert hook here
     const reducerPlaceholder = new RegExp(`${regexp}`)
-    const reducerInsertion = `${name}: ${name}.Reducer,\n`
+    const reducerInsertion = `${name},`
     const updatedDataWithReducer = data.replace(reducerPlaceholder, match => `${match}\n${reducerInsertion}`)
 
     // Добавление строки import после последней строки import
     const lastImportRegex = /^import.*;?$\n(?!import)/m
-    const importInsertion = `import { ${name} } from '${pathForImportReducers}${name}'\n`
+    const importInsertion = `import { Reducer as ${name} } from '${pathForImportReducers}${name}'\n`
     const updatedDataWithImport = updatedDataWithReducer.replace(lastImportRegex, match => `${match}${importInsertion}`)
 
     // Запись изменений обратно в файл

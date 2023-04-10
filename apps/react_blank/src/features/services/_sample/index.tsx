@@ -7,7 +7,6 @@ export const sample = {
   RestAPI,
   Selectors,
   useContainer,
-  Reducer,
 }
 
-export { Actions }
+export { Actions, Reducer }

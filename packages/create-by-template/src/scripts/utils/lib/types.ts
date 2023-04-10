@@ -1,9 +1,16 @@
+import path from 'path'
+
 export type UseAppActionsRegexp = {
   hooks: string
   actions: string
 }
 
 export type ReducersListRegexp = {
+  widget: string
+  service: string
+}
+
+export type PathToTemplate = {
   widget: string
   service: string
 }
@@ -26,4 +33,6 @@ export type ConfigType = {
     reducersList: RegexpKeysType
     useAppActions: RegexpKeysType
   }
+  pathToTemplate: PathToTemplate
+  pathToPaste: PathToTemplate
 }

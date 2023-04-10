@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux'
-import { condition } from '@services/condition'
+import { Actions as condition } from '@services/condition'
 import { RequestStatusType } from '../lib/types/types'
 
 export type ThunkAPIType = {
@@ -8,13 +8,13 @@ export type ThunkAPIType = {
 }
 
 export const handleSetAppStatus = (status: RequestStatusType, thunkAPI: ThunkAPIType) => {
-  thunkAPI.dispatch(condition.Actions.setAppStatus({ status }))
+  thunkAPI.dispatch(condition.setAppStatus({ status }))
 }
 
 export const handleThunkError = ({ showNotify = true, message = 'Error' }, thunkAPI: ThunkAPIType) => {
   if (showNotify) {
     thunkAPI.dispatch(
-      condition.Actions.enqueueNotification({
+      condition.enqueueNotification({
         variant: 'error',
         message,
       })
@@ -28,7 +28,7 @@ export const handleThunkError = ({ showNotify = true, message = 'Error' }, thunk
 export const handleThunkSuccess = ({ showNotify = true, message = 'Success' }, thunkAPI: ThunkAPIType) => {
   if (showNotify) {
     thunkAPI.dispatch(
-      condition.Actions.enqueueNotification({
+      condition.enqueueNotification({
         variant: 'success',
         message,
       })

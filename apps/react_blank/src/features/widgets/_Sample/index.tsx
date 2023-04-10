@@ -3,7 +3,6 @@ import { Actions, Reducer } from './store'
 
 export const Sample = {
   Container,
-  Reducer,
 }
 
-export { Actions }
+export { Actions, Reducer }
