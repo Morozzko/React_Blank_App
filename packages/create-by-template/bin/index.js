@@ -16,7 +16,11 @@ const startScript = async () => {
   }
 
   if (args.type === 'widget') {
-    console.log('@')
+    await app.createWidget({
+      name: args.name,
+      destination: config.pathToPaste.widget,
+      source: config.pathToTemplate.widget,
+    })
   }
 
   await app.insertToReducer({

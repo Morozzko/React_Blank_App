@@ -1,7 +1,14 @@
 import fs from 'fs/promises'
 import path from 'path'
 
-export const copyFiles = async (source: string, destination: string, name: string) => {
+type Payload = {
+  source: string
+  destination: string
+  name: string
+}
+
+const copyFiles = async ({ name, source, destination: d }: Payload) => {
+  const destination = `${d}/${name}/`
   try {
     const files = await fs.readdir(source, { withFileTypes: true })
 
@@ -14,14 +21,14 @@ export const copyFiles = async (source: string, destination: string, name: strin
 
       if (file.isDirectory()) {
         // Если текущий файл является директорией, рекурсивно копируем его содержимое
-        await copyFiles(sourcePath, destinationPath, name)
+        await copyFiles({ source: sourcePath, destination: destinationPath, name })
       } else {
         // Если текущий файл является файлом
         const fileContent = await fs.readFile(sourcePath, 'utf-8')
 
         if (file.name === 'index.tsx') {
           // Если имя файла равно index.tsx, заменяем слово 'Sample' на name
-          const updatedContent = fileContent.replace(/Sample/g, name)
+          const updatedContent = fileContent.replace(/const Sample/g, `const ${name}`)
           await fs.writeFile(destinationPath, updatedContent, 'utf-8')
         } else {
           // В противном случае просто копируем файл
@@ -32,4 +39,9 @@ export const copyFiles = async (source: string, destination: string, name: strin
   } catch (err) {
     console.error(`Ошибка при копировании файлов: ${err}`)
   }
+}
+
+export const createWidget = async (payload: Payload) => {
+  await copyFiles(payload)
+  console.log(`Widget ${payload.name} created`)
 }
