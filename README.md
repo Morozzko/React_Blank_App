@@ -26,7 +26,7 @@
 
 >Слой pages: верстка страницы, объединяющая отдельные логические реализации
 
-> #useActions
+> ## useActions
 > hook для выполнения dispatch
 >
 > const {} = useActions(sample.Actions)
@@ -34,31 +34,47 @@
 >
 > где action импортируются через чей-то index.tsx
 
-> #useAppSelector
+> ## useAppSelector
 > вместо useSelector используется типизированный useAppSelector
 
-> Для создания новых сущностей просто копируйте папку _sample/_Sample
+> ## Для генерации новых features 
 >
->+ не забывайте импортировать slice в store index/store/reducers
->+ каждый slice и thunk должны иметь уникальный: name (slice), typePrefix (thunk)
+> В папке рядом с **_package.json_** вызвать команду из пакета **_@npm.piece/template-generator_**
+> ```
+> new widget name
+> new service name
+> ```
+> Команда автоматически добавит зависимости в хук _**useAppActions**_ и список **_ReducersList_**
+> ## Для удаления features
+> ```
+> remove widget name
+> remove service name
+> ```
+> Команда автоматически удалит зависимости из хука _**useAppActions**_ и списка **_ReducersList_**
 
 
-> #Оркестровка репозиторием
+> # Оркестровка репозиторием
 > 
-> Сборка библиотеки common
+> ### Сборка библиотеки common
 > 
 > ```
 > yarn build --filter=@npm.piece/common
 > ```
-> 
-> Сборка проекта
+>
+> ### Сборка проекта
 >
 > ```
 > yarn build --filter=react_blank
 >
 > yarn dev --filter=react_blank
 > ```
-
->```
->npm publish --access public
->```
+>
+> ### Пример добавление библиотеки
+> ```
+> yarn workspace @npm.piece/common add axios -D
+> ```
+>
+> ### Публикация пакета
+> ```
+> npm publish --access public
+> ```
