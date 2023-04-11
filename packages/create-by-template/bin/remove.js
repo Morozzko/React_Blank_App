@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict'
 
+const { exec } = require('child_process')
 const app = require('../dist')
 
 process.on('unhandledRejection', err => {
@@ -12,30 +13,32 @@ const startScript = async () => {
   const config = app.getConfig()
 
   if (args.type === 'service') {
-    console.log('@')
-  }
-
-  if (args.type === 'widget') {
-    await app.createWidget({
+    await app.removeService({
       name: args.name,
-      destination: config.pathToPaste.widget,
-      source: config.pathToTemplate.widget,
+      destination: config.pathToPaste.service,
     })
   }
 
-  await app.insertToReducer({
+  if (args.type === 'widget') {
+    await app.removeWidget({
+      name: args.name,
+      destination: config.pathToPaste.widget,
+    })
+  }
+
+  await app.removeFromReducer({
     name: args.name,
     pathToReducersList: config.filePath.reducersList,
-    pathForImportReducers: config.importPath.reducersList[args.type],
-    regexp: config.regexp.reducersList[args.type],
   })
 
-  await app.insertToHooks({
+  await app.removeFromHooks({
     name: args.name,
-    pathToHook: config.filePath.useAppActions,
-    regexp: config.regexp.useAppActions,
-    pathForImportHooks: config.importPath.useAppActions[args.type],
+    pathToFile: config.filePath.useAppActions,
   })
+
+  if (config.eslintCommand) {
+    await exec(config.eslintCommand)
+  }
 }
 
 startScript()

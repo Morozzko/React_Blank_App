@@ -41,5 +41,6 @@ module.exports = {
   pathToPaste: {
     service: path.resolve(__dirname, pathToPasteService),
     widget: path.resolve(__dirname, pathToPasteWidget)
-  }
+  },
+  eslintCommand: 'yarn run eslint'
 }

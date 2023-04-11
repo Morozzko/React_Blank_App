@@ -1,2 +1,3 @@
-export * from './widget'
-export * from './utils'
+export * from './service/'
+export * from './utils/'
+export * from './widget/'

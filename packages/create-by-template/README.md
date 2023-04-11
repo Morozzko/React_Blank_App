@@ -10,6 +10,9 @@ npm i @npm.piece/template-generator
 yarn add @npm.piece/template-generator
 ```
 
+## Generate Widget by template
+
+
 ## Create config file .config.template.js near package.json:
 
 ```javascript
@@ -18,9 +21,17 @@ const path = require('path')
 const useAppActionsFile = './src/utils/hooks/useAppActions.ts'
 const reducersFile = './src/app/store/reducers.ts'
 
+const pathToWidgetTemplate = './src/features/widgets/_Sample'
+const pathToServiceTemplate = './src/features/services/_sample'
+
+const pathToPasteWidget = './src/features/widgets/'
+const pathToPasteService = './src/features/services/'
+
 module.exports = {
-  reducersList: path.resolve(__dirname, reducersFile),
-  useAppActions: path.resolve(__dirname, useAppActionsFile),
+  filePath: {
+    reducersList: path.resolve(__dirname, reducersFile),
+    useAppActions: path.resolve(__dirname, useAppActionsFile)
+  },
   regexp: {
     useAppActions: {
       hooks: 'insert hook here',
@@ -31,9 +42,24 @@ module.exports = {
       widget: 'Widgets: Начало'
     }
   },
-  pathForHooksImport: {
-    service: '@services/',
-    widget: '@widgets/'
-  }
+  importPath: {
+    useAppActions: {
+      service: '@services/',
+      widget: '@widgets/'
+    },
+    reducersList: {
+      service: '@services/',
+      widget: '@widgets/'
+    }
+  },
+  pathToTemplate: {
+    service: path.resolve(__dirname, pathToServiceTemplate),
+    widget: path.resolve(__dirname, pathToWidgetTemplate)
+  },
+  pathToPaste: {
+    service: path.resolve(__dirname, pathToPasteService),
+    widget: path.resolve(__dirname, pathToPasteWidget)
+  },
+  eslintCommand: 'yarn run eslint'
 }
 ```

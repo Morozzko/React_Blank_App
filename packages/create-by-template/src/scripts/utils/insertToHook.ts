@@ -29,12 +29,15 @@ export const insertToHooks = async ({ pathToHook, name, regexp, pathForImportHoo
     // Добавление строки import после последней строки import
     const lastImportRegex = /^import.*;?$\n(?!import)/m
     const importInsertion = `import { Actions as ${name} } from '${pathForImportHooks}${name}/'`
-    const updatedDataWithImport = updatedDataWithActions.replace(lastImportRegex, match => `${match}${importInsertion}`)
+    const updatedDataWithImport = updatedDataWithActions.replace(
+      lastImportRegex,
+      match => `${match}${importInsertion}\n`
+    )
 
     // Запись изменений обратно в файл
     await fs.writeFile(pathToHook, updatedDataWithImport, 'utf-8')
-    console.log('useAppAction обновлен')
+    console.log('useAppAction updated')
   } catch (err) {
-    console.error(`Ошибка при обновлении файла: ${err}`)
+    console.error(`Error while insert to useAppAction ${err}`)
   }
 }

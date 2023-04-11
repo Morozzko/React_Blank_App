@@ -35,4 +35,5 @@ export type ConfigType = {
   }
   pathToTemplate: PathToTemplate
   pathToPaste: PathToTemplate
+  eslintCommand: string
 }
