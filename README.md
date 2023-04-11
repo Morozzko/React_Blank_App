@@ -54,9 +54,9 @@
 > Сборка проекта
 >
 > ```
-> yarn build --filter=@npm.piece/common
+> yarn build --filter=react_blank
 >
-> yarn dev --filter=rupor-ui-kit-tailwind
+> yarn dev --filter=react_blank
 > ```
 
 >```
