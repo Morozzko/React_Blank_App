@@ -58,3 +58,7 @@
 >
 > yarn dev --filter=rupor-ui-kit-tailwind
 > ```
+
+>```
+>npm publish --access public
+>```
