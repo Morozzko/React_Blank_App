@@ -11,7 +11,7 @@ type OwnPropertyType = {
 //
 // Таким образом, CCI может быть полезным инструментом для оптимизации производительности и организации кода,
 // так как он позволяет разделять логику сайд-эффектов от дерева компонентов и связанных с ним рендеров.
-export const CustomContainerInjector = ({ containers }: OwnPropertyType) => {
+export const CustomServiceInjector = ({ containers }: OwnPropertyType) => {
   containers.forEach(container => container())
 
   return null

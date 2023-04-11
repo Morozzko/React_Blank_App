@@ -8,7 +8,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.9",
     "@mui/styled-engine-sc": "^5.10.6",
-    "@npm.piece/utils": "^1.0.8",
+    "@npm.piece/utils": "^1.0.10",
     "@reduxjs/toolkit": "^1.9.3",
     "async-mutex": "^0.4.0",
     "axios": "^1.3.4",
