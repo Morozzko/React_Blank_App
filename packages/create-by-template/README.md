@@ -15,11 +15,21 @@ yarn add @npm.piece/template-generator
 new widget name
 new service name
 ```
+or
+```
+npm.piece-add widget name
+npm.piece-add service name
+```
 
 ## Remove from useAppActions, ReducersList, and feature directory
 ```
-new widget name
-new service name
+remove widget name
+remove service name
+```
+or
+```
+npm.piece-remove widget name
+npm.piece-remove service name
 ```
 
 ## Create config file .config.template.js near package.json:
