@@ -20,7 +20,7 @@ export const removeFromReducer = async ({ name, pathToReducersList }: Payload) =
 
     // Запись изменений обратно в файл
     await fs.writeFile(pathToReducersList, updatedContentWithReducerRemoved, 'utf-8')
-    console.log('Reducers list updated')
+    console.log('\x1b[36m', `Removed ${name} from ReducersList`, '\x1b[0m')
   } catch (err) {
     console.error(`Ошибка при обновлении файла: ${err}`)
   }

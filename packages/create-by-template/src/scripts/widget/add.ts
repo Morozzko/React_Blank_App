@@ -49,5 +49,5 @@ const copyFiles = async ({ name, source, destination }: Payload) => {
 
 export const createWidget = async (payload: Payload) => {
   await copyFiles(payload)
-  console.log(`Widget ${payload.name} created`)
+  console.log('\x1b[36m', `Widget ${payload.name} created`, '\x1b[0m')
 }

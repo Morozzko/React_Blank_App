@@ -8,5 +8,5 @@ type Payload = {
 
 export const removeWidget = async (payload: Payload) => {
   await deleteDirectory(path.join(payload.destination, payload.name))
-  console.log(`Widget ${payload.name} removed`)
+  console.log('\x1b[36m', `Widget ${payload.name} removed`, '\x1b[0m')
 }

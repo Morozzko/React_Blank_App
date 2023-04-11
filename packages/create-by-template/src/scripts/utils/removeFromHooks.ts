@@ -24,8 +24,8 @@ export const removeFromHooks = async ({ pathToFile, name }: Payload) => {
 
     // Запись изменений обратно в файл
     await fs.writeFile(pathToFile, updatedContentWithActionsRemoved, 'utf-8')
-    console.log('Импорты и связанные строки удалены')
+    console.log('\x1b[36m', `Removed ${name} from useAppActions`, '\x1b[0m')
   } catch (err) {
-    console.error(`Ошибка при удалении импортов и связанных строк: ${err}`)
+    console.error(`Error while updating useAppActions: ${err}`)
   }
 }

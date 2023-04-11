@@ -24,8 +24,8 @@ export const insertToReducer = async ({ name, pathToReducersList, regexp, pathFo
 
     // Запись изменений обратно в файл
     await fs.writeFile(pathToReducersList, updatedDataWithImport, 'utf-8')
-    console.log('Reducers list updated')
+    console.log('\x1b[36m', `ReducersList updated with ${name}`, '\x1b[0m')
   } catch (err) {
-    console.error(`Error while updating reducers list: ${err}`)
+    console.error(`Error while updating ReducersList: ${err}`)
   }
 }

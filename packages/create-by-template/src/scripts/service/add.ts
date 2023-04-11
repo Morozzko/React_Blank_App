@@ -48,5 +48,5 @@ const copyFiles = async ({ name, source, destination }: Payload) => {
 
 export const createService = async (payload: Payload) => {
   await copyFiles(payload)
-  console.log(`Service ${payload.name} created`)
+  console.log('\x1b[36m', `Service ${payload.name} created`, '\x1b[0m')
 }

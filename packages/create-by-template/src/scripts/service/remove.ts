@@ -8,5 +8,5 @@ type Payload = {
 
 export const removeService = async (payload: Payload) => {
   await deleteDirectory(path.join(payload.destination, payload.name))
-  console.log(`Service ${payload.name} removed`)
+  console.log('\x1b[36m', `Service ${payload.name} removed`, '\x1b[0m')
 }

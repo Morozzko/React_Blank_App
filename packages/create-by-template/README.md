@@ -10,8 +10,17 @@ npm i @npm.piece/template-generator
 yarn add @npm.piece/template-generator
 ```
 
-## Generate Widget by template
+## Generate by template and inject to useAppActions, ReducersList
+```
+new widget name
+new service name
+```
 
+## Remove from useAppActions, ReducersList, and feature directory
+```
+new widget name
+new service name
+```
 
 ## Create config file .config.template.js near package.json:
 

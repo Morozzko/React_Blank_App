@@ -36,7 +36,7 @@ export const insertToHooks = async ({ pathToHook, name, regexp, pathForImportHoo
 
     // Запись изменений обратно в файл
     await fs.writeFile(pathToHook, updatedDataWithImport, 'utf-8')
-    console.log('useAppAction updated')
+    console.log('\x1b[36m', `useAppAction updated with ${name}`, '\x1b[0m')
   } catch (err) {
     console.error(`Error while insert to useAppAction ${err}`)
   }

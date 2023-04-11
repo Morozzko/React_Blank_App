@@ -2,7 +2,6 @@ import fs from 'fs/promises'
 import path from 'path'
 
 export const deleteDirectory = async (directory: string) => {
-  console.log(directory)
   try {
     const files = await fs.readdir(directory, { withFileTypes: true })
 
