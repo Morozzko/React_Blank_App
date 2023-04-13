@@ -5,7 +5,7 @@ export type FieldErrorType = {
   error: string
 }
 
-export type ThunkError = {
+export type ThunkErrorType = {
   rejectValue: {
     errors: string[]
     fieldsErrors?: FieldErrorType[]

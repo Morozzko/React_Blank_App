@@ -16,11 +16,6 @@ export const store = configureStore({
       .concat(...generatedMiddlewaresList),
 })
 
-declare global {
-  interface Window {
-    store: typeof store
-  }
-}
 if (process.env.NODE_ENV === 'development') {
   window.store = store
 }

@@ -45,7 +45,7 @@ module.exports = {
       'error',
       // Правило для типов
       {
-        selector: 'typeLike',
+        selector: 'typeAlias',
         format: ['PascalCase'],
         custom: {
           regex: 'Type$',
@@ -53,10 +53,6 @@ module.exports = {
         },
         leadingUnderscore: 'allow',
         trailingUnderscore: 'allow',
-        filter: {
-          regex: '^(__String|[A-Z][a-zA-Z0-9]+Type)$',
-          match: true,
-        },
       },
       // Правило для интерфейсов
       {
@@ -160,6 +156,12 @@ module.exports = {
       files: ['*.ts', '*.js'],
       rules: {
         'no-console': 'off',
+      },
+    },
+    {
+      files: ['*.d.ts'],
+      rules: {
+        '@typescript-eslint/naming-convention': 'off',
       },
     },
     {

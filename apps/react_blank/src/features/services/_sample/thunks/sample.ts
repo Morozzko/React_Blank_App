@@ -1,10 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { ThunkCreator } from '@functions/ThunkCreator'
-import { ThunkError } from '../../../../utils/lib/types/types'
+import { ThunkErrorType } from '../../../../utils/lib/types/types'
 import { RestAPI } from '../api'
 import { name } from '../constants/name'
 
-export const GetUsersTC = createAsyncThunk<any, void, ThunkError>(
+export const GetUsersTC = createAsyncThunk<any, void, ThunkErrorType>(
   `${name}/GetUsersTC`,
   async (payload, thunkAPI) =>
     await ThunkCreator(
