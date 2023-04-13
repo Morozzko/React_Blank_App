@@ -41,6 +41,46 @@ module.exports = {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/self-closing-comp': 'error',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      // Правило для типов
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+        custom: {
+          regex: 'Type$',
+          match: true,
+        },
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'allow',
+        filter: {
+          regex: '^(__String|[A-Z][a-zA-Z0-9]+Type)$',
+          match: true,
+        },
+      },
+      // Правило для интерфейсов
+      {
+        selector: 'interface',
+        format: ['PascalCase'],
+        custom: {
+          regex: '^I[A-Z]',
+          match: true,
+        },
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'allow',
+      },
+      // Правило для перечислений
+      {
+        selector: 'enum',
+        format: ['PascalCase'],
+        custom: {
+          regex: '^[A-Z][a-zA-Z]*Enum$',
+          match: true,
+        },
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'allow',
+      },
+    ],
     'react/jsx-max-props-per-line': [
       'error',
       {
