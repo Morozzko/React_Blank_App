@@ -2,15 +2,15 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { SnackbarKey } from 'notistack'
 import { v1 } from 'uuid'
 import { name } from '../constants/name'
-import { NotificationPayloadType, NotificationType, RequestStatusType } from '../lib/types'
+import { NotificationPayloadType, NotificationType } from '../lib/types'
 import { initialState } from '../structure'
 
 const slice = createSlice({
   name,
   initialState,
   reducers: {
-    setAppStatus(state, action: PayloadAction<{ status: RequestStatusType }>) {
-      state.status = action.payload.status
+    setAppStatus(state, action: PayloadAction<typeof initialState.status>) {
+      state.status = action.payload
     },
     enqueueNotification(state, action: PayloadAction<NotificationPayloadType>) {
       const date = new Date().toString()

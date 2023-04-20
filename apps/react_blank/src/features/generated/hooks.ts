@@ -8,11 +8,24 @@ import {
   useAddPetMutation,
   useUpdatePetMutation,
 } from './hooks/pet'
+import {
+  useDeleteUserMutation,
+  useUpdateUserMutation,
+  useGetUserByNameQuery,
+  useLogoutUserQuery,
+  useLoginUserQuery,
+  useCreateUsersWithListInputMutation,
+  useCreateUserMutation,
+} from './hooks/user'
 // Этот реэкспорт хуков нужен, если вдруг поменяются названия файлов при изменении контракта с backend
 export {
-  useDeleteOrderMutation,
-  useGetOrderByIdQuery,
-  usePlaceOrderMutation,
+  useDeleteUserMutation,
+  useUpdateUserMutation,
+  useGetUserByNameQuery,
+  useLogoutUserQuery,
+  useLoginUserQuery,
+  useCreateUsersWithListInputMutation,
+  useCreateUserMutation,
   useDeletePetMutation,
   useUpdatePetWithFormMutation,
   useGetPetByIdQuery,
@@ -20,4 +33,7 @@ export {
   useFindPetsByStatusQuery,
   useAddPetMutation,
   useUpdatePetMutation,
+  useDeleteOrderMutation,
+  useGetOrderByIdQuery,
+  usePlaceOrderMutation,
 }

@@ -7,8 +7,8 @@ export const slice = createSlice({
   name,
   initialState,
   reducers: {
-    setJWT(state, action: PayloadAction<{ sample: string }>) {
-      // state.sample = action.payload.sample
+    setLoading(state, action: PayloadAction<typeof initialState.loading>) {
+      state.loading = action.payload
     },
   },
   extraReducers: builder => {

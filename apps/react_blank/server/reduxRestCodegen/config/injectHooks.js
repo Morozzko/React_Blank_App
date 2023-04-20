@@ -40,10 +40,10 @@ files.forEach(file => {
     return trimmedLine.endsWith('} = injectedRtkApi') || trimmedLine.endsWith('} = injectedRtkApi;')
   })
 
-  // если экспорта injectedRtkApi нет, то пропускаем файл
-  if (injectedRtkApiIndex === -1) {
-    return
-  }
+  // // если экспорта injectedRtkApi нет, то пропускаем файл
+  // if (injectedRtkApiIndex === -1) {
+  //   return
+  // }
 
   // ищем все хуки в строках, предшествующих экспорту injectedRtkApi
   const hooks = []
@@ -52,6 +52,30 @@ files.forEach(file => {
     if (line.startsWith('export const {')) {
       break
     }
+    let match
+    while ((match = hooksRegExp.exec(line)) !== null) {
+      // добавляем найденный хук в массив
+      hooks.push(match[0])
+    }
+  }
+
+  // находим индекс строки, в которой начинается экспорт injectedRtkApi
+  const injectedRtkApiStartIndex = lines.findIndex(line => {
+    const trimmedLine = line.trim()
+
+    return trimmedLine.startsWith('export const {')
+  })
+
+  // находим индекс строки, в которой заканчивается экспорт injectedRtkApi
+  const injectedRtkApiEndIndex = lines.findIndex(line => {
+    const trimmedLine = line.trim()
+
+    return trimmedLine.endsWith('} = injectedRtkApi') || trimmedLine.endsWith('} = injectedRtkApi;')
+  })
+
+  // ищем все хуки в строках между началом и концом экспорта injectedRtkApi
+  for (let i = injectedRtkApiStartIndex; i <= injectedRtkApiEndIndex; i++) {
+    const line = lines[i].trim()
     let match
     while ((match = hooksRegExp.exec(line)) !== null) {
       // добавляем найденный хук в массив

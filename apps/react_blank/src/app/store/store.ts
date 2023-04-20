@@ -14,6 +14,7 @@ export const store = configureStore({
       .prepend(thunkMiddleware)
       // Добавляем автоматические middleware сгенерированные библиотекой @rtk-query/codegen-openapi
       .concat(...generatedMiddlewaresList),
+  devTools: process.env.NODE_ENV !== 'production',
 })
 
 if (process.env.NODE_ENV === 'development') {

@@ -6,7 +6,7 @@ const slice = createSlice({
   name,
   initialState,
   reducers: {
-    setIsMobile(state, action: PayloadAction<boolean>) {
+    setIsMobile(state, action: PayloadAction<typeof initialState.isMobile>) {
       state.isMobile = action.payload
     },
   },
