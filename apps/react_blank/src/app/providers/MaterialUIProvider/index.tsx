@@ -4,10 +4,10 @@ export const MaterialUIProvider: FC = ({ children }) => {
   const theme = createTheme({
     palette: {
       // primary: {
-      //   main: ColorsScheme.RaiffeisenWhite(),
+      //   main: "black",
       // },
       // secondary: {
-      //   main: ColorsScheme.RaiffeisenBlack(),
+      //   main: "white",
       // },
     },
   })

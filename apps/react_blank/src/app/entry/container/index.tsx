@@ -13,7 +13,7 @@ export const Container: FC = props => (
   </BrowserRouter>
 )
 
-// Импорт приложения для Плагина Module Federation
+// Импорт приложения для Плагина ModuleFederation
 export const ImportedContainer: FC = props => (
   <Providers>
     <App {...props} />
