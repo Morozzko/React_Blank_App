@@ -17,12 +17,7 @@ export const useContainer = () => {
     displayed = [...displayed, id]
   }
 
-  // const removeDisplayed = (id: SnackbarKey) => {
-  //   displayed = [...displayed.filter(key => id !== key)]
-  // }
-
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
     notifications.forEach(({ key, message, options = {}, dismissed = false }) => {
       if (dismissed) {

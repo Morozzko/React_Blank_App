@@ -4,12 +4,15 @@ import { ThunkErrorType } from '../../../../utils/lib/types/types'
 import { RestAPI } from '../api'
 import { name } from '../constants/name'
 
+const typePrefix = `${name}/GetUsersTC`
+
 export const GetUsersTC = createAsyncThunk<any, void, ThunkErrorType>(
-  `${name}/GetUsersTC`,
+  typePrefix,
   async (payload, thunkAPI) =>
     await ThunkCreator(
       {
-        apiMethod: () => RestAPI.get(payload),
+        apiMethod: signal => RestAPI.get(payload, { signal }),
+        typePrefix,
       },
       thunkAPI
     )

@@ -9,9 +9,6 @@ const slice = createSlice({
   name,
   initialState,
   reducers: {
-    setAppStatus(state, action: PayloadAction<typeof initialState.status>) {
-      state.status = action.payload
-    },
     enqueueNotification(state, action: PayloadAction<NotificationPayloadType>) {
       const date = new Date().toString()
       const key = v1()

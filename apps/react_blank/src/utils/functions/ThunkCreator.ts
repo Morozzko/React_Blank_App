@@ -1,45 +1,76 @@
-import { handleSetAppStatus, handleThunkError, handleThunkSuccess, ThunkAPIType } from './AppStatusHandlers'
+import { AxiosError } from 'axios'
+import { handleThunkError, handleThunkSuccess, ThunkAPIType } from './AppStatusHandlers'
 
 type ThunkCreatorType = {
-  apiMethod: () => any
+  apiMethod: (signal: AbortSignal) => any
+  typePrefix: string
+
   status?: number
-  successCallback?: () => void
-  errorCallback?: () => void
+
+  onSuccess?: () => void
+  onError?: () => void
+
   notification?: {
-    hideSuccess?: boolean
-    hideError?: boolean
-    notifySuccess?: string
-    notifyError?: string
+    successMessage?: string
+    errorMessage?: string
   }
 }
 
-export const ThunkCreator = async (creator: ThunkCreatorType, thunkAPI: ThunkAPIType) => {
-  creator.status = creator.status ? creator.status : 200
-  handleSetAppStatus('loading', thunkAPI)
-  try {
-    const res = await creator.apiMethod()
+// Хранилище ключей
+const activeRequestControllers = new Map<string, AbortController>()
 
-    if (res.status === creator.status) {
+export const ThunkCreator = async (
+  { status = 200, notification, onError, onSuccess, apiMethod, typePrefix }: ThunkCreatorType,
+  thunkAPI: ThunkAPIType
+) => {
+  // AbortController: Начало
+  const controller = new AbortController()
+
+  const requestKey = typePrefix
+  const existingController = activeRequestControllers.get(requestKey)
+
+  if (existingController) {
+    existingController.abort()
+  }
+
+  activeRequestControllers.set(requestKey, controller)
+  // AbortController: Конец
+
+  // Успешная обработка: Начало
+  try {
+    const res = await apiMethod(controller.signal)
+
+    // Удаляем ключ из хранилища
+    activeRequestControllers.delete(requestKey)
+
+    if (res.status === status) {
       handleThunkSuccess(
         {
-          showNotify: !creator.notification?.hideSuccess,
-          message: creator.notification?.notifySuccess,
+          message: notification?.successMessage,
         },
         thunkAPI
       )
-      creator.successCallback && creator.successCallback()
+      onSuccess && onSuccess()
 
       return res.data
     }
-  } catch (error: any) {
-    creator.errorCallback && creator.errorCallback()
+    // Успешная обработка: Конец
+
+    // Обработка ошибки: Начало
+  } catch (e) {
+    const error = e as AxiosError
+
+    // Удаляем ключ из хранилища
+    activeRequestControllers.delete(requestKey)
+
+    onError && onError()
 
     return handleThunkError(
       {
-        showNotify: !creator.notification?.notifyError,
-        message: creator.notification?.notifyError || error,
+        message: notification?.errorMessage || error.message,
       },
       thunkAPI
     )
   }
+  // Обработка ошибки: Конец
 }

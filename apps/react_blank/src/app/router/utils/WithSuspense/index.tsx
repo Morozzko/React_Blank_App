@@ -1,5 +1,5 @@
 import { LazyExoticComponent, Suspense } from 'react'
-import { Loading } from '../../../../components/templates/Loading'
+import { Loading } from '@components/templates/Loading'
 
 // const OtherComponent = lazy(() =>
 //   import('../../../../components/templates/Loading').then(module => ({ default: module.Loading }))

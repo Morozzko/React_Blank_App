@@ -3,7 +3,7 @@ import React from 'react'
 type OwnPropertyType = {}
 
 export const Loading: FC<OwnPropertyType> = React.memo(() => {
-  const simple = 'simple'
+  const loading = 'Loading'
 
-  return <div>{simple}</div>
+  return <div>{loading}</div>
 })

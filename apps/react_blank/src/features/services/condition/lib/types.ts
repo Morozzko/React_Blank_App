@@ -1,4 +1,3 @@
-export type RequestStatusType = 'idle' | 'loading' | 'succeeded' | 'failed'
 export type NotificationType = {
   key: string
   date: Date | string

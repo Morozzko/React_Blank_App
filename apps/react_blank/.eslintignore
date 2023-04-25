@@ -3,5 +3,4 @@
 /src/index.ts
 /src/features/generated/hooks
 /src/utils/helpers/ErrorBoundary/index.tsx
-/src/utils/functions/ThunkCreator.ts
 
