@@ -1,16 +1,20 @@
 import { Mutex } from 'async-mutex'
 import axios from 'axios'
 
+// Получение ссылки на backend из local environment
 const baseURL = process.env.REACT_APP_BACKEND_IP
 
+// Объявление изначальных Headers
 const headers = {
   Authorization: '',
 }
 
+// Создание единого экземпляра axios: Начало
 export const instance = axios.create({
   baseURL,
   headers,
 })
+// Создание единого экземпляра axios: Конец
 
 // Создаем экземпляр Mutex
 // Для другого перехватчика, лучше создать отдельный экземпляр
