@@ -12,7 +12,7 @@ export const instance = axios.create({
   headers,
 })
 
-// create a new mutex
+// Создаем экземпляр Mutex
 const mutex = new Mutex()
 
 // Перехватчики запросов: Начало
@@ -35,19 +35,20 @@ instance.interceptors.response.use(
       if (!mutex.isLocked()) {
         const release = await mutex.acquire()
         try {
-          // here code for refresh token
+          // Код для обновления токена
         } catch (e) {
           request.errorsCount = (request.errorsCount || 1) + 1
         } finally {
-          // release must be called once the mutex should be released again.
+          // Освобождаем поток для следующих
           release()
         }
       }
       // Если поток свободен: Конец
       else {
-        // wait until the mutex is available without locking it
+        // Ждем разблокировки потока
         await mutex.waitForUnlock()
       }
+      // Вызываем запрос повторно
 
       return instance.request(request)
     }
