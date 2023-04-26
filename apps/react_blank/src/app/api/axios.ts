@@ -12,8 +12,8 @@ export const instance = axios.create({
   headers,
 })
 
-// Создаем экземпляр Mutex
-const mutex = new Mutex()
+// Создаем экземпляр Mutex для другого перехватчика, лучше создать отдельный экземпляр
+const mutex401 = new Mutex()
 
 // Перехватчики запросов: Начало
 instance.interceptors.request.use(config => {
@@ -32,8 +32,8 @@ instance.interceptors.response.use(
     // Обработка 401 ошибки: Начало
     if (error.response.status === 401 && error.config && error.config.errorsCount !== 5) {
       // Если поток свободен: Начало
-      if (!mutex.isLocked()) {
-        const release = await mutex.acquire()
+      if (!mutex401.isLocked()) {
+        const release = await mutex401.acquire()
         try {
           // Код для обновления токена
         } catch (e) {
@@ -46,7 +46,7 @@ instance.interceptors.response.use(
       // Если поток свободен: Конец
       else {
         // Ждем разблокировки потока
-        await mutex.waitForUnlock()
+        await mutex401.waitForUnlock()
       }
       // Вызываем запрос повторно
 
