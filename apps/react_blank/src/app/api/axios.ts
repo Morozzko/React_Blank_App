@@ -39,7 +39,7 @@ instance.interceptors.response.use(
         } catch (e) {
           request.errorsCount = (request.errorsCount || 1) + 1
         } finally {
-          // Освобождаем поток для следующих
+          // Освобождаем поток для следующих запросов
           release()
         }
       }
