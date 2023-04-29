@@ -29,6 +29,7 @@
     "start": "updated-cra start",
     "dev": "updated-cra start",
     "build": "updated-cra build",
+    "gen:locales": "npm.piece-locale-downloader",
     "gen:hooks": "npx @rtk-query/codegen-openapi server/reduxRestCodegen/config/openapi-config.ts",
     "postgen:hooks": "yarn run inject:hooks && yarn run inject:reducers && yarn run inject:middleware && yarn run eslint",
     "inject:hooks": "node server/reduxRestCodegen/config/injectHooks.js",
