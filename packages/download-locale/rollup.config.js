@@ -16,7 +16,7 @@ export default {
   },
   external: ['react'],
   plugins: [
-    resolve(),
+    resolve({ preferBuiltins: false }),
     peerDeps(),
     commonjs(),
     typescript({
@@ -26,6 +26,7 @@ export default {
     }),
     babel({ babelHelpers: 'bundled' }),
     terser(),
+    // json(),
     // visualizer({
     //   filename: 'bundle-analysis.html',
     //   open: true,
