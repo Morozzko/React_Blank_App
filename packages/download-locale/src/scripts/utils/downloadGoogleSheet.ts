@@ -20,10 +20,9 @@ export const downloadGoogleSheet = async (href: string) => {
   console.log('\x1b[35m', `Download table: ${href}`, '\x1b[0m')
   const response = await fetch(href)
 
-  const data = await response.json()
-  console.log(data)
+  const data = (await response.json()) as { values: string[][] }
 
-  return data
+  return data?.values
 }
 
 // Функция createDictionary преобразует двумерный массив Google Sheets в словарь переводов
@@ -101,10 +100,12 @@ const MergeObjects = (...objects: object[]) => {
   return result
 }
 
-export const createFile = async (data: TranslationFileType, publicPath: string, fileName = 'common.json') => {
-  const { _fileName, ...newData } = data
-
-  const name = `${publicPath}/${data._fileName}`
+export const createFile = async (
+  { _fileName, ...newData }: TranslationFileType,
+  publicPath: string,
+  fileName = 'common.json'
+) => {
+  const name = `${publicPath}/${_fileName}`
 
   fs.mkdir(name, { recursive: true }, error => {
     if (error) {
