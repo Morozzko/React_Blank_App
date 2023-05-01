@@ -12,7 +12,7 @@ export const GetUsersTC = createAsyncThunk<any, void, ThunkErrorType>(
     await ThunkCreator(
       {
         apiMethod: signal => RestAPI.get(payload, { signal }),
-        typePrefix,
+        requestKey: typePrefix,
       },
       thunkAPI
     )

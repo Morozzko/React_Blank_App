@@ -3,7 +3,7 @@ import { handleThunkError, handleThunkSuccess, ThunkAPIType } from './AppStatusH
 
 type ThunkCreatorType = {
   apiMethod: (signal: AbortSignal) => any
-  typePrefix: string
+  requestKey: string
 
   status?: number
 
@@ -20,13 +20,12 @@ type ThunkCreatorType = {
 const activeRequestControllers = new Map<string, AbortController>()
 
 export const ThunkCreator = async (
-  { status = 200, notification, onError, onSuccess, apiMethod, typePrefix }: ThunkCreatorType,
+  { status = 200, notification, onError, onSuccess, apiMethod, requestKey }: ThunkCreatorType,
   thunkAPI: ThunkAPIType
 ) => {
   // AbortController: Начало
   const controller = new AbortController()
 
-  const requestKey = typePrefix
   const existingController = activeRequestControllers.get(requestKey)
 
   if (existingController) {
