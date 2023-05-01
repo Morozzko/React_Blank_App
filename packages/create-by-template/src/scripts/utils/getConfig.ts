@@ -9,10 +9,10 @@ const rootDir = process.cwd()
 const configFile = path.join(rootDir, '.config.template.js')
 
 export const getConfig = (): ConfigType | undefined => {
-  // Проверяем наличие файла конфигурации
-  if (fs.existsSync(configFile)) {
-    return require(configFile)
-  } else {
-    console.error('Конфигурационный файл .config.template.js не найден!')
-  }
+	// Проверяем наличие файла конфигурации
+	if (fs.existsSync(configFile)) {
+		return require(configFile)
+	} else {
+		console.error('Конфигурационный файл .config.template.js не найден!')
+	}
 }

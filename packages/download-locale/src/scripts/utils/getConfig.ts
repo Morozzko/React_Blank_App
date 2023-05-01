@@ -9,10 +9,10 @@ const rootDir = process.cwd()
 const configFile = path.join(rootDir, '.config.locale.js')
 
 export const getConfig = (): ConfigType | undefined => {
-  // Проверяем наличие файла конфигурации
-  if (fs.existsSync(configFile)) {
-    return require(configFile)
-  } else {
-    console.error('Конфигурационный файл .config.locale.js не найден!')
-  }
+	// Проверяем наличие файла конфигурации
+	if (fs.existsSync(configFile)) {
+		return require(configFile)
+	} else {
+		console.error('Конфигурационный файл .config.locale.js не найден!')
+	}
 }

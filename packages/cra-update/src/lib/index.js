@@ -5,9 +5,9 @@ const paths = require('./paths')
 const plugins = require('./plugins')
 
 module.exports = {
-  ...paths,
-  ...errors,
-  ...plugins,
-  ...general,
-  ...overrideConfig,
+	...paths,
+	...errors,
+	...plugins,
+	...general,
+	...overrideConfig,
 }

@@ -2,7 +2,7 @@ import { AxiosRequestConfig } from 'axios'
 import { instance } from '@app/api/axios'
 
 export const RestAPI = {
-  async get(payload: any, options: AxiosRequestConfig) {
-    return await instance.get<{}>('todos/', options)
-  },
+	async get(payload: any, options: AxiosRequestConfig) {
+		return await instance.get<{}>('todos/', options)
+	},
 }

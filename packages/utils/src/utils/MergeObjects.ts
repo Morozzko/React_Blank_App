@@ -1,22 +1,22 @@
 export const MergeObjects = (...objects: object[]) => {
-  const result: Record<string, unknown> = {}
+	const result: Record<string, unknown> = {}
 
-  objects.forEach(obj => {
-    if (typeof obj === 'object' && obj !== null) {
-      Object.keys(obj).forEach((key: string) => {
-        // @ts-ignore
-        const objByPath = obj[key]
+	objects.forEach(obj => {
+		if (typeof obj === 'object' && obj !== null) {
+			Object.keys(obj).forEach((key: string) => {
+				// @ts-ignore
+				const objByPath = obj[key]
 
-        if (typeof objByPath === 'object' && objByPath !== null) {
-          result[key] = MergeObjects(result[key] || {}, objByPath)
-        } else {
-          result[key] = objByPath
-        }
-      })
-    }
-  })
+				if (typeof objByPath === 'object' && objByPath !== null) {
+					result[key] = MergeObjects(result[key] || {}, objByPath)
+				} else {
+					result[key] = objByPath
+				}
+			})
+		}
+	})
 
-  return result
+	return result
 }
 
 // export function MergeObjects() {

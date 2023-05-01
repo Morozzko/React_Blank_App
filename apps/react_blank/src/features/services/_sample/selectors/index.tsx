@@ -5,6 +5,6 @@ const SelectOne = (state: AppStateType) => state
 const SelectTwo = (state: AppStateType) => state
 
 const simple = createSelector(SelectOne, SelectTwo, (one, two) => ({
-  one,
-  two,
+	one,
+	two,
 }))

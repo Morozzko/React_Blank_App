@@ -1,3 +1,3 @@
 export const initialState = {
-  isMobile: false,
+	isMobile: false,
 }

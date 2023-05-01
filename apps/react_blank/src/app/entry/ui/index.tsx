@@ -5,8 +5,10 @@ import { mobile } from '@services/mobile'
 import '@services/localization'
 
 export const App: FC = () => (
-  <div>
-    <AppRouter />
-    <CustomServiceInjector containers={[condition.useContainer, mobile.useContainer]} />
-  </div>
+	<div>
+		<AppRouter />
+		<CustomServiceInjector
+			containers={[condition.useContainer, mobile.useContainer]}
+		/>
+	</div>
 )

@@ -19,76 +19,84 @@ const files = fs.readdirSync(folderPath)
 
 // итерируемся по каждому файлу в папке
 files.forEach(file => {
-  // получаем полный путь к файлу
-  const filePath = path.join(folderPath, file)
+	// получаем полный путь к файлу
+	const filePath = path.join(folderPath, file)
 
-  // проверяем, является ли файл TypeScript файлом
-  if (path.extname(filePath) !== '.ts') {
-    return
-  }
+	// проверяем, является ли файл TypeScript файлом
+	if (path.extname(filePath) !== '.ts') {
+		return
+	}
 
-  // читаем содержимое файла
-  const data = fs.readFileSync(filePath, 'utf8')
+	// читаем содержимое файла
+	const data = fs.readFileSync(filePath, 'utf8')
 
-  // разделяем содержимое файла на строки и разворачиваем их в обратном порядке
-  const lines = data.split('\n').reverse()
+	// разделяем содержимое файла на строки и разворачиваем их в обратном порядке
+	const lines = data.split('\n').reverse()
 
-  // находим индекс строки, в которой находится экспорт injectedRtkApi
-  const injectedRtkApiIndex = lines.findIndex(line => {
-    const trimmedLine = line.trim()
+	// находим индекс строки, в которой находится экспорт injectedRtkApi
+	const injectedRtkApiIndex = lines.findIndex(line => {
+		const trimmedLine = line.trim()
 
-    return trimmedLine.endsWith('} = injectedRtkApi') || trimmedLine.endsWith('} = injectedRtkApi;')
-  })
+		return (
+			trimmedLine.endsWith('} = injectedRtkApi') ||
+			trimmedLine.endsWith('} = injectedRtkApi;')
+		)
+	})
 
-  // // если экспорта injectedRtkApi нет, то пропускаем файл
-  // if (injectedRtkApiIndex === -1) {
-  //   return
-  // }
+	// // если экспорта injectedRtkApi нет, то пропускаем файл
+	// if (injectedRtkApiIndex === -1) {
+	//   return
+	// }
 
-  // ищем все хуки в строках, предшествующих экспорту injectedRtkApi
-  const hooks = []
-  for (let i = injectedRtkApiIndex + 1; i < lines.length; i++) {
-    const line = lines[i].trim()
-    if (line.startsWith('export const {')) {
-      break
-    }
-    let match
-    while ((match = hooksRegExp.exec(line)) !== null) {
-      // добавляем найденный хук в массив
-      hooks.push(match[0])
-    }
-  }
+	// ищем все хуки в строках, предшествующих экспорту injectedRtkApi
+	const hooks = []
+	for (let i = injectedRtkApiIndex + 1; i < lines.length; i++) {
+		const line = lines[i].trim()
+		if (line.startsWith('export const {')) {
+			break
+		}
+		let match
+		while ((match = hooksRegExp.exec(line)) !== null) {
+			// добавляем найденный хук в массив
+			hooks.push(match[0])
+		}
+	}
 
-  // находим индекс строки, в которой начинается экспорт injectedRtkApi
-  const injectedRtkApiStartIndex = lines.findIndex(line => {
-    const trimmedLine = line.trim()
+	// находим индекс строки, в которой начинается экспорт injectedRtkApi
+	const injectedRtkApiStartIndex = lines.findIndex(line => {
+		const trimmedLine = line.trim()
 
-    return trimmedLine.startsWith('export const {')
-  })
+		return trimmedLine.startsWith('export const {')
+	})
 
-  // находим индекс строки, в которой заканчивается экспорт injectedRtkApi
-  const injectedRtkApiEndIndex = lines.findIndex(line => {
-    const trimmedLine = line.trim()
+	// находим индекс строки, в которой заканчивается экспорт injectedRtkApi
+	const injectedRtkApiEndIndex = lines.findIndex(line => {
+		const trimmedLine = line.trim()
 
-    return trimmedLine.endsWith('} = injectedRtkApi') || trimmedLine.endsWith('} = injectedRtkApi;')
-  })
+		return (
+			trimmedLine.endsWith('} = injectedRtkApi') ||
+			trimmedLine.endsWith('} = injectedRtkApi;')
+		)
+	})
 
-  // ищем все хуки в строках между началом и концом экспорта injectedRtkApi
-  for (let i = injectedRtkApiStartIndex; i <= injectedRtkApiEndIndex; i++) {
-    const line = lines[i].trim()
-    let match
-    while ((match = hooksRegExp.exec(line)) !== null) {
-      // добавляем найденный хук в массив
-      hooks.push(match[0])
-    }
-  }
+	// ищем все хуки в строках между началом и концом экспорта injectedRtkApi
+	for (let i = injectedRtkApiStartIndex; i <= injectedRtkApiEndIndex; i++) {
+		const line = lines[i].trim()
+		let match
+		while ((match = hooksRegExp.exec(line)) !== null) {
+			// добавляем найденный хук в массив
+			hooks.push(match[0])
+		}
+	}
 
-  console.log(hooks)
-  if (hooks.length > 0) {
-    imports.push(
-      `import { ${hooks.join(', ')} } from '${config.hooksImportFileSuffix}${path.basename(filePath, '.ts')}';`
-    )
-  }
+	console.log(hooks)
+	if (hooks.length > 0) {
+		imports.push(
+			`import { ${hooks.join(', ')} } from '${
+				config.hooksImportFileSuffix
+			}${path.basename(filePath, '.ts')}';`
+		)
+	}
 })
 
 // удаляем все импорты из файла
@@ -102,10 +110,15 @@ console.log(imports)
 // добавляем новые импорты в начало файла
 // если массив импортов не пустой, то вставляем его в начало файла
 if (imports.length > 0) {
-  fs.writeFileSync(importFilePath, `${imports.join('\n')}\n${data}`, 'utf8', err => {
-    if (err) {
-      console.error(err)
-    }
-  })
-  console.log('\x1b[36m', 'Инъекция Hooks завершена', '\x1b[0m')
+	fs.writeFileSync(
+		importFilePath,
+		`${imports.join('\n')}\n${data}`,
+		'utf8',
+		err => {
+			if (err) {
+				console.error(err)
+			}
+		}
+	)
+	console.log('\x1b[36m', 'Инъекция Hooks завершена', '\x1b[0m')
 }

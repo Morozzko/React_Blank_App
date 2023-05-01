@@ -3,8 +3,8 @@ import { useAppActions } from '@hooks/useAppActions'
 import { useAppSelector } from '@hooks/useAppSelector'
 
 export const useContainer = () => {
-  useEffect(() => {}, [])
+	useEffect(() => {}, [])
 
-  const {} = useAppActions()
-  const {} = useAppSelector(state => state)
+	const {} = useAppActions()
+	const {} = useAppSelector(state => state)
 }

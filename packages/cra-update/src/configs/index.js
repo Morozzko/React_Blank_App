@@ -5,9 +5,9 @@ const useStylelint = require('./stylelint')
 const useTSLint = require('./tslint')
 
 module.exports = {
-  useBabel,
-  useENV,
-  useStylelint,
-  useESLint,
-  useTSLint,
+	useBabel,
+	useENV,
+	useStylelint,
+	useESLint,
+	useTSLint,
 }

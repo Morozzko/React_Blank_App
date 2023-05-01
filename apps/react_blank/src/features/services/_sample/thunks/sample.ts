@@ -7,13 +7,13 @@ import { name } from '../constants/name'
 const typePrefix = `${name}/GetUsersTC`
 
 export const GetUsersTC = createAsyncThunk<any, void, ThunkErrorType>(
-  typePrefix,
-  async (payload, thunkAPI) =>
-    await ThunkCreator(
-      {
-        apiMethod: signal => RestAPI.get(payload, { signal }),
-        requestKey: typePrefix,
-      },
-      thunkAPI
-    )
+	typePrefix,
+	async (payload, thunkAPI) =>
+		await ThunkCreator(
+			{
+				apiMethod: signal => RestAPI.get(payload, { signal }),
+				requestKey: typePrefix,
+			},
+			thunkAPI
+		)
 )

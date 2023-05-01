@@ -1,5 +1,5 @@
 export const GetFromSessionStorage = (key: string) => {
-  const sessionStorageItem = sessionStorage.getItem(key)
+	const sessionStorageItem = sessionStorage.getItem(key)
 
-  return sessionStorageItem ? JSON.parse(sessionStorageItem) : null
+	return sessionStorageItem ? JSON.parse(sessionStorageItem) : null
 }

@@ -7,25 +7,29 @@ const useTSLintConfig = require('../tslint')
 const nameOnly = path => (path ? last(split('/', path)) : null)
 
 module.exports = config => {
-  const babelConfig =
-    loadFromPackageField('babel') || nameOnly(resolveFromRoot('.babelrc') || resolveFromRoot('config.babel'))
+	const babelConfig =
+		loadFromPackageField('babel') ||
+		nameOnly(resolveFromRoot('.babelrc') || resolveFromRoot('config.babel'))
 
-  const eslintConfig =
-    loadFromPackageField('eslintConfig') || nameOnly(resolveFromRoot('.eslintrc') || resolveFromRoot('config.eslint'))
+	const eslintConfig =
+		loadFromPackageField('eslintConfig') ||
+		nameOnly(resolveFromRoot('.eslintrc') || resolveFromRoot('config.eslint'))
 
-  const tslintConfig = resolveFromRoot('tsconfig.json') && resolveFromRoot('tslint')
+	const tslintConfig =
+		resolveFromRoot('tsconfig.json') && resolveFromRoot('tslint')
 
-  const transforms = reduce(
-    (accumulator, [key, path]) => (path ? [...accumulator, key(path)] : accumulator),
-    [],
-    [
-      [useBabelConfig, babelConfig],
-      [useESLintConfig, eslintConfig],
-      [useTSLintConfig, tslintConfig],
-    ]
-  )
+	const transforms = reduce(
+		(accumulator, [key, path]) =>
+			path ? [...accumulator, key(path)] : accumulator,
+		[],
+		[
+			[useBabelConfig, babelConfig],
+			[useESLintConfig, eslintConfig],
+			[useTSLintConfig, tslintConfig],
+		]
+	)
 
-  const transform = compose(...transforms)
+	const transform = compose(...transforms)
 
-  return transform(config)
+	return transform(config)
 }

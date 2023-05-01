@@ -6,34 +6,41 @@ import { useAppSelector } from '@hooks/useAppSelector'
 let displayed: SnackbarKey[] = []
 
 export const useContainer = () => {
-  const {
-    conditionActions: { removeNotification },
-  } = useAppActions()
-  const { notifications } = useAppSelector(state => state.condition)
+	const {
+		conditionActions: { removeNotification },
+	} = useAppActions()
+	const { notifications } = useAppSelector(state => state.condition)
 
-  const { enqueueSnackbar, closeSnackbar } = useSnackbar()
+	const { enqueueSnackbar, closeSnackbar } = useSnackbar()
 
-  const storeDisplayed = (id: SnackbarKey) => {
-    displayed = [...displayed, id]
-  }
+	const storeDisplayed = (id: SnackbarKey) => {
+		displayed = [...displayed, id]
+	}
 
-  useEffect(() => {
-    //@ts-ignore
-    notifications.forEach(({ key, message, options = {}, dismissed = false }) => {
-      if (dismissed) {
-        closeSnackbar(key)
+	useEffect(() => {
+		notifications.forEach(
+			({
+				key,
+				message,
+				options = {},
+				// @ts-ignore
+				dismissed = false,
+			}) => {
+				if (dismissed) {
+					closeSnackbar(key)
 
-        return
-      }
+					return
+				}
 
-      if (displayed.includes(key)) return
+				if (displayed.includes(key)) return
 
-      enqueueSnackbar(message, {
-        key,
-        ...options,
-      })
+				enqueueSnackbar(message, {
+					key,
+					...options,
+				})
 
-      storeDisplayed(key)
-    })
-  }, [notifications, closeSnackbar, enqueueSnackbar, removeNotification])
+				storeDisplayed(key)
+			}
+		)
+	}, [notifications, closeSnackbar, enqueueSnackbar, removeNotification])
 }
