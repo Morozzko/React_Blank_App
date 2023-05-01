@@ -53,7 +53,7 @@
   "devDependencies": {
     "@npm.piece/cra-update": "^1.0.4",
     "@npm.piece/eslint-config-npmpiece": "^1.0.22",
-    "@npm.piece/locale-downloader": "^1.0.3",
+    "@npm.piece/locale-downloader": "^1.0.4",
     "@npm.piece/tailwind-config": "^1.0.0",
     "@npm.piece/template-generator": "^1.0.4",
     "@rtk-query/codegen-openapi": "^1.0.0",
