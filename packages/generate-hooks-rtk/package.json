@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/generate-hooks-rtk",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "private": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -18,6 +18,7 @@
   "description": "code gen",
   "author": "Morozzko",
   "license": "ISC",
+  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/generate-hooks-rtk",
   "scripts": {
     "bump": "npm version patch",
     "rollup": "rm -rf ./dist && node_modules/.bin/rollup -c",

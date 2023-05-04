@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/template-generator",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "private": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -21,6 +21,7 @@
   "description": "code gen",
   "author": "Morozzko",
   "license": "ISC",
+  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/create-by-template",
   "scripts": {
     "bump": "npm version patch",
     "rollup": "rm -rf ./dist && node_modules/.bin/rollup -c",

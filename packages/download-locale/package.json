@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/locale-downloader",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "private": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -23,6 +23,7 @@
     "build": "npm run rollup",
     "eslint": "eslint --fix --ext .js,.jsx,.tsx,.ts ./src"
   },
+  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/download-locale",
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@rollup/plugin-babel": "^5.3.1",
