@@ -76,10 +76,15 @@ const configFile = {
   middlewaresImportDestination: createPath(
     './src/app/store/generated/middlewares.ts'
   ),
+  // путь для импорта из файла reducers
   reducersImportFileSuffix: '@generated/hooks/',
+  // путь для импорта из файла middlewares
   middlewaresImportFileSuffix: '@generated/hooks/',
+  // название объекта куда вставлять импорты в файле reducers
   reducersObjectName: 'generatedReducersList',
+  // название объекта куда вставлять импорты в файле middlewares
   middlewaresObjectName: 'generatedMiddlewaresList',
+  // не обязательное поле, которое при наличии вызовет eslint fix в конце
   eslintCommand: 'yarn run eslint'
 }
 
