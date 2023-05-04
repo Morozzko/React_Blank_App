@@ -4,15 +4,17 @@ import { ConfigType } from './lib/types'
 
 // Путь к корневой директории проекта
 const rootDir = process.cwd()
-const name = '.config.locale.js'
-
+const name = '.config.openapi.js'
 // Путь к файлу конфигурации
 const configFile = path.join(rootDir, name)
 
 export const getConfig = (): ConfigType | undefined => {
 	// Проверяем наличие файла конфигурации
 	if (fs.existsSync(configFile)) {
-		return require(configFile)
+		// eslint-disable-next-line @typescript-eslint/no-var-requires
+		const file = require(configFile)
+
+		return file.configFile
 	} else {
 		console.error(`Конфигурационный файл ${name} не найден!`)
 	}

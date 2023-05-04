@@ -4,4 +4,5 @@ export type ConfigType = {
 	localesFolder: string
 	sheetName: string
 	fileName: string
+	eslintCommand: string
 }

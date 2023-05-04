@@ -22,6 +22,7 @@ type ThunkCreatorType = {
 
 // Хранилище ключей
 const activeRequestControllers = new Map<string, AbortController>()
+
 export const ThunkCreator = async (
 	{
 		notification,

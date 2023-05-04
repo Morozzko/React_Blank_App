@@ -1,10 +1,10 @@
 import fs from 'fs/promises'
-import { UseAppActionsRegexp } from './lib/types'
+import { UseAppActionsRegexpType } from './lib/types'
 
 type PayloadType = {
 	pathToHook: string
 	name: string
-	regexp: UseAppActionsRegexp
+	regexp: UseAppActionsRegexpType
 	pathForImportHooks: string
 }
 

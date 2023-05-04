@@ -30,11 +30,7 @@
     "dev": "updated-cra start",
     "build": "updated-cra build",
     "gen:locales": "npm.piece-locale-downloader",
-    "gen:hooks": "npx @rtk-query/codegen-openapi server/reduxRestCodegen/config/openapi-config.ts",
-    "postgen:hooks": "yarn run inject:hooks && yarn run inject:reducers && yarn run inject:middleware && yarn run eslint",
-    "inject:hooks": "node server/reduxRestCodegen/config/injectHooks.js",
-    "inject:reducers": "node server/reduxRestCodegen/config/injectReducers.js",
-    "inject:middleware": "node server/reduxRestCodegen/config/injectMiddleware.js",
+    "gen:hooks": "npm.piece-gen-rtk-hooks",
     "test": "react-scripts test",
     "eslint": "eslint --fix --ext .js,.jsx,.tsx,ts ."
   },
@@ -55,8 +51,8 @@
     "@npm.piece/eslint-config-npmpiece": "^1.0.23",
     "@npm.piece/locale-downloader": "^1.0.4",
     "@npm.piece/tailwind-config": "^1.0.0",
-    "@npm.piece/template-generator": "^1.0.4",
-    "@rtk-query/codegen-openapi": "^1.0.0",
+    "@npm.piece/template-generator": "^1.0.5",
+    "@npm.piece/generate-hooks-rtk": "^1.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
@@ -72,7 +68,6 @@
     "postcss-import": "^15.1.0",
     "react-scripts": "^5.0.1",
     "tailwindcss": "^3.3.1",
-    "ts-node": "^10.9.1",
     "webpack-bundle-analyzer": "^4.8.0"
   }
 }

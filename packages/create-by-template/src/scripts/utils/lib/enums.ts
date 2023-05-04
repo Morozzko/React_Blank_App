@@ -1,4 +1,4 @@
-export enum templates {
-  widget = 'widget',
-  service = 'service',
+export enum TemplatesEnum {
+	widget = 'widget',
+	service = 'service',
 }

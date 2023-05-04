@@ -1,13 +1,13 @@
-import { templates } from './lib/enums'
+import { TemplatesEnum } from './lib/enums'
 
 const getType = (value: string) => {
 	let type: string | undefined
 	switch (value.toLowerCase()) {
-		case templates.widget:
-			type = templates.widget
+		case TemplatesEnum.widget:
+			type = TemplatesEnum.widget
 			break
-		case templates.service:
-			type = templates.service
+		case TemplatesEnum.service:
+			type = TemplatesEnum.service
 			break
 		default:
 			console.log(
@@ -31,7 +31,7 @@ const getName = (value: string, type: string) => {
 
 	const firstLetter = name.charAt(0)
 	const firstLetterToRightCase =
-		type === templates.widget
+		type === TemplatesEnum.widget
 			? firstLetter.toUpperCase()
 			: firstLetter.toLowerCase()
 	name = `${firstLetterToRightCase}${name.slice(1)}`
