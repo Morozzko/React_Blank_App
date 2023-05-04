@@ -26,12 +26,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "updated-cra start",
-    "dev": "updated-cra start",
-    "build": "updated-cra build",
+    "start": "craco start",
+    "dev": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "gen:locales": "npm.piece-locale-downloader",
     "gen:hooks": "npm.piece-gen-rtk-hooks",
-    "test": "react-scripts test",
     "eslint": "eslint --fix --ext .js,.jsx,.tsx,ts ."
   },
   "browserslist": {
@@ -47,7 +47,7 @@
     ]
   },
   "devDependencies": {
-    "@npm.piece/cra-update": "^1.0.4",
+    "@craco/craco": "^7.1.0",
     "@npm.piece/eslint-config-npmpiece": "^1.0.23",
     "@npm.piece/locale-downloader": "^1.0.7",
     "@npm.piece/tailwind-config": "^1.0.0",
