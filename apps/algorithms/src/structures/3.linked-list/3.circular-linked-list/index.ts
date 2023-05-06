@@ -8,57 +8,79 @@
 export class CircularListNode<T> {
 	constructor(
 		public value: T,
-		public nextNode: CircularListNode<T> | null = null
+		public nextValue: CircularListNode<T> | null = null
 	) {}
 }
 
 export class CircularLinkedList<T> {
-	private tail: CircularListNode<T> | null = null
+	private head: CircularListNode<T> | null = null
 
-	add(value: T): void {
-		const newNode = new CircularListNode(value)
+	// Добавление элемента в начало списка
+	addFirst(value: T): void {
+		const newNode = new CircularListNode<T>(value)
 
-		if (this.tail === null) {
-			this.tail = newNode
-			newNode.nextNode = newNode
+		if (this.head === null) {
+			this.head = newNode
+			newNode.nextValue = newNode
 		} else {
-			newNode.nextNode = this.tail.nextNode
-			this.tail.nextNode = newNode
-			this.tail = newNode
-		}
-	}
-
-	remove(): T | null {
-		if (this.tail === null) {
-			return null
-		}
-
-		const removedValue = this.tail.nextNode?.value
-
-		if (this.tail.nextNode === this.tail) {
-			this.tail = null
-		} else {
-			this.tail.nextNode = this.tail.nextNode!.nextNode
-		}
-
-		return removedValue as T | null
-	}
-
-	find(value: T): CircularListNode<T> | null {
-		if (this.tail === null) {
-			return null
-		}
-
-		let currentNode = this.tail.nextNode
-
-		do {
-			if (currentNode?.value === value) {
-				return currentNode
+			let currentNode = this.head
+			while (currentNode.nextValue !== this.head) {
+				currentNode = currentNode.nextValue!
 			}
 
-			currentNode = currentNode!.nextNode
-		} while (currentNode !== this.tail.nextNode)
+			newNode.nextValue = this.head
+			currentNode.nextValue = newNode
+			this.head = newNode
+		}
+	}
 
-		return null
+	// Добавление элемента в конец списка
+	addLast(value: T): void {
+		const newNode = new CircularListNode<T>(value)
+
+		if (this.head === null) {
+			this.head = newNode
+			newNode.nextValue = newNode
+		} else {
+			let currentNode = this.head
+			while (currentNode.nextValue !== this.head) {
+				currentNode = currentNode.nextValue!
+			}
+
+			currentNode.nextValue = newNode
+			newNode.nextValue = this.head
+		}
+	}
+
+	// Вывод элементов списка
+	display(): T[] {
+		const values: T[] = []
+
+		if (this.head === null) {
+			return values
+		}
+
+		let currentNode = this.head
+		do {
+			values.push(currentNode.value)
+			currentNode = currentNode.nextValue!
+		} while (currentNode !== this.head)
+
+		return values
+	}
+	displayList(): CircularListNode<T>[] {
+		const values: CircularListNode<T>[] = []
+
+		if (this.head === null) {
+			return values
+		}
+
+		let currentNode = this.head
+		do {
+			values.push(currentNode)
+			currentNode = currentNode.nextValue!
+		} while (currentNode !== this.head)
+
+		return values
 	}
 }
