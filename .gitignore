@@ -35,4 +35,5 @@ yarn-error.log*
 .idea
 /packages/eslint-config-npmpiece/node_modules/
 /packages/tailwind-config/node_modules/
-/packages/cra-update/node_modules/
+folderData.txt
+folderStructure.txt
