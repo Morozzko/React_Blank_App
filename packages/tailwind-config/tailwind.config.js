@@ -66,7 +66,7 @@ module.exports = {
 			},
 			animation: {
 				ripples: 'ripples 300ms ease-out forwards',
-				'absolute-spin': 'absolute-spin 1s linear infinite',
+				'absolute-spin': 'absolute-spin 1s 2.linear infinite',
 				'fade-in': 'fade-in 300ms ease-out forwards',
 			},
 		},

@@ -7,6 +7,9 @@
         "outDir": "dist",
         "sourceMap": true
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "dist"]
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "../core/node_modules", "dist"]
 }
