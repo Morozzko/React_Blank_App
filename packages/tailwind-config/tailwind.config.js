@@ -52,8 +52,14 @@ module.exports = {
 			backgroundImage: {},
 			keyframes: {
 				ripples: {
-					'0%': { transform: 'scale(1)', opacity: '0.2' },
-					'100%': { transform: 'scale(10)', opacity: '0' },
+					'0%': {
+						transform: 'scale(1)',
+						opacity: '0.2',
+					},
+					'100%': {
+						transform: 'scale(10)',
+						opacity: '0',
+					},
 				},
 				'absolute-spin': {
 					'0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
@@ -66,7 +72,7 @@ module.exports = {
 			},
 			animation: {
 				ripples: 'ripples 300ms ease-out forwards',
-				'absolute-spin': 'absolute-spin 1s 2.linear infinite',
+				'absolute-spin': 'absolute-spin 1s linear infinite',
 				'fade-in': 'fade-in 300ms ease-out forwards',
 			},
 		},
