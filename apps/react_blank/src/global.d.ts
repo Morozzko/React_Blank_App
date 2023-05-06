@@ -10,6 +10,7 @@ declare global {
 	type Callback<Value = void | unknown, ReturnType = void> = (
 		value?: Value
 	) => ReturnType
+	type UnknownCallback = (...args: any[]) => any
 	interface Window {
 		store: typeof store
 	}

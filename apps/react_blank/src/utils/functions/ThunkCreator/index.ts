@@ -1,9 +1,13 @@
 import { AxiosError } from 'axios'
 import {
+	ThunkErrorType,
+	WithoutOptionsType,
+} from '@functions/ThunkCreator/lib/types'
+import {
 	handleThunkError,
 	handleThunkSuccess,
 	ThunkAPIType,
-} from './AppStatusHandlers'
+} from './lib/AppStatusHandlers'
 
 type ThunkCreatorType = {
 	apiMethod: (signal: AbortSignal) => any
@@ -76,4 +80,10 @@ export const ThunkCreator = async (
 		)
 	}
 	// Обработка ошибки: Конец
+}
+
+export type CreateThunkType<T extends UnknownCallback> = {
+	Return: T
+	Payload: WithoutOptionsType<T>
+	Error: ThunkErrorType
 }

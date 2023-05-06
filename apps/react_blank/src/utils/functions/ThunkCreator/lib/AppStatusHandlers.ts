@@ -1,15 +1,14 @@
 import { Dispatch } from 'redux'
+import { RejectValueType } from '@functions/ThunkCreator/lib/types'
 import { Actions as condition } from '@services/condition'
 
 export type ThunkAPIType = {
 	dispatch: Dispatch
 	rejectWithValue: Function
 }
-type ThunkHelperPayloadType = {
-	message?: string
-}
+
 export const handleThunkError = (
-	{ message }: ThunkHelperPayloadType,
+	{ message }: RejectValueType,
 	thunkAPI: ThunkAPIType
 ) => {
 	if (message) {
@@ -21,11 +20,11 @@ export const handleThunkError = (
 		)
 	}
 
-	return thunkAPI.rejectWithValue({})
+	return thunkAPI.rejectWithValue({ message })
 }
 
 export const handleThunkSuccess = (
-	{ message }: ThunkHelperPayloadType,
+	{ message }: RejectValueType,
 	thunkAPI: ThunkAPIType
 ) => {
 	if (message) {

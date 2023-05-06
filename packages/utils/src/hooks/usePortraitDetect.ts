@@ -9,8 +9,9 @@ export const usePortraitDetect = () => {
 
 	const portrait = window.matchMedia('(orientation: portrait)')
 	const [isPortrait, setIsPortrait] = useState<boolean>(!portrait.matches)
-	const changeHandler = (event: MediaQueryListEvent) =>
+	const changeHandler = (event: MediaQueryListEvent) => {
 		setIsPortrait(!event.matches)
+	}
 
 	useEffect(() => {
 		portrait.addEventListener('change', changeHandler)

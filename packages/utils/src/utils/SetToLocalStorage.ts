@@ -1,3 +1,3 @@
-export const SetToLocalStorage = (key: string, data: any) => {
+export const SetToLocalStorage = <T>(key: string, data: T) => {
 	localStorage.setItem(key, JSON.stringify(data))
 }

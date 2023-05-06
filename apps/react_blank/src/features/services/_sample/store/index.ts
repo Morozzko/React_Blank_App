@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { name } from '../constants/name'
 import { initialState } from '../structure'
-import { asyncActions } from '../thunks/io'
+import { asyncActions } from '../thunks/export'
 
 export const slice = createSlice({
 	name,
