@@ -38,7 +38,7 @@ module.exports = {
 		'prefer-template': 'error',
 		'react/display-name': 'off',
 		'spaced-comment': [
-			'error',
+			'warn',
 			'always',
 			{
 				markers: ['/'],
@@ -127,7 +127,7 @@ module.exports = {
 			},
 		],
 		'prettier/prettier': [
-			'error',
+			'warn',
 			{
 				// printWidth: 120,
 				singleQuote: true,
