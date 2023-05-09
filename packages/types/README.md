@@ -9,9 +9,9 @@ npm i @npm.piece/types
 ```
 yarn add @npm.piece/types
 ```
-## Create .d.ts file and import types
+## Create .d.ts file in src folder and import types
 ```
-/// <reference types="@npm.piece/types" />
+/// <reference types="@npm.piece/types/global" />
 ```
 
 ### Types:

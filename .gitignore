@@ -37,3 +37,6 @@ yarn-error.log*
 /packages/tailwind-config/node_modules/
 folderData.txt
 folderStructure.txt
+
+*/node_modules
+/packages/**/node_modules/
