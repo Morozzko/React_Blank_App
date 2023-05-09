@@ -1,5 +1,5 @@
 import { useOnKeyPress } from '@npm.piece/utils'
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import SwappableViews from 'react-swipeable-views'
 import atomJSON from './assets/animations/atom-css-customisible.json'
@@ -12,11 +12,10 @@ import webpack from './assets/animations/webpack.json'
 import server from './assets/animations/working-server-animation.json'
 import { Telegram } from './assets/svg/telegram'
 import { BG } from './components/bg/'
-import { FloatingPanel } from './components/FloattingPannel'
-import { Paper } from './components/Paper'
 import { Slide } from './components/Slide/'
 
 import { AppSizeProvider } from './context/AppSizeContext'
+
 const link = 'https://t.me/morozzko'
 const Pages = [
 	{
@@ -110,7 +109,7 @@ const Pages = [
 
 const Main: FC = () => {
 	const [state, setState] = useState<number>(0)
-	const [isShown, setIsShown] = useState<boolean>(false)
+	// const [isShown, setIsShown] = useState<boolean>(false)
 
 	const onPressRightHandler = useCallback(() => {
 		setState(prevState => {
@@ -131,7 +130,7 @@ const Main: FC = () => {
 	useOnKeyPress(onPressLefttHandler, 'ArrowLeft')
 	useOnKeyPress(onPressRightHandler, 'ArrowRight')
 
-	const ref = useEffect(() => {}, [])
+	// const ref = useEffect(() => {}, [])
 
 	return (
 		<div
@@ -156,9 +155,9 @@ const Main: FC = () => {
 				rel="noreferrer">
 				<Telegram />
 			</a>
-			<FloatingPanel side="right" visible={isShown}>
-				<Paper>213</Paper>
-			</FloatingPanel>
+			{/* <FloatingPanel side="right" visible={isShown}>*/}
+			{/*	<Paper>213</Paper>*/}
+			{/* </FloatingPanel>*/}
 		</div>
 	)
 }
