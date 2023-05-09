@@ -6,23 +6,30 @@ import peerDeps from 'rollup-plugin-peer-deps-external'
 import { terser } from 'rollup-plugin-terser'
 
 export default {
-	input: './src/index.ts',
+	input: ['./src/index.ts'],
 	output: {
 		dir: 'dist',
 		format: 'esm',
 		preserveModules: true,
 		preserveModulesRoot: 'src',
-		sourcemap: true,
+		sourcemap: false,
 	},
 	external: ['react'],
 	plugins: [
-		resolve(),
+		resolve({ preferBuiltins: false }),
 		peerDeps(),
 		commonjs(),
 		typescript({
 			tsconfig: './tsconfig.json',
+			declaration: true,
+			declarationDir: 'dist',
 		}),
 		babel({ babelHelpers: 'bundled' }),
 		terser(),
+		// json(),
+		// visualizer({
+		//   filename: 'bundle-analysis.html',
+		//   open: true,
+		// }),
 	],
 }
