@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/React_Blank_App/static/css/main.2b8e3b83.css",
+    "main.js": "/React_Blank_App/static/js/main.36dcd5db.js",
+    "service-worker.js": "/React_Blank_App/service-worker.js",
+    "index.html": "/React_Blank_App/index.html",
+    "main.2b8e3b83.css.map": "/React_Blank_App/static/css/main.2b8e3b83.css.map",
+    "main.36dcd5db.js.map": "/React_Blank_App/static/js/main.36dcd5db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b8e3b83.css",
+    "static/js/main.36dcd5db.js"
+  ]
+}
