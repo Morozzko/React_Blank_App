@@ -2,6 +2,7 @@
   "rules": {
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/no-unused-vars": "off",
+    "no-constant-condition": "off",
     "no-prototype-builtins": "off"
   }
 }
