@@ -1,20 +1,20 @@
 # Навигация по репозиторию
 
-> ### 1. Архитектура
+> ### 1. Архитектура.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/apps/react_blank">1.1 Пример архитектуры на React.js.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/create-by-template">1.2 Генерация шаблонов под архитектуру.<a/>
 
-> ### 2. Вспомогательные библиотеки
+> ### 2. Вспомогательные библиотеки.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/utils">2.1 Хуки и полезные функции.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/types">2.2 Типы для быстрого написания кода.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/eslint-config-npmpiece">2.3 ES-Lint config.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/tailwind-config">2.4 Tailwind config.<a/>
 
-> ### 3. Генерация
+> ### 3. Генерация.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/generate-hooks-rtk">3.1 Генерация хуков для ReduxToolkit Query с авто-инъекцией в store.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/download-locale">3.2 Загрузка переводов из гугл таблицы.<a/>
 
-> ### 4. Структуры, Алгоритмы, Паттерны
+> ### 4. Структуры, Алгоритмы, Паттерны.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/apps/algorithms/src/structures">4.1 Структуры данных.<a/>
 
 
