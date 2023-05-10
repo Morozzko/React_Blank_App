@@ -17,6 +17,11 @@
 > ### 4. Структуры, Алгоритмы, Паттерны.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/apps/algorithms/src/structures">4.1 Структуры данных.<a/>
 
+> ### 5. Прочее
+> #### <a href="https://github.com/Morozzko/React_Blank_App/blob/master/apps/react_blank/src/app/api/axios.ts">5.1 Работа с Mutex.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/blob/master/apps/react_blank/src/utils/functions/ThunkCreator/index.ts">5.2 Работа с AbortController.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/blob/master/apps/react_blank/src/app/api/RTK.ts">5.3 Custom Query с использованием Axios Instance для RTK Query.<a/>
+
 
 # Оркестровка репозиторием
 > ### Сборка библиотеки common
