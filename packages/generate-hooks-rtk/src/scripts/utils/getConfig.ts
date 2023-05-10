@@ -9,13 +9,13 @@ const name = '.config.openapi.js'
 const configFile = path.join(rootDir, name)
 
 export const getConfig = (): ConfigType | undefined => {
-	// Проверяем наличие файла конфигурации
-	if (fs.existsSync(configFile)) {
-		// eslint-disable-next-line @typescript-eslint/no-var-requires
-		const file = require(configFile)
+  // Проверяем наличие файла конфигурации
+  if (fs.existsSync(configFile)) {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const file = require(configFile)
 
-		return file.configFile
-	} else {
-		console.error(`Конфигурационный файл ${name} не найден!`)
-	}
+    return file.configFile
+  } else {
+    console.error(`Конфигурационный файл ${name} не найден!`)
+  }
 }

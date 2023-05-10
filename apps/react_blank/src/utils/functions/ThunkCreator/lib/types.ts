@@ -4,15 +4,15 @@ import { AxiosRequestConfig } from 'axios'
 export type RejectValueType = SerializedError
 
 export type ThunkErrorType = {
-	rejectValue: RejectValueType
+  rejectValue: RejectValueType
 }
 
 export type WithoutOptionsType<T extends UnknownCallback> = ExcludeLastType<
-	Parameters<T>
+  Parameters<T>
 >
 export type ExcludeLastType<T extends any[]> = T extends [
-	...infer R,
-	AxiosRequestConfig
+  ...infer R,
+  AxiosRequestConfig
 ]
-	? R
-	: never
+  ? R
+  : never

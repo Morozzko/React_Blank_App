@@ -7,17 +7,17 @@ const typePrefix = `${name}/GetUsersTC`
 type ThunkType = CreateThunkType<typeof RestAPI.get>
 
 export const GetUsersTC = createAsyncThunk<
-	ThunkType['Return'],
-	ThunkType['Payload'],
-	ThunkType['Error']
+  ThunkType['Return'],
+  ThunkType['Payload'],
+  ThunkType['Error']
 >(
-	typePrefix,
-	async (payload, thunkAPI) =>
-		await ThunkCreator(
-			{
-				apiMethod: signal => RestAPI.get(...payload, { signal }),
-				requestKey: typePrefix,
-			},
-			thunkAPI
-		)
+  typePrefix,
+  async (payload, thunkAPI) =>
+    await ThunkCreator(
+      {
+        apiMethod: signal => RestAPI.get(...payload, { signal }),
+        requestKey: typePrefix,
+      },
+      thunkAPI
+    )
 )

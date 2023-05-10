@@ -7,19 +7,19 @@ import { reducersList } from './reducers'
 const rootReducer = combineReducers(reducersList)
 
 export const store = configureStore({
-	reducer: rootReducer,
-	// @ts-ignore
-	middleware: getDefaultMiddleware =>
-		getDefaultMiddleware()
-			.prepend(thunkMiddleware)
-			// Добавляем автоматические middleware сгенерированные библиотекой @rtk-query/codegen-openapi
-			.concat(...generatedMiddlewaresList),
-	devTools: process.env.NODE_ENV !== 'production',
+  reducer: rootReducer,
+  // @ts-ignore
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware()
+      .prepend(thunkMiddleware)
+      // Добавляем автоматические middleware сгенерированные библиотекой @rtk-query/codegen-openapi
+      .concat(...generatedMiddlewaresList),
+  devTools: process.env.NODE_ENV !== 'production',
 })
 
 if (process.env.NODE_ENV === 'development') {
-	// @ts-ignore
-	window.store = store
+  // @ts-ignore
+  window.store = store
 }
 
 export type AppStateType = ReturnType<typeof rootReducer>

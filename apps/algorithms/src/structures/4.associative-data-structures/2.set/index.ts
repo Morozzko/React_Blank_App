@@ -13,39 +13,39 @@ mySet.add(1) // Дубликаты не добавляются
 // console.log(mySet.has(4)) // false
 
 export class MySet<T> {
-	private items: { [key: string]: T } = {}
+  private items: { [key: string]: T } = {}
 
-	private toKey(value: T): string {
-		return JSON.stringify(value)
-	}
+  private toKey(value: T): string {
+    return JSON.stringify(value)
+  }
 
-	add(value: T): void {
-		const key = this.toKey(value)
-		this.items[key] = value
-	}
+  add(value: T): void {
+    const key = this.toKey(value)
+    this.items[key] = value
+  }
 
-	has(value: T): boolean {
-		const key = this.toKey(value)
+  has(value: T): boolean {
+    const key = this.toKey(value)
 
-		return this.items.hasOwnProperty(key)
-	}
+    return this.items.hasOwnProperty(key)
+  }
 
-	delete(value: T): boolean {
-		const key = this.toKey(value)
-		if (this.items.hasOwnProperty(key)) {
-			delete this.items[key]
+  delete(value: T): boolean {
+    const key = this.toKey(value)
+    if (this.items.hasOwnProperty(key)) {
+      delete this.items[key]
 
-			return true
-		}
+      return true
+    }
 
-		return false
-	}
+    return false
+  }
 
-	size(): number {
-		return Object.keys(this.items).length
-	}
+  size(): number {
+    return Object.keys(this.items).length
+  }
 
-	clear(): void {
-		this.items = {}
-	}
+  clear(): void {
+    this.items = {}
+  }
 }

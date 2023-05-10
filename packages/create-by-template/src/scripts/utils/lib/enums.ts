@@ -1,4 +1,4 @@
 export enum TemplatesEnum {
-	widget = 'widget',
-	service = 'service',
+  widget = 'widget',
+  service = 'service',
 }

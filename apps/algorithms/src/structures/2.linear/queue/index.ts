@@ -7,17 +7,17 @@
 // Основные операции очереди - это enqueue, добавляющая элемент в хвост очереди,
 // и dequeue, удаляющая элемент из головы очереди.
 export class Queue<T> {
-	private items: T[] = []
+  private items: T[] = []
 
-	enqueue(element: T): void {
-		this.items.push(element)
-	}
+  enqueue(element: T): void {
+    this.items.push(element)
+  }
 
-	dequeue(): T | undefined {
-		return this.items.shift()
-	}
+  dequeue(): T | undefined {
+    return this.items.shift()
+  }
 
-	isEmpty(): boolean {
-		return this.items.length === 0
-	}
+  isEmpty(): boolean {
+    return this.items.length === 0
+  }
 }

@@ -7,17 +7,17 @@
 // что последний добавленный элемент будет первым удаленным.
 // Основные операции стека - это push, добавляющая элемент на вершину стека, и pop, удаляющая элемент с вершины стека.
 export class Stack<T> {
-	private items: T[] = []
+  private items: T[] = []
 
-	push(element: T): void {
-		this.items.push(element)
-	}
+  push(element: T): void {
+    this.items.push(element)
+  }
 
-	pop(): T | undefined {
-		return this.items.pop()
-	}
+  pop(): T | undefined {
+    return this.items.pop()
+  }
 
-	isEmpty(): boolean {
-		return this.items.length === 0
-	}
+  isEmpty(): boolean {
+    return this.items.length === 0
+  }
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 
 type OwnPropertyType<T> = {
-	items: T[]
-	renderItem: (item: T, index?: number) => React.ReactNode
+  items: T[]
+  renderItem: (item: T, index?: number) => React.ReactNode
 }
 
 // Этот компонент является обобщенным компонентом для отображения массива элементов.
@@ -12,8 +12,8 @@ type OwnPropertyType<T> = {
 // и обеспечить чистоту и модульность кода.
 
 export const ArrayRender = <T extends unknown>({
-	items,
-	renderItem,
+  items,
+  renderItem,
 }: OwnPropertyType<T>): JSX.Element => (
-	<>{items.map((item, index) => renderItem(item, index))}</>
+  <>{items.map((item, index) => renderItem(item, index))}</>
 )

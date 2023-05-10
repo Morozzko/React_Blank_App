@@ -1,3 +1,3 @@
 export const app = {
-	name: 'App',
+  name: 'App',
 }

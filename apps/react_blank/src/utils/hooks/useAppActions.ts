@@ -14,9 +14,9 @@ export const useAppDispatch = () => useDispatch<AppDispatchType>()
 // Он использует bindActionCreators из redux для связывания каждого действия с функцией dispatch из хука useAppDispatch.
 // Результатом является объект, который содержит все действия, уже связанные с функцией dispatch, что позволяет легко использовать их в компонентах.
 const useActions = <T extends ActionCreatorsMapObject>(actions: T) => {
-	const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch()
 
-	return useMemo(() => bindActionCreators(actions, dispatch), [])
+  return useMemo(() => bindActionCreators(actions, dispatch), [])
 }
 
 // useAppActions - хук, который использует useActions для создания объектов действий для различных сервисов.
@@ -24,16 +24,16 @@ const useActions = <T extends ActionCreatorsMapObject>(actions: T) => {
 // Этот хук может быть расширен для включения дополнительных сервисов и виджетов. Хук используют useMemo для оптимизации производительности,
 // что гарантирует, что объекты действий не будут пересозданы.
 export const useAppActions = () => {
-	// insert hook here
-	const conditionActions = useActions(condition)
-	const mobileActions = useActions(mobile)
+  // insert hook here
+  const conditionActions = useActions(condition)
+  const mobileActions = useActions(mobile)
 
-	return useMemo(
-		() => ({
-			// insert actions here
-			conditionActions,
-			mobileActions,
-		}),
-		[]
-	)
+  return useMemo(
+    () => ({
+      // insert actions here
+      conditionActions,
+      mobileActions,
+    }),
+    []
+  )
 }

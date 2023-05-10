@@ -21,91 +21,91 @@
 
 // Определение узла связного списка
 export class ListNode<T> {
-	constructor(public value: T, public nextNode: ListNode<T> | null = null) {}
+  constructor(public value: T, public nextNode: ListNode<T> | null = null) {}
 }
 
 // Определение связного списка
 export class LinkedList<T> {
-	private head: ListNode<T> | null = null
+  private head: ListNode<T> | null = null
 
-	// Добавление элемента в начало списка
-	addFirst(value: T): void {
-		this.head = new ListNode<T>(value, this.head)
-	}
+  // Добавление элемента в начало списка
+  addFirst(value: T): void {
+    this.head = new ListNode<T>(value, this.head)
+  }
 
-	// Удаление элемента из начала списка
-	removeFirst(): T | null {
-		if (this.head === null) {
-			return null
-		}
-		const removedValue = this.head.value
-		this.head = this.head.nextNode
+  // Удаление элемента из начала списка
+  removeFirst(): T | null {
+    if (this.head === null) {
+      return null
+    }
+    const removedValue = this.head.value
+    this.head = this.head.nextNode
 
-		return removedValue
-	}
+    return removedValue
+  }
 
-	// Добавление элемента в конец списка
-	addLast(value: T): void {
-		const newNode = new ListNode<T>(value)
+  // Добавление элемента в конец списка
+  addLast(value: T): void {
+    const newNode = new ListNode<T>(value)
 
-		if (this.head === null) {
-			this.head = newNode
+    if (this.head === null) {
+      this.head = newNode
 
-			return
-		}
+      return
+    }
 
-		let currentNode = this.head
-		while (currentNode.nextNode !== null) {
-			currentNode = currentNode.nextNode
-		}
+    let currentNode = this.head
+    while (currentNode.nextNode !== null) {
+      currentNode = currentNode.nextNode
+    }
 
-		currentNode.nextNode = newNode
-	}
+    currentNode.nextNode = newNode
+  }
 
-	// Поиск элемента в списке
-	find(value: T): ListNode<T> | null {
-		let currentNode = this.head
+  // Поиск элемента в списке
+  find(value: T): ListNode<T> | null {
+    let currentNode = this.head
 
-		while (currentNode !== null) {
-			if (currentNode.value === value) {
-				return currentNode
-			}
-			currentNode = currentNode.nextNode
-		}
+    while (currentNode !== null) {
+      if (currentNode.value === value) {
+        return currentNode
+      }
+      currentNode = currentNode.nextNode
+    }
 
-		return null
-	}
+    return null
+  }
 
-	// Удаление элемента по индексу
-	removeAt(index: number): T | null {
-		if (index < 0 || this.head === null) {
-			return null
-		}
+  // Удаление элемента по индексу
+  removeAt(index: number): T | null {
+    if (index < 0 || this.head === null) {
+      return null
+    }
 
-		if (index === 0) {
-			const removedValue = this.head.value
-			this.head = this.head.nextNode
+    if (index === 0) {
+      const removedValue = this.head.value
+      this.head = this.head.nextNode
 
-			return removedValue
-		}
+      return removedValue
+    }
 
-		let currentIndex = 1
-		let currentNode = this.head
+    let currentIndex = 1
+    let currentNode = this.head
 
-		while (currentNode.nextNode !== null) {
-			if (currentIndex === index) {
-				const removedValue = currentNode.nextNode.value
-				currentNode.nextNode = currentNode.nextNode.nextNode
+    while (currentNode.nextNode !== null) {
+      if (currentIndex === index) {
+        const removedValue = currentNode.nextNode.value
+        currentNode.nextNode = currentNode.nextNode.nextNode
 
-				return removedValue
-			}
+        return removedValue
+      }
 
-			currentNode = currentNode.nextNode
-			currentIndex++
-		}
+      currentNode = currentNode.nextNode
+      currentIndex++
+    }
 
-		return null
-	}
+    return null
+  }
 }
 // В связанном списке можно удалить последний элемент.
 // Однако это действие может быть менее эффективным, чем удаление элемента из начала списка.

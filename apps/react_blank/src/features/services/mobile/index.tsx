@@ -2,7 +2,7 @@ import { useContainer } from './container'
 import { Actions, Reducer } from './store'
 
 export const mobile = {
-	useContainer,
+  useContainer,
 }
 
 export { Actions, Reducer }

@@ -6,16 +6,16 @@ import '../../../index.css'
 
 // Точка входа для разработки
 export const Container: FC = props => (
-	<BrowserRouter>
-		<Providers>
-			<App {...props} />
-		</Providers>
-	</BrowserRouter>
+  <BrowserRouter>
+    <Providers>
+      <App {...props} />
+    </Providers>
+  </BrowserRouter>
 )
 
 // Импорт приложения для Плагина ModuleFederation
 export const ImportedContainer: FC = props => (
-	<Providers>
-		<App {...props} />
-	</Providers>
+  <Providers>
+    <App {...props} />
+  </Providers>
 )

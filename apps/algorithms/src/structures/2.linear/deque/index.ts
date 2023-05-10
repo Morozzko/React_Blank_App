@@ -7,25 +7,25 @@
 // в зависимости от потребностей. Основные операции дека - это addFront, addBack, removeFront и removeBack,
 // добавляющие или удаляющие элементы с соответствующих концов дека.
 export class Deque<T> {
-	private items: T[] = []
+  private items: T[] = []
 
-	addFront(element: T): void {
-		this.items.unshift(element)
-	}
+  addFront(element: T): void {
+    this.items.unshift(element)
+  }
 
-	addBack(element: T): void {
-		this.items.push(element)
-	}
+  addBack(element: T): void {
+    this.items.push(element)
+  }
 
-	removeFront(): T | undefined {
-		return this.items.shift()
-	}
+  removeFront(): T | undefined {
+    return this.items.shift()
+  }
 
-	removeBack(): T | undefined {
-		return this.items.pop()
-	}
+  removeBack(): T | undefined {
+    return this.items.pop()
+  }
 
-	isEmpty(): boolean {
-		return this.items.length === 0
-	}
+  isEmpty(): boolean {
+    return this.items.length === 0
+  }
 }

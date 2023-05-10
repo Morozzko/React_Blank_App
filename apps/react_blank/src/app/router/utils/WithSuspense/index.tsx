@@ -6,7 +6,7 @@ import { Loading } from '@components/templates/Loading'
 // )
 
 export const WithSuspense = (Component: LazyExoticComponent<FC>) => (
-	<Suspense fallback={<Loading />}>
-		<Component />
-	</Suspense>
+  <Suspense fallback={<Loading />}>
+    <Component />
+  </Suspense>
 )

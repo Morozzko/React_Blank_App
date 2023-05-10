@@ -3,36 +3,36 @@ import { RejectValueType } from '@functions/ThunkCreator/lib/types'
 import { Actions as condition } from '@services/condition'
 
 export type ThunkAPIType = {
-	dispatch: Dispatch
-	rejectWithValue: Function
+  dispatch: Dispatch
+  rejectWithValue: Function
 }
 
 export const handleThunkError = (
-	{ message }: RejectValueType,
-	thunkAPI: ThunkAPIType
+  { message }: RejectValueType,
+  thunkAPI: ThunkAPIType
 ) => {
-	if (message) {
-		thunkAPI.dispatch(
-			condition.enqueueNotification({
-				variant: 'error',
-				message,
-			})
-		)
-	}
+  if (message) {
+    thunkAPI.dispatch(
+      condition.enqueueNotification({
+        variant: 'error',
+        message,
+      })
+    )
+  }
 
-	return thunkAPI.rejectWithValue({ message })
+  return thunkAPI.rejectWithValue({ message })
 }
 
 export const handleThunkSuccess = (
-	{ message }: RejectValueType,
-	thunkAPI: ThunkAPIType
+  { message }: RejectValueType,
+  thunkAPI: ThunkAPIType
 ) => {
-	if (message) {
-		thunkAPI.dispatch(
-			condition.enqueueNotification({
-				variant: 'success',
-				message,
-			})
-		)
-	}
+  if (message) {
+    thunkAPI.dispatch(
+      condition.enqueueNotification({
+        variant: 'success',
+        message,
+      })
+    )
+  }
 }

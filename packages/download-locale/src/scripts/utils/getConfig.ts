@@ -10,10 +10,10 @@ const name = '.config.locale.js'
 const configFile = path.join(rootDir, name)
 
 export const getConfig = (): ConfigType | undefined => {
-	// Проверяем наличие файла конфигурации
-	if (fs.existsSync(configFile)) {
-		return require(configFile)
-	} else {
-		console.error(`Конфигурационный файл ${name} не найден!`)
-	}
+  // Проверяем наличие файла конфигурации
+  if (fs.existsSync(configFile)) {
+    return require(configFile)
+  } else {
+    console.error(`Конфигурационный файл ${name} не найден!`)
+  }
 }

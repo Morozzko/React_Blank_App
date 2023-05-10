@@ -1,7 +1,7 @@
 import { FieldValues, UseFormReturn } from 'react-hook-form'
 
 export type UseFormPropsType<T extends FieldValues> = Partial<
-	UseFormReturn<T>
+  UseFormReturn<T>
 > & {
-	control: UseFormReturn<T>['control']
+  control: UseFormReturn<T>['control']
 }

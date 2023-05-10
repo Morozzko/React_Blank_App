@@ -6,27 +6,27 @@ const setOrderName = (name: string) => `${name}Store`
 const setFilterName = (name: string) => [new RegExp(name, 'i')]
 
 const getControllers = (names: string[]) =>
-	names.reduce(
-		(acc, name) => ({
-			...acc,
-			[getName(name)]: {
-				filterEndpoints: setFilterName(name),
-				exportName: setOrderName(name),
-				tag: name,
-			},
-		}),
-		{}
-	)
+  names.reduce(
+    (acc, name) => ({
+      ...acc,
+      [getName(name)]: {
+        filterEndpoints: setFilterName(name),
+        exportName: setOrderName(name),
+        tag: name,
+      },
+    }),
+    {}
+  )
 
 const controllers = ['pet', 'order', 'user']
 const config: ConfigFile = {
-	schemaFile: 'https://petstore3.swagger.io/api/v3/openapi.json',
-	// schemaFile: './swagger.json',
-	apiFile: '@app/api/RTK',
-	tag: true,
-	hooks: true,
-	// outputFile: getName('api'),
-	outputFiles: { ...getControllers(controllers) },
+  schemaFile: 'https://petstore3.swagger.io/api/v3/openapi.json',
+  // schemaFile: './swagger.json',
+  apiFile: '@app/api/RTK',
+  tag: true,
+  hooks: true,
+  // outputFile: getName('api'),
+  outputFiles: { ...getControllers(controllers) },
 }
 
 // eslint-disable-next-line import/no-default-export

@@ -4,10 +4,10 @@ import { useAppSelector } from '@hooks/useAppSelector'
 import { UIPropertyType } from '../ui'
 
 export const useContainer = (): UIPropertyType => {
-	useEffect(() => {}, [])
+  useEffect(() => {}, [])
 
-	const {} = useAppActions()
-	const {} = useAppSelector(state => state)
+  const {} = useAppActions()
+  const {} = useAppSelector(state => state)
 
-	return {}
+  return {}
 }

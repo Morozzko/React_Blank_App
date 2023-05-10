@@ -1,18 +1,18 @@
 interface Array<T> {
-	customMap<U>(callback: (value: T, index: number, array: T[]) => U): U[]
+  customMap<U>(callback: (value: T, index: number, array: T[]) => U): U[]
 }
 
 Array.prototype.customMap = function <T, U>(
-	this: T[],
-	callback: (value: T, index: number, array: T[]) => U
+  this: T[],
+  callback: (value: T, index: number, array: T[]) => U
 ): U[] {
-	const result: U[] = []
+  const result: U[] = []
 
-	for (let i = 0; i < this.length; i++) {
-		result.push(callback(this[i], i, this))
-	}
+  for (let i = 0; i < this.length; i++) {
+    result.push(callback(this[i], i, this))
+  }
 
-	return result
+  return result
 }
 
 // Использование customMap:

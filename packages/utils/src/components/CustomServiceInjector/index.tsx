@@ -1,5 +1,5 @@
 type OwnPropertyType = {
-	containers: Array<() => void>
+  containers: Array<() => void>
 }
 
 // Компонент Custom Service Injector (CSI) предназначен для инжектирования кастомных хуков, содержащих useEffect,
@@ -13,7 +13,7 @@ type OwnPropertyType = {
 // так как он позволяет разделять логику сайд-эффектов от дерева компонентов и связанных с ним рендеров.
 
 export const CustomServiceInjector = ({ containers }: OwnPropertyType) => {
-	containers.forEach(container => container())
+  containers.forEach(container => container())
 
-	return null
+  return null
 }
