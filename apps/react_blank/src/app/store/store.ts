@@ -18,6 +18,7 @@ export const store = configureStore({
 })
 
 if (process.env.NODE_ENV === 'development') {
+	// @ts-ignore
 	window.store = store
 }
 

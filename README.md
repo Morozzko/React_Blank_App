@@ -1,74 +1,24 @@
-# Архитектура
+# Навигация по репозиторию
 
-> Слой **_app_**: инициализация приложения.
+> ### 1. Архитектура
+> #### <a hrer="https://github.com/Morozzko/React_Blank_App/tree/master/apps/react_blank">1.1 Пример архитектуры на React.js.<a/>
+> #### <a hrer="https://github.com/Morozzko/React_Blank_App/tree/master/packages/create-by-template">1.2 Генерация шаблонов под архитектуру.<a/>
 
-> Слой **_generated_** заменяет 99% сервисов
->
-> сгенерировать хуки rtk-query:
-> ```
-> yarn gen:hooks
-> ```
-> Скрипт автоматически внедрит **_reducers_** и **_middleware_** в приложение
+> ### 2. Вспомогательные библиотеки
+> #### <a hrer="https://github.com/Morozzko/React_Blank_App/tree/master/packages/utils">2.1 Хуки и полезные функции.<a/>
+> #### <a hrer="https://github.com/Morozzko/React_Blank_App/tree/master/packages/types">2.2 Типы для быстрого написания кода.<a/>
+> #### <a hrer="https://github.com/Morozzko/React_Blank_App/tree/master/packages/eslint-config-npmpiece">2.3 ES-Lint config.<a/>
+> #### <a hrer="https://github.com/Morozzko/React_Blank_App/tree/master/packages/tailwind-config">2.4 Tailwind config.<a/>
 
-> Слой **_service_**: отдельные логические реализации:
->
-> Все сервисы должны наименоваться с маленькой буквы в файле index.tsx, чтобы не было совпадений с виджетами
-> + structure: изначальное состояние slice
-> + store: настройка slice и actions
-> + container: реализация логики
-> + thunks: (необязательно) для каждой thunk свой файл, закидываются в io, а далее сами подцепляются
-> + api: (необязательно) Data Access Layer
-> + lib: (необязательно) utility функции, типизация
-> + selectors: (необязательно) Реселекты для мемоизации бизнес логики
+> ### 3. Генерация
+> #### <a hrer="https://github.com/Morozzko/React_Blank_App/tree/master/packages/generate-hooks-rtk">3.1 Генерация хуков для ReduxToolkit Query с авто-инъекцией в store.<a/>
+> #### <a hrer="https://github.com/Morozzko/React_Blank_App/tree/master/packages/download-locale">3.2 Загрузка переводов из гугл таблицы.<a/>
 
-> Слой **_widget_** отдельные блоки приложения:
->
-> Все виджеты должны именоваться с большой буквы в файле index.tsx, чтобы не было совпадений с сервисами
-> + container/useContainer.ts: все side effects для ui, мемоизация логики
-> + ui: чистая компонента, отвечающая только за отрисовку
-> + templates: (необязательно) декомпозиция UI для более простого масштабирования приложения в будущем
-> + lib: (необязательно) utility функции
-> + store: (необязательно) обычно используется для локального состояния загрузки или других процессов, которые могут зависеть от других thunks
-> + structure: (необязательно) изначальное состояние slice
->
-
-> Слой **_layouts_**: верстка каркасов приложения
-
-> Слой **_pages_**: верстка страницы, объединяющая отдельные логические реализации
-
-> ## useAppActions
-> Хук-адаптер позволяет доставать любые действия взаимодействия с **_store_**
-> ```javascript
-> const { conditionActions: { enqueueNotification } } = useAppActions()
-> ``` 
-> Данная реализация позволяет **_изменять_** библиотеку управления состоянием без затрагивания компонент
-
-> ## useAppSelector
-> Хук-адаптер позволяет подписываться на любые изменения store
-> ```javascript
-> const { status } = useAppSelector(state => state.condition)
-> ``` 
-> Данная реализация позволяет **_изменять_** библиотеку управления состоянием без затрагивания компонент
+> ### 4. Структуры, Алгоритмы, Паттерны
+> #### <a hrer="https://github.com/Morozzko/React_Blank_App/tree/master/apps/algorithms/src/structures">4.1 Структуры данных.<a/>
 
 
-> ## Для генерации новых features
->
-> В папке рядом с **_package.json_** вызвать команду из пакета **_@npm.piece/template-generator_**
-> ```
-> new widget name
-> new service name
-> ```
-> Команда автоматически добавит зависимости в хук _**useAppActions**_ и список **_ReducersList_**
-> ## Для удаления features
-> ```
-> remove widget name
-> remove service name
-> ```
-> Команда автоматически удалит зависимости из хука _**useAppActions**_ и списка **_ReducersList_**
-
-
-> # Оркестровка репозиторием
->
+# Оркестровка репозиторием
 > ### Сборка библиотеки common
 >
 > ```

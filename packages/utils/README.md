@@ -34,41 +34,6 @@ const log = useThrottle((params) => console.log(params), 1000);
 log("123")
 ```
 
-## useEffectWithoutFirstCall
-
-```javascript
-import {useEffectWithoutFirstCall} from '@npm.piece/utils'
-```
-
-```javascript
-useEffectWithoutFirstCall(() => {}, []);
-```
-
-
-## useSessionStorage
-
-```javascript
-import {useSessionStorage} from '@npm.piece/utils'
-```
-
-```javascript
-const { get, set } = useSessionStorage('item')
-set({key:"value"})
-get()
-```
-
-## useLocalStorage
-
-```javascript
-import {useLocalStorage} from '@npm.piece/utils'
-```
-
-```javascript
-const { get, set } = useLocalStorage('item')
-set({key:"value"})
-get()
-```
-
 ## usePortraitDetect
 
 ```javascript
@@ -89,14 +54,19 @@ import {useOnlineDetect} from '@npm.piece/utils'
 const isOnline = useOnlineDetect()
 ```
 
-## useMobileSizeDetect
+## useSizeDetect
 
 ```javascript
-import {useMobileSizeDetect} from '@npm.piece/utils'
+import {useSizeDetect} from '@npm.piece/utils'
 ```
 
 ```javascript
-const isMobileWidth = useMobileSizeDetect(768)
+const {
+  clientHeight,
+  clientWidth,
+  innerHeight,
+  innerWidth
+} = useSizeDetect()
 ```
 
 ## useKeyPressDetect
@@ -119,6 +89,18 @@ import {useInterval} from '@npm.piece/utils'
 useInterval(() => {}, 1000);
 ```
 
+## useTimeout
+
+```javascript
+import {useTimeout} from '@npm.piece/utils'
+```
+
+```javascript
+useTimeout(() => {}, 1000);
+```
+
+
+
 ## useFocus
 
 ```javascript
@@ -135,10 +117,10 @@ useEffect(()=>{
 return <input ref={htmlElRef}/>
 ```
 
-## useIntersection
+## useIsVisibleElement
 
 ```javascript
-import {useIntersection} from '@npm.piece/utils'
+import {useIsVisibleElement} from '@npm.piece/utils'
 ```
 
 ```jsx
@@ -146,4 +128,137 @@ const checkViewPortRef = useRef<HTMLDivElement>(null);
 const isInViewPort = useIntersection(checkViewPortRef);
 
 return <div ref={checkViewPortRef}/>
+```
+
+## useEffectWithoutFirstCall
+
+```javascript
+import {useEffectWithoutFirstCall} from '@npm.piece/utils'
+```
+
+```javascript
+useEffectWithoutFirstCall(() => {}, []);
+```
+
+## CustomServiceInjector
+#### The Custom Service Injector (CSI) component is designed to inject custom hooks containing useEffect, to your application without calling re-render of child components.
+```javascript
+import { CustomServiceInjector } from '@npm.piece/utils'
+```
+
+```tsx
+<CustomServiceInjector
+  containers={[condition.useContainer, mobile.useContainer]}
+/>
+```
+
+## ArrayRender
+
+#### This component is a generic component for displaying an array of elements. Instead of just using map to convert an array of elements into JSX elements, the ArrayRender component takes an array of items and a renderItem function and processes them internally. The main purpose of this component is to simplify repetitive code when displaying a list of items and keep the code clean and modular.
+```javascript
+import { ArrayRender } from '@npm.piece/utils'
+```
+
+```tsx
+<ArrayRender items={items} renderItem={(item)=><itemTemplate key/>}/>
+```
+
+## DeepClone
+
+```javascript
+import { DeepClone } from '@npm.piece/utils'
+```
+
+```javascript
+const newObj = DeepClone({ name: 'npm.piece' })
+```
+
+## MergeObjects
+
+```javascript
+import { MergeObjects } from '@npm.piece/utils'
+```
+
+```javascript
+const a = { 
+  name: 'npm.piece', 
+  location: { 
+    city: 'City 17'
+  }
+}
+
+const b = {
+  age: 18,
+  location: {
+    flat: 'H15'
+  }
+}
+
+const c = {
+  price: 100
+}
+
+
+const d = MergeObjects(a, b, c)
+// d will be:
+const d = {
+  name: 'npm.piece',
+  age: 18,
+  price: 100,
+  location: {
+    city: 'City 17',
+    flat: 'H15'
+  }
+}
+```
+
+## SetToSessionStorage / SetToLocalStorage / GetFromSessionStorage / GetFromLocalStorage
+
+```javascript
+import { 
+  SetToSessionStorage, 
+  SetToLocalStorage, 
+  GetFromSessionStorage, 
+  GetFromLocalStorage
+} from '@npm.piece/utils'
+```
+
+```javascript
+  SetToSessionStorage('token', { age: 100 })
+  SetToLocalStorage('token', { age: 100 }), 
+  GetFromSessionStorage('token'), 
+  GetFromLocalStorage('token')
+```
+
+## Micro-Frontend Events
+
+```javascript
+import { useSubscribe, EventTransfer } from '@npm.piece/utils'
+```
+```javascript
+const [green, setGreen] = useState<string>('')
+
+useSubscribe<{ text: string }>(
+  // or use string like 'green'
+  {
+    mfName: 'green',
+    eventName: 'CloseEvent',
+    tag: 'tag'
+  }, 
+    (e) => setGreen(e.text))
+```
+
+```javascript
+EventTransfer<{ text: string }>({
+  data: {
+    text: e.target.value
+  },
+  debug: true,
+  // or use string like 'green'
+  name: { 
+    mfName: 'green',
+    eventName: 'CloseEvent', 
+    tag: 'tag' 
+  }
+})
 ```

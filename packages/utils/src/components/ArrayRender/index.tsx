@@ -5,11 +5,12 @@ type OwnPropertyType<T> = {
 	renderItem: (item: T, index?: number) => React.ReactNode
 }
 
-/**
- *
- *  <ArrayRender items={items} renderItem={(item)=><itemTemplate key/>}/>
- *
- **/
+// Этот компонент является обобщенным компонентом для отображения массива элементов.
+// Вместо того чтобы просто использовать map для преобразования массива элементов в JSX-элементы, компонент ArrayRender
+// принимает массив items и функцию renderItem и обрабатывает их внутри себя.
+// Основная цель этого компонента - упростить повторяющийся код при отображении списка элементов
+// и обеспечить чистоту и модульность кода.
+
 export const ArrayRender = <T extends unknown>({
 	items,
 	renderItem,

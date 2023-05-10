@@ -9,6 +9,9 @@ const slice = createSlice({
 		setIsMobile(state, action: PayloadAction<typeof initialState.isMobile>) {
 			state.isMobile = action.payload
 		},
+		setAppSize(state, action: PayloadAction<typeof initialState.appSize>) {
+			state.appSize = action.payload
+		},
 	},
 })
 

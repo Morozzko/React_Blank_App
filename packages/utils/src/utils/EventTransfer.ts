@@ -1,5 +1,5 @@
-type EventTransferPayloadType = {
-	data: object | string | number | boolean | any[]
+type EventTransferPayloadType<T> = {
+	data: T
 	debug?: boolean
 	name: string | NameType
 }
@@ -10,24 +10,19 @@ type NameType = {
 	mfName: string
 }
 
-export const EventTransfer = ({
+export const EventTransfer = <T extends unknown>({
 	data,
 	name,
 	debug,
-}: EventTransferPayloadType) => {
-	let type
+}: EventTransferPayloadType<T>) => {
+	const type =
+		typeof name === 'object'
+			? `${name.mfName}-${name.tag ? `${name.tag}-` : ''}${name.eventName}`
+			: name
 
-	if (typeof name === 'object') {
-		const { tag, mfName, eventName } = name
-		const thisTag = tag ? `${tag}-` : ''
-		type = `${mfName}-${thisTag}${eventName}`
-	} else {
-		type = name
-	}
+	const event = new CustomEvent(type, { detail: { data } })
 
-	const Event = new CustomEvent(type, { detail: { data } })
-
-	dispatchEvent(Event)
+	dispatchEvent(event)
 
 	if (debug) {
 		console.log('Event type:', type, '\nevent.detail.data: ', data)
