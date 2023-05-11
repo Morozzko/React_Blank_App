@@ -6,7 +6,7 @@
 
 > ### 2. Вспомогательные библиотеки.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/utils">2.1 Хуки и полезные функции.<a/>
-> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/types">2.2 Типы для быстрого написания кода.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/types">2.2 Типы для быстрого написания кода с импортом через reference types.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/eslint-config-npmpiece">2.3 ES-Lint config.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/tailwind-config">2.4 Tailwind config.<a/>
 
