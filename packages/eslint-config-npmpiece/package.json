@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/eslint-config-npmpiece",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "custom eslint configuration",
   "main": "index.js",
   "private": false,

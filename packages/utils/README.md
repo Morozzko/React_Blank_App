@@ -13,7 +13,7 @@ yarn add @npm.piece/utils
 ## useDebounce (with lodash)
 
 ```javascript
-import {useDebounce} from '@npm.piece/utils'
+import { useDebounce } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -25,7 +25,7 @@ log("123")
 ## useThrottle (with lodash)
 
 ```javascript
-import {useThrottle} from '@npm.piece/utils'
+import { useThrottle } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -37,7 +37,7 @@ log("123")
 ## usePortraitDetect
 
 ```javascript
-import {usePortraitDetect} from '@npm.piece/utils'
+import { usePortraitDetect } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -47,7 +47,7 @@ const isPortrait = usePortraitDetect()
 ## useOnlineDetect
 
 ```javascript
-import {useOnlineDetect} from '@npm.piece/utils'
+import { useOnlineDetect } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -57,7 +57,7 @@ const isOnline = useOnlineDetect()
 ## useSizeDetect
 
 ```javascript
-import {useSizeDetect} from '@npm.piece/utils'
+import { useSizeDetect } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -72,76 +72,94 @@ const {
 ## useKeyPressDetect
 
 ```javascript
-import {useKeyPressDetect} from '@npm.piece/utils'
+import { useKeyPressDetect } from '@npm.piece/utils'
 ```
 
 ```javascript
 const isKeyFPressed = useKeyPressDetect("f")
 ```
 
-## useInterval
+## useOnKeyPress
 
 ```javascript
-import {useInterval} from '@npm.piece/utils'
+import { useOnKeyPress } from '@npm.piece/utils'
 ```
 
 ```javascript
-useInterval(() => {}, 1000);
+const callback=useCallback(()=>{
+  // i use toLowerCase() in code, so it doesn't matter, if you use 'Enter' or 'enter'
+  console.log('npm.piece')
+},[])
+
+useOnKeyPress(callback, 'Enter')
+```
+
+## useInterval
+
+```javascript
+import { useInterval } from '@npm.piece/utils'
+```
+
+```javascript
+useInterval(() => {
+}, 1000);
 ```
 
 ## useTimeout
 
 ```javascript
-import {useTimeout} from '@npm.piece/utils'
+import { useTimeout } from '@npm.piece/utils'
 ```
 
 ```javascript
-useTimeout(() => {}, 1000);
+useTimeout(() => {
+}, 1000);
 ```
-
-
 
 ## useFocus
 
 ```javascript
-import {useFocus} from '@npm.piece/utils'
+import { useFocus } from '@npm.piece/utils'
 ```
 
 ```jsx
 const [htmlElRef, setFocus] = useFocus()
 
-useEffect(()=>{
-    setFocus()
-},[])
+useEffect(() => {
+  setFocus()
+}, [])
 
-return <input ref={htmlElRef}/>
+return <input ref={htmlElRef} />
 ```
 
 ## useIsVisibleElement
 
 ```javascript
-import {useIsVisibleElement} from '@npm.piece/utils'
+import { useIsVisibleElement } from '@npm.piece/utils'
 ```
 
 ```jsx
-const checkViewPortRef = useRef<HTMLDivElement>(null);
+const checkViewPortRef = useRef < HTMLDivElement > (null);
 const isInViewPort = useIntersection(checkViewPortRef);
 
-return <div ref={checkViewPortRef}/>
+return <div ref={checkViewPortRef} />
 ```
 
 ## useEffectWithoutFirstCall
 
 ```javascript
-import {useEffectWithoutFirstCall} from '@npm.piece/utils'
+import { useEffectWithoutFirstCall } from '@npm.piece/utils'
 ```
 
 ```javascript
-useEffectWithoutFirstCall(() => {}, []);
+useEffectWithoutFirstCall(() => {
+}, []);
 ```
 
 ## CustomServiceInjector
+
 #### The Custom Service Injector (CSI) component is designed to inject custom hooks containing useEffect, to your application without calling re-render of child components.
+
 ```javascript
 import { CustomServiceInjector } from '@npm.piece/utils'
 ```
@@ -155,12 +173,13 @@ import { CustomServiceInjector } from '@npm.piece/utils'
 ## ArrayRender
 
 #### This component is a generic component for displaying an array of elements. Instead of just using map to convert an array of elements into JSX elements, the ArrayRender component takes an array of items and a renderItem function and processes them internally. The main purpose of this component is to simplify repetitive code when displaying a list of items and keep the code clean and modular.
+
 ```javascript
 import { ArrayRender } from '@npm.piece/utils'
 ```
 
 ```tsx
-<ArrayRender items={items} renderItem={(item)=><itemTemplate key/>}/>
+<ArrayRender items={items} renderItem={(item) => <itemTemplate key />} />
 ```
 
 ## DeepClone
@@ -180,9 +199,9 @@ import { MergeObjects } from '@npm.piece/utils'
 ```
 
 ```javascript
-const a = { 
-  name: 'npm.piece', 
-  location: { 
+const a = {
+  name: 'npm.piece',
+  location: {
     city: 'City 17'
   }
 }
@@ -215,18 +234,18 @@ const d = {
 ## SetToSessionStorage / SetToLocalStorage / GetFromSessionStorage / GetFromLocalStorage
 
 ```javascript
-import { 
-  SetToSessionStorage, 
-  SetToLocalStorage, 
-  GetFromSessionStorage, 
+import {
+  SetToSessionStorage,
+  SetToLocalStorage,
+  GetFromSessionStorage,
   GetFromLocalStorage
 } from '@npm.piece/utils'
 ```
 
 ```javascript
   SetToSessionStorage('token', { age: 100 })
-  SetToLocalStorage('token', { age: 100 }), 
-  GetFromSessionStorage('token'), 
+  SetToLocalStorage('token', { age: 100 }),
+  GetFromSessionStorage('token'),
   GetFromLocalStorage('token')
 ```
 
@@ -235,30 +254,31 @@ import {
 ```javascript
 import { useSubscribe, EventTransfer } from '@npm.piece/utils'
 ```
-```javascript
-const [green, setGreen] = useState<string>('')
 
-useSubscribe<{ text: string }>(
+```javascript
+const [green, setGreen] = useState < string > ('')
+
+useSubscribe < { text: string } > (
   // or use string like 'green'
   {
     mfName: 'green',
     eventName: 'CloseEvent',
     tag: 'tag'
-  }, 
+  },
     (e) => setGreen(e.text))
 ```
 
 ```javascript
-EventTransfer<{ text: string }>({
+EventTransfer < { text: string } > ({
   data: {
     text: e.target.value
   },
   debug: true,
   // or use string like 'green'
-  name: { 
+  name: {
     mfName: 'green',
-    eventName: 'CloseEvent', 
-    tag: 'tag' 
+    eventName: 'CloseEvent',
+    tag: 'tag'
   }
 })
 ```

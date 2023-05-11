@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
 
-export const useOnKeyPress = (callback: Function, key: string) => {
+export const useOnKeyPress = (
+  callback: Function,
+  key: KeyboardEvent['key'] | string
+) => {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key.toLowerCase() === key.toLowerCase()) {

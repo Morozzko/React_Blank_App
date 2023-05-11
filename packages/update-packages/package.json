@@ -1,8 +1,7 @@
 {
-  "name": "@npm.piece/types",
-  "version": "1.0.3",
+  "name": "@npm.piece/update-packages",
+  "version": "1.0.0",
   "private": false,
-  "types": "global.d.ts",
   "files": [
     "package.json",
     "README"
@@ -14,10 +13,7 @@
   "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/types",
   "author": "Morozzko",
   "license": "ISC",
-  "devDependencies": {
-    "typescript": "^5.0.4"
-  },
-  "peerDependencies": {
-    "react": "^16.x.x || ^17.x.x || ^18.x.x"
+  "dependencies": {
+    "semver": "^7.5.0"
   }
 }

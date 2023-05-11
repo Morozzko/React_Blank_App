@@ -4,7 +4,7 @@
   "homepage": "https://morozzko.github.io/React_Blank_App/",
   "private": true,
   "dependencies": {
-    "@npm.piece/utils": "^1.0.19",
+    "@npm.piece/utils": "^1.0.20",
     "clsx": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
