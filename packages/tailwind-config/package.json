@@ -1,9 +1,13 @@
 {
   "name": "@npm.piece/tailwind-config",
-  "version": "1.0.2",
-  "private": false,
-  "main": "index.js",
-  "devDependencies": {
+  "version": "1.0.10",
+  "main": "tailwind.config.js",
+  "files": [
+    "package.json",
+    "README",
+    "tailwind.config.js"
+  ],
+  "dependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "tailwindcss": "^3.3.2"
   }

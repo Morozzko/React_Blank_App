@@ -176,6 +176,10 @@ async function updatePackageVersions(configPath) {
     }
 
     if (isUpdated) {
+      packageJson.version = semver.inc(packageJson.version, 'patch')
+      console.log(
+        `Version of ${packageJson.name} is increased to ${packageJson.version}`
+      )
       await fs.writeFile(filePath, JSON.stringify(packageJson, null, 2))
     }
   }

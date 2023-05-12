@@ -56,3 +56,4 @@ folderStructure.txt
 /apps/**/dist/
 /apps/**/node_modules/
 /.yarn/
+/.yarn/**

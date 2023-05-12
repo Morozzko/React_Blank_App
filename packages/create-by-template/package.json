@@ -1,14 +1,13 @@
 {
   "name": "@npm.piece/template-generator",
   "version": "1.0.9",
-  "private": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
     "new": "./bin/add.js",
-    "remove": "./bin/remove.js",
     "npm.piece-add": "./bin/add.js",
-    "npm.piece-remove": "./bin/remove.js"
+    "npm.piece-remove": "./bin/remove.js",
+    "remove": "./bin/remove.js"
   },
   "files": [
     "package.json",
