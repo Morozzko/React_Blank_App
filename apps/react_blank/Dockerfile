@@ -3,15 +3,26 @@ FROM node:18.12.1 as build
 
 WORKDIR /app
 
-COPY package.json /app/package.json
+# Копируем package.json и yarn.lock (если есть)
+COPY package*.json yarn.lock ./
 
-COPY . /app
+# Копируем остальные файлы и папки
+COPY . .
 
+# Устанавливаем зависимости
+RUN yarn install
 
-RUN yarn
+# Собираем приложение
 RUN yarn build
 
+# Берем образ nginx для раздачи статических файлов
 FROM nginx:1.23.4-alpine
+
+# Копируем собранный проект в образ nginx
 COPY --from=build /app/build /usr/share/nginx/html
+
+# Открываем порт 80
 EXPOSE 80
+
+# Запускаем nginx
 CMD ["nginx", "-g", "daemon off;"]

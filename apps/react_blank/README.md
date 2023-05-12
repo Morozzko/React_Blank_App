@@ -67,3 +67,22 @@
 > remove service name
 > ```
 > Команда автоматически удалит зависимости из хука _**useAppActions**_ и списка **_ReducersList_**.
+
+
+> ## Docker
+> #### Сборка docker-образа:
+> ```
+> docker build -t react_blank .
+> ```
+> #### Запуск docker-образа:
+> ```
+> docker run -p 8000:80 -d react_blank
+> ```
+> Проверяем http://localhost:8000/
+> #### Остановка docker-образа:
+> ```
+> docker ps
+> ```
+> ```
+> docker stop %CONTAINER ID% 
+> ```
