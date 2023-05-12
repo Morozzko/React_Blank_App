@@ -55,3 +55,4 @@ folderStructure.txt
 /apps/**/coverage/
 /apps/**/dist/
 /apps/**/node_modules/
+.yarn/
