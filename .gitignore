@@ -45,6 +45,7 @@ folderStructure.txt
 /packages/**/coverage/
 /packages/**/dist/
 /packages/**/node_modules/
+/packages/**/.yarn/
 
 
 /apps/**/.DS_Store
@@ -55,5 +56,7 @@ folderStructure.txt
 /apps/**/coverage/
 /apps/**/dist/
 /apps/**/node_modules/
+/apps/**/.yarn/
+
 /.yarn/
 /.yarn/**
