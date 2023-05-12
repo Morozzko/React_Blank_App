@@ -4,7 +4,7 @@ FROM node:18.12.1 as build
 WORKDIR /app
 
 # Копируем package.json и yarn.lock (если есть)
-COPY package*.json yarn.lock ./
+COPY package.json yarn.lock ./
 
 # Копируем остальные файлы и папки
 COPY . .
