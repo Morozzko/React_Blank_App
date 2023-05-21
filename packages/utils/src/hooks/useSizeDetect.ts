@@ -26,7 +26,7 @@ export const useSizeDetect = () => {
       setInnerHeight(innerHeight)
       setInnerWidth(innerWidth)
     },
-    100
+    20
   )
 
   const handleResize = () => {

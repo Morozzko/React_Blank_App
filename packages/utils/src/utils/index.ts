@@ -1,7 +1,2 @@
 export * from './DeepClone'
-export * from './EventTransfer'
-export * from './GetFromLocalStorage'
-export * from './GetFromSessionStorage'
 export * from './MergeObjects'
-export * from './SetToLocalStorage'
-export * from './SetToSessionStorage'

@@ -86,10 +86,10 @@ import { useOnKeyPress } from '@npm.piece/utils'
 ```
 
 ```javascript
-const callback=useCallback(()=>{
+const callback = useCallback(() => {
   // i use toLowerCase() in code, so it doesn't matter, if you use 'Enter' or 'enter'
   console.log('npm.piece')
-},[])
+}, [])
 
 useOnKeyPress(callback, 'Enter')
 ```
@@ -244,7 +244,7 @@ import {
 
 ```javascript
   SetToSessionStorage('token', { age: 100 })
-  SetToLocalStorage('token', { age: 100 }),
+SetToLocalStorage('token', { age: 100 }),
   GetFromSessionStorage('token'),
   GetFromLocalStorage('token')
 ```
@@ -281,4 +281,29 @@ EventTransfer < { text: string } > ({
     tag: 'tag'
   }
 })
+```
+
+## IndexDB (with idb)
+
+```javascript
+import { IndexedDB } from '@npm.piece/utils'
+```
+
+```tsx
+useEffect(() => {
+  const runIndexDb = async () => {
+    const idb = new IndexedDB('test')
+    //if you need to delete database, add new version number for second argument
+    await idb.createObjectStore(['languages', 'students'], 1)
+    await idb.putValue('languages', { name: 'JavaScript' })
+    await idb.putBulkValue('languages', [
+      { name: 'TypeScript' },
+      { name: 'C#' }
+    ])
+    await idb.getValue('languages', 1)
+    await idb.getAllValue('languages')
+    await idb.deleteValue('languages', 1)
+  }
+  runIndexDb()
+}, [])
 ```

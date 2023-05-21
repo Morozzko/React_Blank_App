@@ -1,6 +1,6 @@
 {
   "name": "react_blank",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -8,7 +8,7 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.1",
     "@mui/styled-engine-sc": "^5.12.0",
-    "@npm.piece/utils": "^1.0.20",
+    "@npm.piece/utils": "^1.0.22",
     "@reduxjs/toolkit": "^1.9.5",
     "async-mutex": "^0.4.0",
     "axios": "^1.3.6",

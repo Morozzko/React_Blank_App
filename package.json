@@ -10,6 +10,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
     "format": "eslint --fix --ext .js,.jsx,.tsx,ts ."
   },
   "devDependencies": {
@@ -19,5 +21,5 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@1.22.17"
 }
