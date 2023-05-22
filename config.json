@@ -27,7 +27,7 @@
     "@npm.piece/tailwind-config": "^1.0.10",
     "@npm.piece/template-generator": "^1.0.9",
     "@npm.piece/types": "^1.0.4",
-    "@npm.piece/utils": "^1.0.22",
+    "@npm.piece/utils": "^1.0.23",
     "@reduxjs/toolkit": "^1.9.5",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.1",

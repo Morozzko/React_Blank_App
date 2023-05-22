@@ -283,7 +283,7 @@ EventTransfer < { text: string } > ({
 })
 ```
 
-## IndexDB (with idb)
+## IndexedDB (with idb)
 
 ```javascript
 import { IndexedDB } from '@npm.piece/utils'
