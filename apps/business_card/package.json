@@ -1,10 +1,10 @@
 {
   "name": "hireme",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://morozzko.github.io/React_Blank_App/",
   "private": true,
   "dependencies": {
-    "@npm.piece/utils": "^1.0.23",
+    "@npm.piece/utils": "^1.0.24",
     "clsx": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
