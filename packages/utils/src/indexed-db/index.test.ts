@@ -54,7 +54,6 @@ describe('IndexDb', () => {
       },
     ])
     const result = await db.getAllValue(tables[0])
-    console.log(result)
     expect(result).toEqual([
       data,
       {
