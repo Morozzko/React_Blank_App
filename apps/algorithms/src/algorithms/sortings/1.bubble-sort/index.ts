@@ -3,17 +3,17 @@
 //
 // Сложность алгоритма сортировки пузырьком в худшем случае составляет O(n^2),
 // где n - количество элементов в массиве. Это делает его неэффективным для больших наборов данных.
-export const bubbleSort = (arr: number[]): number[] => {
-  let length = arr.length
+export const bubbleSort = (array: number[]): number[] => {
+  let length = array.length
   let swapped
 
   do {
     swapped = false
     for (let currentIndex = 0; currentIndex < length; currentIndex++) {
-      if (arr[currentIndex] > arr[currentIndex + 1]) {
-        const temp = arr[currentIndex]
-        arr[currentIndex] = arr[currentIndex + 1]
-        arr[currentIndex + 1] = temp
+      if (array[currentIndex] > array[currentIndex + 1]) {
+        const temp = array[currentIndex]
+        array[currentIndex] = array[currentIndex + 1]
+        array[currentIndex + 1] = temp
         swapped = true
       }
     }
@@ -21,5 +21,5 @@ export const bubbleSort = (arr: number[]): number[] => {
     length--
   } while (swapped) // Если на этом проходе не было обменов, значит, массив уже отсортирован
 
-  return arr
+  return array
 }

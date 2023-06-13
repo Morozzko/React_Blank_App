@@ -12,9 +12,17 @@ export const slice = createSlice({
     },
   },
   extraReducers: builder => {
-    builder.addCase(asyncActions.GetUsersTC.fulfilled, (state, action) => {
-      // state.users = action.payload;
-    })
+    builder
+      .addCase(asyncActions.GetUsersTC.fulfilled, (state, action) => {
+        // state.users = action.payload;
+        state.loading = false
+      })
+      .addCase(asyncActions.GetUsersTC.pending, state => {
+        state.loading = true
+      })
+      .addCase(asyncActions.GetUsersTC.rejected, state => {
+        state.loading = false
+      })
   },
 })
 

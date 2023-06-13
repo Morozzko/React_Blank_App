@@ -48,3 +48,7 @@
 > ```
 > npm publish --access public
 > ```
+
+> ```
+> npm install -g npm @nestjs/cli
+> ```

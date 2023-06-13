@@ -1,6 +1,6 @@
 {
   "name": "hireme",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://morozzko.github.io/React_Blank_App/",
   "private": true,
   "dependencies": {
@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
-    "@types/node": "^18.16.0",
+    "@types/node": "^20.3.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "18.2.0",
     "@types/react-i18next": "^8.1.0",
