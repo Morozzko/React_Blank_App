@@ -1,13 +1,13 @@
 import { AxiosError } from 'axios'
 import {
-  ThunkErrorType,
-  WithoutOptionsType,
-} from '@functions/ThunkCreator/lib/types'
-import {
   handleThunkError,
   handleThunkSuccess,
   ThunkAPIType,
-} from './lib/AppStatusHandlers'
+} from '@functions/thunkCreator/lib/appStatusHandlers'
+import {
+  ThunkErrorType,
+  WithoutOptionsType,
+} from '@functions/thunkCreator/lib/types'
 
 type ThunkCreatorType = {
   apiMethod: (signal: AbortSignal) => any
@@ -27,7 +27,7 @@ type ThunkCreatorType = {
 // Хранилище ключей
 const activeRequestControllers = new Map<string, AbortController>()
 
-export const ThunkCreator = async (
+export const thunkCreator = async (
   {
     notification,
     onError,

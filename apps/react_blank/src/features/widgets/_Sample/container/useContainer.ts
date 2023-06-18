@@ -3,7 +3,7 @@ import { useAppActions } from '@hooks/useAppActions'
 import { useAppSelector } from '@hooks/useAppSelector'
 import { UIPropertyType } from '../ui'
 
-export const useContainer = (): UIPropertyType => {
+export const useContainer: CC<UIPropertyType> = () => {
   useEffect(() => {}, [])
 
   const {} = useAppActions()

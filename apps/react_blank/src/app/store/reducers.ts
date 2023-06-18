@@ -1,11 +1,11 @@
 import { generatedReducersList } from '@app/store/generated/reducers'
+import { Reducer as appSize } from '@services/appSize'
 import { Reducer as condition } from '@services/condition'
-import { Reducer as mobile } from '@services/mobile'
 
 export const reducersList = {
   // Services: Начало
+  appSize,
   condition,
-  mobile,
   // Services: Конец
 
   // Widgets: Начало

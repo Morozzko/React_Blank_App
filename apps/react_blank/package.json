@@ -1,6 +1,6 @@
 {
   "name": "react_blank",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -48,12 +48,12 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.1.0",
-    "@npm.piece/eslint-config-npmpiece": "^1.0.27",
+    "@npm.piece/eslint-config-npmpiece": "^1.0.30",
     "@npm.piece/generate-hooks-rtk": "^1.0.6",
     "@npm.piece/locale-downloader": "^1.0.8",
     "@npm.piece/tailwind-config": "^1.0.10",
     "@npm.piece/template-generator": "^1.0.9",
-    "@npm.piece/types": "^1.0.4",
+    "@npm.piece/types": "^1.0.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",

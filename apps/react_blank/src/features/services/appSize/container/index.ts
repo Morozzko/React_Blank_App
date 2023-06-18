@@ -5,18 +5,18 @@ import { useAppSelector } from '@hooks/useAppSelector'
 
 export const useContainer = () => {
   const { innerWidth, innerHeight, clientWidth, clientHeight } = useSizeDetect()
-  const { isMobile } = useAppSelector(state => state.mobile)
+  const isMobile = useAppSelector(state => state.appSize.isMobile)
   const isMobileWidth = Boolean(innerWidth <= 768)
 
   const {
-    mobileActions: { setIsMobile, setAppSize },
+    appSizeActions: { setIsMobile, setAppSize },
   } = useAppActions()
 
   useEffect(() => {
     if (isMobileWidth !== isMobile) {
       setIsMobile(isMobileWidth)
     }
-  }, [isMobile])
+  }, [isMobile, isMobileWidth])
 
   useEffect(() => {
     setAppSize({

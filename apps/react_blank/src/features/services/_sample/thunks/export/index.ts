@@ -1,5 +1,5 @@
-import { GetUsersTC } from '../sample'
+import { getUsersTC } from '../sample'
 
 export const asyncActions = {
-  GetUsersTC,
+  getUsersTC,
 }

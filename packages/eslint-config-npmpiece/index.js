@@ -230,5 +230,11 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
       },
     },
+    {
+      files: ['**/*.config.js', '**/*.config.ts'],
+      rules: {
+        'import/no-default-export': 'off',
+      },
+    },
   ],
 }

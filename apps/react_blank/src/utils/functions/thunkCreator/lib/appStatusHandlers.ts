@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux'
-import { RejectValueType } from '@functions/ThunkCreator/lib/types'
+import { RejectValueType } from '@functions/thunkCreator/lib/types'
 import { Actions as condition } from '@services/condition'
 
 export type ThunkAPIType = {

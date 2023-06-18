@@ -13,14 +13,14 @@ export const slice = createSlice({
   },
   extraReducers: builder => {
     builder
-      .addCase(asyncActions.GetUsersTC.fulfilled, (state, action) => {
+      .addCase(asyncActions.getUsersTC.fulfilled, (state, action) => {
         // state.users = action.payload;
         state.loading = false
       })
-      .addCase(asyncActions.GetUsersTC.pending, state => {
+      .addCase(asyncActions.getUsersTC.pending, state => {
         state.loading = true
       })
-      .addCase(asyncActions.GetUsersTC.rejected, state => {
+      .addCase(asyncActions.getUsersTC.rejected, state => {
         state.loading = false
       })
   },
