@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/tailwind-config",
-  "version": "1.0.10",
+  "version": "1.0.26",
   "main": "tailwind.config.js",
   "files": [
     "package.json",

@@ -1,43 +1,108 @@
 const colors = {
-  'miami-blue': '#0070b9',
-  'miami-cyan': '#009afe',
-  'miami-orange': '#e65706',
-  'miami-turquoise': '#4dd6ca',
   'moscow-yellow': '#FEE600',
   'moscow-red': '#EE505A',
   'moscow-blue': '#00A5BC',
   'moscow-turquoise': '#19B28D',
   'moscow-orange': '#F88545',
-  'moscow-white': '#F4F4F4',
-  'moscow-black': '#2B2D33',
+
   'milan-black': '#2f2f2f',
 }
+
+const palette = {
+  'primal-black': '#2f2f2f',
+  'secondary-black': '#2B2D33',
+
+  'primal-white': '#ffffff',
+  'secondary-white': '#F8F8F8',
+  'primal-gray': '#F4F4F4',
+  'secondary-gray': '#f5f5f1',
+
+  black: '#000000',
+
+  'exotic-blue': '#0070b9',
+  'exotic-cyan': '#009afe',
+  'exotic-orange': '#e65706',
+  'exotic-turquoise': '#4dd6ca',
+
+  'status-red': '#f06251',
+  'status-yellow': '#f8b200',
+  'status-green': '#2ec36a',
+
+  'text-gray': '#65727f',
+  'text-black': '#0b1f32',
+}
+const createColor = (light, dark) => ({
+  DEFAULT: light?.default,
+
+  light: {
+    DEFAULT: light?.default,
+    active: light?.active,
+  },
+
+  dark: {
+    DEFAULT: dark?.default,
+    active: dark?.active,
+  },
+})
 
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
   darkMode: 'class',
   theme: {
-    colors,
-    fontSize: {
-      'paragraph-xs': ['8px', { lineHeight: '14px' }],
-      'paragraph-s': ['10px', { lineHeight: '15px' }],
-      'paragraph-m-s': ['12px', { lineHeight: '25px' }],
-      'paragraph-l-m': ['14px', { lineHeight: '22px' }],
-      'paragraph-m-l': ['14px', { lineHeight: '26px' }],
-      'paragraph-l': ['16px', { lineHeight: '28px' }],
-      'paragraph-xl': ['18px', { lineHeight: '29px' }],
-      'headline-xs': ['20px', { lineHeight: '31px' }],
-      'headline-s': ['24px', { lineHeight: '33px' }],
-      'headline-m-s': ['28px', { lineHeight: '36px' }],
-      'headline-l-m': ['32px', { lineHeight: '47px' }],
-      'headline-l': ['36px', { lineHeight: '50px' }],
-      'headline-xl': ['40px', { lineHeight: '53px' }],
-      'accent-s': ['48px', { lineHeight: '67px' }],
-      'accent-m-s': ['56px', { lineHeight: '73px' }],
-      'accent-l-m': ['64px', { lineHeight: '79px' }],
-      'accent-l': ['72px', { lineHeight: '80px' }],
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      inherit: 'inherit',
+      primary: createColor(
+        { default: palette['primal-white'] },
+        {
+          default: palette['primal-black'],
+          active: palette['secondary-black'],
+        }
+      ),
+
+      text: {
+        gray: palette['text-gray'],
+      },
+
+      brand: {
+        blue: palette['exotic-blue'],
+        cyan: palette['exotic-cyan'],
+        orange: palette['exotic-orange'],
+        turquoise: palette['exotic-turquoise'],
+      },
+
+      status: {
+        error: palette['status-red'],
+        warning: palette['status-yellow'],
+        success: palette['status-green'],
+        focus: palette['exotic-cyan'],
+      },
+
+      paper: {
+        light: {
+          100: palette['primal-white'],
+          200: palette['secondary-white'],
+          300: palette['primal-gray'],
+          400: palette['secondary-gray'],
+        },
+      },
+    },
+    animation: {
+      slide: 'slide 1s ease-in-out',
+    },
+    keyframes: {
+      slide: {
+        '0%': { transform: 'translateX(-100%)' },
+        '100%': { transform: 'translateX(100%)' },
+      },
     },
   },
-
+  variants: {
+    extend: {
+      backgroundColor: ['dark'],
+      textColor: ['dark'],
+    },
+  },
   plugins: [require('@tailwindcss/typography')],
 }

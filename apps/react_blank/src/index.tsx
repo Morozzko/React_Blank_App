@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import { App } from './app/entry'
+import { App } from '@app/entry'
 import { reportWebVitals } from './reportWebVitals'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 

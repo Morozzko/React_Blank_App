@@ -36,7 +36,7 @@
     "@npm.piece/eslint-config-npmpiece": "^1.0.30",
     "@npm.piece/generate-hooks-rtk": "^1.0.6",
     "@npm.piece/locale-downloader": "^1.0.8",
-    "@npm.piece/tailwind-config": "^1.0.10",
+    "@npm.piece/tailwind-config": "^1.0.26",
     "@npm.piece/template-generator": "^1.0.9",
     "@npm.piece/types": "^1.0.5",
     "@npm.piece/utils": "^1.0.24",
