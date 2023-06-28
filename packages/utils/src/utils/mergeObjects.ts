@@ -1,4 +1,4 @@
-export const MergeObjects = (...objects: object[]) => {
+export const mergeObjects = (...objects: object[]) => {
   const result: Record<string, unknown> = {}
 
   objects.forEach(obj => {
@@ -8,7 +8,7 @@ export const MergeObjects = (...objects: object[]) => {
         const objByPath = obj[key]
 
         if (typeof objByPath === 'object' && objByPath !== null) {
-          result[key] = MergeObjects(result[key] || {}, objByPath)
+          result[key] = mergeObjects(result[key] || {}, objByPath)
         } else {
           result[key] = objByPath
         }

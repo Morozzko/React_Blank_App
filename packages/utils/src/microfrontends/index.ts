@@ -1,2 +1,2 @@
 export * from './useSubscribe'
-export * from './EventTransfer'
+export * from './eventTransfer'

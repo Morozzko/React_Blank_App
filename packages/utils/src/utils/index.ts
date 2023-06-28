@@ -1,2 +1,2 @@
-export * from './DeepClone'
-export * from './MergeObjects'
+export * from './deepClone'
+export * from './mergeObjects'

@@ -9,7 +9,7 @@ export const useContainer = () => {
   const isMobileWidth = Boolean(innerWidth <= 768)
 
   const {
-    appSizeActions: { setIsMobile, setAppSize },
+    appSize: { setIsMobile, setAppSize },
   } = useAppActions()
 
   useEffect(() => {

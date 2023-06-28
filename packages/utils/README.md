@@ -158,15 +158,15 @@ useEffectWithoutFirstCall(() => {
 
 ## CustomServiceInjector
 
-#### The Custom Service Injector (CSI) component is designed to inject custom hooks containing useEffect, to your application without calling re-render of child components.
+#### The Service Injector component is designed to inject custom hooks containing useEffect, to your application without calling re-render of child components.
 
 ```javascript
-import { CustomServiceInjector } from '@npm.piece/utils'
+import { ServiceInjector } from '@npm.piece/utils'
 ```
 
 ```tsx
-<CustomServiceInjector
-  containers={[condition.useContainer, mobile.useContainer]}
+<ServiceInjector
+  services={[condition.service, mobile.service]}
 />
 ```
 
@@ -182,20 +182,20 @@ import { ArrayRender } from '@npm.piece/utils'
 <ArrayRender items={items} renderItem={(item) => <itemTemplate key />} />
 ```
 
-## DeepClone
+## deepClone
 
 ```javascript
-import { DeepClone } from '@npm.piece/utils'
+import { deepClone } from '@npm.piece/utils'
 ```
 
 ```javascript
-const newObj = DeepClone({ name: 'npm.piece' })
+const newObj = deepClone({ name: 'npm.piece' })
 ```
 
 ## MergeObjects
 
 ```javascript
-import { MergeObjects } from '@npm.piece/utils'
+import { mergeObjects } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -218,7 +218,7 @@ const c = {
 }
 
 
-const d = MergeObjects(a, b, c)
+const d = mergeObjects(a, b, c)
 // d will be:
 const d = {
   name: 'npm.piece',
@@ -231,28 +231,28 @@ const d = {
 }
 ```
 
-## SetToSessionStorage / SetToLocalStorage / GetFromSessionStorage / GetFromLocalStorage
+## setToSessionStorage / setToLocalStorage / getFromSessionStorage / getFromLocalStorage
 
 ```javascript
 import {
-  SetToSessionStorage,
-  SetToLocalStorage,
-  GetFromSessionStorage,
-  GetFromLocalStorage
+  setToSessionStorage,
+  setToLocalStorage,
+  getFromSessionStorage,
+  getFromLocalStorage
 } from '@npm.piece/utils'
 ```
 
 ```javascript
-  SetToSessionStorage('token', { age: 100 })
-SetToLocalStorage('token', { age: 100 }),
-  GetFromSessionStorage('token'),
-  GetFromLocalStorage('token')
+  setToSessionStorage('token', { age: 100 })
+  setToLocalStorage('token', { age: 100 }),
+  getFromSessionStorage('token'),
+  getFromLocalStorage('token')
 ```
 
 ## Micro-Frontend Events
 
 ```javascript
-import { useSubscribe, EventTransfer } from '@npm.piece/utils'
+import { useSubscribe, eventTransfer } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -269,7 +269,7 @@ useSubscribe < { text: string } > (
 ```
 
 ```javascript
-EventTransfer < { text: string } > ({
+eventTransfer < { text: string } > ({
   data: {
     text: e.target.value
   },

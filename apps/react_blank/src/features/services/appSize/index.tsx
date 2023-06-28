@@ -2,7 +2,7 @@ import { useContainer } from './container'
 import { Actions, Reducer } from './store'
 
 export const appSize = {
-  useContainer,
+  service: useContainer,
 }
 
 export { Actions, Reducer }

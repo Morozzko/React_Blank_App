@@ -2,7 +2,7 @@ import { useContainer } from './container'
 import { Actions, Reducer } from './store'
 
 export const condition = {
-  useContainer,
+  service: useContainer,
 }
 
 export { Actions, Reducer }

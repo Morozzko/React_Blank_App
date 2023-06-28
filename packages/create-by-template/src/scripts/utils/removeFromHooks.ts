@@ -12,14 +12,14 @@ export const removeFromHooks = async ({ pathToFile, name }: PayloadType) => {
 
     // Удаление импортов
     const importRegex = new RegExp(
-      `^import\\s+{\\s*Actions\\s+as\\s+${name}\\s*}\\s+from\\s+'.+?${name}/';?\\n`,
+      `^import\\s+{\\s*Actions\\s+as\\s+${name}Actions\\s*}\\s+from\\s+'.+?${name}/';?\\n`,
       'gm'
     )
     const updatedContent = data.replace(importRegex, '')
 
     // Удаление строк const ${name}Actions = useActions(${name})
     const constRegex = new RegExp(
-      `const\\s+${name}Actions\\s+=\\s+useActions\\(${name}\\);?\\n`,
+      `const\\s+${name}\\s+=\\s+useActions\\(${name}Actions\\);?\\n`,
       'gm'
     )
     const updatedContentWithConstRemoved = updatedContent.replace(
@@ -28,7 +28,7 @@ export const removeFromHooks = async ({ pathToFile, name }: PayloadType) => {
     )
 
     // Удаление строк ${name}Actions,
-    const actionsRegex = new RegExp(`${name}Actions,?\\n`, 'gm')
+    const actionsRegex = new RegExp(`${name},?\\n`, 'gm')
     const updatedContentWithActionsRemoved =
       updatedContentWithConstRemoved.replace(actionsRegex, '')
 

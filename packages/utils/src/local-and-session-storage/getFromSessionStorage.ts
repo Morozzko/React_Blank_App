@@ -1,4 +1,4 @@
-export const GetFromSessionStorage = <T>(key: string) => {
+export const getFromSessionStorage = <T>(key: string) => {
   const sessionStorageItem = sessionStorage.getItem(key)
 
   return sessionStorageItem ? (JSON.parse(sessionStorageItem) as T) : null

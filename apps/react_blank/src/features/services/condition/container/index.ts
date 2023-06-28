@@ -7,7 +7,7 @@ let displayed: SnackbarKey[] = []
 
 export const useContainer = () => {
   const {
-    conditionActions: { removeNotification },
+    condition: { removeNotification },
   } = useAppActions()
   const { notifications } = useAppSelector(state => state.condition)
 

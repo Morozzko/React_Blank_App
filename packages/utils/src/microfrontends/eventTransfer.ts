@@ -10,7 +10,7 @@ type NameType = {
   mfName: string
 }
 
-export const EventTransfer = <T extends unknown>({
+export const eventTransfer = <T extends unknown>({
   data,
   name,
   debug,

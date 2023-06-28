@@ -20,7 +20,7 @@ export const insertToHooks = async ({
 
     // Замена строки // insert hook here
     const hookPlaceholder = new RegExp(`${regexp.hooks}`)
-    const hookInsertion = `const ${name}Actions = useActions(${name})`
+    const hookInsertion = `const ${name} = useActions(${name}Actions)`
     const updatedDataWithHook = data.replace(
       hookPlaceholder,
       match => `${match}\n${hookInsertion}`
@@ -28,7 +28,7 @@ export const insertToHooks = async ({
 
     // Замена строки // insert actions here
     const actionsPlaceholder = new RegExp(`${regexp.actions}`)
-    const actionsInsertion = `${name}Actions,`
+    const actionsInsertion = `${name},`
     const updatedDataWithActions = updatedDataWithHook.replace(
       actionsPlaceholder,
       match => `${match}\n${actionsInsertion}`
@@ -36,7 +36,7 @@ export const insertToHooks = async ({
 
     // Добавление строки import после последней строки import
     const lastImportRegex = /^import.*;?$\n(?!import)/m
-    const importInsertion = `import { Actions as ${name} } from '${pathForImportHooks}${name}/'`
+    const importInsertion = `import { Actions as ${name}Actions } from '${pathForImportHooks}${name}/'`
     const updatedDataWithImport = updatedDataWithActions.replace(
       lastImportRegex,
       match => `${match}${importInsertion}\n`
