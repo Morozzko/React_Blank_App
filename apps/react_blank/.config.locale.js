@@ -1,6 +1,6 @@
 const path = require('path')
 
-const localesFolder = './src/features/services/localization/locales'
+const localesFolder = './src/app/localization/locales'
 
 module.exports = {
   apiKey: 'AIzaSyAT2uFOrgZVvZTMmQPk7slY98d80BWcjtk',

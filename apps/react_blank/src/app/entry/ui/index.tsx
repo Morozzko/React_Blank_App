@@ -3,7 +3,7 @@ import { AppRouter } from '@app/router'
 import { appSize } from '@services/appSize'
 import { condition } from '@services/condition'
 
-import '@services/localization'
+import 'app/localization'
 
 export const App: FC = () => (
   <div>
