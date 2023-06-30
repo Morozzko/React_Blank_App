@@ -1,6 +1,5 @@
 {
   "files": [
-    "apps/[polygon]-nest-rest-character-microservice/package.json",
     "apps/algorithms/package.json",
     "apps/business_card/package.json",
     "apps/nest_blank/package.json",
@@ -35,7 +34,7 @@
     "@nestjs/testing": "^9.4.3",
     "@npm.piece/eslint-config-npmpiece": "^1.0.30",
     "@npm.piece/generate-hooks-rtk": "^1.0.6",
-    "@npm.piece/locale-downloader": "^1.0.8",
+    "@npm.piece/locale-downloader": "^1.0.9",
     "@npm.piece/tailwind-config": "^1.0.26",
     "@npm.piece/template-generator": "^1.0.11",
     "@npm.piece/types": "^1.0.5",
@@ -82,7 +81,7 @@
     "eslint-plugin-tailwindcss": "^3.11.0",
     "fake-indexeddb": "^4.0.1",
     "gh-pages": "^3.2.3",
-    "i18next": "^22.4.14",
+    "i18next": "^23.2.6",
     "idb": "^7.1.1",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
@@ -95,6 +94,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
+    "react-i18next": "^13.0.1",
     "react-lottie": "^1.2.3",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",

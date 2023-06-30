@@ -37,7 +37,7 @@ const startScript = async () => {
 
   console.log(
     '\x1b[31m',
-    `Редактирование перевода доступно по ссылке ${editUrl}`,
+    `Editing the translation is available at the link: ${editUrl}`,
     '\x1b[0m'
   )
 }
