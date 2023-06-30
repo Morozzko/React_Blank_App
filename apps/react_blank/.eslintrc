@@ -11,7 +11,7 @@
           ["@constants", "./src/constants"],
           ["@functions", "./src/utils/functions"],
           ["@generated", "./src/features/generated"],
-          ["@helpers", "./src/utils/helpers"],
+          ["@utility-components", "./src/utils/components"],
           ["@hooks", "./src/utils/hooks"],
           ["@layouts", "./src/layouts"],
           ["@pages", "./src/pages"],

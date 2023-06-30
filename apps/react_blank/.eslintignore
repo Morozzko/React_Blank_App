@@ -2,5 +2,5 @@
 /node_modules
 /src/index.ts
 /src/features/generated/hooks
-/src/utils/helpers/ErrorBoundary/index.tsx
+/src/utils/components/ErrorBoundary/index.tsx
 

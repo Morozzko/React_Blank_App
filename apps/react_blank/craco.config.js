@@ -15,7 +15,7 @@ module.exports = {
       '@constants': path.resolve(__dirname, 'src/constants/'),
       '@functions': path.resolve(__dirname, 'src/utils/functions/'),
       '@generated': path.resolve(__dirname, 'src/features/generated/'),
-      '@helpers': path.resolve(__dirname, 'src/utils/helpers/'),
+      '@utility-components': path.resolve(__dirname, 'src/utils/components/'),
       '@hooks': path.resolve(__dirname, 'src/utils/hooks/'),
       '@layouts': path.resolve(__dirname, 'src/layouts/'),
       '@pages': path.resolve(__dirname, 'src/pages/'),

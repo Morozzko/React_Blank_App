@@ -7,7 +7,7 @@
           "@constants/*": ["constants/*"],
           "@functions/*": ["utils/functions/*"],
           "@generated/*": ["features/generated/*"],
-          "@helpers/*": ["utils/helpers/*"],
+          "@utility-components/*": ["utils/components/*"],
           "@hooks/*": ["utils/hooks/*"],
           "@layouts/*": ["layouts/*"],
           "@pages/*": ["pages/*"],
