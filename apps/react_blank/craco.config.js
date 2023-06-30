@@ -7,7 +7,6 @@ const { exported, imported } = require('./.MF.module')
 
 const { name, dependencies } = require('./package.json')
 module.exports = {
-  // ...
   webpack: {
     alias: {
       '@app': path.resolve(__dirname, 'src/app/'),
@@ -62,5 +61,26 @@ module.exports = {
     ) =>
       /* ... */
       webpackConfig,
+  },
+  jest: {
+    configure(config) {
+      config.moduleNameMapper = {
+        '^@app/(.*)$': '<rootDir>/src/app/$1',
+        '^@components/(.*)$': '<rootDir>/src/components/$1',
+        '^@constants/(.*)$': '<rootDir>/src/constants/$1',
+        '^@functions/(.*)$': '<rootDir>/src/utils/functions/$1',
+        '^@generated/(.*)$': '<rootDir>/src/features/generated/$1',
+        '^@utility-components/(.*)$': '<rootDir>/src/utils/components/$1',
+        '^@hooks/(.*)$': '<rootDir>/src/utils/hooks/$1',
+        '^@layouts/(.*)$': '<rootDir>/src/layouts/$1',
+        '^@pages/(.*)$': '<rootDir>/src/pages/$1',
+        '^@services/(.*)$': '<rootDir>/src/features/services/$1',
+        '^@styles/(.*)$': '<rootDir>/src/styles/$1',
+        '^@widgets/(.*)$': '<rootDir>/src/features/widgets/$1',
+      }
+
+      // Вернуть измененную конфигурацию
+      return config
+    },
   },
 }

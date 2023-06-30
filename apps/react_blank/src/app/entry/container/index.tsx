@@ -4,8 +4,7 @@ import { Providers } from '@app/providers'
 import { App } from '../ui'
 
 import '../../../index.css'
-import 'app/localization'
-
+import '@app/localization'
 // Точка входа для разработки
 export const Container: FC = props => (
   <BrowserRouter>
