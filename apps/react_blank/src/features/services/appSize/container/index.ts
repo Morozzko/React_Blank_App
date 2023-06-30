@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useAppActions } from '@hooks/useAppActions'
 import { useAppSelector } from '@hooks/useAppSelector'
 
-export const useContainer = () => {
+export const useContainer: SC = () => {
   const { innerWidth, innerHeight, clientWidth, clientHeight } = useSizeDetect()
   const isMobile = useAppSelector(state => state.appSize.isMobile)
   const isMobileWidth = Boolean(innerWidth <= 768)

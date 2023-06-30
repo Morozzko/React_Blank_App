@@ -5,7 +5,7 @@ import { useAppSelector } from '@hooks/useAppSelector'
 
 let displayed: SnackbarKey[] = []
 
-export const useContainer = () => {
+export const useContainer: SC = () => {
   const {
     condition: { removeNotification },
   } = useAppActions()

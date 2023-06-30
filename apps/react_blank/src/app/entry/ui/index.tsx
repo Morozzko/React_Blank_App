@@ -4,8 +4,6 @@ import { appSize } from '@services/appSize'
 import { condition } from '@services/condition'
 import { ErrorBoundary } from '@utility-components/ErrorBoundary'
 
-import 'app/localization'
-
 export const App: FC = () => (
   <div>
     <ErrorBoundary>

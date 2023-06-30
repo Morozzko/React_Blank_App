@@ -10,6 +10,9 @@ declare global {
   // Container Component
   type CC<T = {}> = () => T
 
+  // Service Component
+  type SC = () => void
+
   type Nullable<T> = T | null | undefined
 
   type Callback<Value = void | unknown, ReturnType = void> = (

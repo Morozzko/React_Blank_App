@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const folderPath = './cra-update'
+const folderPath = './apps/react_blank/src/app'
 
 function readFilesInDirectory(directoryPath) {
   // Читаем содержимое каждого файла в директории
