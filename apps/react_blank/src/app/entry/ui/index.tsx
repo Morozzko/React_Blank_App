@@ -5,10 +5,10 @@ import { condition } from '@services/condition'
 import { ErrorBoundary } from '@utility-components/ErrorBoundary'
 
 export const App: FC = () => (
-  <div>
+  <>
     <ErrorBoundary>
       <AppRouter />
     </ErrorBoundary>
     <ServiceInjector services={[condition.service, appSize.service]} />
-  </div>
+  </>
 )

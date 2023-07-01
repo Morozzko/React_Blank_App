@@ -12,7 +12,7 @@ export const UI: FC<UIPropertyType> = React.memo(({}) => {
   const { t } = useTranslation()
 
   return (
-    <div data-testid={`${dti}${dtiDictionary}`} className="">
+    <div data-testid={`${dti}${dtiDictionary.mainDiv}`} className="">
       {t('text')}
     </div>
   )

@@ -17,7 +17,7 @@ describe(`${name} UI Component`, () => {
   it(`${name} UI will render the translated text`, () => {
     const { getByTestId } = render(<UI />)
 
-    const divElement = getByTestId(`${dti}${dtiDictionary}`)
+    const divElement = getByTestId(`${dti}${dtiDictionary.mainDiv}`)
     expect(divElement).toBeInTheDocument()
     expect(divElement).toHaveTextContent('русский')
   })

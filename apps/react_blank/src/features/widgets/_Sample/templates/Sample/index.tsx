@@ -11,5 +11,5 @@ type OwnPropertyType = {}
 export const Simple: FC<OwnPropertyType> = React.memo(({}) => {
   const { t } = useTranslation()
 
-  return <div data-testid={`${dti}${dtiDictionary}`}>{t('text')}</div>
+  return <div data-testid={`${dti}${dtiDictionary.mainDiv}`}>{t('text')}</div>
 })
