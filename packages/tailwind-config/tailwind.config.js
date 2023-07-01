@@ -97,6 +97,12 @@ module.exports = {
         '100%': { transform: 'translateX(100%)' },
       },
     },
+    extend: {
+      lineHeight: {
+        125: '125%', // 125%
+        150: '150%', // 150%
+      },
+    },
   },
   variants: {
     extend: {
