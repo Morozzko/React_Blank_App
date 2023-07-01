@@ -1,7 +1,7 @@
 import { Layout } from '@layouts/index'
 import { Sample } from '@widgets/_Sample'
 
-export const Todo: FC = () => (
+export const SimplePage: FC = () => (
   <Layout.Main>
     <div>
       <Sample.Widget />
