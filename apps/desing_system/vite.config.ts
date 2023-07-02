@@ -10,9 +10,7 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, './src/utils'),
     },
   },
-  plugins: [
-    react(),
-  ],
+  plugins: [react()],
   css: {
     postcss: {
       plugins: [tailwindcss],
@@ -20,7 +18,7 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    port:4000
+    port: 4000,
   },
   build: {
     lib: {

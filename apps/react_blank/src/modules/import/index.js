@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react'
 import { ErrorBoundary } from '@helpers/ErrorBoundary'
+import React, { Suspense, lazy } from 'react'
 
 const RedModuleLazy = lazy(
   async () => await import('RenameImportedModuleHere/AnyNameHere')

@@ -1,10 +1,10 @@
-import { NestFactory } from '@nestjs/core'
-import { AppModule } from './app.module'
 import { ValidationPipe } from '@nestjs/common'
-import { initSwagger } from './app/init/swagger'
+import { NestFactory } from '@nestjs/core'
 import { initFileSystem } from './app/init/fileSystem'
-import { HttpExceptionFilter } from './app/validation/filters/http-exception.filter'
+import { initSwagger } from './app/init/swagger'
 import { exceptionFactory } from './app/validation/exception/exceptionFactory'
+import { HttpExceptionFilter } from './app/validation/filters/http-exception.filter'
+import { AppModule } from './app.module'
 
 async function bootstrap() {
   const PORT = process.env.PORT || 7000

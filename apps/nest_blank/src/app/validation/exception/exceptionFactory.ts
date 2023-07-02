@@ -1,5 +1,5 @@
-import { ValidationError } from '@nestjs/common/interfaces/external/validation-error.interface'
 import { BadRequestException } from '@nestjs/common'
+import { ValidationError } from '@nestjs/common/interfaces/external/validation-error.interface'
 import { ExceptionType } from '../lib/types'
 
 export const exceptionFactory = (errors: ValidationError[]) => {

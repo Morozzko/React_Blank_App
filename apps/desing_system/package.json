@@ -1,7 +1,7 @@
 {
   "name": "untitled14",
   "private": true,
-  "version": "0.0.4",
+  "version": "0.0.7",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,12 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@npm.piece/ui-kit": "^0.0.7",
+    "@npm.piece/ui-kit": "^0.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@npm.piece/eslint-config-npmpiece": "^1.0.32",
+    "@npm.piece/eslint-config-npmpiece": "^1.0.34",
     "@npm.piece/tailwind-config": "^1.0.27",
     "@npm.piece/types": "^1.0.6",
     "@types/node": "^20.3.1",

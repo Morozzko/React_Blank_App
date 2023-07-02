@@ -25,6 +25,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
         ...standardResponse,
         errors,
       })
+
       return
     }
 

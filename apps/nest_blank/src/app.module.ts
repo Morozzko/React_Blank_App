@@ -1,5 +1,5 @@
-import { Module } from '@nestjs/common'
 import { join } from 'path'
+import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 import { ServeStaticModule } from '@nestjs/serve-static'
 import { BloggersModule } from './features/bloggers/bloggers.module'

@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/eslint-config-npmpiece",
-  "version": "1.0.30",
+  "version": "1.0.34",
   "description": "custom eslint configuration",
   "main": "index.js",
   "exports": {
@@ -19,17 +19,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "eslint": "^8.21.0",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-react": "^1.1.7",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-tailwindcss": "^3.11.0",
-    "prettier": "^2.8.7",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "prettier": "^2.8.8",
     "tailwindcss": "^3.3.2"
   }
 }

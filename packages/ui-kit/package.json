@@ -1,7 +1,7 @@
 {
   "name": "@npm.piece/ui-kit",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.9",
   "type": "module",
   "license": "MIT",
   "files": [
@@ -32,7 +32,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@npm.piece/eslint-config-npmpiece": "^1.0.32",
+    "@npm.piece/eslint-config-npmpiece": "^1.0.34",
     "@npm.piece/tailwind-config": "^1.0.27",
     "@npm.piece/types": "^1.0.6",
     "@types/node": "^20.3.1",

@@ -9,7 +9,7 @@ export function App() {
   return (
     <div
       className={clsx(
-        'flex w-full flex-col bg-paper-light-400',
+        'bg-paper-light-400 flex w-full flex-col',
         dark ? 'dark' : ''
       )}>
       <Atom>

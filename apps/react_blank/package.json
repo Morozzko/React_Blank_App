@@ -1,6 +1,6 @@
 {
   "name": "react_blank",
-  "version": "0.1.19",
+  "version": "0.1.21",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.1.0",
-    "@npm.piece/eslint-config-npmpiece": "^1.0.32",
+    "@npm.piece/eslint-config-npmpiece": "^1.0.34",
     "@npm.piece/generate-hooks-rtk": "^1.0.6",
     "@npm.piece/locale-downloader": "^1.0.9",
     "@npm.piece/tailwind-config": "^1.0.27",
