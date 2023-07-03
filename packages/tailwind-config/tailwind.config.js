@@ -46,7 +46,12 @@ const createColor = (light, dark) => ({
 })
 
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx,mdx}',
+    '../../node_modules/@npm.piece/ui-kit/dist/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@npm.piece/ui-kit/dist/**/*.{js,ts,jsx,tsx}',
+    './index.html',
+  ],
   darkMode: 'class',
   theme: {
     colors: {

@@ -39,12 +39,12 @@ const typographyToTailwindClass: Record<TypographyType, string> = {
 
 type OwnPropertyType = {
   typography: TypographyType
-  element: ElementType
+  element?: ElementType
 }
 
 export const Typography: FC<OwnPropertyType> = ({
   typography,
-  element,
+  element = 'span',
   children,
 }) => {
   const className = typographyToTailwindClass[typography]

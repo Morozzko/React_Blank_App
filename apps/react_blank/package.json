@@ -1,6 +1,6 @@
 {
   "name": "react_blank",
-  "version": "0.1.21",
+  "version": "0.1.26",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -8,7 +8,7 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.1",
     "@mui/styled-engine-sc": "^5.12.0",
-    "@npm.piece/utils": "^1.0.25",
+    "@npm.piece/utils": "^1.0.28",
     "@reduxjs/toolkit": "^1.9.5",
     "async-mutex": "^0.4.0",
     "axios": "^1.3.6",
@@ -52,7 +52,7 @@
     "@npm.piece/eslint-config-npmpiece": "^1.0.34",
     "@npm.piece/generate-hooks-rtk": "^1.0.6",
     "@npm.piece/locale-downloader": "^1.0.9",
-    "@npm.piece/tailwind-config": "^1.0.27",
+    "@npm.piece/tailwind-config": "^1.0.29",
     "@npm.piece/template-generator": "^1.0.11",
     "@npm.piece/types": "^1.0.6",
     "@testing-library/jest-dom": "^5.16.5",

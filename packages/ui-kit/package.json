@@ -1,7 +1,7 @@
 {
   "name": "@npm.piece/ui-kit",
   "private": false,
-  "version": "0.0.9",
+  "version": "0.0.20",
   "type": "module",
   "license": "MIT",
   "files": [
@@ -9,31 +9,31 @@
     "README",
     "LICENSE",
     "dist/",
-    "tailwind.config.cjs"
+    "tailwind.config.js"
   ],
-  "main": "./dist/ruk.umd.js",
-  "module": "./dist/ruk.es.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/ruk.es.js",
-      "require": "./dist/ruk.umd.js"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite build --watch",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "clsx": "^1.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@npm.piece/eslint-config-npmpiece": "^1.0.34",
-    "@npm.piece/tailwind-config": "^1.0.27",
+    "@npm.piece/tailwind-config": "^1.0.29",
     "@npm.piece/types": "^1.0.6",
     "@types/node": "^20.3.1",
     "@types/react": "^18.2.0",
@@ -41,11 +41,12 @@
     "@vitejs/plugin-react-swc": "^3.0.0",
     "autoprefixer": "^10.4.14",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "nodemon": "^2.0.22",
     "postcss": "^8.4.24",
     "postcss-nesting": "^11.3.0",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.0.4",
     "vite": "^4.3.9",
-    "vite-plugin-dts": "^2.3.0"
+    "vite-plugin-dts": "^3.0.0-beta.2"
   }
 }

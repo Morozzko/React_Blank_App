@@ -29,23 +29,10 @@ export default defineConfig({
   },
   build: {
     lib: {
-      // путь к основному файлу библиотеки
-      entry: path.resolve(__dirname, 'src/lib/index.ts'),
-      // название библиотеки
-      name: 'ruk',
-      // форматы генерируемых файлов
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: '@npm.piece/ui-kit',
       formats: ['es', 'umd'],
-      // названия генерируемых файлов
-      fileName: format => `ruk.${format}.js`,
-    },
-    rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-      },
+      fileName: format => `index.${format}.js`,
     },
   },
 })
