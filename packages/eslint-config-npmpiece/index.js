@@ -118,6 +118,29 @@ module.exports = {
         leadingUnderscore: 'allow',
         trailingUnderscore: 'allow',
       },
+      // Правило для булевых
+      {
+        selector: 'variable',
+        types: ['boolean'],
+        format: ['PascalCase'],
+        prefix: ['is', 'has', 'can'],
+        filter: {
+          // Исключения
+          regex: '^(disabled)$',
+          match: false,
+        },
+      },
+      {
+        selector: 'typeProperty',
+        types: ['boolean'],
+        format: ['PascalCase'],
+        prefix: ['is', 'has', 'can'],
+        filter: {
+          // Исключения
+          regex: '^(disabled)$',
+          match: false,
+        },
+      },
     ],
     'react/jsx-max-props-per-line': [
       'error',

@@ -5,11 +5,11 @@
 ## Install
 
 ```
-npm i @npm.piece/generate-hooks-rtk
+npm i @npm.piece/generate-hooks-rtk -D
 ```
 
 ```
-yarn add @npm.piece/generate-hooks-rtk
+yarn add @npm.piece/generate-hooks-rtk -D
 ```
 
 ## Run command

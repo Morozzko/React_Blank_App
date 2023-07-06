@@ -6,8 +6,8 @@ const slice = createSlice({
   name,
   initialState,
   reducers: {
-    setLoading(state, action: PayloadAction<typeof initialState.loading>) {
-      state.loading = action.payload
+    setLoading(state, action: PayloadAction<typeof initialState.isLoading>) {
+      state.isLoading = action.payload
     },
   },
 })

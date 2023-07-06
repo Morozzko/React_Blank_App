@@ -4,7 +4,12 @@ module.exports = {
     "@npm.piece/eslint-config-npmpiece"
   ],
   parser: '@typescript-eslint/parser',
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: "./tsconfig.json"
+  },
   plugins: ['react-refresh'],
   rules: {
 

@@ -3,11 +3,11 @@
 ## Install
 
 ```
-npm i @npm.piece/locale-downloader
+npm i @npm.piece/locale-downloader -D
 ```
 
 ```
-yarn add @npm.piece/locale-downloader
+yarn add @npm.piece/locale-downloader -D
 ```
 
 ## Run command

@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/eslint-config-npmpiece",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "description": "custom eslint configuration",
   "main": "index.js",
   "exports": {
@@ -9,7 +9,7 @@
   },
   "files": [
     "package.json",
-    "README",
+    "README.md",
     "index.js"
   ],
   "keywords": [

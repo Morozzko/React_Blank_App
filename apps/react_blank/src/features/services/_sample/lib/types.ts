@@ -1,1 +1,3 @@
-export type SampleType = {}
+export type SampleType = {
+  ClickHandler: () => void
+}

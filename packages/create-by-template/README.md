@@ -3,11 +3,11 @@
 ## Install
 
 ```
-npm i @npm.piece/template-generator
+npm i @npm.piece/template-generator -D
 ```
 
 ```
-yarn add @npm.piece/template-generator
+yarn add @npm.piece/template-generator -D
 ```
 
 ## Generate by template and inject to useAppActions, ReducersList

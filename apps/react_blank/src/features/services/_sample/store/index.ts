@@ -7,21 +7,21 @@ export const slice = createSlice({
   name,
   initialState,
   reducers: {
-    setLoading(state, action: PayloadAction<typeof initialState.loading>) {
-      state.loading = action.payload
+    setLoading(state, action: PayloadAction<typeof initialState.isLoading>) {
+      state.isLoading = action.payload
     },
   },
   extraReducers: builder => {
     builder
       .addCase(asyncActions.getUsersTC.fulfilled, (state, action) => {
         // state.users = action.payload;
-        state.loading = false
+        state.isLoading = false
       })
       .addCase(asyncActions.getUsersTC.pending, state => {
-        state.loading = true
+        state.isLoading = true
       })
       .addCase(asyncActions.getUsersTC.rejected, state => {
-        state.loading = false
+        state.isLoading = false
       })
   },
 })

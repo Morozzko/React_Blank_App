@@ -3,11 +3,11 @@
 ## Install
 
 ```
-npm i @npm.piece/types
+npm i @npm.piece/types -D
 ```
 
 ```
-yarn add @npm.piece/types
+yarn add @npm.piece/types -D
 ```
 ## Create .d.ts file in src folder and import types
 ```
