@@ -35,7 +35,7 @@
     "@nestjs/swagger": "^6.3.0",
     "@nestjs/testing": "^9.4.3",
     "@npm.piece/eslint-config-npmpiece": "^1.0.35",
-    "@npm.piece/generate-hooks-rtk": "^1.0.7",
+    "@npm.piece/generate-hooks-rtk": "^1.0.8",
     "@npm.piece/locale-downloader": "^1.0.9",
     "@npm.piece/tailwind-config": "^1.0.29",
     "@npm.piece/template-generator": "^1.0.12",

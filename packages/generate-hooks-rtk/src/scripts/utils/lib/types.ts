@@ -13,4 +13,5 @@ export type ConfigType = {
   middlewaresImportFileSuffix: string
   reducersObjectName: string
   middlewaresObjectName: string
+  eslintCommand: string
 }

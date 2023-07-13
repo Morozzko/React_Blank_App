@@ -12,11 +12,13 @@ const execPromise = command =>
   new Promise((resolve, reject) => {
     exec(command, (error, stdout, stderr) => {
       if (error) {
+        console.log(stderr)
         reject(error)
 
         return
       }
       if (stderr) {
+        console.log(stderr)
         reject(new Error(stderr))
 
         return
@@ -27,7 +29,6 @@ const execPromise = command =>
 
 const startScript = async () => {
   const config = app.getConfig()
-
   await execPromise('npx @rtk-query/codegen-openapi openapi-config.ts')
 
   app.injectHooks(
@@ -50,7 +51,7 @@ const startScript = async () => {
     config.reducersObjectName
   )
 
-  if (config.eslintCommand) {
+  if (config?.eslintCommand) {
     await exec(config.eslintCommand)
   }
 }
