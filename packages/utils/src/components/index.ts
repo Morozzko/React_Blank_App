@@ -1,2 +1,2 @@
 export * from './ArrayRender'
-export * from './CustomServiceInjector'
+export * from './ServiceInjector'
