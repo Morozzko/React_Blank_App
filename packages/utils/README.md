@@ -170,6 +170,18 @@ import { ServiceInjector } from '@npm.piece/utils'
 />
 ```
 
+## ErrorBoundary
+
+```javascript
+import { ErrorBoundary } from '@npm.piece/utils'
+```
+
+```tsx
+<ErrorBoundary errorComponent={<h1>error</h1>}>
+    <div/>
+</ErrorBoundary>
+```
+
 ## ArrayRender
 
 #### This component is a generic component for displaying an array of elements. Instead of just using map to convert an array of elements into JSX elements, the ArrayRender component takes an array of items and a renderItem function and processes them internally. The main purpose of this component is to simplify repetitive code when displaying a list of items and keep the code clean and modular.
