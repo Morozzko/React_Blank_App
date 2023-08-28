@@ -11,7 +11,12 @@ function deleteNodeModules(dir) {
     const fullPath = path.join(dir, entry.name)
 
     if (entry.isDirectory()) {
-      if (entry.name === 'node_modules') {
+      if (
+        entry.name === 'node_modules' ||
+        entry.name === '.turbo' ||
+        entry.name === 'dist' ||
+        entry.name === 'build'
+      ) {
         console.log(`Deleting ${fullPath}`)
         exec(`rm -rf ${fullPath}`, err => {
           if (err) {
