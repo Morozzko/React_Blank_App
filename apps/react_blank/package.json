@@ -48,7 +48,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@craco/craco": "^7.1.0",
+    "@module-federation/fmr": "^0.0.7",
     "@npm.piece/eslint-config-npmpiece": "^1.0.35",
     "@npm.piece/generate-hooks-rtk": "^1.0.9",
     "@npm.piece/locale-downloader": "^1.0.9",

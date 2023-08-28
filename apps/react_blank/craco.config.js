@@ -1,4 +1,6 @@
 const path = require('path')
+const { MFLiveReloadPlugin } = require('@module-federation/fmr')
+
 const {
   container: { ModuleFederationPlugin },
 } = require('webpack')
@@ -24,6 +26,11 @@ module.exports = {
     },
     plugins: {
       add: [
+        new MFLiveReloadPlugin({
+          port: 9001, // the port your app runs on
+          container: name, // the name of your app, must be unique
+          standalone: false, // false uses chrome extention
+        }),
         new ModuleFederationPlugin({
           name,
           filename: 'remoteEntry.js',
@@ -55,12 +62,19 @@ module.exports = {
         /* ... */
       ],
     },
-    configure: (
-      webpackConfig
-      // { env, paths }
-    ) =>
-      /* ... */
-      webpackConfig,
+    configure: (webpackConfig, { env }) => {
+      if (env === 'development') {
+        const publicPath = `//${process.env.HOST}:${process.env.PORT}/`
+        console.log(publicPath)
+        webpackConfig.output.publicPath = publicPath
+      } else {
+        const publicPath = `${process.env.REACT_APP_PUBLIC_PATH}`
+        console.log(publicPath)
+        webpackConfig.output.publicPath = publicPath
+      }
+
+      return webpackConfig
+    },
   },
   jest: {
     configure(config) {
