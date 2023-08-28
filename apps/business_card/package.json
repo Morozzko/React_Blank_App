@@ -1,6 +1,6 @@
 {
   "name": "hireme",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "homepage": "https://morozzko.github.io/React_Blank_App/",
   "private": true,
   "dependencies": {
@@ -49,6 +49,6 @@
     "postcss-import": "^15.1.0",
     "react-scripts": "^5.0.1",
     "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.6"
   }
 }

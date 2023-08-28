@@ -28,6 +28,7 @@ const execPromise = command =>
   })
 
 const startScript = async () => {
+  process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0'
   const config = app.getConfig()
   await execPromise('npx @rtk-query/codegen-openapi openapi-config.ts')
 

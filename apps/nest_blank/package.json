@@ -1,6 +1,6 @@
 {
   "name": "training",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "author": "",
   "private": true,
@@ -52,7 +52,7 @@
     "ts-loader": "^9.2.3",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "4.0.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.6"
   },
   "jest": {
     "moduleFileExtensions": [

@@ -25,5 +25,5 @@ export const useSubscribe = <T = any>(
     return () => {
       window.removeEventListener(eventType, eventHandler as EventListener)
     }
-  }, [eventType, eventHandler])
+  }, [])
 }
