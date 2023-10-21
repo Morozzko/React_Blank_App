@@ -18,8 +18,8 @@ const createColor = (
 module.exports = {
   content: [
     './src/**/*.{js,jsx,ts,tsx,mdx}',
-    '../../node_modules/@rtkcd/ui-kit/dist/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@rtkcd/ui-kit/dist/**/*.{js,ts,jsx,tsx}',
+    '../../node_modules/@npm.piece/ui-kit/dist/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@npm.piece/ui-kit/dist/**/*.{js,ts,jsx,tsx}',
     './index.html',
   ],
   darkMode: 'class',
@@ -86,6 +86,14 @@ module.exports = {
         2: createColor({ default: '#DADCE2' }, { default: '#2E3957' }),
         3: createColor({ default: '#C4C7D4' }, { default: '#334E6B' }),
         4: createColor({ default: '#DFE2E7' }, { default: '#313D5D' }),
+        5: createColor(
+          { default: 'rgba(196, 228, 253, 1)' },
+          { default: 'rgba(38, 62, 89, 1)' }
+        ),
+        danger: createColor(
+          { default: 'rgba(255, 128, 128, 1)' },
+          { default: 'rgba(111, 42, 42, 1)' }
+        ),
       },
 
       accent: {
@@ -101,7 +109,7 @@ module.exports = {
           {
             default: '#335AE3',
             hover: '#1A3EBC',
-            focus: 'rgba(36, 120, 204, 0.4)',
+            focus: 'rgba(51, 90, 227, 0.5)',
             transparent: {
               hover: 'rgba(51, 90, 227, 0.15)',
             },
@@ -182,7 +190,7 @@ module.exports = {
           },
           {
             default: '#EF9701',
-            lite: 'rgba(255, 227, 178, 1)',
+            lite: 'rgba(94, 62, 8, 1)',
           }
         ),
         danger: createColor(
@@ -196,8 +204,8 @@ module.exports = {
           },
           {
             default: '#ED4040',
-            lite: 'rgba(255, 178, 178, 1)',
-            hover: '#C71F1F',
+            lite: 'rgba(66, 25, 25, 1)',
+            hover: '#CF2020',
             transparent: {
               hover: 'rgba(237, 64, 64, 0.15)',
             },
@@ -251,52 +259,44 @@ module.exports = {
       },
     },
     fontFamily: {
-      golos: ['Golos Text', 'sans-serif'],
+      main: ['Roboto', 'sans-serif', 'system-ui'],
     },
-
+    fontSize: {
+      xs: '0.625rem', // 10px
+      sm: '0.75rem', // 12px
+      base: '0.875rem', // 14px
+      lg: '1rem', // 16px
+      xl: '1.125rem', // 18px
+      '2xl': '1.25rem', // 20px
+      '3xl': '1.5rem', // 24px
+      '4xl': '1.75rem', // 28px
+      '5xl': '2.125rem', // 34px
+      '6xl': '2.5rem', // 40px
+      '7xl': '3rem', // 48px
+      '8xl': '3.5rem', // 56px
+      '9xl': '4.5rem', // 72px
+      '10xl': '5rem', // 80px
+    },
     extend: {
+      'truncate-3': {
+        overflow: 'hidden',
+        display: '-webkit-box',
+        '-webkit-line-clamp': 3,
+        '-webkit-box-orient': 'vertical',
+      },
       lineHeight: {
-        112.5: '112.5%', // 112.5%
-        125: '125%', // 125%
-        137.5: '137.5%', // 137.5%
-        150: '150%', // 150%
+        3: '3rem', // 48px
+        4: '4rem', // 64px
+        5: '5rem', // 80px
+        6: '6rem', // 96px
       },
-      borderRadius: {
-        625: '0.625rem',
+      fontWeight: {
+        550: '550',
+        500: '500',
+        400: '400',
       },
-      boxShadow: {
-        paper:
-          '0px 2px 20px 0px rgba(19, 77, 178, 0.15), 0px 2px 4px 0px rgba(19, 77, 178, 0.25)',
-        paperHover:
-          '0px 5px 8px 0px rgba(18, 72, 166, 0.02), 0px 0px 16px 0px rgba(18, 72, 166, 0.08), 0px 9px 16px 0px rgba(18, 72, 166, 0.06)',
-        dropdownLight:
-          '0px 4px 6px 0px rgba(49, 76, 130, 0.06), 0px 2px 10px 0px rgba(49, 76, 130, 0.25)',
-      },
-      gridTemplateRows: {
-        7: 'repeat(7, minmax(0, 7fr))',
-        8: 'repeat(8, minmax(0, 1fr))',
-        9: 'repeat(9, minmax(0, 9fr))',
-        10: 'repeat(10, minmax(0, 10fr))',
-        11: 'repeat(11, minmax(0, 11fr))',
-        12: 'repeat(12, minmax(0, 12fr))',
-        13: 'repeat(13, minmax(0, 13fr))',
-      },
-      keyframes: {
-        loader: {
-          '0%,10%': {
-            transform: 'rotate(0deg)',
-          },
-          '90%,100%': {
-            transform: 'rotate(360deg)',
-          },
-        },
-      },
-      animation: {
-        loader1: 'loader 2s linear infinite',
-        loader2: 'loader 2s linear 0.125s infinite',
-        loader3: 'loader 2s linear 0.250s infinite',
-        loader4: 'loader 2s linear 0.375s infinite',
-        loader5: 'loader 2s linear 0.5s infinite',
+      screens: {
+        '3xl': '1920px', // @media (min-width: 1920px)
       },
     },
   },

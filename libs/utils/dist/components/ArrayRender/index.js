@@ -1,0 +1,1 @@
+import{jsx as r,Fragment as e}from"react/jsx-runtime";var n=function(n){var t=n.items,i=n.renderItem;return r(e,{children:null==t?void 0:t.map((function(r,e){return i(r,e)}))})};export{n as ArrayRender};

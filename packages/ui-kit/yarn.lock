@@ -278,9 +278,9 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@npm.piece/eslint-config-npmpiece@^1.0.30":
+"@npm.piece/eslint-config@^1.0.30":
   version "1.0.30"
-  resolved "https://registry.yarnpkg.com/@npm.piece/eslint-config-npmpiece/-/eslint-config-npmpiece-1.0.30.tgz#fec44e853065f0cb100bf2f8aceb7441badcd1d4"
+  resolved "https://registry.yarnpkg.com/@npm.piece/eslint-config/-/eslint-config-npmpiece-1.0.30.tgz#fec44e853065f0cb100bf2f8aceb7441badcd1d4"
   integrity sha512-8Bm72SbuxXT4V2yVCqe4/HuW7TI0Gf8WaujWhoWO1B1dSEF6U7u9RkLGdymkziQrE2LAxTOAc4LT1LzaC4nv2Q==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.57.1"

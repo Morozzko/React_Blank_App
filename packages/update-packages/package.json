@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/update-packages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "package.json",
     "README"
@@ -13,6 +13,6 @@
   "author": "Morozzko",
   "license": "ISC",
   "dependencies": {
-    "semver": "^7.5.0"
+    "semver": "^7.5.4"
   }
 }

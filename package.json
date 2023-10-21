@@ -4,18 +4,25 @@
   "private": true,
   "workspaces": [
     "apps/*",
+    "frontend/*",
+    "backend/*",
+    "other/*",
+    "libs/*",
     "packages/*"
   ],
   "scripts": {
+    "build:libs": "turbo run build --filter=@npm.piece/constants & turbo run build --filter=@npm.piece/common && turbo run build --filter=@npm.piece/utils && turbo run build --filter=@npm.piece/ui-kit",
     "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "test": "turbo run test",
+    "prestart": "yarn build:libs",
+    "start": "turbo run dev --filter=app_auth & turbo run dev --filter=app_root",
     "test:watch": "turbo run test:watch",
-    "format": "eslint --fix --ext .js,.jsx,.tsx,ts ."
+    "format": "eslint --fix --ext .js,.jsx,.tsx,ts .",
+    "mf": "npm.piece-connect-mf",
+    "rmrf": "node deleteNodeModules.js",
+    "update": "node ./packages/update-packages/bin/index.js && yarn"
   },
   "devDependencies": {
-    "@npm.piece/eslint-config-npmpiece": "*",
+    "@npm.piece/eslint-config": "*",
     "turbo": "latest"
   },
   "engines": {

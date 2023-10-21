@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/types",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "types": "global.d.ts",
   "files": [
     "package.json",
@@ -10,14 +10,14 @@
   "keywords": [
     "react"
   ],
-  "description": "Frequently used hooks for React",
+  "description": "Frequently used types for React",
   "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/types",
   "author": "Morozzko",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "react": "^16.x.x || ^17.x.x || ^18.x.x"
+    "react": "16.x.x || 17.x.x || 18.x.x"
   }
 }

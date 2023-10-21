@@ -1,0 +1,1 @@
+import{useEffect as o}from"react";var e=function(e,n){o((function(){var o=function(o){o.key.toLowerCase()===n.toLowerCase()&&(o.stopPropagation(),e())};return window.addEventListener("keydown",o),function(){window.removeEventListener("keydown",o)}}),[e,n])};export{e as useOnKeyPress};

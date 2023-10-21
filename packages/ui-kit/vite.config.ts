@@ -8,7 +8,6 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@assets': path.resolve(__dirname, './src/assets'),
-      '@utils': path.resolve(__dirname, './src/utils'),
     },
   },
   plugins: [
@@ -26,6 +25,7 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
+    port: 4002,
   },
   build: {
     lib: {
@@ -35,11 +35,13 @@ export default defineConfig({
       fileName: format => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react', 'react-dom', 'react-table', '@npm.piece/utils'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          'react-table': 'react-table',
+          '@npm.piece/utils': '@npm.piece/utils',
         },
       },
     },

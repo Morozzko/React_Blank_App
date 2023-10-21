@@ -1,0 +1,1 @@
+import{useState as n,useEffect as e}from"react";var t=function(){if(!("undefined"!=typeof window))return!1;var t=window.matchMedia("(orientation: portrait)"),r=n(!t.matches),i=r[0],o=r[1],a=function(n){o(!n.matches)};return e((function(){return t.addEventListener("change",a),function(){return t.removeEventListener("change",a)}}),[]),i};export{t as usePortraitDetect};
