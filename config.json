@@ -54,7 +54,6 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.4",
     "@rtk-query/codegen-openapi": "^1.0.0",
-    "@rtkcd/icons": "^0.0.54",
     "@tailwindcss/typography": "^0.5.9",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",

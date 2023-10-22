@@ -3,11 +3,11 @@
 ## Install
 
 ```
-npm i @rtkcd/utils
+npm i @npm.piece/utils
 ```
 
 ```
-yarn add @rtkcd/utils
+yarn add @npm.piece/utils
 ```
 
 ## useDebounce (with lodash)

@@ -18,11 +18,10 @@ const getControllers = (names: string[]) =>
     {}
   )
 
-const controllers = ['Auth']
+const controllers = ['pet', 'order', 'user']
 const config: ConfigFile = {
-  // schemaFile:
-  // 'https://stage-app-01.office.rtk-cd.ru:7274/swagger/v1/swagger.json',
-  schemaFile: './swagger.json',
+  schemaFile: 'https://petstore3.swagger.io/api/v3/openapi.json',
+  // schemaFile: './swagger.json',
   apiFile: '@app/api/RTK',
   tag: true,
   hooks: true,
