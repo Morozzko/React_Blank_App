@@ -1,7 +1,7 @@
 # Навигация по репозиторию
 
 > ### 1. Архитектура.
-> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/apps/react_blank">1.1 Пример архитектуры на React.js.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/_doc/Architect%26Structure">1.1 Документация к архитектуре на React.js.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/create-by-template">1.2 Генерация шаблонов под архитектуру.<a/>
 
 > ### 2. Вспомогательные библиотеки.
@@ -15,8 +15,8 @@
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/download-locale">3.2 Загрузка переводов из гугл таблицы.<a/>
 
 > ### 4. Структуры, Алгоритмы, Паттерны.
-> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/apps/algorithms/src/algorithms/sortings">4.1 Сортировки.<a/>
-> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/apps/algorithms/src/structures">4.2 Структуры данных.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/other/algorithms/src/algorithms/sortings">4.1 Сортировки.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/other/algorithms/src/structures">4.2 Структуры данных.<a/>
 
 > ### 5. Прочее
 > #### <a href="https://github.com/Morozzko/React_Blank_App/blob/master/_templates/rtkthunk/react_blank/src/app/api/axios.ts">5.1 Работа с Mutex на примере interceptors.<a/>
