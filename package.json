@@ -11,7 +11,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build:libs": "turbo run build --filter=@npm.piece/constants & turbo run build --filter=@npm.piece/common && turbo run build --filter=@npm.piece/utils && turbo run build --filter=@npm.piece/ui-kit",
+    "build:libs": "turbo run build --filter=@npm.piece/constants & turbo run build --filter=@npm.piece/common && turbo run build --filter=@npm.piece/utils && turbo run build --filter=@npm.piece/ui-kit  && turbo run build --filter=@npm.piece/mf-connect",
     "build": "turbo run build",
     "prestart": "yarn build:libs",
     "start": "turbo run dev --filter=app_auth & turbo run dev --filter=app_root",
@@ -19,7 +19,7 @@
     "format": "eslint --fix --ext .js,.jsx,.tsx,ts .",
     "mf": "npm.piece-connect-mf",
     "rmrf": "node deleteNodeModules.js",
-    "update": "node ./packages/update-packages/bin/index.js && yarn"
+    "update": "node ./libs/update-packages/bin/index.js && yarn"
   },
   "devDependencies": {
     "@npm.piece/eslint-config": "*",

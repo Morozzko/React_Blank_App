@@ -1,1 +1,0 @@
-import{__spreadArray as o}from"../../node_modules/tslib/tslib.es6.mjs.js";import r from"../../node_modules/lodash.debounce/index.js";import{useCallback as e}from"react";var t=function(t,n,i,d){return void 0===i&&(i=[]),e(r((function(){for(var o=[],r=0;r<arguments.length;r++)o[r]=arguments[r];return t.apply(void 0,o)}),n,d),o([n],i,!0))};export{t as useDebounce};

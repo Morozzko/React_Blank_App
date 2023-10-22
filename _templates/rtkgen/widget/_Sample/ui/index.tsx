@@ -1,5 +1,5 @@
 import { Flex } from '@npm.piece/ui-kit'
-import { clsx } from '../../../../../libs/utils'
+import { clsx } from '@npm.piece/utils'
 import React from 'react'
 import { dti } from '../constants/data-testid'
 

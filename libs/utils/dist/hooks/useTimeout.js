@@ -1,1 +1,0 @@
-import{useRef as r,useEffect as t}from"react";var n=function(n,u){var c=r(),e=r();t((function(){c.current=n}),[n]),t((function(){if(u||0===u)return e.current=setTimeout((function(){c.current&&c.current()}),u),function(){e.current&&clearTimeout(e.current)}}),[u])};export{n as useTimeout};

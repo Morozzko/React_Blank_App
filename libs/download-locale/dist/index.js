@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("./scripts/utils/getConfig.js"),t=require("./scripts/utils/downloadGoogleSheet.js");exports.getConfig=e.getConfig,exports.createDictionary=t.createDictionary,exports.createFile=t.createFile,exports.downloadGoogleSheet=t.downloadGoogleSheet;

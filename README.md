@@ -52,6 +52,10 @@
 > ```
 > npm install -g npm @nestjs/cli
 > ```
+> ```
+> npm run build && npm publish --access public
+> ```
+
 
 > ```
 > kill -9 $(lsof -ti:3000)

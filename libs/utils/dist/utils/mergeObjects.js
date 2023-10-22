@@ -1,1 +1,0 @@
-var o=function(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n];var r={};return t.forEach((function(t){"object"==typeof t&&null!==t&&Object.keys(t).forEach((function(n){var e=t[n];r[n]="object"==typeof e&&null!==e?o(r[n]||{},e):e}))})),r};export{o as mergeObjects};

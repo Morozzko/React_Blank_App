@@ -1,7 +1,7 @@
 {
   "name": "@npm.piece/ui-kit",
   "private": false,
-  "version": "0.0.131",
+  "version": "0.0.132",
   "type": "module",
   "license": "MIT",
   "files": [

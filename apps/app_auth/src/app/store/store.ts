@@ -1,6 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { combineReducers } from 'redux'
-import thunkMiddleware from 'redux-thunk'
 import { generatedMiddlewaresList } from '@app/store/generated/middlewares'
 import { reducersList } from './reducers'
 
@@ -11,7 +10,6 @@ export const store = configureStore({
   // @ts-ignore
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware()
-      .prepend(thunkMiddleware)
       // Добавляем автоматические middleware сгенерированные библиотекой @rtk-query/codegen-openapi
       .concat(...generatedMiddlewaresList),
   devTools: process.env.NODE_ENV !== 'production',
