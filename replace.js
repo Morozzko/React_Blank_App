@@ -24,8 +24,8 @@ const replaceTextInFiles = (dir, from, to) => {
 }
 
 const main = () => {
-  const from = '@rtkcd/mf-connect' // Замените на текст, который нужно заменить
-  const to = '@npm.piece/mf-connect' // Замените на текст, на который нужно заменить
+  const from = '@npm.piece/frontend-types' // Замените на текст, который нужно заменить
+  const to = '@npm.piece/types' // Замените на текст, на который нужно заменить
   const startDir = '.' // Замените на папку, в которой нужно начать
 
   replaceTextInFiles(startDir, from, to)

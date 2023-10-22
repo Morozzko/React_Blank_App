@@ -14,7 +14,26 @@ yarn add @npm.piece/types -D
 /// <reference types="@npm.piece/types/global" />
 ```
 
-### Types:
+```
+/// <reference types="@npm.piece/types/frontend" />
+```
+
+```
+/// <reference types="@npm.piece/types/backend" />
+```
+
+### Global Types:
+```typescript
+type Nullable<T> = T | null | undefined
+
+type Callback<Value = void | unknown, ReturnType = void> = (
+  value: Value
+) => ReturnType
+
+type UnknownCallback = (...args: any[]) => any
+```
+
+### Frontend Types:
 ```typescript
 // Function Component
 type FC<T = {}> = FunctionComponent<T & ChildrenType>
@@ -26,12 +45,4 @@ type CC<T = {}> = () => T
 type SC = () => void
 
 type ImportedMF<T = {}> = FC<T & MFPropsType>
-
-type Nullable<T> = T | null | undefined
-
-type Callback<Value = void | unknown, ReturnType = void> = (
-  value: Value
-) => ReturnType
-
-type UnknownCallback = (...args: any[]) => any
 ```

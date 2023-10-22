@@ -1,7 +1,7 @@
 {
   "name": "@npm.piece/ui-kit",
   "private": false,
-  "version": "0.0.132",
+  "version": "0.0.134",
   "type": "module",
   "license": "MIT",
   "files": [
@@ -28,12 +28,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
     "react-table": "^7.8.0"
   },
+  "peerDependencies": {
+    "react": "16.x.x || 17.x.x || 18.x.x",
+    "react-router-dom": "6.x.x",
+    "react-dom": "16.x.x || 17.x.x || 18.x.x"
+  },
   "devDependencies": {
-    "@npm.piece/tailwind-config": "^1.0.33",
-    "@npm.piece/types": "^1.0.10",
+    "@npm.piece/tailwind-config": "^1.0.34",
+    "@npm.piece/types": "^1.0.11",
     "@npm.piece/utils": "^1.0.146",
     "@types/node": "^20.6.0",
     "@types/react": "^18.2.0",

@@ -1,10 +1,11 @@
 {
   "name": "@npm.piece/types",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "types": "global.d.ts",
   "files": [
     "package.json",
     "global.d.ts",
+    "frontend.d.ts",
     "README"
   ],
   "keywords": [

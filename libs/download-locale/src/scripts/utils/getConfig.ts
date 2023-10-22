@@ -4,7 +4,7 @@ import { ConfigType } from './lib/types'
 
 // Путь к корневой директории проекта
 const rootDir = process.cwd()
-const name = '.config.MF.js'
+const name = '.config.locale.js'
 
 // Путь к файлу конфигурации
 const configFile = path.join(rootDir, name)

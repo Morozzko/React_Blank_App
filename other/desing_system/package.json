@@ -1,7 +1,7 @@
 {
   "name": "design-system",
   "private": true,
-  "version": "0.0.23",
+  "version": "0.0.25",
   "type": "module",
   "scripts": {
     "dev": "node_modules/.bin/vite",
@@ -15,8 +15,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@npm.piece/tailwind-config": "^1.0.33",
-    "@npm.piece/types": "^1.0.10",
+    "@npm.piece/tailwind-config": "^1.0.34",
+    "@npm.piece/types": "^1.0.11",
     "@types/node": "^20.6.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
