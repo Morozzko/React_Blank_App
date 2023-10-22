@@ -1,4 +1,4 @@
-import { eventTransfer, EventTransferActionsEnum } from '@rtkcd/event-bus'
+import { eventTransfer, EventTransferActionsEnum } from '@npm.piece/event-bus'
 import { AxiosInstance } from 'axios'
 
 export const waitForTokenRefresh = async (

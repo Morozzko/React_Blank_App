@@ -28,7 +28,7 @@
 > ### Сборка библиотеки common
 >
 > ```
-> yarn build --filter=@npm.piece/common
+> yarn build --filter=@npm.piece/common-frontend
 > ```
 >
 > ### Сборка проекта
@@ -41,7 +41,7 @@
 >
 > ### Пример добавление библиотеки
 > ```
-> yarn workspace @npm.piece/common add axios -D
+> yarn workspace @npm.piece/common-frontend add axios -D
 > ```
 >
 > ### Публикация пакета

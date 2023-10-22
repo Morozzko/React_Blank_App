@@ -13,7 +13,7 @@ export const createQueryParams = (params: SelectedFiltersType) =>
         )}`
       }
 
-      if (value === null || value === undefined) {
+      if (!value || !key?.toString()) {
         return ''
       }
 

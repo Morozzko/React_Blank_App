@@ -1,12 +1,12 @@
 {
   "name": "react_blank",
-  "version": "0.1.206",
+  "version": "0.1.208",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
-    "@npm.piece/common": "^1.0.10",
+    "@npm.piece/common-frontend": "^1.0.12",
     "@npm.piece/constants": "^1.0.7",
-    "@rtkcd/event-bus": "^1.0.53",
+    "@npm.piece/event-bus": "^1.0.54",
     "@rtkcd/icons": "^0.0.54",
     "@npm.piece/ui-kit": "^0.0.134",
     "@npm.piece/utils": "^1.0.146",

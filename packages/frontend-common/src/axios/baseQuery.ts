@@ -24,6 +24,7 @@ export const createAxiosBaseQuery =
       return { data: result.data }
     } catch (axiosError) {
       const err = axiosError as AxiosError
+      console.error(axiosError)
 
       return {
         error: {

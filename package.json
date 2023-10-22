@@ -12,7 +12,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build:libs": "turbo run build --filter=@npm.piece/constants & turbo run build --filter=@npm.piece/common && turbo run build --filter=@npm.piece/utils && turbo run build --filter=@npm.piece/ui-kit  && turbo run build --filter=@npm.piece/mf-connect && turbo run build --filter=@npm.piece/locale-downloader",
+    "build:libs": "turbo run build --filter=@npm.piece/constants & turbo run build --filter=@npm.piece/common-frontend && turbo run build --filter=@npm.piece/utils && turbo run build --filter=@npm.piece/ui-kit  && turbo run build --filter=@npm.piece/mf-connect && turbo run build --filter=@npm.piece/locale-downloader",
     "build": "turbo run build",
     "prestart": "yarn build:libs",
     "start": "turbo run dev --filter=app_auth & turbo run dev --filter=app_root",
