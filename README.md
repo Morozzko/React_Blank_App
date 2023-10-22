@@ -3,6 +3,7 @@
 > ### 1. Архитектура.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/_doc/Architect%26Structure">1.1 Документация к архитектуре на React.js.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/create-by-template">1.2 Генерация шаблонов под архитектуру.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/_templates">1.3 Шаблоны.<a/>
 
 > ### 2. Вспомогательные библиотеки.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/utils">2.1 Хуки и полезные функции.<a/>
@@ -24,6 +25,14 @@
 > #### <a href="https://github.com/Morozzko/React_Blank_App/blob/master/packages/frontend-common/src/axios/baseQuery.ts">5.3 Custom Query с использованием Axios Instance для RTK Query.<a/>
 
 
+> ### Папки:
+> #### _doc Для документации
+> #### _templates для создания когда по шаблону
+> #### backend для microservice на nest
+> #### frontend для microfrontend на React
+> #### libs глобальные библиотеки (Инструменты)
+> #### packages локальные библиотеки (Помощь в оркестровке внутри проекта, eslint, constants, и т.д )
+
 # Оркестровка репозиторием
 > ### Сборка библиотеки common
 >
@@ -37,6 +46,18 @@
 > yarn build --filter=react_blank
 >
 > yarn dev --filter=react_blank
+> ```
+>
+> ### Чистка cache, node_modules, dist
+>
+> ```
+> yarn rmrf
+> ```
+>
+> ### Синхронизация библиотек
+>
+> ```
+> yarn update
 > ```
 >
 > ### Пример добавление библиотеки
