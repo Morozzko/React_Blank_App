@@ -25,13 +25,13 @@
 > #### <a href="https://github.com/Morozzko/React_Blank_App/blob/master/packages/frontend-common/src/axios/baseQuery.ts">5.3 Custom Query с использованием Axios Instance для RTK Query.<a/>
 
 
-> ### Папки:
-> #### _doc Для документации
-> #### _templates для создания когда по шаблону
-> #### backend для microservice на nest
-> #### frontend для microfrontend на React
-> #### libs глобальные библиотеки (Инструменты)
-> #### packages локальные библиотеки (Помощь в оркестровке внутри проекта, eslint, constants, и т.д )
+> ### 6. Папки:
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/_doc">6.1 _doc Для документации<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/_templates">6.2 _templates для создания когда по шаблону<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/backend">6.3 backend для microservice на nest<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/frontend">6.4 frontend для microfrontend на React<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs">6.5 libs глобальные библиотеки (Инструменты)<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages">6.6 packages локальные библиотеки (Помощь в оркестровке внутри проекта, eslint, constants, и т.д )<a/>
 
 # Оркестровка репозиторием
 > ### Сборка библиотеки common
