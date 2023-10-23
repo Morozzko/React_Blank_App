@@ -17,7 +17,19 @@ interface IDebounce<T extends (...args: any[]) => any> {
   flush(): ReturnType<T> | undefined
 }
 
-// const log = useDebounce((params) => console.log(params), 1000);
+/**
+ * The useDebounce function is a React hook that returns a debounced version of the callback function.
+ *
+ * const log = useDebounce((params) => console.log(params), 1000);
+ *
+ * @param callback automatically inferred type of function
+ * @param delay number Determine how long to wait before
+ * @param deps Tell react when to recreate the useDebounce hook
+ * @param options OptionsType Pass in the trailing and leading options
+ *
+ * @return A function that is debounced
+ *
+ */
 export const useDebounce = <T extends (...args: any[]) => any>(
   callback: T,
   delay: number,

@@ -3,6 +3,15 @@ const path = require('path')
 
 const folderPath = './apps/react_blank/src/app'
 
+/**
+ * The readFilesInDirectory function reads the contents of each file in a directory.
+ *
+ *
+ * @param directoryPath Specify the path of the directory that we want to read
+ *
+ * @return Undefined
+ *
+ */
 function readFilesInDirectory(directoryPath) {
   // Читаем содержимое каждого файла в директории
   fs.readdir(directoryPath, { withFileTypes: true }, (err, files) => {

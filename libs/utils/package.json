@@ -34,7 +34,7 @@
     "subscribe"
   ],
   "description": "Frequently used tools for React",
-  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/utils",
+  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/libs/utils",
   "author": "Morozzko",
   "license": "ISC",
   "scripts": {

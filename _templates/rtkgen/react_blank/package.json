@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
-    "@npm.piece/common-frontend": "^1.0.12",
+    "@npm.piece/common-frontend-frontend": "^1.0.12",
     "@npm.piece/constants": "^1.0.7",
     "@npm.piece/event-bus": "^1.0.54",
     "@npm.piece/ui-kit": "^0.0.135",

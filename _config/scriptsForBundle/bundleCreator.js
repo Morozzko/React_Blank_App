@@ -1,6 +1,6 @@
 const libs = [
   '@reduxjs/toolkit',
-  '@npm.piece/common-frontend',
+  '@npm.piece/common-frontend-frontend',
   '@npm.piece/constants',
   '@npm.piece/ui-kit',
   '@npm.piece/utils',

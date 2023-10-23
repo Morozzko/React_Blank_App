@@ -1,4 +1,3 @@
-// Мок для localStorage
 import { getFromLocalStorage } from './getFromLocalStorage'
 import { getFromSessionStorage } from './getFromSessionStorage'
 import { setToLocalStorage } from './setToLocalStorage'

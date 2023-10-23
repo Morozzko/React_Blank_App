@@ -37,7 +37,7 @@
     "@nestjs/serve-static": "^3.0.1",
     "@nestjs/swagger": "^6.3.0",
     "@nestjs/testing": "^9.4.3",
-    "@npm.piece/common-frontend": "^1.0.12",
+    "@npm.piece/common-frontend-frontend": "^1.0.12",
     "@npm.piece/constants": "^1.0.7",
     "@npm.piece/eslint-config": "^1.0.36",
     "@npm.piece/event-bus": "^1.0.54",
