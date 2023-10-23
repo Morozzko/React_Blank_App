@@ -263,37 +263,7 @@ import {
 
 ## Micro-Frontend Events
 
-```javascript
-import { useSubscribe, eventTransfer } from 'libs/utils'
-```
-
-```javascript
-const [green, setGreen] = useState < string > ('')
-
-useSubscribe < { text: string } > (
-  // or use string like 'green'
-  {
-    mfName: 'green',
-    eventName: 'CloseEvent',
-    tag: 'tag'
-  },
-    (e) => setGreen(e.text))
-```
-
-```javascript
-eventTransfer < { text: string } > ({
-  data: {
-    text: e.target.value
-  },
-  debug: true,
-  // or use string like 'green'
-  name: {
-    mfName: 'green',
-    eventName: 'CloseEvent',
-    tag: 'tag'
-  }
-})
-```
+<a href="https://www.npmjs.com/package/@npm.piece/event-bus">moved to event-bus</a>
 
 ## IndexedDB (with idb)
 

@@ -16,7 +16,7 @@
   "description": "code gen",
   "author": "Morozzko",
   "license": "ISC",
-  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/generate-hooks-rtk",
+  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/libs/mf-connect",
   "scripts": {
     "bump": "npm version patch",
     "rollup": "rollup -c",

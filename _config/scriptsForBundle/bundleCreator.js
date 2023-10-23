@@ -1,7 +1,7 @@
 const libs = [
   '@reduxjs/toolkit',
-  '@npm.piece/common-frontend-frontend',
-  '@npm.piece/constants',
+  '@npm.piece/common-frontend',
+  '@npm.piece/constants-frontend',
   '@npm.piece/ui-kit',
   '@npm.piece/utils',
   'async-mutex',

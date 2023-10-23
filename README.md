@@ -10,6 +10,7 @@
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/types">2.2 Типы для быстрого написания кода с импортом через reference types.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/eslint-config">2.3 ES-Lint config.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/frontend-tailwind-config">2.4 Tailwind config.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/frontend-event-bus">2.5 Eventbus между Microfrontend.<a/>
 
 > ### 3. Генерация.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/generate-hooks-rtk">3.1 Генерация хуков для ReduxToolkit Query с авто-инъекцией в store.<a/>
@@ -37,7 +38,7 @@
 > ### Сборка библиотеки common
 >
 > ```
-> yarn build --filter=@npm.piece/common-frontend-frontend
+> yarn build --filter=@npm.piece/common-frontend
 > ```
 >
 > ### Сборка проекта
@@ -62,7 +63,7 @@
 >
 > ### Пример добавление библиотеки
 > ```
-> yarn workspace @npm.piece/common-frontend-frontend add axios -D
+> yarn workspace @npm.piece/common-frontend add axios -D
 > ```
 >
 > ### Публикация пакета

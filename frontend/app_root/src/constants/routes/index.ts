@@ -1,1 +1,1 @@
-export { RoutesEnum, routes, PagesEnum } from '@npm.piece/constants'
+export { RoutesEnum, routes, PagesEnum } from '@npm.piece/constants-frontend'

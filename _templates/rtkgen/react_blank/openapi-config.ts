@@ -23,7 +23,7 @@ const config: ConfigFile = {
   schemaFile: 'https://petstore3.swagger.io/api/v3/openapi.json',
   // schemaFile: './swagger.json',
   apiFile: '@app/api/RTK',
-  tag: true,
+  // tag: true, // по итогу лучше без тегов
   hooks: true,
   // outputFile: getName('api'),
   outputFiles: { ...getControllers(controllers) },

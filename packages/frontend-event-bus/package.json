@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/event-bus",
-  "version": "1.0.54",
+  "version": "1.0.55",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -10,7 +10,7 @@
   ],
   "keywords": [],
   "description": "Frequently used tools for React",
-  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/utils",
+  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/frontend-event-bus",
   "author": "Morozzko",
   "license": "ISC",
   "scripts": {

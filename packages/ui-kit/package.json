@@ -1,7 +1,7 @@
 {
   "name": "@npm.piece/ui-kit",
   "private": false,
-  "version": "0.0.135",
+  "version": "0.0.136",
   "type": "module",
   "license": "MIT",
   "files": [
@@ -38,7 +38,7 @@
   "devDependencies": {
     "@npm.piece/tailwind-config": "^1.0.34",
     "@npm.piece/types": "^1.0.11",
-    "@npm.piece/utils": "^1.0.147",
+    "@npm.piece/utils": "^1.0.148",
     "@types/node": "^20.6.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",

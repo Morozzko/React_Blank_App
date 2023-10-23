@@ -1,4 +1,4 @@
-import { waitForTokenRefresh } from '@npm.piece/common-frontend-frontend'
+import { waitForTokenRefresh } from '@npm.piece/common-frontend'
 import { Mutex } from 'async-mutex'
 import axios from 'axios'
 

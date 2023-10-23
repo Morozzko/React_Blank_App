@@ -1,6 +1,6 @@
 {
-  "name": "@npm.piece/common-frontend-frontend",
-  "version": "1.0.12",
+  "name": "@npm.piece/common-frontend",
+  "version": "1.0.14",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -12,7 +12,7 @@
     "react"
   ],
   "description": "Frequently used tools for React",
-  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/utils",
+  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/frontend-common",
   "author": "Morozzko",
   "license": "ISC",
   "scripts": {
@@ -29,7 +29,7 @@
     "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.4",
-    "@npm.piece/event-bus": "^1.0.54",
+    "@npm.piece/event-bus": "^1.0.55",
     "async-mutex": "^0.4.0",
     "axios": "^1.5.0",
     "jest": "^29.5.0",

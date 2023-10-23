@@ -1,5 +1,5 @@
 {
-  "name": "@npm.piece/constants",
+  "name": "@npm.piece/constants-frontend",
   "version": "1.0.7",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
   ],
   "keywords": [],
   "description": "Frequently used tools for React",
-  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/utils",
+  "homepage": "https://github.com/Morozzko/React_Blank_App/tree/master/packages/frontend-constants",
   "author": "Morozzko",
   "license": "ISC",
   "scripts": {

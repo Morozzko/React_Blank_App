@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/utils",
-  "version": "1.0.147",
+  "version": "1.0.148",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [

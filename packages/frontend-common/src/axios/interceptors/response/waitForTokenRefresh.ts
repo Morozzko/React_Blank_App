@@ -1,9 +1,10 @@
 import { eventTransfer, EventTransferActionsEnum } from '@npm.piece/event-bus'
+import { Mutex } from 'async-mutex'
 import { AxiosInstance } from 'axios'
 
 export const waitForTokenRefresh = async (
   error: any,
-  mutex401: any,
+  mutex401: Mutex,
   instance: AxiosInstance
 ) => {
   const request = error.config
