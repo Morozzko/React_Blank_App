@@ -1,4 +1,4 @@
-import { useSizeDetect } from '../../../../libs/utils'
+import { useSizeDetect } from '@npm.piece/utils'
 import { createContext, useContext } from 'react'
 
 export const defaultValue = {

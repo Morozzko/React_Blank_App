@@ -7,7 +7,7 @@ export type QueryParamsType = Record<string, string | string[]>
  * The useQueryParams function returns an object containing the query parameters of the current URL.
  * It is a hook that uses useLocation from React Router to get the current URL and parses it using URLSearchParams.
  * The parsed query parameters are then returned as an object, with each key being a parameter name and its value being either a string or array of strings (if there are multiple values for one parameter).
- *
+ * @example const params = useQueryParams()
  *
  * @return An object with the query parameters
  *

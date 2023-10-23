@@ -2,6 +2,7 @@ export /**
  * The deepClone function takes an object and returns a new object with the same properties.
  * If any of those properties are objects, they will be cloned as well.
  *
+ * @example const a = deepClone(b)
  *
  * @param obj T Specify the type of object that is being cloned
  *

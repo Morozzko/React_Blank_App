@@ -4,6 +4,16 @@ type EventArgumentType = {
   key: string
 }
 
+/**
+ * The useKeyPressDetect function is a custom hook that detects if a specific key has been pressed.
+ *
+ * @example const isFPressed = useKeyPressDetect("f")
+ *
+ * @param targetKey string Specify which key the user is pressing
+ *
+ * @return A boolean value, which is the state of whether a key is pressed or not
+ *
+ */
 export const useKeyPressDetect = (targetKey: string) => {
   const [isKeyPressed, setIsKeyPressed] = useState(false)
 

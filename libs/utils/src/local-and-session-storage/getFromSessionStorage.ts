@@ -1,5 +1,6 @@
 /**
  * The getFromSessionStorage function retrieves a value from the sessionStorage object.
+ * @example const data = getFromSessionStorage<UserDataType>('user')
  *
  * @param key string Specify the key of the item in session storage
  *

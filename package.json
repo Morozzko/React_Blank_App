@@ -7,7 +7,6 @@
     "_templates/*",
     "frontend/*",
     "backend/*",
-    "other/*",
     "libs/*",
     "packages/*"
   ],

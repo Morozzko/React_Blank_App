@@ -6,8 +6,14 @@ const replaceTextInFiles = (dir, from, to) => {
 
   for (const file of files) {
     const filePath = path.join(dir, file)
+    const fileExtension = path.extname(file)
 
-    if (file === 'node_modules' || file === '.git' || file === 'replace.js') {
+    if (
+      file === 'node_modules' ||
+      file === '.git' ||
+      file === 'replace.js' ||
+      ['.png', '.img', '.ico'].includes(fileExtension)
+    ) {
       continue
     }
 
@@ -24,7 +30,7 @@ const replaceTextInFiles = (dir, from, to) => {
 }
 
 const main = () => {
-  const from = '@npm.piece/constants' // Замените на текст, который нужно заменить
+  const from = '@npm.piece/constants-frontend-frontend' // Замените на текст, который нужно заменить
   const to = '@npm.piece/constants-frontend' // Замените на текст, на который нужно заменить
   const startDir = '.' // Замените на папку, в которой нужно начать
 

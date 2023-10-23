@@ -2,7 +2,7 @@
  * The mergeObjects function takes in any number of objects as arguments and returns a new object that contains all the properties from each argument.
  * If two or more objects have the same property, then the value for that property is taken from right-to-left (rightmost object wins).
  *
- *
+ * @example const coordinates = mergeObjects({ location: { x: 10 }}, { location: { y: 20}})
  * @param objects object[] Accept a variable number of objects
  *
  * @return An object

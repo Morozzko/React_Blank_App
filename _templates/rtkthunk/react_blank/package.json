@@ -1,14 +1,14 @@
 {
   "name": "react_blank",
-  "version": "0.1.212",
+  "version": "0.1.214",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@npm.piece/common-frontend": "^1.0.14",
     "@npm.piece/constants-frontend": "^1.0.7",
     "@npm.piece/event-bus": "^1.0.55",
-    "@npm.piece/ui-kit": "^0.0.136",
-    "@npm.piece/utils": "^1.0.148",
+    "@npm.piece/ui-kit": "^0.0.137",
+    "@npm.piece/utils": "^1.0.149",
     "async-mutex": "^0.4.0",
     "axios": "^1.5.0",
     "clsx": "^2.0.0",

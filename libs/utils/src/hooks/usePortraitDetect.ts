@@ -1,6 +1,14 @@
 import { useEffect, useState } from 'react'
 
-export const usePortraitDetect = () => {
+export /**
+ * The usePortraitDetect function is a React hook that returns true if the device is in portrait mode, and false otherwise.
+ *
+ * @example const isPortrait = usePortraitDetect()
+ *
+ * @return A boolean value
+ *
+ */
+const usePortraitDetect = () => {
   const isClient = typeof window !== 'undefined'
 
   if (!isClient) {

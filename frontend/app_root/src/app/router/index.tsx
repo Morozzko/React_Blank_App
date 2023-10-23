@@ -9,6 +9,11 @@ const Auth = lazy(() =>
     default: module.Page,
   }))
 )
+const Simple = lazy(() =>
+  import('@pages/Simple').then(module => ({
+    default: module.Page,
+  }))
+)
 
 const rootPublicPath = process.env.REACT_APP_ROOT_PUBLIC_PATH
 
@@ -23,9 +28,9 @@ const mf = {
 const format = (url: string) => url.replaceAll('//', '/')
 export const AppRouter: FC = () => (
   <Routes>
-    {/* <Route path={rootPublicPath} element={<Layouts.Main />}>*/}
-    {/*  <Route index element={<Dashboards />} />*/}
-    {/* </Route>*/}
+    <Route path={rootPublicPath} element={<Layouts.Main />}>
+      <Route index element={<Simple />} />
+    </Route>
 
     <Route path={format(`${rootPublicPath}${mf.auth}${RoutesEnum.auth}*`)}>
       <Route path="*" element={<Auth />} />

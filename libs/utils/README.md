@@ -25,7 +25,7 @@ log("123")
 ## useThrottle (with lodash)
 
 ```javascript
-import { useThrottle } from 'libs/utils'
+import { useThrottle } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -37,7 +37,7 @@ log("123")
 ## usePortraitDetect
 
 ```javascript
-import { usePortraitDetect } from 'libs/utils'
+import { usePortraitDetect } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -47,7 +47,7 @@ const isPortrait = usePortraitDetect()
 ## useOnlineDetect
 
 ```javascript
-import { useOnlineDetect } from 'libs/utils'
+import { useOnlineDetect } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -57,7 +57,7 @@ const isOnline = useOnlineDetect()
 ## useSizeDetect
 
 ```javascript
-import { useSizeDetect } from 'libs/utils'
+import { useSizeDetect } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -72,17 +72,29 @@ const {
 ## useKeyPressDetect
 
 ```javascript
-import { useKeyPressDetect } from 'libs/utils'
+import { useKeyPressDetect } from '@npm.piece/utils'
 ```
 
 ```javascript
 const isKeyFPressed = useKeyPressDetect("f")
 ```
 
+## useClickOutside
+
+```javascript
+import { useClickOutside } from '@npm.piece/utils'
+```
+
+```javascript
+const ref = useRef()
+useClickOutside(ref, () => {
+})
+```
+
 ## useOnKeyPress
 
 ```javascript
-import { useOnKeyPress } from 'libs/utils'
+import { useOnKeyPress } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -97,7 +109,7 @@ useOnKeyPress(callback, 'Enter')
 ## useInterval
 
 ```javascript
-import { useInterval } from 'libs/utils'
+import { useInterval } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -108,7 +120,7 @@ useInterval(() => {
 ## useTimeout
 
 ```javascript
-import { useTimeout } from 'libs/utils'
+import { useTimeout } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -119,11 +131,12 @@ useTimeout(() => {
 ## useFocus
 
 ```javascript
-import { useFocus } from 'libs/utils'
+import { useFocus } from '@npm.piece/utils'
 ```
 
 ```jsx
-const [htmlElRef, setFocus] = useFocus()
+const checkViewPortRef = useRef < HTMLDivElement > (null);
+const setFocus = useFocus(ref)
 
 useEffect(() => {
   setFocus()
@@ -135,7 +148,7 @@ return <input ref={htmlElRef} />
 ## useIsVisibleElement
 
 ```javascript
-import { useIsVisibleElement } from 'libs/utils'
+import { useIsVisibleElement } from '@npm.piece/utils'
 ```
 
 ```jsx
@@ -148,7 +161,7 @@ return <div ref={checkViewPortRef} />
 ## useEffectWithoutFirstCall
 
 ```javascript
-import { useEffectWithoutFirstCall } from 'libs/utils'
+import { useEffectWithoutFirstCall } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -161,7 +174,7 @@ useEffectWithoutFirstCall(() => {
 #### The Service Injector component is designed to inject custom hooks containing useEffect, to your application without calling re-render of child components.
 
 ```javascript
-import { ServiceInjector } from 'libs/utils'
+import { ServiceInjector } from '@npm.piece/utils'
 ```
 
 ```tsx
@@ -173,7 +186,7 @@ import { ServiceInjector } from 'libs/utils'
 ## ErrorBoundary
 
 ```javascript
-import { ErrorBoundary } from 'libs/utils'
+import { ErrorBoundary } from '@npm.piece/utils'
 ```
 
 ```tsx
@@ -187,7 +200,7 @@ import { ErrorBoundary } from 'libs/utils'
 #### This component is a generic component for displaying an array of elements. Instead of just using map to convert an array of elements into JSX elements, the ArrayRender component takes an array of items and a renderItem function and processes them internally. The main purpose of this component is to simplify repetitive code when displaying a list of items and keep the code clean and modular.
 
 ```javascript
-import { ArrayRender } from 'libs/utils'
+import { ArrayRender } from '@npm.piece/utils'
 ```
 
 ```tsx
@@ -197,7 +210,7 @@ import { ArrayRender } from 'libs/utils'
 ## deepClone
 
 ```javascript
-import { deepClone } from 'libs/utils'
+import { deepClone } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -207,7 +220,7 @@ const newObj = deepClone({ name: 'npm.piece' })
 ## MergeObjects
 
 ```javascript
-import { mergeObjects } from 'libs/utils'
+import { mergeObjects } from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -251,7 +264,7 @@ import {
   setToLocalStorage,
   getFromSessionStorage,
   getFromLocalStorage
-} from 'libs/utils'
+} from '@npm.piece/utils'
 ```
 
 ```javascript
@@ -268,7 +281,7 @@ import {
 ## IndexedDB (with idb)
 
 ```javascript
-import { IndexedDB } from 'libs/utils'
+import { IndexedDB } from '@npm.piece/utils'
 ```
 
 ```tsx
@@ -288,4 +301,24 @@ useEffect(() => {
   }
   runIndexDb()
 }, [])
+```
+
+## createQueryParams
+
+```javascript
+import { createQueryParams } from '@npm.piece/utils'
+```
+
+```tsx
+createQueryParams({ page: 1, size:10 })
+```
+
+## useQueryParams
+
+```javascript
+import { useQueryParams } from '@npm.piece/utils'
+```
+
+```tsx
+const params = useQueryParams()
 ```

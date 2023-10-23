@@ -9,6 +9,7 @@ type OwnPropertyType<T> = {
 // принимает массив items и функцию renderItem и обрабатывает их внутри себя.
 // Основная цель этого компонента - упростить повторяющийся код при отображении списка элементов
 // и обеспечить чистоту и модульность кода.
+
 export const ArrayRender = <T extends unknown>({
   items,
   renderItem,

@@ -1,5 +1,14 @@
 import { useEffect, useState } from 'react'
 
+/**
+ * The useOnlineDetect function is a React hook that returns the current online status of the user.
+ * It uses navigator.onLine to determine if the user is online or offline, and updates its state accordingly when it detects a change in connectivity.
+ *
+ * @example const isOnline = useOnlineDetect()
+ *
+ * @return A boolean value
+ *
+ */
 export const useOnlineDetect = () => {
   const isClient = typeof window !== 'undefined'
 

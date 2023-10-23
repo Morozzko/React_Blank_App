@@ -4,7 +4,7 @@ export type SelectedFiltersType = {
 
 /**
  * The createQueryParams function takes an object of key-value pairs and returns a string that can be used as the query params in a URL.
- *
+ * @example const params = createQueryParams({ page:1, size:10 })
  *
  * @return A string of the form:
  *

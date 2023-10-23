@@ -1,5 +1,5 @@
-import debounce from 'lodash.debounce'
 import { useCallback } from 'react'
+import { debounce } from '../../utils'
 
 type OptionsType = Partial<{
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -20,7 +20,7 @@ interface IDebounce<T extends (...args: any[]) => any> {
 /**
  * The useDebounce function is a React hook that returns a debounced version of the callback function.
  *
- * const log = useDebounce((params) => console.log(params), 1000);
+ * @example const log = useDebounce((params) => console.log(params), 1000);
  *
  * @param callback automatically inferred type of function
  * @param delay number Determine how long to wait before
