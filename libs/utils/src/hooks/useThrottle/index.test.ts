@@ -1,4 +1,5 @@
-import { renderHook, act } from '@testing-library/react'
+import { act, renderHook } from '@testing-library/react'
+import { describe, expect, vi as jest } from 'vitest'
 import { useThrottle } from './index'
 
 jest.useFakeTimers()

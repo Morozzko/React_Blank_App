@@ -1,5 +1,5 @@
 export type SelectedFiltersType = {
-  [param: string]: string | null | undefined | string[]
+  [param: string]: string | number | null | undefined | string[] | number[]
 }
 
 /**
@@ -20,7 +20,7 @@ export const createQueryParams = (params: SelectedFiltersType) =>
         )}`
       }
 
-      if (!value || !key?.toString()) {
+      if (!value || !key) {
         return ''
       }
 

@@ -1,3 +1,4 @@
+import { vi as jest } from 'vitest'
 import { debounce } from './debounce'
 
 jest.useFakeTimers()

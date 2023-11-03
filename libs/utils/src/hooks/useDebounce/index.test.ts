@@ -1,4 +1,5 @@
-import { renderHook, act } from '@testing-library/react'
+import { act, renderHook } from '@testing-library/react'
+import { vi as jest } from 'vitest'
 import { useDebounce } from './index'
 
 jest.useFakeTimers()

@@ -12,7 +12,7 @@ const replaceTextInFiles = (dir, from, to) => {
       file === 'node_modules' ||
       file === '.git' ||
       file === 'replace.js' ||
-      ['.png', '.img', '.ico'].includes(fileExtension)
+      ['.png', '.img', '.ico', 'jpg'].includes(fileExtension)
     ) {
       continue
     }

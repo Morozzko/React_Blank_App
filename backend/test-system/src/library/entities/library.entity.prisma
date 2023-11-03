@@ -1,0 +1,9 @@
+model Library {
+  name    String @unique
+  version String
+}
+
+model Review {
+  name    String @unique
+  version String
+}

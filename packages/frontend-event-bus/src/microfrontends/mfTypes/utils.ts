@@ -12,4 +12,5 @@ export type SubscribeType<T extends EventTransferActionsEnum> = {
   type: T
   callback: (value: EventTransferPayloadType[T]) => void
   isDebugMode?: boolean
+  deps?: any[]
 }

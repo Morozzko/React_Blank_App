@@ -22,8 +22,8 @@ export function useSubscribe(
 export function useSubscribe<T extends EventTransferActionsEnum>(
   payload: SubscribeType<T>
 ): void {
-  const { type, callback, isDebugMode } = payload
-
+  const { type, callback, isDebugMode, deps } = payload
+  const dependency = deps || []
   const eventHandler = (event: CustomEvent) => {
     if (isDebugMode) {
       console.log(event.detail.data)
@@ -43,6 +43,6 @@ export function useSubscribe<T extends EventTransferActionsEnum>(
         console.log('Unsubscribe: ', type)
       }
     }
-  }, [])
+  }, [...dependency])
 }
 // Основная реализация: Конец

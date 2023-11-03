@@ -1,4 +1,4 @@
-import { Component, ErrorInfo, ReactNode } from 'react'
+import { Component, ReactNode } from 'react'
 
 interface IProps {
   children: ReactNode
@@ -21,7 +21,7 @@ export class ErrorBoundary extends Component<IProps, IState> {
     return { hasError: true }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+  // componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
 
   render() {
     if (this.state.hasError) {

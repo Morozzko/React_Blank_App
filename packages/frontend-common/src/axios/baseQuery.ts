@@ -9,9 +9,7 @@ type AxiosBaseQueryConfigType = {
 }
 
 export const createAxiosBaseQuery =
-  (
-    instance: AxiosInstance
-  ): BaseQueryFn<AxiosBaseQueryConfigType, unknown, unknown> =>
+  (instance: AxiosInstance): BaseQueryFn<AxiosBaseQueryConfigType> =>
   async ({ url, method = 'get', body: data, params }) => {
     try {
       const result = await instance({

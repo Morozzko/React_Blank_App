@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const folderPath = './apps/react_blank/src/app'
+const folderPath = './packages/ant/'
 
 /**
  * The readFilesInDirectory function reads the contents of each file in a directory.

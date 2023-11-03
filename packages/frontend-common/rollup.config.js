@@ -14,7 +14,12 @@ export default {
     preserveModulesRoot: 'src',
     sourcemap: false,
   },
-  external: ['react'],
+  external: [
+    'axios',
+    'async-mutex',
+    '@npm.piece/event-bus',
+    '@reduxjs/toolkit',
+  ],
   plugins: [
     resolve({ preferBuiltins: false }),
     peerDeps(),
