@@ -5,17 +5,12 @@ import {
   SyncLibraryRequestDto,
 } from './dto/sync-library.dto'
 import { LibraryService } from './library.service'
+import { CleanVersionPipe } from './mappers/CleanVersionPipe'
 
 @ApiTags('library')
 @Controller('library')
 export class LibraryController {
   constructor(private readonly libraryService: LibraryService) {}
-
-  // @Get()
-  // findAll() {
-  //   return this.libraryService.findAll()
-  // }
-  //
 
   @Patch()
   @ApiBody({
@@ -24,10 +19,9 @@ export class LibraryController {
   @ApiResponse({
     type: [SyncLibraryResponseDto],
   })
-  updateLibrary(@Body() updateLibraryDto: SyncLibraryRequestDto[]) {}
-
-  // @Delete(':id')
-  // remove(@Param('id') id: string) {
-  //   return this.libraryService.remove(+id)
-  // }
+  updateLibrary(
+    @Body(CleanVersionPipe) updateLibraryDto: SyncLibraryRequestDto[]
+  ) {
+    return this.libraryService.syncLibraries(updateLibraryDto)
+  }
 }

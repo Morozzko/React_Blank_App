@@ -14,7 +14,7 @@
 
 > ### 3. Генерация.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/generate-hooks-rtk">3.1 Генерация хуков для ReduxToolkit Query с авто-инъекцией в store.<a/>
-> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/download-locale">3.2 Загрузка переводов из гугл таблицы.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/download-locale">3.2 Загрузка переводов из гугл таблицы.<a/>
 
 > ### 4. Структуры, Алгоритмы, Паттерны.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/other/algorithms/src/algorithms/sortings">4.1 Сортировки.<a/>
