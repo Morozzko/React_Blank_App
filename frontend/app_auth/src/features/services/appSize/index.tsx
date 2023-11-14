@@ -1,8 +1,6 @@
 import { useContainer } from './container'
-import { Actions, Reducer } from './store'
+export { Actions, Reducer } from './store'
 
 export const appSize = {
   service: useContainer,
 }
-
-export { Actions, Reducer }
