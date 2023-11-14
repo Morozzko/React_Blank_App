@@ -17,20 +17,16 @@ export const removeFromHooks = async ({ pathToFile, name }: PayloadType) => {
     )
     const updatedContent = data.replace(importRegex, '')
 
-    // Удаление строк const ${name}Actions = useActions(${name})
-    const constRegex = new RegExp(
-      `const\\s+${name}\\s+=\\s+useActions\\(${name}Actions\\);?\\n`,
+    // Удаление определений действий: Начало
+    const actionsRegex = new RegExp(
+      `${name}: createAction\\(${name}Actions\\),?\\n`,
       'gm'
     )
-    const updatedContentWithConstRemoved = updatedContent.replace(
-      constRegex,
+    const updatedContentWithActionsRemoved = updatedContent.replace(
+      actionsRegex,
       ''
     )
-
-    // Удаление строк ${name}Actions,
-    const actionsRegex = new RegExp(`${name},?\\n`, 'gm')
-    const updatedContentWithActionsRemoved =
-      updatedContentWithConstRemoved.replace(actionsRegex, '')
+    // Удаление определений действий: Конец
 
     // Запись изменений обратно в файл
     await fs.writeFile(pathToFile, updatedContentWithActionsRemoved, 'utf-8')

@@ -18,18 +18,18 @@ export const insertToHooks = async ({
     // Чтение содержимого файла
     const data = await fs.readFile(pathToHook, 'utf-8')
 
-    // Замена строки // insert hook here
-    const hookPlaceholder = new RegExp(`${regexp.hooks}`)
-    const hookInsertion = `const ${name} = useActions(${name}Actions)`
-    const updatedDataWithHook = data.replace(
-      hookPlaceholder,
-      match => `${match}\n${hookInsertion}`
-    )
+    // // Замена строки // insert hook here
+    // const hookPlaceholder = new RegExp(`${regexp.hooks}`)
+    // const hookInsertion = `const ${name} = useActions(${name}Actions)`
+    // const updatedDataWithHook = data.replace(
+    //   hookPlaceholder,
+    //   match => `${match}\n${hookInsertion}`
+    // )
 
     // Замена строки // insert actions here
     const actionsPlaceholder = new RegExp(`${regexp.actions}`)
-    const actionsInsertion = `${name},`
-    const updatedDataWithActions = updatedDataWithHook.replace(
+    const actionsInsertion = `${name}: createAction(${name}Actions),`
+    const updatedDataWithActions = data.replace(
       actionsPlaceholder,
       match => `${match}\n${actionsInsertion}`
     )
