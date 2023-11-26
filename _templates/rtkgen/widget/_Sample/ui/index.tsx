@@ -4,7 +4,7 @@ import React from 'react'
 import { dti } from '../constants/data-testid'
 
 export const dtiDictionary = {
-  mainDiv: 'sample',
+  mainDiv: 'UI',
 }
 
 export type UIPropertyType = {
