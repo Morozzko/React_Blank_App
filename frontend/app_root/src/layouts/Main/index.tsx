@@ -1,5 +1,5 @@
-import { Flex } from '@npm.piece/ui-kit'
 import { Suspense } from 'react'
+import { Flex } from '@npm.piece/ui-kit'
 import { Outlet } from 'react-router-dom'
 import { Loading } from '@components/templates/Loading'
 

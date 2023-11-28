@@ -4,7 +4,7 @@ const {
 } = require('webpack')
 const { getPackages } = require('../../_config/scriptsForBundle/')
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-const { exported, imported } = require('./.MF.module')
+const { imported } = require('./.MF.module')
 const { name, dependencies } = require('./package.json')
 
 module.exports = {

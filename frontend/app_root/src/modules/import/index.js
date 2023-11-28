@@ -1,5 +1,5 @@
-import { ErrorBoundary } from '@npm.piece/utils'
 import React, { Suspense, lazy } from 'react'
+import { ErrorBoundary } from '@npm.piece/utils'
 
 const AuthModuleLazy = lazy(async () => await import('AuthMF/AuthContainer'))
 // const AuthServiceLazy = lazy(async () => await import('AuthMF/AuthService'))

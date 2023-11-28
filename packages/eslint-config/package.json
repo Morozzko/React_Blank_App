@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/eslint-config",
-  "version": "1.0.37",
+  "version": "1.0.40",
   "description": "custom eslint configuration",
   "main": "index.js",
   "exports": {

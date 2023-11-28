@@ -19,7 +19,10 @@ export class HttpExceptionFilter implements ExceptionFilter {
     if (status === 400) {
       const ExceptionResponse = exception.getResponse() as ExceptionResponseType
 
-      const errors = ExceptionResponse?.message.map(({ message, field }) => ({ message, field }))
+      const errors = ExceptionResponse?.message.map(({ message, field }) => ({
+        message,
+        field,
+      }))
 
       response.status(status).json({
         ...standardResponse,
