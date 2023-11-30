@@ -37,14 +37,6 @@ export const AppRouter: FC = () => (
     </Route>
 
     {/* <Route*/}
-    {/*  path={format(*/}
-    {/*    `${rootPublicPath}${mf.dashboards}${RoutesEnum.dashboards}*`*/}
-    {/*  )}*/}
-    {/*  element={<Layouts.Main />}>*/}
-    {/*  <Route path="*" element={<Dashboards />} />*/}
-    {/* </Route>*/}
-
-    {/* <Route*/}
     {/*  path={format(`${rootPublicPath}${mf.card}${RoutesEnum.card}*`)}*/}
     {/*  element={<Layouts.Main />}>*/}
     {/*  <Route path="*" element={<Card />} />*/}
