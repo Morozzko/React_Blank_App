@@ -1,5 +1,5 @@
-import { clsx } from '../../../../../../libs/utils'
 import { forwardRef, HTMLAttributes } from 'react'
+import { clsx } from '@npm.piece/utils'
 import type { JustifyContentType, AlignItemsType } from './lib/types'
 import { alignItems, justifyContent } from './lib/types'
 
