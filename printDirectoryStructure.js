@@ -23,7 +23,9 @@ function printDirectoryStructure(directoryPath, indent = 0, fileDescriptor) {
 
     // Записываем эту строку в файл с помощью метода fs.write
     fs.write(fileDescriptor, line, err => {
-      if (err) throw err
+      if (err) {
+        throw err
+      }
     })
 
     const fileStats = fs.statSync(filePath)
@@ -37,12 +39,16 @@ function printDirectoryStructure(directoryPath, indent = 0, fileDescriptor) {
 
 // Создаем файл с именем "анализ.txt" и запускаем функцию для записи в него структуры файлов
 fs.open('folderStructure.txt', 'w', (err, fileDescriptor) => {
-  if (err) throw err
+  if (err) {
+    throw err
+  }
 
   printDirectoryStructure('./apps/react_blank', 0, fileDescriptor)
 
   // Закрываем файл после записи
   fs.close(fileDescriptor, err => {
-    if (err) throw err
+    if (err) {
+      throw err
+    }
   })
 })

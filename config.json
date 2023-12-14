@@ -39,7 +39,7 @@
     "@npm.piece/constants-frontend": "^1.0.7",
     "@npm.piece/eslint-config": "^1.0.40",
     "@npm.piece/event-bus": "^1.0.55",
-    "@npm.piece/generate-hooks-rtk": "^1.0.13",
+    "@npm.piece/generate-hooks-rtk": "^1.0.21",
     "@npm.piece/locale-downloader": "^1.0.12",
     "@npm.piece/tailwind-config": "^1.0.35",
     "@npm.piece/template-generator": "^1.0.24",

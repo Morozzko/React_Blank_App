@@ -1,6 +1,6 @@
 {
   "name": "react_blank",
-  "version": "0.1.218",
+  "version": "0.1.219",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
@@ -50,7 +50,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@craco/craco": "^7.1.0",
-    "@npm.piece/generate-hooks-rtk": "^1.0.13",
+    "@npm.piece/generate-hooks-rtk": "^1.0.21",
     "@npm.piece/locale-downloader": "^1.0.12",
     "@npm.piece/template-generator": "^1.0.24",
     "@npm.piece/eslint-config": "^1.0.40",

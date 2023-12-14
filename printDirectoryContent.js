@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const folderPath = './packages/ant/'
+const folderPath = './libs/generate-hooks-rtk'
 
 /**
  * The readFilesInDirectory function reads the contents of each file in a directory.
@@ -15,7 +15,9 @@ const folderPath = './packages/ant/'
 function readFilesInDirectory(directoryPath) {
   // Читаем содержимое каждого файла в директории
   fs.readdir(directoryPath, { withFileTypes: true }, (err, files) => {
-    if (err) throw err
+    if (err) {
+      throw err
+    }
 
     files.forEach(file => {
       const filePath = path.join(directoryPath, file.name)
@@ -26,6 +28,7 @@ function readFilesInDirectory(directoryPath) {
         (file.name === 'node_modules' ||
           file.name === '.idea' ||
           file.name === 'build' ||
+          file.name === 'dist' ||
           file.name === '.git')
       ) {
         return
@@ -44,12 +47,16 @@ function readFilesInDirectory(directoryPath) {
       } else {
         // Читаем содержимое файла
         fs.readFile(filePath, 'utf8', (err, data) => {
-          if (err) throw err
+          if (err) {
+            throw err
+          }
 
           // Записываем содержимое файла в файловую систему
           const result = `File: ${filePath}\nContent:\n${data}`
           fs.writeFile('folderData.txt', result, { flag: 'a' }, err => {
-            if (err) throw err
+            if (err) {
+              throw err
+            }
           })
         })
       }
