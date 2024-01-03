@@ -32,3 +32,5 @@
 > 5. Импорт типов допустим только в папку
 > * WidgetName/types
 > * serviceName/types
+
+> 6. Interface не используем
