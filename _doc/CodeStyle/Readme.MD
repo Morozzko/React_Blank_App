@@ -5,7 +5,6 @@
 > ```typescript jsx
 > type OwnPropertyType = {
 >   onChangeHandler: VoidFunction
->   onClickCloseButtonHandler: Callback
 >   onSubmitHandler: Callback<string>
 >   onDeleteHandler: Callback<string, string>
 > }
@@ -30,8 +29,6 @@
 
 > 4. Использования хуков и функций в компонентах UI запрещено.
 
-> 5. Импорт типов допустим только в папку Types.
-
-
-
-
+> 5. Импорт типов допустим только в папку
+> * WidgetName/types
+> * serviceName/types
