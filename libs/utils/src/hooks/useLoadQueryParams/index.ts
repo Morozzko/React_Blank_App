@@ -1,7 +1,27 @@
 import { useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 
-export type QueryParamsType = Record<string, string | string[]>
+export type QueryParamsType = Record<
+  string,
+  string | string[] | number | number[] | boolean | boolean[]
+>
+
+/**
+ * Преобразует строку в число или булево, если возможно.
+ * @param {string} value - Значение для преобразования.
+ * @return {string | number | boolean} - Преобразованное значение.
+ */
+const parseValue = (value: string): string | number | boolean => {
+  if (value === 'true') {
+    return true
+  }
+  if (value === 'false') {
+    return false
+  }
+  const numValue = Number(value)
+
+  return isNaN(numValue) ? value : numValue
+}
 
 /**
  * The useQueryParams function returns an object containing the query parameters of the current URL.
@@ -23,12 +43,15 @@ export const useQueryParams = () => {
         const normalizedKey = key.replace(/\[\]$/, '')
 
         if (!acc[normalizedKey]) {
-          acc[normalizedKey] = value
+          acc[normalizedKey] = parseValue(value)
         } else {
           if (Array.isArray(acc[normalizedKey])) {
-            ;(acc[normalizedKey] as string[]).push(value)
+            ;(acc[normalizedKey] as unknown[]).push(parseValue(value))
           } else {
-            acc[normalizedKey] = [acc[normalizedKey] as string, value]
+            acc[normalizedKey] = [
+              acc[normalizedKey] as string,
+              parseValue(value) as string,
+            ]
           }
         }
 

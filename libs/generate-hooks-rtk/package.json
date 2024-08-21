@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/generate-hooks-rtk",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
@@ -37,6 +37,6 @@
   "dependencies": {
     "@rtk-query/codegen-openapi": "^1.0.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.5.4"
   }
 }

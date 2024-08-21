@@ -1,6 +1,6 @@
 {
   "name": "@npm.piece/common-frontend",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -33,7 +33,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "ts-jest": "^29.1.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.5.4"
   },
   "peerDependencies": {
     "@reduxjs/toolkit": "1.9.X",
