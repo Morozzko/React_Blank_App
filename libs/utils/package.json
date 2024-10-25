@@ -56,6 +56,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/react": "^18.2.0",
+    "@types/uuid": "^10.0.0",
     "@vitejs/plugin-react-swc": "^3.4.0",
     "fake-indexeddb": "^4.0.1",
     "typescript": "^5.5.4",
@@ -72,6 +73,7 @@
     "clsx": "^2.0.0",
     "idb": "^7.1.1",
     "tailwind-merge": "^1.14.0",
-    "tslib": "^2.6.1"
+    "tslib": "^2.6.1",
+    "uuid": "^10.0.0"
   }
 }
