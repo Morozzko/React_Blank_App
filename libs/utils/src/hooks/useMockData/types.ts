@@ -14,3 +14,4 @@ export type DataItemType<Fields extends FieldsDefinitionType> = {
     ? Date
     : never
 }
+export type SortOrderType = 'ASC' | 'DESC'
