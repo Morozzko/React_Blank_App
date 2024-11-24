@@ -9,11 +9,7 @@ const Auth = lazy(() =>
     default: module.Page,
   }))
 )
-const Simple = lazy(() =>
-  import('@pages/Simple').then(module => ({
-    default: module.Page,
-  }))
-)
+// insert page imports here
 
 const rootPublicPath = process.env.REACT_APP_ROOT_PUBLIC_PATH
 
@@ -28,9 +24,7 @@ const mf = {
 const format = (url: string) => url.replaceAll('//', '/')
 export const AppRouter: FC = () => (
   <Routes>
-    <Route path={rootPublicPath} element={<Layouts.Main />}>
-      <Route index element={<Simple />} />
-    </Route>
+    <Route path={rootPublicPath} element={<Layouts.Main />} />
 
     <Route path={format(`${rootPublicPath}${mf.auth}${RoutesEnum.auth}*`)}>
       <Route path="*" element={<Auth />} />
@@ -46,11 +40,6 @@ export const AppRouter: FC = () => (
     {/*  path={format(`${rootPublicPath}${mf.registry}${RoutesEnum.registry}*`)}*/}
     {/*  element={<Layouts.Main />}>*/}
     {/*  <Route path="*" element={<Registry />} />*/}
-    {/* </Route>*/}
-
-    {/* <Route path={RoutesEnum.admin} element={<Layouts.Secondary />}>*/}
-    {/*  <Route index element={<div>1</div>} />*/}
-    {/*  <Route path={Constants.routes.banned} element={<div>2</div>} />*/}
     {/* </Route>*/}
 
     <Route path="*" element={<Layouts.Main />}>

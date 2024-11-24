@@ -43,7 +43,7 @@ fs.open('folderStructure.txt', 'w', (err, fileDescriptor) => {
     throw err
   }
 
-  printDirectoryStructure('./apps/react_blank', 0, fileDescriptor)
+  printDirectoryStructure('./packages/create-by-template', 0, fileDescriptor)
 
   // Закрываем файл после записи
   fs.close(fileDescriptor, err => {

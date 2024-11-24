@@ -29,7 +29,18 @@ const startScript = async () => {
     })
   }
 
-  if (!args?.permissions?.includes(app.ARGEnum.noStore)) {
+  if (args.type === 'page') {
+    await app.createPage({
+      name: args.name,
+      destination: path.join(config.pathToPaste.service, args.name),
+      source: config.pathToTemplate.service,
+    })
+  }
+
+  if (
+    !args?.permissions?.includes(app.ARGEnum.noStore) &&
+    args.type !== 'page'
+  ) {
     await app.insertToReducer({
       name: args.name,
       pathToReducersList: config.filePath.reducersList,

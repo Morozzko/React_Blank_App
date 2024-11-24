@@ -7,7 +7,6 @@
     "_templates/*",
     "frontend/*",
     "backend/*",
-    "libs/*",
     "packages/*"
   ],
   "scripts": {
@@ -23,7 +22,7 @@
   },
   "devDependencies": {
     "@npm.piece/eslint-config": "*",
-    "turbo": "latest"
+    "turbo": "^2.2.3"
   },
   "engines": {
     "node": ">=14.0.0"

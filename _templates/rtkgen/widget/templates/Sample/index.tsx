@@ -1,6 +1,6 @@
+import React from 'react'
 import { Flex } from '@npm.piece/ui-kit'
 import { clsx } from '@npm.piece/utils'
-import React from 'react'
 import { dti } from '../../constants/data-testid'
 
 export const dtiDictionary = {
@@ -9,7 +9,7 @@ export const dtiDictionary = {
 
 type OwnPropertyType = {}
 
-export const Simple: FC<OwnPropertyType> = React.memo(({}) => (
+export const Sample: FC<OwnPropertyType> = React.memo(({}) => (
   <Flex data-testid={`${dti}${dtiDictionary.mainDiv}`} className={clsx('')}>
     {}
   </Flex>

@@ -1,1 +1,1 @@
-export type SimpleType = {}
+export type SampleType = {}

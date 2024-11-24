@@ -2,19 +2,19 @@
 
 > ### 1. Архитектура.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/_doc/Architect%26Structure">1.1 Документация к архитектуре на React.js.<a/>
-> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/create-by-template">1.2 Генерация шаблонов под архитектуру.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/create-by-template">1.2 Генерация шаблонов под архитектуру.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/_templates">1.3 Шаблоны.<a/>
 
 > ### 2. Вспомогательные библиотеки.
-> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/utils">2.1 Хуки и полезные функции.<a/>
-> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/types">2.2 Типы для быстрого написания кода с импортом через reference types.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/utils">2.1 Хуки и полезные функции.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/types">2.2 Типы для быстрого написания кода с импортом через reference types.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/eslint-config">2.3 ES-Lint config.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/frontend-tailwind-config">2.4 Tailwind config.<a/>
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/frontend-event-bus">2.5 Eventbus между Microfrontend.<a/>
 
 > ### 3. Генерация.
-> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/generate-hooks-rtk">3.1 Генерация хуков для ReduxToolkit Query с авто-инъекцией в store.<a/>
-> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/libs/download-locale">3.2 Загрузка переводов из гугл таблицы.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/generate-hooks-rtk">3.1 Генерация хуков для ReduxToolkit Query с авто-инъекцией в store.<a/>
+> #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/packages/download-locale">3.2 Загрузка переводов из гугл таблицы.<a/>
 
 > ### 4. Структуры, Алгоритмы, Паттерны.
 > #### <a href="https://github.com/Morozzko/React_Blank_App/tree/master/other/algorithms/src/algorithms/sortings">4.1 Сортировки.<a/>

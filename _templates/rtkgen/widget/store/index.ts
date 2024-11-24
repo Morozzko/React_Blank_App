@@ -12,8 +12,5 @@ const slice = createSlice({
   },
 })
 
-export const Actions = {
-  ...slice.actions,
-}
-
+export const Actions = slice.actions
 export const Reducer = slice.reducer

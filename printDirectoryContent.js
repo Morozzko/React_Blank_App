@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const folderPath = './libs/generate-hooks-rtk'
+const folderPath = './packages/create-by-template'
 
 /**
  * The readFilesInDirectory function reads the contents of each file in a directory.
@@ -36,7 +36,17 @@ function readFilesInDirectory(directoryPath) {
       if (
         file.name.match('yarn.lock') ||
         file.name.match('package.json') ||
-        file.name.match('README.md')
+        file.name.match('package-lock.json') ||
+        file.name.match('README.md') ||
+        file.name.match('.png') ||
+        file.name.match('.jpeg') ||
+        file.name.match('.jpg') ||
+        file.name.match('.gif') ||
+        file.name.match('.pdf') ||
+        file.name.match('.doc') ||
+        file.name.match('.docx') ||
+        file.name.match('.ttf') ||
+        file.name.match('.svg')
       ) {
         return
       }

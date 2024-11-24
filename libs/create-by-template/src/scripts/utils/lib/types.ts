@@ -3,35 +3,55 @@ export type UseAppActionsRegexpType = {
   actions: string
 }
 
-export type ReducersListRegexpType = {
-  widget: string
-  service: string
+export type RegexpType = {
+  hooks?: string
+  actions?: string
+  import?: string
+  service?: string
+  widget?: string
+}
+
+export type FilePathType = {
+  reducersList: string
+  useAppActions: string
+  router: string
+}
+
+export type ImportPathType = {
+  useAppActions: {
+    service: string
+    widget: string
+  }
+  reducersList: {
+    service: string
+    widget: string
+  }
+  router: {
+    page: string
+  }
 }
 
 export type PathToTemplateType = {
-  widget: string
   service: string
+  widget: string
+  page: string
 }
 
-export type RegexpKeysType = {
-  widget: string
+export type PathToPasteType = {
   service: string
+  widget: string
+  page: string
 }
 
 export type ConfigType = {
-  filePath: {
-    reducersList: string
-    useAppActions: string
-  }
+  filePath: FilePathType
   regexp: {
-    reducersList: ReducersListRegexpType
-    useAppActions: UseAppActionsRegexpType
+    useAppActions: RegexpType
+    reducersList: RegexpType
+    router: RegexpType
   }
-  importPath: {
-    reducersList: RegexpKeysType
-    useAppActions: RegexpKeysType
-  }
+  importPath: ImportPathType
   pathToTemplate: PathToTemplateType
-  pathToPaste: PathToTemplateType
+  pathToPaste: PathToPasteType
   eslintCommand: string
 }
