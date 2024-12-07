@@ -51,7 +51,6 @@
     "@craco/craco": "^7.1.0",
     "@npm.piece/generate-hooks-rtk": "^1.0.21",
     "@npm.piece/locale-downloader": "^1.0.12",
-    "@npm.piece/template-generator": "^1.0.24",
     "@npm.piece/eslint-config": "^1.0.40",
     "@npm.piece/tailwind-config": "^1.0.35",
     "@npm.piece/types": "^1.0.11",

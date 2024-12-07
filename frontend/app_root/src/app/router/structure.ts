@@ -1,9 +1,9 @@
 import { NotFound } from '@components/templates/404'
 import { RoutesEnum } from '@constants/routes'
 import * as Layouts from '@layouts/index'
-import { mf } from './config'
-import * as Pages from './pages'
-import { RouteConfigType } from './render'
+import { mf } from './utils/config'
+import * as Pages from './utils/pages'
+import type { RouteConfigType } from './utils/render'
 
 const rootPath = mf.root || '/'
 
@@ -38,6 +38,12 @@ export const routeStructure: RouteConfigType[] = [
     path: rootPath,
     layout: Layouts.Main,
     element: Pages.Main,
+    children: [
+      {
+        path: ':id',
+        element: Pages.Main,
+      },
+    ],
   },
   {
     path: `${rootPath}${mf.auth}${RoutesEnum.auth}*`,
@@ -46,6 +52,6 @@ export const routeStructure: RouteConfigType[] = [
   {
     path: '*',
     element: NotFound,
-    layout: Layouts.Main,
+    layout: Layouts.Empty,
   },
 ]

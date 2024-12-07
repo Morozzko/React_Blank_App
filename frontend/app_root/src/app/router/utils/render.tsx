@@ -28,6 +28,7 @@ export const renderRoute = (route: RouteConfigType) => {
     return (
       <Route key={route.path} path={format(route.path)} element={<Layout />}>
         <Route index element={<Element />} />
+        {route.children?.map(renderRoute)}
       </Route>
     )
   }

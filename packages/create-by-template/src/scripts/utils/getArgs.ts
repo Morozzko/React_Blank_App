@@ -17,13 +17,15 @@ const getType = (value: string) => {
     case TemplatesEnum.service:
       type = TemplatesEnum.service
       break
+    case TemplatesEnum.page:
+      type = TemplatesEnum.page
+      break
     default:
       console.log(
         '\x1b[31m',
-        `First argument must be service or widget`,
+        `First argument must be service, widget or page`,
         '\x1b[0m'
       )
-
       break
   }
 

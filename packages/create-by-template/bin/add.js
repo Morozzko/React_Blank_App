@@ -15,7 +15,7 @@ const startScript = async () => {
 
   if (args.type === 'service') {
     await app.createService({
-      name: args.name,
+      name: args.name.charAt(0).toUpperCase() + args.name.slice(1),
       destination: path.join(config.pathToPaste.service, args.name),
       source: config.pathToTemplate.service,
     })
@@ -29,7 +29,20 @@ const startScript = async () => {
     })
   }
 
-  if (!args?.permissions?.includes(app.ARGEnum.noStore)) {
+  if (args.type === 'page') {
+    const name = args.name.charAt(0).toUpperCase() + args.name.slice(1)
+
+    await app.createPage({
+      name,
+      destination: path.join(config.pathToPaste.page, name),
+      source: config.pathToTemplate.page,
+    })
+  }
+
+  if (
+    !args?.permissions?.includes(app.ARGEnum.noStore) &&
+    args.type !== 'page'
+  ) {
     await app.insertToReducer({
       name: args.name,
       pathToReducersList: config.filePath.reducersList,

@@ -2,7 +2,7 @@ const path = require('path')
 
 const useAppActionsFile = './src/utils/hooks/useAppActions.ts'
 const reducersFile = './src/app/store/reducers.ts'
-const routerFile = './src/app/store/router.ts'
+const routerFile = './src/app/router/utils/pages.ts'
 
 const pathToWidgetTemplate = '../../_templates/rtkgen/widget/'
 const pathToServiceTemplate = '../../_templates/rtkgen/service/'
@@ -42,7 +42,7 @@ module.exports = {
     },
     router: {
       page:`
-    const Sample = lazy(() =>
+   export const Sample = lazy(() =>
   import('@pages/Sample').then(module => ({
     default: module.Page,
   }))

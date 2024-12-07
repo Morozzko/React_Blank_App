@@ -26,6 +26,24 @@ const startScript = async () => {
     })
   }
 
+  if (args.type === 'page') {
+    const name = args.name.charAt(0).toUpperCase() + args.name.slice(1)
+
+    await app.removePage({
+      name,
+      destination: config.pathToPaste.page,
+    })
+
+    if (config?.filePath?.router) {
+      await app.removeFromRouter({
+        name,
+        pathToRouter: config.filePath.router,
+      })
+    }
+
+    return
+  }
+
   await app.removeFromReducer({
     name: args.name,
     pathToReducersList: config.filePath.reducersList,
